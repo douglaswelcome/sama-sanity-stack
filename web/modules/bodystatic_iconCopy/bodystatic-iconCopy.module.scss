@@ -1,0 +1,40 @@
+@import '../../styles/base/grid';
+
+.icon{
+    grid-column: span 3;
+    
+    img{
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+    
+    h5{
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    @include breakpoint(w-med){
+        grid-row:auto;
+        grid-column: 2/ span 5;
+    }
+
+    &:nth-child(even) {
+        @include breakpoint(w-med){
+            grid-row: auto;
+            grid-column: 7/ span 5;
+        }
+    }
+
+    @include breakpoint(w-sm){
+        grid-row: auto;
+        grid-column: 1 / span 12;
+
+    }
+
+    &:nth-child(even) {
+        @include breakpoint(w-sm){
+            grid-row:auto;
+            grid-column: 1/ span 12;
+        }
+    }
+}

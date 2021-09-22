@@ -1,0 +1,8 @@
+export {default as hero_home} from './hero_home/hero_home'
+export {default as bodystatic_bragBar} from './bodystatic_bragBar/bodystatic_bragBar'
+export {default as bodystatic_iconCopy} from './bodystatic_iconCopy/bodystatic_iconCopy'
+export {default as bodymove_featureWindow} from './bodymove_featureWindow/bodymove_featureWindow'
+export {default as bodystatic_panelAvatarQuote} from './bodystatic_panelAvatarQuote/bodystatic_panelAvatarQuote'
+export {default as bodystatic_panelFeature} from './bodystatic_panelFeature/bodystatic_panelFeature'
+export {default as bodystatic_panelQuote} from './bodystatic_panelQuote/bodystatic_panelQuote'
+export {default as bodystatic_splitTxtBtn} from './bodystatic_splitTxtBtn/bodystatic_splitTxtBtn'

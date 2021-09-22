@@ -1,0 +1,30 @@
+@import '../../styles/base/grid';
+
+.logoRow {
+    grid-column: 1 / span 12;
+    grid-row: 2;
+    text-align: center;
+}
+
+.logos {
+    --gap: 2rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+    width: calc(100% + var(--gap));
+    justify-content: center;
+}
+
+.logo {
+    margin: var(--gap) 0 0 var(--gap);
+    align-self: center;
+}
+
+.__left {
+    .logoRow{
+        grid-column: 1 / span 12;
+    }
+    .logos{
+        justify-content: flex-start;
+    }
+}

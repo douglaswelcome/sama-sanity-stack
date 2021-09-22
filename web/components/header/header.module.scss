@@ -1,0 +1,133 @@
+@import '.../../styles/base/grid';
+@import '../../styles/base/colors';
+
+.outer{
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  position: relative;
+  grid-template-columns: auto 8fr auto;
+  grid-column-gap: 3rem;
+  grid-template-rows: 75px;
+  z-index: 2;
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  image-rendering: crisp-edges;
+
+  svg {
+    height: 1.7rem;
+    fill: $color-sunshine;
+    path{
+      fill: $color-sunshine;
+      transition-property: fill;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+  
+    }
+    &:hover {
+      path{
+        fill: $color-white;
+      }
+    }
+  }
+}
+  
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.navBar{
+  height: 100%;
+  display: inline-grid;
+  grid-template-columns: repeat(5, max-content);
+  list-style: none;
+}
+
+.navItem {
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  position: relative;
+  cursor: pointer; 
+  &:hover {
+    background-color: $color-charcoal-2;
+    .navItem_label  {
+      color: $color-white;
+    }
+    .dropDown {
+      display: grid;
+    }
+  }
+}
+
+.navItem_label {
+  color: $color-charcoal-6;
+  font-weight: 700;
+  transition-property: color;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+  &__active{
+    color: $color-white;
+  }
+}
+
+.dropDown {
+  display: none;
+  grid-auto-flow: row;
+  border-radius: 0 0 .5rem .5rem;
+  padding: 1rem;
+  background-color: $color-charcoal-2;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-bottom: 1rem;
+  z-index: 2;
+  white-space: nowrap;
+  .navLink{
+    border-radius: .25rem;
+    padding: 0.75rem;
+    color: $color-charcoal-7;
+    background-color: rgba($color-charcoal-4, 0);
+    transition: transform 250ms, opacity 250ms;
+    transition-property: all;
+  
+    &__active{
+      color: $color-white;
+      background-color: rgba(96, 96, 118, 0.25);
+    }
+    &:hover {
+      color: $color-white;
+      background-color: rgba($color-charcoal-4, 1);
+    }
+  }
+}
+
+.dropDown_group{
+  grid-row: 1;
+  display: grid;
+  align-items: self-start;
+  border-right: 2px solid $color-charcoal-4;
+  padding: 0 1rem;
+  &:first-of-type{
+    padding-left: 0;
+  }
+  &:last-of-type{
+    border-right: none;
+    padding-right: 0;
+  }
+}
+
+.dropdown_group_label{
+  padding: 0 0.75rem 0.75rem 0.75rem;
+  color: rgba($color-charcoal-5, 0.7);
+  font-size: .875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+

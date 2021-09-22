@@ -1,0 +1,39 @@
+$static-font-base: "https://www.sama.com/hubfs/Custom/assets/static-assets/fonts/Brown/";
+$font-brown: "Brown", Arial, sans-serif;
+
+@font-face {
+  font-family: "Brown";
+  src: 
+  url("#{$static-font-base}BrownLLWeb-Light.woff2") format("woff2"),
+  url("#{$static-font-base}BrownLLWeb-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brown";
+  src: 
+  url("#{$static-font-base}BrownLLWeb-LightItalic.woff2") format("woff2"),
+  url("#{$static-font-base}BrownLLWeb-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Brown";
+  src: 
+  url("#{$static-font-base}BrownLLWeb-Medium.woff2") format("woff2"),
+  url("#{$static-font-base}BrownLLWeb-Medium.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brown";
+  src: 
+  url("#{$static-font-base}BrownLLWeb-MediumItalic.woff2") format("woff2"),
+  url("#{$static-font-base}BrownLLWeb-MediumItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+

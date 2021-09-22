@@ -1,0 +1,212 @@
+:root{
+  font-size: 100%;
+}
+
+body,
+html {
+  font-size: 1rem;
+  font-family: $font-brown;
+  color: $color-white;
+  background-color: $color-charcoal-1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+* {
+  box-sizing: border-box;
+
+  &::before, &::after {
+    box-sizing: border-box
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+//p tags
+p{
+  font-family: $font-brown;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+//headers
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.25;
+
+  @include breakpoint(w-lg) {
+    font-size: 2rem;
+  }
+
+  @include breakpoint(w-med) {
+    font-size: calc(1rem + 1.75vw);
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+
+  @include breakpoint(w-med) {
+    font-size: calc(.8rem + 2vw);
+  }
+}
+
+h3 {
+  font-family: $font-brown;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+
+  @include breakpoint(w-med) {
+    font-size: calc(.8rem + 1.3vw);
+  }
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.4;
+
+  @include breakpoint(w-med) {
+    font-size: calc(.8rem + .9vw);
+  }
+}
+
+h6 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.bold,
+b,
+strong {
+  font-weight: 700 !important;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 700 !important;
+  }
+}
+
+//links
+a {
+  text-decoration: none;
+}
+
+p a,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  transition: 300ms all;
+  color: $color-white;
+  font-weight: 700;
+  text-decoration: underline $color-sunshine;
+
+  &:hover {
+    color: $color-charcoal-6;
+  }
+}
+
+blockquote {
+  position: relative;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  padding-left: 1.5rem;
+  border-left: .25rem solid $color-charcoal-2;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+
+  p {
+    font-size: 1.25rem;
+
+    @include breakpoint(w-med) {
+      font-size: calc(.8rem + .9vw);
+    }
+  }
+}
+
+//justifying text 
+.umoja-u-text--left {
+  text-align: left !important
+}
+
+.umoja-u-text--center {
+  text-align: center !important;
+}
+
+.umoja-u-text--right {
+  text-align: right !important;
+}
+
+.umoja-u-hidden {
+  visibility: hidden;
+}
+
+.umoja-u-nowrap{
+  white-space: nowrap;
+}
+
+.display-large {
+  font-size: 6rem;
+
+  @include breakpoint (w-lg) {
+    font-size: 4.75rem;
+  }
+
+  @include breakpoint(w-med) {
+    --maxFontSize: 4.75rem;
+    --minFontSize: 3.8rem;
+    --scaler: 7vw;
+    font-size: m#{i}n(m#{a}x(var(--minFontSize), var(--scaler)), var(--maxFontSize));
+  }
+  @include breakpoint(w-sm) {
+    --maxFontSize: 3.8rem;
+    --minFontSize: 2.4rem;
+    --scaler: 7vw;
+    font-size: m#{i}n(m#{a}x(var(--minFontSize), var(--scaler)), var(--maxFontSize));
+  }
+}
+
+.display-small {
+  font-size: 3.75rem;
+
+  @include breakpoint (w-lg) {
+    font-size: 3rem;
+  }
+
+  @include breakpoint(w-med) {
+    --maxFontSize: 3rem;
+    --minFontSize: 2.4rem;
+    --scaler: 7vw;
+    font-size: m#{i}n(m#{a}x(var(--minFontSize), var(--scaler)), var(--maxFontSize));
+  }
+
+  @include breakpoint(w-sm) {
+    --maxFontSize: 2.4rem;
+    --minFontSize: 1.5rem;
+    --scaler: 7vw;
+    font-size: m#{i}n(m#{a}x(var(--minFontSize), var(--scaler)), var(--maxFontSize));
+  }
+}
