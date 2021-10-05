@@ -257,7 +257,13 @@ class Header extends external_react_.Component {
       children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("nav", {
         className: `umoja-l-grid--12 ${(header_module_default()).wrapper}`,
         children: [/*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
-          href: "/",
+          href: {
+            pathname: '/',
+            query: {
+              slug: '/'
+            }
+          },
+          as: "/",
           children: /*#__PURE__*/jsx_runtime_.jsx("a", {
             className: (header_module_default()).logo,
             children: /*#__PURE__*/jsx_runtime_.jsx((external_react_inlinesvg_default()), {

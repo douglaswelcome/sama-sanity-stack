@@ -44,7 +44,15 @@ class Header extends Component {
     return (
       <header className={`${styles.outer} ${showNav ? styles._active: ''}`}>
         <nav className={`umoja-l-grid--12 ${styles.wrapper}`}>
-          <Link href="/">
+          <Link
+            href={{
+              pathname: '/',
+              query: {
+                slug: '/'
+              }
+            }}
+            as='/'
+          >
             <a className={styles.logo}>
               <SVG src={logo.asset.url} />
             </a>

@@ -39,7 +39,7 @@ bodystatic_panelFeature.propTypes ={
     body_text: PropTypes.string,
     button: PropTypes.shape({
         title: PropTypes.string,
-        link: PropTypes.string,
+        link: PropTypes.object,
         type: PropTypes.string
     }),
     awards: PropTypes.arrayOf(PropTypes.shape({
