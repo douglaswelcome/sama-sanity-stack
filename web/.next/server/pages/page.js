@@ -4,7 +4,7 @@ exports.id = 702;
 exports.ids = [702];
 exports.modules = {
 
-/***/ 5780:
+/***/ 946:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37,9 +37,9 @@ __webpack_require__.d(modules_namespaceObject, {
   "hero_splittxtimg": () => (hero_splittxtimg_hero_splittxtimg)
 });
 
-// EXTERNAL MODULE: external "groq"
-var external_groq_ = __webpack_require__(619);
-var external_groq_default = /*#__PURE__*/__webpack_require__.n(external_groq_);
+;// CONCATENATED MODULE: external "groq"
+const external_groq_namespaceObject = require("groq");
+var external_groq_default = /*#__PURE__*/__webpack_require__.n(external_groq_namespaceObject);
 // EXTERNAL MODULE: ./client.js
 var client = __webpack_require__(267);
 var client_default = /*#__PURE__*/__webpack_require__.n(client);
@@ -1661,14 +1661,6 @@ module.exports = require("@sanity/client");
 
 /***/ }),
 
-/***/ 619:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("groq");
-
-/***/ }),
-
 /***/ 2364:
 /***/ ((module) => {
 
@@ -1836,7 +1828,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [664,675,286], () => (__webpack_exec__(5780)));
+var __webpack_exports__ = __webpack_require__.X(0, [664,675,286], () => (__webpack_exec__(946)));
 module.exports = __webpack_exports__;
 
 })();
