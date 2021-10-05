@@ -8,9 +8,11 @@ const Page = (props) => {
 
   return (
       <Layout config={config}>
-        {sections.map((section) => {
+        {sections &&
+          sections.map((section) => {
              return <RenderSection {...section} key={section._key} />
-          })}
+          })
+        }
       </Layout>
   )
 }

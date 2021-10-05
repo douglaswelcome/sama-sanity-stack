@@ -1184,7 +1184,7 @@ const Page = props => {
   } = props;
   return /*#__PURE__*/jsx_runtime_.jsx(Layout/* default */.Z, {
     config: config,
-    children: sections.map(section => {
+    children: sections && sections.map(section => {
       return /*#__PURE__*/(0,external_react_.createElement)(components_RenderSection, page_objectSpread(page_objectSpread({}, section), {}, {
         key: section._key
       }));
