@@ -5,20 +5,26 @@ import {getFile} from '@sanity/asset-utils'
 import client from '../client'
 
 const LottieAnimation = (props) => {
-    const {id, type, loop, autoplay, json, style, active} = props;
+    const {id, type, loop, autoplay, json, style, active, inView} = props;
     const jsonPath = getFile(json, client.config());
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        if(active && !loaded){
-            lottie.loadAnimation({
-                container: document.querySelector(`#${id}`),
-                path: jsonPath.asset.url,
-                renderer: type, 
-                loop: loop,
-                autoplay: autoplay,
-            })
-            setLoaded(true);
+        if(active && inView){
+            if(!loaded){
+                lottie.loadAnimation({
+                    container: document.querySelector(`#${id}`),
+                    path: jsonPath.asset.url,
+                    renderer: type, 
+                    loop: loop,
+                    autoplay: autoplay,
+                })
+                setLoaded(true);
+            }else{
+                lottie.play();
+            }
+        }else if(active && !inView){
+            lottie.pause();
         }
     });
 
@@ -36,7 +42,8 @@ LottieAnimation.propTypes = {
         asset: PropTypes.shape({url: PropTypes.string})
     }),
     style: PropTypes.object,
-    active: PropTypes.bool
+    active: PropTypes.bool,
+    inView: PropTypes.bool
 }
 
 export default LottieAnimation

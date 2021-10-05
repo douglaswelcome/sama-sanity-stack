@@ -2,6 +2,9 @@ export default {
     type: 'object',
     name: 'button',
     title: 'Button',
+    initialValue: {
+        type: ''
+    },
     fields: [
         {
             name: "title",
@@ -10,7 +13,7 @@ export default {
         },
         {
             name: "link",
-            type: "url",
+            type: "link",
             title: "Link URL"
         },
         {
@@ -19,7 +22,9 @@ export default {
             title: 'Button Type',
             options: {
                 list: [
-                  { title: 'Secondary', value: 'secondary' },
+                    { title: 'Primary (Default)', value: ''},
+                    { title: 'Secondary', value: 'secondary' },
+                    { title: 'Arrow CTA', value: 'arrow'}
                 ],
             },
         }

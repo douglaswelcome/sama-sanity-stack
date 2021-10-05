@@ -1,0 +1,38 @@
+@import '../../styles/base/grid';
+@import '../../styles/base/variables';
+
+.copy{
+    grid-column: 1 / span 5;
+    grid-row: 1;
+    h5{
+        margin: $space-sm 0;
+    }
+
+    @include breakpoint(w-sm) {
+        grid-column: 1 / span 12;
+        padding-bottom: 3rem;
+    }
+}
+
+.pageTitle{
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: $color-charcoal-5;
+    text-transform: uppercase;
+}
+
+.imgWrapper {
+    height: 100%;
+    grid-column: 6 / -1;
+    grid-row: 1;
+    img{
+        border-radius: $roundcorner;
+        object-fit: cover;
+    }
+
+    @include breakpoint(w-sm) {
+        grid-row: 2;
+        grid-column: 1 /span 12
+    }
+}

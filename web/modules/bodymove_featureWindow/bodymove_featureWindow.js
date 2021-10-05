@@ -39,8 +39,12 @@ const bodymove_featureWindow = (props) => {
                             <div className={`${styles.detailWrapper} ${activeFeature == `feature${i}` ? styles.detailWrapper__active : ''}`} key={feature._key}>
                                 <p>{feature.description}</p>
                                 <div className={styles.img}>
-                                    {(feature.animation && inViewport) &&
-                                    <LottieAnimation {...feature.animation} active={activeFeature == `feature${i}` ? true : false} />
+                                    {(feature.animation) &&
+                                        <LottieAnimation 
+                                            {...feature.animation} 
+                                            active={activeFeature == `feature${i}` ? true : false} 
+                                            inView={inViewport}
+                                        />
                                     }
                                     {feature.image &&
                                         <Image src={feature.image} layout="fill" />

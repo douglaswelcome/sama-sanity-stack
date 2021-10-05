@@ -10,7 +10,7 @@ export default {
         {
             type: 'boolean',
             name: 'image_position',
-            title: 'Align Image Left'
+            title: 'Align Image Right'
         },
         {
             type: 'image',

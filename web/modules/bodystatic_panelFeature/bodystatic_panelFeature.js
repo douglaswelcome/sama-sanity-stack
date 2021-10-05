@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Image from '../../components/image'
+import Button from '../../components/button/button'
 import styles from './bodystatic-panelFeature.module.scss'
 
 const bodystatic_panelFeature = (props) => {
@@ -22,15 +23,7 @@ const bodystatic_panelFeature = (props) => {
                     </div>
                 }
                 {button.link &&
-                    <div className={styles.btnRow}>
-                        <div className="btn_row">
-                            <a className="btn_wrapper" href={button.link}>
-                                <button className={`btn ${button.type ? `btn__${button.type}` : ''}`}>
-                                    <h3 className="btn_text">{button.title}</h3>
-                                </button>
-                            </a>
-                        </div>
-                    </div>
+                    <Button {...button} />
                 }
             </div>
         </div>

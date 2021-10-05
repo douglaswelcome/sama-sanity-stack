@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import {LogoJsonLd} from 'next-seo'
 import Header from './header/header'
-import Footer from './Footer'
+import Footer from './footer/footer'
 
 function Layout (props) {
   const {config, children} = props
@@ -24,18 +24,22 @@ function Layout (props) {
       <div className='container'>
         <Header title={title} navItems={mainNav} logo={logo} />
         <main className='content'>{children}</main>
-        <Footer navItems={footerNav} />
+        <Footer navItems={footerNav.items} logo={logo} />
       </div>
     </>
   )
 }
 
 Layout.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node),
   config: PropTypes.shape({
     title: PropTypes.string,
     mainNav: PropTypes.shape({
-      items: PropTypes.arrayOf(PropTypes.object)
+      items: PropTypes.arrayOf(PropTypes.object),
+      nav_cta: PropTypes.shape({
+        link: PropTypes.object,
+        title: PropTypes.string,
+        type: PropTypes.string
+      })
     }),
     footerNav: PropTypes.shape({
       items: PropTypes.arrayOf(PropTypes.object)

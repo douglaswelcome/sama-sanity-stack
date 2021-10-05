@@ -130,16 +130,25 @@ $med-page-width: 800px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-bottom: 6rem;
-  padding-top: 6rem;
+  padding-top: $space-lg;
+  padding-bottom: $space-lg;
   position: relative;
+
   &:first-of-type{
-    padding-bottom: 3rem;
     padding-top: 3rem;
+    padding-bottom: 3rem;
   }
-  @include breakpoint (w-sm){
-    padding-bottom: 3rem;
+
+  > *{
+    margin-bottom: $space-md;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint(w-sm) {
     padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -161,6 +170,10 @@ $med-page-width: 800px;
 
 .umoja-l-grid-gap--row-3{
   grid-row-gap: $space-lg;
+}
+
+.umoja-l-grid-align--center{
+  align-items: center;
 }
 
 .umoja-l-grid-align--base{

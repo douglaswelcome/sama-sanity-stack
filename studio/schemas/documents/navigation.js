@@ -12,11 +12,6 @@ export default {
             title: "Title"
         },
         {
-            name: 'navId',
-            type: 'slug',
-            title: "Navigation Id"
-        },
-        {
             name: "items",
             type: "array",
             title: "Top navigation items",
@@ -24,6 +19,11 @@ export default {
                 { type: "navItem" },
                 { type: "navDropdownMenu" }
             ]
+        },
+        {
+            name: "nav_cta",
+            type: "button",
+            title: "Navigation CTA"
         }
     ]
 }

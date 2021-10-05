@@ -4,15 +4,13 @@ import Layout from '../../components/Layout'
 import RenderSection from '../../components/RenderSection'
 
 const Page = (props) => {
-
-  const {title, sections, config} = props;
+  const {sections, config} = props;
 
   return (
       <Layout config={config}>
-        <p>{title}</p>
-{/*           {sections.map((section) => {
-             return <RenderSection modules={section.modules} key={section._key} />
-          })} */}
+        {sections.map((section) => {
+             return <RenderSection {...section} key={section._key} />
+          })}
       </Layout>
   )
 }
@@ -27,7 +25,12 @@ Page.getInitialProps = async function({query}) {
       *[_id == "global-config"][0]{
         frontpage -> {
           title,
-          sections
+          slug,
+          "sections": sections[]{
+            _key,
+            background_color,
+            "modules": modules.modules
+          }
         }
       }
     `
@@ -37,7 +40,26 @@ Page.getInitialProps = async function({query}) {
 
   if (slug && slug !== '/') {
     return await client.fetch(`
-      *[_type == "page" && slug.current == $slug][0]
+      *[_type == "page" && slug.current == $slug]{
+        title,
+        slug,
+        "sections": sections[]{
+          _key,
+          background_color,
+          "modules": modules.modules[]{
+            ...,
+             text[]{
+               ...,
+               markDefs[]{
+                 ...,
+                 internalLink->{
+                   slug
+                 }
+               }
+             }
+           }
+        }
+      }[0]
     `, { slug })
   }
 }

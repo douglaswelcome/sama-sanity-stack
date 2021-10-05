@@ -18,7 +18,6 @@ export default {
             name: 'modules',
             title: 'Modules',
             type: 'array',
-            
             options: {
                 editModal: 'fullscreen'
             },

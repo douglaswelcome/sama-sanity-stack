@@ -1,0 +1,33 @@
+@import '../../styles/base/variables';
+@import '../../styles/base/grid';
+
+.card{
+    grid-column: span 4;
+    display: grid;
+    grid-auto-flow: row;
+    border-radius: $roundcorner;
+    padding: 3rem 2rem;
+    background-color: $color-charcoal-2;
+    h5{
+        margin-bottom: $space-sm;
+        font-weight: 700;
+    }
+}
+
+._four{
+    grid-column: span 3;
+    @include breakpoint(w-med){
+        grid-column: span 6;
+        margin-top: $space-sm;
+    }
+}
+
+@include breakpoint(w-sm){
+    .card{
+        grid-column: 1 / span 12;
+        margin-top: $space-sm;
+        &:nth-of-type(1){
+            margin-top: 0;
+        }
+    }
+}

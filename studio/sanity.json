@@ -14,7 +14,8 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "@sanity/form-builder",
-    "sama-logo"
+    "sama-logo",
+    "dashboard-widget-netlify"
   ],
   "env": {
     "development": {

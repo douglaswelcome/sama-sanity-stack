@@ -50,19 +50,15 @@
 }
 
 .logoWrapper {
+    display: inline-block;
     height: 2.5rem;
+    width: 100%;
+    max-width: 220px;
     margin-bottom: 2rem;
     position: relative;
-    img {
-        display: inline-block;
-        text-align: left;
-        margin-right:auto;
-        width: auto;
-        height: 100%;
     
-        @include breakpoint(w-sm){
-            max-width: 6rem;
-        }
+    @include breakpoint(w-sm){
+        max-width: 6rem;
     }
 }
 

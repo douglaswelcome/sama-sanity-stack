@@ -14,14 +14,15 @@ function resolveModule (module) {
 }
 
 function RenderSection (props) {
-  const {modules} = props;
-console.log(props)
+  const {modules, background_color} = props;
+  const className = background_color ? `umoja-l-grid-section ${background_color}` : "umoja-l-grid-section";
+  
   return (
-    <section className="umoja-l-grid-section">
+    <section className={className}>
       {modules.map(module => {
         const SectionComponent = resolveModule(module)
         if (!SectionComponent) {
-          return <div>Missing section {module._type}</div>
+          return <div key={module._key}>Missing section {module._type}</div>
         }
         return <SectionComponent {...module} key={module._key} />
       })}
@@ -34,9 +35,9 @@ RenderSection.propTypes = {
     PropTypes.shape({
       _type: PropTypes.string,
       _key: PropTypes.string,
-      section: PropTypes.instanceOf(PropTypes.object)
     })
-  )
+  ),
+  background_color: PropTypes.string
 }
 
 export default RenderSection

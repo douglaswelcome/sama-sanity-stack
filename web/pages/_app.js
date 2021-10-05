@@ -19,9 +19,19 @@ const siteConfigQuery = `*[_id == "global-config"]{
         url{..., internalLink->{slug}}
       }
       }
-    }
+    },
+    nav_cta
 	},
-  footerNav -> {items}
+  footerNav-> {
+  	items[]{
+      ...,
+      url{..., internalLink->{slug}},
+      items[]{
+        ...,
+        url{..., internalLink->{slug}},
+      }
+    }
+  }
 }[0]`;
 
 class App extends BaseApp {

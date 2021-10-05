@@ -23,6 +23,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-inlinesvg": "^2.3.0",
-    "sass": "^1.38.2"
+    "sass": "^1.38.2",
+    "umoja-foundations": "^1.0.0"
   }
 }

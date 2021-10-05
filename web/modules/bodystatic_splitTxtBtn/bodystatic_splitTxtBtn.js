@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Button from '../../components/button/button'
 import styles from './bodystatic-splitTxtBtn.module.scss'
 
 const bodystatic_splitTxtBtn  = (props) => {
@@ -12,14 +13,10 @@ const bodystatic_splitTxtBtn  = (props) => {
                 <p>{body}</p>
             </div>
             <div className={styles.right}>
-                <div className="btn_row">
+                <div className={styles.buttons}>
                     {buttons.map((button) => {
-                        return (
-                            <a className="btn_wrapper" href={button.link} key={button._key}>
-                                <button className={`btn ${button.type ? `btn__${button.type}` : ''}`}>
-                                    <h3 className="btn_text">{button.title}</h3>
-                                </button>
-                            </a>
+                        return ( 
+                            <Button {...button} key={button._key} />
                         )
                     })}
                 </div>
@@ -31,11 +28,7 @@ const bodystatic_splitTxtBtn  = (props) => {
 bodystatic_splitTxtBtn.propTypes = {
     headline: PropTypes.string,
     body: PropTypes.string,
-    buttons: PropTypes.arrayOf(PropTypes.shape({
-        title: PropTypes.string,
-        link: PropTypes.string,
-        type: PropTypes.string
-    }))
+    buttons: PropTypes.array
 }
 
 export default bodystatic_splitTxtBtn;

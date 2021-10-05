@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Image from '../../components/image'
+import Button from '../../components/button/button'
 import DotCanvas from '../../components/dot_canvas'
 import styles from './hero-home.module.scss'
 
@@ -17,13 +18,7 @@ const hero_home = (props) => {
             <div className="divider-line divider-line--horizontal divider-line--negative"></div>
             <h2 className={styles.subheadline}>{tagline}</h2>
             {cta &&
-              <div className="btn_row">
-                <div className="btn_wrapper">
-                  <a className="btn" href={cta.link}>
-                    <h3 className="btn_text">{cta.title}</h3>
-                  </a>
-                </div>
-              </div>
+              <Button {...cta} />
             }
         </div>
         {image &&

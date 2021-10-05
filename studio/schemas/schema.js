@@ -9,9 +9,6 @@ import page from './documents/page'
 import navigation from './documents/navigation'
 import siteConfig from './documents/siteConfig'
 
-//Array types
-import page_sections from './arrays/sections'
-
 //Object types
 import button from './objects/button'
 import icon_copy from './objects/icon_copy'
@@ -21,15 +18,24 @@ import navDropdownMenu from './objects/navDropdownMenu'
 import navItem from './objects/navItem'
 import navCat from './objects/navCat'
 import link from './objects/link'
+import sticky_sideItem from './objects/sticky_sideItem'
 import page_modules from './objects/page_modules'
+import page_sections from './objects/page_sections'
 import hero_home from './modules/hero_home'
+import hero_splittxtimg from './modules/hero_splittxtimg'
+import hero_centertxt from './modules/hero_centertxt'
 import bodystaticBragBar from './modules/bodystatic_bragBar'
 import bodystatic_iconCopy from './modules/bodystatic_iconCopy'
+import bodystatic_richTxt from './modules/bodystatic_richTxt'
 import bodystatic_panelAvatarQuote from './modules/bodystatic_panelAvatarQuote'
 import bodystatic_panelFeature from './modules/bodystatic_panelFeature'
 import bodystatic_panelQuote from './modules/bodystatic_panelQuote'
 import bodystatic_splitTxtBtn from './modules/bodystatic_splitTxtBtn'
 import bodymove_featureWindow from './modules/bodymove_featureWindow'
+import bodymove_stickySideScroll from './modules/bodymove_stickySideScroll'
+import bodystatic_videoDivide from './modules/bodystatic_videoDivide'
+import bodystatic_display from './modules/bodystatic_display'
+import bodystatic_cardImg from './modules/bodystatic_cardImg'
 
 export default createSchema({
   name: 'default',
@@ -53,13 +59,21 @@ export default createSchema({
     navItem,
     navCat,
     link,
+    sticky_sideItem,
     hero_home,
+    hero_splittxtimg,
+    hero_centertxt,
     bodystaticBragBar,
     bodystatic_iconCopy,
+    bodystatic_richTxt,
     bodystatic_panelAvatarQuote,
     bodystatic_panelFeature,
     bodystatic_panelQuote,
     bodystatic_splitTxtBtn,
-    bodymove_featureWindow
+    bodystatic_videoDivide,
+    bodystatic_cardImg,
+    bodystatic_display,
+    bodymove_featureWindow,
+    bodymove_stickySideScroll
   ]),
 })

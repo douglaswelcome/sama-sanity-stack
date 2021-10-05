@@ -47,11 +47,16 @@ export default {
         description: 'Image for sharing previews on Facebook, Twitter etc.',
         fieldset: 'metadata'
       },
-      { 
+      {
+        type: 'array',
         name: 'sections',
-        type: 'sections',
-        title: 'Page Sections'
-      }
+        title: 'Page Sections',
+        of: [
+          {
+            type: 'page_sections',
+          }
+        ]
+      },
     ],
     preview: {
       select: {

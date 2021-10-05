@@ -12,7 +12,7 @@ const bodystatic_panelAvatarQuote = (props) => {
                 <div className={styles.icon}>&#8220;</div>
                 <div className={styles.body}>
                     <div className={styles.logoWrapper}>
-                        <Image src={company_logo} layout="fill" />
+                        <Image src={company_logo} layout="fill" objectPosition="left" />
                     </div>
                     <div className={styles.quoteText}>
                         {quote.quote_text}

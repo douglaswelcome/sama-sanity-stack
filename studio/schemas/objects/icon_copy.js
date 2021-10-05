@@ -16,7 +16,7 @@ export default {
         {
             type: 'image',
             name: 'icon',
-            title: 'Icon',
+            title: 'Image',
             fields: [
                 {
                   name: 'alt',

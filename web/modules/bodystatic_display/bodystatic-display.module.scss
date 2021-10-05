@@ -1,0 +1,17 @@
+@import '../../styles/base/grid';
+@import '../../styles/base/variables';
+
+.inner{
+    grid-column: 1 / span 12;
+    border-radius: $roundcorner;
+    padding: $space-md;
+    background-color: $color-sunshine;
+    h1{
+        font-size: 3.75rem;
+        text-align: right;
+        color: #000;
+    }
+    @include breakpoint(w-sm) {
+        padding: $space-sm;
+    }
+}

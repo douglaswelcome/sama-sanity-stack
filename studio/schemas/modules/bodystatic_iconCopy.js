@@ -8,8 +8,31 @@ export default {
       collapsible: true,
       collapsed: false
     },
+    fieldsets: [
+      {
+        title: 'Options',
+        name: 'layout_options',
+        options: {
+          collapsible: true,
+          collapsed: false
+        }
+      }
+    ],
     fields: [
-       {
+      {
+        name: "center",
+        title: "Center Align Content",
+        type: 'boolean',
+        fieldset: 'layout_options'
+      },
+      {
+        name: "responsive",
+        title: "Responsive Sized Images",
+        description: "Make icon image dimensions responsive to their parent container. Default icon size is 48px by 48px.",
+        type: 'boolean',
+        fieldset: 'layout_options'
+      },
+      {
         type: 'array',
         name: 'icons',
         title: 'Icons',
@@ -20,7 +43,7 @@ export default {
         of:[
           {type: 'icon_copy'}
         ]
-       }
+      }
     ],
     preview: {
       select: {
