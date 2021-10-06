@@ -17,7 +17,7 @@ const NavLink = (props) => {
         return (
             <Link
                 href={{
-                    pathname: '/page',
+                    pathname: '/',
                     query: {slug: slug}
                 }}
                 as={`/${slug}`}

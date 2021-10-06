@@ -7,7 +7,7 @@ const bodystatic_display = (props) => {
 
     return (
         <div className="bodystatic-display umoja-l-grid--12">
-            <div class={styles.inner}>
+            <div className={styles.inner}>
                 <h1>{text}</h1>
             </div>
         </div>

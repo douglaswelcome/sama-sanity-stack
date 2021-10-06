@@ -35,8 +35,12 @@ const Button = (props) => {
                         {buttonInner}
                     </a>
                     :
-                    <Link 
-                        href={buttonLink}
+                    <Link
+                        href={{
+                            pathname: '/',
+                            query: {slug: buttonLink}
+                        }}
+                        as={`/${buttonLink}`}
                     >
                         <a className={wrapperClass}>
                             {buttonInner}

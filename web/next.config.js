@@ -19,7 +19,7 @@ const reduceRoutes = (obj, route) => {
 	  _createdAt,
 	  _updatedAt,
 	  title,
-	  page: '/page'
+	  page: '/'
 	}
 	return obj
 }
