@@ -11,6 +11,7 @@ const client = sanityClient({
   projectId: '76e3r62u',
   // you can find this in sanity.json
   dataset: 'production',
+  apiVersion: '2021-10-06',
   useCdn: true // `false` if you want to ensure fresh data
 
 });
@@ -33,8 +34,6 @@ var external_react_ = __webpack_require__(9297);
 // EXTERNAL MODULE: external "next/head"
 var head_ = __webpack_require__(701);
 var head_default = /*#__PURE__*/__webpack_require__.n(head_);
-// EXTERNAL MODULE: external "next-seo"
-var external_next_seo_ = __webpack_require__(2364);
 // EXTERNAL MODULE: external "next/router"
 var router_ = __webpack_require__(6731);
 // EXTERNAL MODULE: external "react-inlinesvg"
@@ -549,7 +548,6 @@ const Footer = props => {
 
 /* harmony default export */ const footer = (Footer);
 ;// CONCATENATED MODULE: ./components/Layout.js
-
 
 
 

@@ -1661,14 +1661,6 @@ module.exports = require("@sanity/client");
 
 /***/ }),
 
-/***/ 2364:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next-seo");
-
-/***/ }),
-
 /***/ 9325:
 /***/ ((module) => {
 
