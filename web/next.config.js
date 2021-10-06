@@ -19,7 +19,7 @@ const reduceRoutes = (obj, route) => {
 	  _createdAt,
 	  _updatedAt,
 	  title,
-	  page: '/'
+	  page: '/page'
 	}
 	return obj
 }
@@ -35,7 +35,7 @@ module.exports = {
 
 		  routes.find((route, i) => {
 			  if(route.slug.current === frontpage.slug.current){
-				  routes[i].slug.current = '/';
+				  //routes[i].slug.current = '/';
 			  }
 		  });
 

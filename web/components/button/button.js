@@ -37,7 +37,7 @@ const Button = (props) => {
                     :
                     <Link
                         href={{
-                            pathname: '/',
+                            pathname: '/page',
                             query: {slug: buttonLink}
                         }}
                         as={`/${buttonLink}`}
