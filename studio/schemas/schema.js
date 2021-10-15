@@ -36,6 +36,10 @@ import bodymove_stickySideScroll from './modules/bodymove_stickySideScroll'
 import bodystatic_videoDivide from './modules/bodystatic_videoDivide'
 import bodystatic_display from './modules/bodystatic_display'
 import bodystatic_cardImg from './modules/bodystatic_cardImg'
+import bodystatic_splitTxtImg from './modules/bodystatic_splitTxtImg'
+import bodystatic_tabs from './modules/bodystatic_tabs'
+import tab from './objects/tab'
+import richTxt_field from './objects/richTxt_field'
 
 export default createSchema({
   name: 'default',
@@ -59,6 +63,8 @@ export default createSchema({
     navItem,
     navCat,
     link,
+    tab,
+    richTxt_field,
     sticky_sideItem,
     hero_home,
     hero_splittxtimg,
@@ -73,6 +79,8 @@ export default createSchema({
     bodystatic_videoDivide,
     bodystatic_cardImg,
     bodystatic_display,
+    bodystatic_splitTxtImg,
+    bodystatic_tabs,
     bodymove_featureWindow,
     bodymove_stickySideScroll
   ]),

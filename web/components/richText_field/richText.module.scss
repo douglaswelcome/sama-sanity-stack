@@ -1,0 +1,29 @@
+@import '../../styles/base/variables';
+@import '../../styles/base/grid';
+
+.inner{
+    grid-column: span 8;
+    text-align: left;
+    > *{
+        margin-bottom: $space-sm;
+    }
+    :last-child{
+        margin-bottom: 0;
+    }
+}
+
+._center{
+    grid-column: 3 / span 8;
+    text-align: center;
+}
+
+._right{
+    grid-column: -1;
+    text-align: right;
+}
+
+@include breakpoint(w-sm){
+    .inner{
+        grid-column: 1 / span 12;
+    }
+}

@@ -13,23 +13,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var groq__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(619);
-/* harmony import */ var groq__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(groq__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(267);
-/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_client__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(267);
+/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_client__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _libs_queries__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4645);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5964);
-/* harmony import */ var _components_RenderSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4160);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9297);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(5282);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
+/* harmony import */ var _components_RenderSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1898);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5282);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
@@ -43,36 +33,23 @@ const Index = props => {
   } = props;
   const {
     sections
-  } = page.frontpage;
-  return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__/* .default */ .Z, {
+  } = page;
+  return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__/* .default */ .Z, {
     config: config,
     children: sections && sections.map(section => {
-      return /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_4__.createElement)(_components_RenderSection__WEBPACK_IMPORTED_MODULE_3__/* .default */ .Z, _objectSpread(_objectSpread({}, section), {}, {
-        key: section._key
-      }));
+      return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_components_RenderSection__WEBPACK_IMPORTED_MODULE_3__/* .default */ .Z, {
+        modules: section.modules,
+        background_color: section.background_color
+      }, section._key);
     })
   });
 };
 
-async function getStaticProps({
-  preview,
-  previewData
-}) {
-  const pageData = await _client__WEBPACK_IMPORTED_MODULE_1___default().fetch((groq__WEBPACK_IMPORTED_MODULE_0___default())`*[_id == "global-config"][0]{
-          frontpage -> {
-            title,
-            slug,
-            "sections": sections[]{
-              _key,
-              background_color,
-              "modules": modules.modules
-            }
-          }
-        }
-      `);
+async function getStaticProps() {
+  const home = await _client__WEBPACK_IMPORTED_MODULE_0___default().fetch(_libs_queries__WEBPACK_IMPORTED_MODULE_1__/* .indexQuery */ .zl);
   return {
     props: {
-      page: pageData
+      page: home
     }
   };
 }
@@ -98,13 +75,6 @@ module.exports = require("@sanity/block-content-to-react");
 /***/ ((module) => {
 
 module.exports = require("@sanity/client");
-
-/***/ }),
-
-/***/ 619:
-/***/ ((module) => {
-
-module.exports = require("groq");
 
 /***/ }),
 
@@ -262,7 +232,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [61,228], () => (__webpack_exec__(6124)));
+var __webpack_exports__ = __webpack_require__.X(0, [61,357], () => (__webpack_exec__(6124)));
 module.exports = __webpack_exports__;
 
 })();

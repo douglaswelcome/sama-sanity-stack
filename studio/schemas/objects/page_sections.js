@@ -19,6 +19,7 @@ export default {
                   { title: 'Charcoal 3', value: 'umoja-u-bg--charcoal3'},
                   { title: 'Charcoal 4', value: 'umoja-u-bg--charcoal4'},
                   { title: 'Charcoal 5', value: 'umoja-u-bg--charcoal5'},
+                  { title: 'White', value: 'umoja-u-bg--white'}
                 ],
             },
         },

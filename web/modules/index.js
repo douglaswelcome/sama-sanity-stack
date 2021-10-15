@@ -13,3 +13,5 @@ export {default as bodymove_stickySideScroll} from './bodymove_stickySideScroll/
 export {default as bodystatic_videoDivide} from './bodystatic_videoDivide/bodystatic_videoDivide'
 export {default as bodystatic_cardImg} from './bodystatic_cardImg/bodystatic_cardImg'
 export {default as bodystatic_display} from './bodystatic_display/bodystatic_display'
+export {default as bodystatic_splitTxtImg} from './bodystatic_splitTxtImg/bodystatic_splitTxtImg'
+export {default as bodystatic_tabs} from './bodystatic_tabs/bodystatic_tabs'

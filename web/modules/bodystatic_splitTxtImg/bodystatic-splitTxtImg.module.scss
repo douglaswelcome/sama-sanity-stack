@@ -1,0 +1,167 @@
+@import '../../styles/base/grid';
+@import '../../styles/base/variables';
+
+.copy{
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 1.5rem;
+    grid-row: 1;
+    p{
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 1.4;
+    }
+
+    @include breakpoint(w-sm) {
+        grid-row: 1;
+    }
+}
+
+.subheading{
+    display: inline-block;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    background: linear-gradient(270deg, $gradient-sunshine);
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+}
+
+.image{
+    grid-row: 1;
+    position: relative;
+
+    @include breakpoint(w-sm) {
+        grid-row: 2;
+    }
+}
+
+._left {
+    grid-column: 1 / span 3;
+    align-self: center;
+
+    @include breakpoint (w-sm) {
+        grid-column: 1 / span 6;
+    }
+}
+
+._right {
+    grid-column: 4 / span 3;
+    align-self: center;
+
+    @include breakpoint (w-sm) {
+        margin-top: $space-sm;
+        grid-column: 1 / span 6;
+    }
+}
+
+._frame {
+    position: relative;
+    padding-bottom: 2rem;
+
+    .imgWrap{
+        width: calc(100% - 2rem);
+        height: calc(100% - 2rem);
+        position: relative;
+    }
+
+    img {
+        border-radius: $roundcorner;
+    }
+
+    &:before {
+        content: "";
+        width: calc(100% - 2rem);
+        height: calc(100% - 2rem);
+        background: linear-gradient($color-charcoal-1, $color-charcoal-1) padding-box, linear-gradient(89.94deg, $gradient-sunshine) border-box;
+        border: 6px solid transparent;
+        border-radius: $roundcorner;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+    }
+}
+
+._green-yellow {
+    .subheading {
+        background: linear-gradient(270deg, $gradient-green-yellow);
+    }
+
+    ._frame {
+        &:before {
+            background: linear-gradient($color-charcoal-1, $color-charcoal-1) padding-box, linear-gradient(89.94deg, $gradient-green-yellow) border-box;
+        }
+    }
+}
+
+._purple {
+    .subheading {
+        background: linear-gradient(270deg, $gradient-magenta-purple);
+    }
+
+    ._frame {
+        &:before {
+            background: linear-gradient($color-charcoal-1, $color-charcoal-1) padding-box, linear-gradient(89.94deg, $gradient-magenta-purple) border-box;
+        }
+    }
+}
+
+._green {
+    .subheading {
+        background: linear-gradient(270deg, $gradient-green-blue);
+    }
+
+    ._frame {
+        &:before {
+            background: linear-gradient($color-charcoal-1, $color-charcoal-1) padding-box, linear-gradient(89.94deg, $gradient-green-blue) border-box;
+        }
+    }
+}
+
+._red_orange {
+    .subheading {
+        background: linear-gradient(270deg, $gradient-red-orange);
+    }
+
+    ._frame {
+        &:before {
+            background: linear-gradient($color-charcoal-1, $color-charcoal-1) padding-box, linear-gradient(89.94deg, $gradient-red-orange) border-box;
+        }
+    }
+}
+
+._blue{
+    .subheading {
+        background: linear-gradient(270deg, $gradient-blue);
+    }
+
+    ._frame {
+        &:before {
+            background: linear-gradient($color-charcoal-1, $color-charcoal-1) padding-box, linear-gradient(89.94deg, $gradient-blue) border-box;
+        }
+    }
+}
+
+._pink_red {
+    .subheading {
+        background: linear-gradient(270deg, $gradient-pink-red);
+    }
+
+    ._frame {
+        &:before {
+            background: linear-gradient($color-charcoal-1, $color-charcoal-1) padding-box, linear-gradient(89.94deg, $gradient-pink-red) border-box;
+        }
+    }
+}
+
+._blue_purple {
+    .subheading {
+        background: linear-gradient(270deg, $gradient-blue-purple);
+    }
+
+    ._frame {
+        &:before {
+            background: linear-gradient($color-charcoal-1, $color-charcoal-1) padding-box, linear-gradient(89.94deg, $gradient-blue-purple) border-box;
+        }
+    }
+}

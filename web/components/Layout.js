@@ -8,7 +8,6 @@ function Layout (props) {
   const {config, children} = props
 
   if (!config) {
-    console.error('Missing config')
     return <div>Missing config</div>
   }
 

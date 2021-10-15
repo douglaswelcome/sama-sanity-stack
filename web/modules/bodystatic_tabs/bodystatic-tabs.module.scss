@@ -1,0 +1,111 @@
+@import '../../styles/base/variables';
+@import '../../styles/base/grid';
+
+.nav{
+    grid-column: 2/span 10;
+    margin-bottom: 4rem;
+    text-align: center;
+
+    @include breakpoint (w-sm){
+        display: none;
+    }
+}
+
+.navInner{
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0.25rem 0 0.125rem 0;
+    position: relative;
+}
+
+._slideLeft{
+    .nav_item{
+        &:after{
+            transform-origin: 100% 50%;
+        }
+    }
+}
+
+.nav_item{
+    display: flex;
+    padding: 1rem 2rem;
+    color: $color-charcoal-5;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    transition: all 300ms;
+    &:after{
+        content: "";
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: transparent;
+        transform: scaleX(0);  
+        transform-origin: 0 50%;
+        transition: transform 250ms ease-in-out;
+    }
+    &:hover{
+        color: $color-charcoal-7;
+    }
+    &.active{
+        color: #FFF;
+        &:after{
+            background-color: $color-sunshine;
+            transform: scaleX(1);
+        }
+    }
+}
+
+.tabWrapper{
+    grid-row: 2;
+    grid-column: 3 /span 8;
+    position: relative;
+
+    @include breakpoint (w-sm){
+        grid-column: 1 /span 12;
+        height: 100% !important;
+    } 
+}
+
+.tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 250ms;
+    h4{
+        display: none;
+    }
+    img, video{
+        display: block;
+        max-width: 100%;
+    }
+    &.active{
+        opacity: 1;
+    }
+    
+    @include breakpoint (w-sm){
+        margin-top: 4rem;
+        position: relative;
+        opacity: 1;
+        h4{
+            display: block;
+            margin-bottom: $space-sm;
+        }
+        &:first-of-type{
+            margin-top: 0;
+        }
+    }
+}
+
+.tabContent{
+    padding: 1.5rem 3rem;
+    background-color: $color-charcoal-5;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.4;
+}
