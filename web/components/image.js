@@ -5,7 +5,7 @@ import NextImg from 'next/image'
 import client from '../client'
 
 const Image = (props) => {
-    const {src, layout, width, height, sizes, className} = props;
+    const {src, layout, width, height, sizes} = props;
 
     const imageProps = useNextSanityImage(client, src);
 
@@ -22,11 +22,16 @@ const Image = (props) => {
 
 Image.propTypes = {
     layout: PropTypes.string,
-    height: PropTypes.number,
-    width: PropTypes.number,
+    height: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    width: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
     sizes: PropTypes.string,
-    src: PropTypes.object.isRequired,
-    className: PropTypes.object
+    src: PropTypes.object.isRequired
 }
 
 export default Image;

@@ -50,7 +50,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 const siteConfigQuery = `*[_id == "global-config"]{
   title,
   logo {asset->},
-  frontpage ->,
   mainNav-> {
   	items[]{
       ...,
@@ -84,18 +83,7 @@ class App extends next_app__WEBPACK_IMPORTED_MODULE_1__.default {
     ctx
   }) {
     let pageProps = {};
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
-    }
-
     return _client__WEBPACK_IMPORTED_MODULE_2___default().fetch(siteConfigQuery).then(config => {
-      if (!config) {
-        return {
-          pageProps
-        };
-      }
-
       if (config && pageProps) {
         pageProps.config = config;
       }
