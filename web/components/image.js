@@ -5,9 +5,10 @@ import NextImg from 'next/image'
 import client from '../client'
 
 const Image = (props) => {
-    const {src, layout, width, height, sizes} = props;
-
+    const {src, layout, sizes} = props;
     const imageProps = useNextSanityImage(client, src);
+    const width = (!props.width && layout != 'fill') ? imageProps.width : props.width;
+    const height = (!props.height && layout != 'fill') ? imageProps.height : props.height;
 
     return (
         <>

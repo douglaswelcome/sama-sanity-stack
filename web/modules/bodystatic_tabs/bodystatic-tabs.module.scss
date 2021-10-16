@@ -62,18 +62,20 @@
 .tabWrapper{
     grid-row: 2;
     grid-column: 3 /span 8;
+    display: grid;
     position: relative;
 
     @include breakpoint (w-sm){
         grid-column: 1 /span 12;
-        height: 100% !important;
     } 
 }
 
 .tab {
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-area: 1/1;
     text-align: center;
     opacity: 0;
     transition: all 250ms;
@@ -82,7 +84,9 @@
     }
     img, video{
         display: block;
-        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     &.active{
         opacity: 1;
@@ -108,4 +112,8 @@
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 1.4;
+}
+
+.imgWrap{
+    position: relative;
 }

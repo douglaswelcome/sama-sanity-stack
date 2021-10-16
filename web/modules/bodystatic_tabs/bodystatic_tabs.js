@@ -9,20 +9,7 @@ import styles from './bodystatic-tabs.module.scss'
 const bodystatic_tabs = (props) => {
     const {tabs} = props;
     const [activeTab, setActiveTab] = useState(0);
-    const [tabHeight, setTabHeight] = useState('100%');
     const [tabDir, setTabDir] = useState('');
-
-    useEffect(() => {
-        if(window.innerWidth < 800) return;
-        const tabsEl = Array.from(document.querySelectorAll(`.${styles.tab}`));
-        let tabHeight = 0;
-        tabsEl.map((tab) =>{
-            if (tab.offsetHeight > tabHeight){
-                tabHeight = tab.offsetHeight;
-            } 
-        });
-        setTabHeight(`${tabHeight}px`);
-    })
 
     const handleClick = (e) => {
         const active = parseInt(e.target.getAttribute('data-at'));
@@ -52,7 +39,7 @@ const bodystatic_tabs = (props) => {
                     })}
                 </div>
             </div>
-            <div className={styles.tabWrapper} style={{height: tabHeight}}> 
+            <div className={styles.tabWrapper}> 
                 {tabs.map((tab, i) => {
                     let media;
                     if(tab.video){
@@ -71,7 +58,7 @@ const bodystatic_tabs = (props) => {
                                 </video>;
                     }
                     if(tab.image){
-                        <Image src={tab.image} layout="fill" />
+                        media = <div className={styles.imgWrap}><Image src={tab.image} layout="responsive" objectFit="cover" /></div>;
                     }
                     return (
                         <div 

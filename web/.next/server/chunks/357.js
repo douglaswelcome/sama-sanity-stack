@@ -654,11 +654,11 @@ const Image = props => {
   const {
     src,
     layout,
-    width,
-    height,
     sizes
   } = props;
   const imageProps = (0,external_next_sanity_image_.useNextSanityImage)((client_default()), src);
+  const width = !props.width && layout != 'fill' ? imageProps.width : props.width;
+  const height = !props.height && layout != 'fill' ? imageProps.height : props.height;
   return /*#__PURE__*/jsx_runtime_.jsx(jsx_runtime_.Fragment, {
     children: sizes ? /*#__PURE__*/jsx_runtime_.jsx(next_image.default, _objectSpread(_objectSpread({}, imageProps), {}, {
       layout: layout,
@@ -1781,24 +1781,9 @@ const bodystatic_tabs = props => {
     1: setActiveTab
   } = (0,external_react_.useState)(0);
   const {
-    0: tabHeight,
-    1: setTabHeight
-  } = (0,external_react_.useState)('100%');
-  const {
     0: tabDir,
     1: setTabDir
   } = (0,external_react_.useState)('');
-  (0,external_react_.useEffect)(() => {
-    if (window.innerWidth < 800) return;
-    const tabsEl = Array.from(document.querySelectorAll(`.${(bodystatic_tabs_module_default()).tab}`));
-    let tabHeight = 0;
-    tabsEl.map(tab => {
-      if (tab.offsetHeight > tabHeight) {
-        tabHeight = tab.offsetHeight;
-      }
-    });
-    setTabHeight(`${tabHeight}px`);
-  });
 
   const handleClick = e => {
     const active = parseInt(e.target.getAttribute('data-at'));
@@ -1829,9 +1814,6 @@ const bodystatic_tabs = props => {
       })
     }), /*#__PURE__*/jsx_runtime_.jsx("div", {
       className: (bodystatic_tabs_module_default()).tabWrapper,
-      style: {
-        height: tabHeight
-      },
       children: tabs.map((tab, i) => {
         let media;
 
@@ -1851,10 +1833,13 @@ const bodystatic_tabs = props => {
         }
 
         if (tab.image) {
-          /*#__PURE__*/
-          jsx_runtime_.jsx(components_image, {
-            src: tab.image,
-            layout: "fill"
+          media = /*#__PURE__*/jsx_runtime_.jsx("div", {
+            className: (bodystatic_tabs_module_default()).imgWrap,
+            children: /*#__PURE__*/jsx_runtime_.jsx(components_image, {
+              src: tab.image,
+              layout: "responsive",
+              objectFit: "cover"
+            })
           });
         }
 
@@ -2535,7 +2520,8 @@ module.exports = {
 	"active": "bodystatic-tabs_active__2-Hns",
 	"tabWrapper": "bodystatic-tabs_tabWrapper__36Oah",
 	"tab": "bodystatic-tabs_tab__3CcWj",
-	"tabContent": "bodystatic-tabs_tabContent__38szV"
+	"tabContent": "bodystatic-tabs_tabContent__38szV",
+	"imgWrap": "bodystatic-tabs_imgWrap___3qu-"
 };
 
 

@@ -14,6 +14,7 @@ export default {
             title: "Section Background Color",
             options: {
                 list: [
+                  { title: 'Charcoal 0', value: 'umoja-u-bg--charcoal0' },
                   { title: 'Charcoal 1 (Default)', value: '' },
                   { title: 'Charcoal 2', value: 'umoja-u-bg--charcoal2'},
                   { title: 'Charcoal 3', value: 'umoja-u-bg--charcoal3'},

@@ -25,9 +25,12 @@ export default {
             tabs: 'tabs'
         },
         prepare ({tabs}) {
-            let title = "Tabs";
+            let title = "Tabs: ";
             tabs.map((tab, i) => {
-                title += ` ,${tab.title}`;
+                title += `${tab.title}`;
+                if(i < (tabs.length - 1)){
+                  title += `, `;
+                }
             });
           return {
             title: title
