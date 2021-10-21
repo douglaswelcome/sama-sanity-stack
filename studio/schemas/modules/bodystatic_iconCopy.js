@@ -3,7 +3,7 @@ import React from 'react'
 export default {
     type: 'object',
     name: 'bodystatic_iconCopy',
-    title: 'Icon Copy List',
+    title: 'Columns: Text & Icons',
     options: {
       collapsible: true,
       collapsed: false
@@ -35,7 +35,7 @@ export default {
       {
         type: 'array',
         name: 'icons',
-        title: 'Icons',
+        title: 'Items',
         validation: Rule => [
             Rule.min(3),
             Rule.max(4)
@@ -51,7 +51,7 @@ export default {
       },
       prepare ({icon}) {
       return {
-        title: 'Icon Copy List',
+        title: 'Columns: Text & Icons',
         media: <img src={icon} alt="" />
       }
     }

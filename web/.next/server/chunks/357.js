@@ -867,7 +867,7 @@ const bodystatic_iconCopy = props => {
     children: icons.map(icon => {
       return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
         className: (bodystatic_iconCopy_module_default()).icon,
-        children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+        children: [icon.icon && /*#__PURE__*/jsx_runtime_.jsx("div", {
           className: (bodystatic_iconCopy_module_default()).iconWrap,
           children: responsive ? /*#__PURE__*/jsx_runtime_.jsx(components_image, {
             layout: "fill",
@@ -1746,11 +1746,9 @@ const bodystatic_splitTxtImg = props => {
       className: imgColClass,
       children: /*#__PURE__*/jsx_runtime_.jsx("div", {
         className: (bodystatic_splitTxtImg_module_default()).imgWrap,
-        children: /*#__PURE__*/jsx_runtime_.jsx(components_image, {
+        children: image && /*#__PURE__*/jsx_runtime_.jsx(components_image, {
           src: image,
           layout: "responsive",
-          width: "100%",
-          height: "100%",
           objectFit: "cover"
         })
       })
@@ -1902,7 +1900,7 @@ function resolveModule(module) {
 }
 
 function RenderSection(props) {
-  const {
+  let {
     modules,
     background_color
   } = props;
@@ -2019,6 +2017,20 @@ const Button = props => {
 /* harmony export */   "A3": () => (/* binding */ pageSlugsQuery)
 /* harmony export */ });
 const homeID = `*[_id == "global-config"][0].frontpage->_id`;
+const moduleFields = `
+...,
+"align": richText.align,
+"richText": 
+    richText.richText[]{
+        ...,
+        markDefs[]{
+            ...,
+            internalLink->{
+                slug
+            }
+        }
+    }
+`;
 const pageFields = `
 title,
 "slug": slug.current,
@@ -2026,17 +2038,13 @@ title,
     _key,
     background_color,
     "modules": modules.modules[]{
-        ...,
-        "align": richText.align,
-        "richText": 
-           richText.richText[]{
-            ...,
-            markDefs[]{
-                ...,
-                internalLink->{
-                    slug
-                }
+        _type == "reusable_modules_module" => module_ref->.module{
+            "ref_modules": modules[]{
+                ${moduleFields}
             }
+        },
+        _type != "reusable_modules_module" => {
+            ${moduleFields}
         }
     }
 }

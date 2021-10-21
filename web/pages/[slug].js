@@ -7,10 +7,8 @@ import RenderSection from '../components/RenderSection'
 
 const Page = ({ data = {}, config }) => {
   const router = useRouter();
-
   const slug = data?.page?.slug;
   const sections = data?.page?.sections;
-
   if (!router.isFallback && !slug) {
     return <ErrorPage statusCode={404} />
   }
@@ -19,6 +17,7 @@ const Page = ({ data = {}, config }) => {
     <Layout config={config}>
       {sections &&
         sections.map((section) => {
+          console.log(section.modules)
           return <RenderSection modules={section.modules} background_color={section.background_color} key={section._key} />
         })
       }
@@ -30,6 +29,19 @@ export async function getStaticProps({ params }) {
   const { page} = await client.fetch(pageQuery, {
     slug: params.slug,
   })
+
+  const sections = page?.sections;
+  if(sections){
+    sections.map(section =>{
+      let {modules} = section;
+      modules.map((module, i) =>{
+        if(module.ref_modules){
+          let refs = module.ref_modules;
+          modules.splice(i, 1 , ...refs);
+        }
+      });
+    })
+  }
 
   return {
     props: {

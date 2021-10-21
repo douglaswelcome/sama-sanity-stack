@@ -62,6 +62,7 @@ const Page = ({
   return /*#__PURE__*/jsx_runtime_.jsx(Layout/* default */.Z, {
     config: config,
     children: sections && sections.map(section => {
+      console.log(section.modules);
       return /*#__PURE__*/jsx_runtime_.jsx(RenderSection/* default */.Z, {
         modules: section.modules,
         background_color: section.background_color
@@ -78,6 +79,22 @@ async function getStaticProps({
   } = await client_default().fetch(queries/* pageQuery */.JR, {
     slug: params.slug
   });
+  const sections = page === null || page === void 0 ? void 0 : page.sections;
+
+  if (sections) {
+    sections.map(section => {
+      let {
+        modules
+      } = section;
+      modules.map((module, i) => {
+        if (module.ref_modules) {
+          let refs = module.ref_modules;
+          modules.splice(i, 1, ...refs);
+        }
+      });
+    });
+  }
+
   return {
     props: {
       data: {
