@@ -19,8 +19,19 @@ const Index = (props) => {
 }
 
 export async function getStaticProps() {
-    const home = await client.fetch(indexQuery)
+    const home = await client.fetch(indexQuery);
 
+    const sections = home?.sections;
+    sections.map(section =>{
+      let {modules} = section;
+      modules.map((module, i) =>{
+        if(module.ref_modules){
+          let refs = module.ref_modules;
+          modules.splice(i, 1 , ...refs);
+        }
+      });
+    })
+    
     return {
         props: {
           page: home,

@@ -47,6 +47,18 @@ const Index = props => {
 
 async function getStaticProps() {
   const home = await _client__WEBPACK_IMPORTED_MODULE_0___default().fetch(_libs_queries__WEBPACK_IMPORTED_MODULE_1__/* .indexQuery */ .zl);
+  const sections = home === null || home === void 0 ? void 0 : home.sections;
+  sections.map(section => {
+    let {
+      modules
+    } = section;
+    modules.map((module, i) => {
+      if (module.ref_modules) {
+        let refs = module.ref_modules;
+        modules.splice(i, 1, ...refs);
+      }
+    });
+  });
   return {
     props: {
       page: home

@@ -19,13 +19,15 @@ const bodystatic_iconCopy = (props) => {
             {icons.map((icon) => {
                 return ( 
                 <div className={styles.icon} key={icon._key}>
+                    {icon.icon && 
                     <div className={styles.iconWrap}>
                         {responsive ?
-                            <Image layout="fill" src={icon.icon} />
-                        :
-                            <Image layout="fixed" src={icon.icon} height={48} width={48} />
+                                <Image layout="fill" src={icon.icon} />
+                            :
+                                <Image layout="fixed" src={icon.icon} height={48} width={48} />
                         }
                     </div>
+                    }
                     <h5>{icon.title}</h5>
                     <p>{icon.body}</p>
                 </div>

@@ -14,9 +14,9 @@ function resolveModule (module) {
 }
 
 function RenderSection (props) {
-  const {modules, background_color} = props;
+  let {modules, background_color} = props;
   const className = background_color ? `umoja-l-grid-section ${background_color}` : "umoja-l-grid-section";
-  
+
   return (
     <section className={className}>
       {modules.map(module => {

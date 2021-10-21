@@ -24,7 +24,9 @@ const bodystatic_splitTxtImg  = (props) => {
             </div>
             <div className={imgColClass}>
                 <div className={styles.imgWrap}>
-                    <Image src={image} layout="responsive" width="100%" height="100%" objectFit='cover' />
+                    {image &&
+                        <Image src={image} layout="responsive" objectFit="cover" />
+                    }
                 </div>
             </div>
         </div>

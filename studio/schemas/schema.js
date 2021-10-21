@@ -8,6 +8,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import page from './documents/page'
 import navigation from './documents/navigation'
 import siteConfig from './documents/siteConfig'
+import reusable_module from './documents/reusableModule'
 
 //Object types
 import button from './objects/button'
@@ -40,6 +41,7 @@ import bodystatic_splitTxtImg from './modules/bodystatic_splitTxtImg'
 import bodystatic_tabs from './modules/bodystatic_tabs'
 import tab from './objects/tab'
 import richTxt_field from './objects/richTxt_field'
+import reusable_module_module from './modules/reusable_modules_module'
 
 export default createSchema({
   name: 'default',
@@ -51,6 +53,7 @@ export default createSchema({
     page,
     navigation,
     siteConfig,
+    reusable_module,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     page_sections,
@@ -82,6 +85,7 @@ export default createSchema({
     bodystatic_splitTxtImg,
     bodystatic_tabs,
     bodymove_featureWindow,
-    bodymove_stickySideScroll
+    bodymove_stickySideScroll,
+    reusable_module_module
   ]),
 })
