@@ -3,7 +3,7 @@ import React from 'react'
 export default {
     type: 'object',
     name: 'bodystatic_iconCopy',
-    title: 'Columns: Text & Icons',
+    title: 'Columns: Images with Text',
     options: {
       collapsible: true,
       collapsed: false

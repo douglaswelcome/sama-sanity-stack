@@ -42,6 +42,9 @@ import bodystatic_tabs from './modules/bodystatic_tabs'
 import tab from './objects/tab'
 import richTxt_field from './objects/richTxt_field'
 import reusable_module_module from './modules/reusable_modules_module'
+import bodystatic_iconList from './modules/bodystatic_iconList'
+import bodystatic_centerPanel from './modules/bodystatic_centerPanel'
+import bodystatic_headSubCta from './modules/bodystatic_headSubCta'
 
 export default createSchema({
   name: 'default',
@@ -86,6 +89,9 @@ export default createSchema({
     bodystatic_tabs,
     bodymove_featureWindow,
     bodymove_stickySideScroll,
-    reusable_module_module
+    reusable_module_module,
+    bodystatic_iconList,
+    bodystatic_centerPanel,
+    bodystatic_headSubCta
   ]),
 })

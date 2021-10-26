@@ -1,0 +1,14 @@
+@import '../../styles/base/variables';
+
+.preheadline,
+.headline,
+.subheadline,
+.cta {
+    grid-column: 3 /span 8;
+    text-align: center;
+}
+
+.preheadline{
+    text-transform: uppercase;
+    color: $color-sunshine;
+}
