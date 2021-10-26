@@ -8,9 +8,9 @@ export default {
     },
     fields: [
         {
-            name: 'page_title',
-            type: 'boolean',
-            title: 'Show Page Title',
+            name: 'preheadline',
+            type: 'string',
+            title: 'Preheadline',
         },
         {
             name: 'heading',

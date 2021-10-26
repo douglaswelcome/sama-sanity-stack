@@ -15,3 +15,6 @@ export {default as bodystatic_cardImg} from './bodystatic_cardImg/bodystatic_car
 export {default as bodystatic_display} from './bodystatic_display/bodystatic_display'
 export {default as bodystatic_splitTxtImg} from './bodystatic_splitTxtImg/bodystatic_splitTxtImg'
 export {default as bodystatic_tabs} from './bodystatic_tabs/bodystatic_tabs'
+export {default as bodystatic_iconList} from './bodystatic_iconList/bodystatic_iconList'
+export {default as bodystatic_centerPanel} from './bodystatic_centerPanel/bodystatic_centerPanel'
+export {default as bodystatic_headSubCta} from './bodystatic_headSubCta/bodystatic_headSubCta'

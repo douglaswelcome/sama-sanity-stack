@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import {getFile} from '@sanity/asset-utils'
 import client from '../../client'
-import Image from '../../components/image'
+import { useNextSanityImage } from 'next-sanity-image';
 import styles from './bodymove-stickySideScroll.module.scss'
 
 const bodymove_stickySideScroll = (props) => {
@@ -135,7 +135,8 @@ const bodymove_stickySideScroll = (props) => {
                         </video>
                     )
                 }else{
-                    return <Image layout="fill" src={item.image} key={item._key} />
+                    const imageProps = useNextSanityImage(client, item.image);
+                    return <img key={item._key} className={mediaClass} src={imageProps.src} alt={imageProps.alt} />
                 }
             })}  
         </div>

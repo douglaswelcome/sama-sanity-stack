@@ -30,8 +30,8 @@ var client_default = /*#__PURE__*/__webpack_require__.n(client);
 var queries = __webpack_require__(4645);
 // EXTERNAL MODULE: ./components/Layout.js + 5 modules
 var Layout = __webpack_require__(5964);
-// EXTERNAL MODULE: ./components/RenderSection.js + 23 modules
-var RenderSection = __webpack_require__(1898);
+// EXTERNAL MODULE: ./components/RenderSection.js + 26 modules
+var RenderSection = __webpack_require__(5171);
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(5282);
 ;// CONCATENATED MODULE: ./pages/[slug].js
@@ -62,7 +62,6 @@ const Page = ({
   return /*#__PURE__*/jsx_runtime_.jsx(Layout/* default */.Z, {
     config: config,
     children: sections && sections.map(section => {
-      console.log(section.modules);
       return /*#__PURE__*/jsx_runtime_.jsx(RenderSection/* default */.Z, {
         modules: section.modules,
         background_color: section.background_color
@@ -293,7 +292,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [61,357], () => (__webpack_exec__(8414)));
+var __webpack_exports__ = __webpack_require__.X(0, [61,854], () => (__webpack_exec__(8414)));
 module.exports = __webpack_exports__;
 
 })();

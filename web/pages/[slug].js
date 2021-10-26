@@ -17,7 +17,6 @@ const Page = ({ data = {}, config }) => {
     <Layout config={config}>
       {sections &&
         sections.map((section) => {
-          console.log(section.modules)
           return <RenderSection modules={section.modules} background_color={section.background_color} key={section._key} />
         })
       }
