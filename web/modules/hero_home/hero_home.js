@@ -15,7 +15,6 @@ const hero_home = (props) => {
         </div>
         <div className={styles.copy}>
             <h1 className="display-small">{heading}</h1>
-            <div className="divider-line divider-line--horizontal divider-line--negative"></div>
             <h2 className={styles.subheadline}>{tagline}</h2>
             {cta &&
               <Button {...cta} />

@@ -134,10 +134,10 @@ $med-page-width: 800px;
   padding-bottom: $space-lg;
   position: relative;
 
-  &:first-of-type{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
+  // &:first-of-type{
+  //   padding-top: 3rem;
+  //   padding-bottom: 3rem;
+  // }
 
   > *{
     margin-bottom: $space-md;
