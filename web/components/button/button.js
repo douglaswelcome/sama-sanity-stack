@@ -25,9 +25,9 @@ const Button = (props) => {
     if(buttonLink){
         return (
             <>
-                {buttonLink.externalUrl ?
+                {link.externalUrl ?
                     <a 
-                        href={buttonLink.externalUrl}
+                        href={buttonLink}
                         className={wrapperClass}
                         target="_blank"
                         rel="noopener"
@@ -35,9 +35,7 @@ const Button = (props) => {
                         {buttonInner}
                     </a>
                     :
-                    <Link 
-                        href={buttonLink}
-                    >
+                    <Link href={`/${buttonLink}`}>
                         <a className={wrapperClass}>
                             {buttonInner}
                         </a>

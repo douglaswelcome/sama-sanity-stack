@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
-import {LogoJsonLd} from 'next-seo'
 import Header from './header/header'
 import Footer from './footer/footer'
 
@@ -9,7 +8,6 @@ function Layout (props) {
   const {config, children} = props
 
   if (!config) {
-    console.error('Missing config')
     return <div>Missing config</div>
   }
 

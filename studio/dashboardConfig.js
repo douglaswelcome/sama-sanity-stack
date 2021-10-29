@@ -16,7 +16,7 @@ export default {
               apiId: 'd534ccae-4025-4e36-acba-13ebcd5a7dff',
               buildHookId: '615c8aa866dba816eae9e2a6',
               name: 'sama-next',
-              url: 'https://sama-next.netlify.app',
+              url: 'https://sama-next.netlify.app/',
             }
           ]
         }

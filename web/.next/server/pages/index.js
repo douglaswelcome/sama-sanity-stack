@@ -28,6 +28,7 @@ eval("const sanityClient = __webpack_require__(/*! @sanity/client */ \"@sanity/c
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+<<<<<<< HEAD
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ \"prop-types\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/head */ \"next/head\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next-seo */ \"next-seo\");\n/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _header_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header/header */ \"./components/header/header.js\");\n/* harmony import */ var _footer_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./footer/footer */ \"./components/footer/footer.js\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__);\nvar _jsxFileName = \"/Users/douglaswelcome/webdev/Sama/sama-sanity/web/components/Layout.js\";\n\n\n\n\n\n\n\n\n\nfunction Layout(props) {\n  const {\n    config,\n    children\n  } = props;\n\n  if (!config) {\n    console.error('Missing config');\n    return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxDEV)(\"div\", {\n      children: \"Missing config\"\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 13,\n      columnNumber: 12\n    }, this);\n  }\n\n  const {\n    title,\n    mainNav,\n    footerNav,\n    logo,\n    url\n  } = config;\n  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {\n    children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxDEV)((next_head__WEBPACK_IMPORTED_MODULE_2___default()), {\n      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxDEV)(\"meta\", {\n        name: \"viewport\",\n        content: \"initial-scale=1.0, width=device-width, viewport-fit=cover\"\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 21,\n        columnNumber: 9\n      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxDEV)(\"title\", {\n        children: \"Sama - Make Training Data Your Competitive Advantage\"\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 22,\n        columnNumber: 9\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 20,\n      columnNumber: 7\n    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxDEV)(\"div\", {\n      className: \"container\",\n      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxDEV)(_header_header__WEBPACK_IMPORTED_MODULE_4__.default, {\n        title: title,\n        navItems: mainNav,\n        logo: logo\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 25,\n        columnNumber: 9\n      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxDEV)(\"main\", {\n        className: \"content\",\n        children: children\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 26,\n        columnNumber: 9\n      }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxDEV)(_footer_footer__WEBPACK_IMPORTED_MODULE_5__.default, {\n        navItems: footerNav.items,\n        logo: logo\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 27,\n        columnNumber: 9\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 24,\n      columnNumber: 7\n    }, this)]\n  }, void 0, true);\n}\n\nLayout.propTypes = {\n  config: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape({\n    title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),\n    mainNav: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape({\n      items: prop_types__WEBPACK_IMPORTED_MODULE_1___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_1___default().object)),\n      nav_cta: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape({\n        link: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),\n        title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),\n        type: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string)\n      })\n    }),\n    footerNav: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape({\n      items: prop_types__WEBPACK_IMPORTED_MODULE_1___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_1___default().object))\n    }),\n    url: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),\n    logo: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape({\n      asset: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape({\n        url: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string)\n      })\n    })\n  })\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0xheW91dC5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7OztBQUVBLFNBQVNNLE1BQVQsQ0FBaUJDLEtBQWpCLEVBQXdCO0FBQ3RCLFFBQU07QUFBQ0MsSUFBQUEsTUFBRDtBQUFTQyxJQUFBQTtBQUFULE1BQXFCRixLQUEzQjs7QUFFQSxNQUFJLENBQUNDLE1BQUwsRUFBYTtBQUNYRSxJQUFBQSxPQUFPLENBQUNDLEtBQVIsQ0FBYyxnQkFBZDtBQUNBLHdCQUFPO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFlBQVA7QUFDRDs7QUFFRCxRQUFNO0FBQUNDLElBQUFBLEtBQUQ7QUFBUUMsSUFBQUEsT0FBUjtBQUFpQkMsSUFBQUEsU0FBakI7QUFBNEJDLElBQUFBLElBQTVCO0FBQWtDQyxJQUFBQTtBQUFsQyxNQUF5Q1IsTUFBL0M7QUFFQSxzQkFDRTtBQUFBLDRCQUNFLDhEQUFDLGtEQUFEO0FBQUEsOEJBQ0U7QUFBTSxZQUFJLEVBQUMsVUFBWDtBQUFzQixlQUFPLEVBQUM7QUFBOUI7QUFBQTtBQUFBO0FBQUE7QUFBQSxjQURGLGVBRUU7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FGRjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsWUFERixlQUtFO0FBQUssZUFBUyxFQUFDLFdBQWY7QUFBQSw4QkFDRSw4REFBQyxtREFBRDtBQUFRLGFBQUssRUFBRUksS0FBZjtBQUFzQixnQkFBUSxFQUFFQyxPQUFoQztBQUF5QyxZQUFJLEVBQUVFO0FBQS9DO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FERixlQUVFO0FBQU0saUJBQVMsRUFBQyxTQUFoQjtBQUFBLGtCQUEyQk47QUFBM0I7QUFBQTtBQUFBO0FBQUE7QUFBQSxjQUZGLGVBR0UsOERBQUMsbURBQUQ7QUFBUSxnQkFBUSxFQUFFSyxTQUFTLENBQUNHLEtBQTVCO0FBQW1DLFlBQUksRUFBRUY7QUFBekM7QUFBQTtBQUFBO0FBQUE7QUFBQSxjQUhGO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxZQUxGO0FBQUEsa0JBREY7QUFhRDs7QUFFRFQsTUFBTSxDQUFDWSxTQUFQLEdBQW1CO0FBQ2pCVixFQUFBQSxNQUFNLEVBQUVQLHVEQUFBLENBQWdCO0FBQ3RCVyxJQUFBQSxLQUFLLEVBQUVYLDBEQURlO0FBRXRCWSxJQUFBQSxPQUFPLEVBQUVaLHVEQUFBLENBQWdCO0FBQ3ZCZ0IsTUFBQUEsS0FBSyxFQUFFaEIseURBQUEsQ0FBa0JBLDBEQUFsQixDQURnQjtBQUV2QnNCLE1BQUFBLE9BQU8sRUFBRXRCLHVEQUFBLENBQWdCO0FBQ3ZCdUIsUUFBQUEsSUFBSSxFQUFFdkIsMERBRGlCO0FBRXZCVyxRQUFBQSxLQUFLLEVBQUVYLDBEQUZnQjtBQUd2QndCLFFBQUFBLElBQUksRUFBRXhCLDBEQUFnQm1CO0FBSEMsT0FBaEI7QUFGYyxLQUFoQixDQUZhO0FBVXRCTixJQUFBQSxTQUFTLEVBQUViLHVEQUFBLENBQWdCO0FBQ3pCZ0IsTUFBQUEsS0FBSyxFQUFFaEIseURBQUEsQ0FBa0JBLDBEQUFsQjtBQURrQixLQUFoQixDQVZXO0FBYXRCZSxJQUFBQSxHQUFHLEVBQUVmLDBEQWJpQjtBQWN0QmMsSUFBQUEsSUFBSSxFQUFFZCx1REFBQSxDQUFnQjtBQUNwQnlCLE1BQUFBLEtBQUssRUFBRXpCLHVEQUFBLENBQWdCO0FBQ3JCZSxRQUFBQSxHQUFHLEVBQUVmLDBEQUFnQm1CO0FBREEsT0FBaEI7QUFEYSxLQUFoQjtBQWRnQixHQUFoQjtBQURTLENBQW5CO0FBdUJBLGlFQUFlZCxNQUFmIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vc2FtYS1zYW5pdHkvLi9jb21wb25lbnRzL0xheW91dC5qcz9lNThhIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcbmltcG9ydCBQcm9wVHlwZXMgZnJvbSAncHJvcC10eXBlcydcbmltcG9ydCBIZWFkIGZyb20gJ25leHQvaGVhZCdcbmltcG9ydCB7TG9nb0pzb25MZH0gZnJvbSAnbmV4dC1zZW8nXG5pbXBvcnQgSGVhZGVyIGZyb20gJy4vaGVhZGVyL2hlYWRlcidcbmltcG9ydCBGb290ZXIgZnJvbSAnLi9mb290ZXIvZm9vdGVyJ1xuXG5mdW5jdGlvbiBMYXlvdXQgKHByb3BzKSB7XG4gIGNvbnN0IHtjb25maWcsIGNoaWxkcmVufSA9IHByb3BzXG5cbiAgaWYgKCFjb25maWcpIHtcbiAgICBjb25zb2xlLmVycm9yKCdNaXNzaW5nIGNvbmZpZycpXG4gICAgcmV0dXJuIDxkaXY+TWlzc2luZyBjb25maWc8L2Rpdj5cbiAgfVxuXG4gIGNvbnN0IHt0aXRsZSwgbWFpbk5hdiwgZm9vdGVyTmF2LCBsb2dvLCB1cmx9ID0gY29uZmlnXG5cbiAgcmV0dXJuIChcbiAgICA8PlxuICAgICAgPEhlYWQ+XG4gICAgICAgIDxtZXRhIG5hbWU9J3ZpZXdwb3J0JyBjb250ZW50PSdpbml0aWFsLXNjYWxlPTEuMCwgd2lkdGg9ZGV2aWNlLXdpZHRoLCB2aWV3cG9ydC1maXQ9Y292ZXInIC8+XG4gICAgICAgIDx0aXRsZT5TYW1hIC0gTWFrZSBUcmFpbmluZyBEYXRhIFlvdXIgQ29tcGV0aXRpdmUgQWR2YW50YWdlPC90aXRsZT5cbiAgICAgIDwvSGVhZD5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPSdjb250YWluZXInPlxuICAgICAgICA8SGVhZGVyIHRpdGxlPXt0aXRsZX0gbmF2SXRlbXM9e21haW5OYXZ9IGxvZ289e2xvZ299IC8+XG4gICAgICAgIDxtYWluIGNsYXNzTmFtZT0nY29udGVudCc+e2NoaWxkcmVufTwvbWFpbj5cbiAgICAgICAgPEZvb3RlciBuYXZJdGVtcz17Zm9vdGVyTmF2Lml0ZW1zfSBsb2dvPXtsb2dvfSAvPlxuICAgICAgPC9kaXY+XG4gICAgPC8+XG4gIClcbn1cblxuTGF5b3V0LnByb3BUeXBlcyA9IHtcbiAgY29uZmlnOiBQcm9wVHlwZXMuc2hhcGUoe1xuICAgIHRpdGxlOiBQcm9wVHlwZXMuc3RyaW5nLFxuICAgIG1haW5OYXY6IFByb3BUeXBlcy5zaGFwZSh7XG4gICAgICBpdGVtczogUHJvcFR5cGVzLmFycmF5T2YoUHJvcFR5cGVzLm9iamVjdCksXG4gICAgICBuYXZfY3RhOiBQcm9wVHlwZXMuc2hhcGUoe1xuICAgICAgICBsaW5rOiBQcm9wVHlwZXMub2JqZWN0LFxuICAgICAgICB0aXRsZTogUHJvcFR5cGVzLnN0cmluZyxcbiAgICAgICAgdHlwZTogUHJvcFR5cGVzLnN0cmluZ1xuICAgICAgfSlcbiAgICB9KSxcbiAgICBmb290ZXJOYXY6IFByb3BUeXBlcy5zaGFwZSh7XG4gICAgICBpdGVtczogUHJvcFR5cGVzLmFycmF5T2YoUHJvcFR5cGVzLm9iamVjdClcbiAgICB9KSxcbiAgICB1cmw6IFByb3BUeXBlcy5zdHJpbmcsXG4gICAgbG9nbzogUHJvcFR5cGVzLnNoYXBlKHtcbiAgICAgIGFzc2V0OiBQcm9wVHlwZXMuc2hhcGUoe1xuICAgICAgICB1cmw6IFByb3BUeXBlcy5zdHJpbmdcbiAgICAgIH0pXG4gICAgfSksXG4gIH0pXG59XG5cbmV4cG9ydCBkZWZhdWx0IExheW91dFxuIl0sIm5hbWVzIjpbIlJlYWN0IiwiUHJvcFR5cGVzIiwiSGVhZCIsIkxvZ29Kc29uTGQiLCJIZWFkZXIiLCJGb290ZXIiLCJMYXlvdXQiLCJwcm9wcyIsImNvbmZpZyIsImNoaWxkcmVuIiwiY29uc29sZSIsImVycm9yIiwidGl0bGUiLCJtYWluTmF2IiwiZm9vdGVyTmF2IiwibG9nbyIsInVybCIsIml0ZW1zIiwicHJvcFR5cGVzIiwic2hhcGUiLCJzdHJpbmciLCJhcnJheU9mIiwib2JqZWN0IiwibmF2X2N0YSIsImxpbmsiLCJ0eXBlIiwiYXNzZXQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/Layout.js\n");
 
@@ -242,6 +243,84 @@ eval("module.exports = __webpack_require__(/*! ./dist/client/link */ \"./node_mo
 /*!*********************************!*\
   !*** external "@sanity/client" ***!
   \*********************************/
+=======
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(267);
+/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_client__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _libs_queries__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4645);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5964);
+/* harmony import */ var _components_RenderSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5171);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5282);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+const Index = props => {
+  const {
+    page,
+    config
+  } = props;
+  const {
+    sections
+  } = page;
+  return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__/* .default */ .Z, {
+    config: config,
+    children: sections && sections.map(section => {
+      return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_components_RenderSection__WEBPACK_IMPORTED_MODULE_3__/* .default */ .Z, {
+        modules: section.modules,
+        background_color: section.background_color
+      }, section._key);
+    })
+  });
+};
+
+async function getStaticProps() {
+  const home = await _client__WEBPACK_IMPORTED_MODULE_0___default().fetch(_libs_queries__WEBPACK_IMPORTED_MODULE_1__/* .indexQuery */ .zl);
+  const sections = home === null || home === void 0 ? void 0 : home.sections;
+  sections.map(section => {
+    let {
+      modules
+    } = section;
+    modules.map((module, i) => {
+      if (module.ref_modules) {
+        let refs = module.ref_modules;
+        modules.splice(i, 1, ...refs);
+      }
+    });
+  });
+  return {
+    props: {
+      page: home
+    }
+  };
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Index);
+
+/***/ }),
+
+/***/ 9484:
+/***/ ((module) => {
+
+module.exports = require("@sanity/asset-utils");
+
+/***/ }),
+
+/***/ 2904:
+/***/ ((module) => {
+
+module.exports = require("@sanity/block-content-to-react");
+
+/***/ }),
+
+/***/ 8809:
+>>>>>>> develop
 /***/ ((module) => {
 
 "use strict";
@@ -249,6 +328,7 @@ module.exports = require("@sanity/client");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "next-seo":
 /*!***************************!*\
   !*** external "next-seo" ***!
@@ -257,6 +337,19 @@ module.exports = require("@sanity/client");
 
 "use strict";
 module.exports = require("next-seo");
+=======
+/***/ 5768:
+/***/ ((module) => {
+
+module.exports = require("lottie-web");
+
+/***/ }),
+
+/***/ 1095:
+/***/ ((module) => {
+
+module.exports = require("next-sanity-image");
+>>>>>>> develop
 
 /***/ }),
 
@@ -271,10 +364,28 @@ module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../i18n/normalize-locale-path":
 /*!*********************************************************************!*\
   !*** external "next/dist/shared/lib/i18n/normalize-locale-path.js" ***!
   \*********************************************************************/
+=======
+/***/ 822:
+/***/ ((module) => {
+
+module.exports = require("next/dist/server/image-config.js");
+
+/***/ }),
+
+/***/ 6695:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/head.js");
+
+/***/ }),
+
+/***/ 5378:
+>>>>>>> develop
 /***/ ((module) => {
 
 "use strict";
@@ -370,10 +481,21 @@ module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../shared/lib/utils":
 /*!************************************************!*\
   !*** external "next/dist/shared/lib/utils.js" ***!
   \************************************************/
+=======
+/***/ 556:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/to-base-64.js");
+
+/***/ }),
+
+/***/ 7620:
+>>>>>>> develop
 /***/ ((module) => {
 
 "use strict";
@@ -475,7 +597,11 @@ module.exports = require("react/jsx-dev-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+<<<<<<< HEAD
 var __webpack_exports__ = (__webpack_exec__("./pages/index.js"));
+=======
+var __webpack_exports__ = __webpack_require__.X(0, [61,854], () => (__webpack_exec__(6124)));
+>>>>>>> develop
 module.exports = __webpack_exports__;
 
 })();

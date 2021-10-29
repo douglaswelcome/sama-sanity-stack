@@ -1,0 +1,17 @@
+@import '../../styles/base/grid';
+@import '../../styles/base/variables';
+
+.panel{
+    grid-column: 3 / span 8;
+    border-radius: $roundcorner;
+    padding: 3rem;
+    background-color: $color-charcoal-2;
+    h2{
+        margin-bottom: $space-sm;
+    }
+
+    @include breakpoint(w-sm){
+        grid-column: 1 / span 12;
+        padding: 1.5rem;
+    }
+}

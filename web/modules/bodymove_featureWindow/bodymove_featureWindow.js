@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react'
 import PropTypes from 'prop-types'
-import useIntersection from '../../tools/useIntersection'
+import useIntersection from '../../libs/useIntersection'
 import LottieAnimation from '../../components/lottie_animation'
 import Image from '../../components/image'
 import styles from './bodymove-featureWindow.module.scss'

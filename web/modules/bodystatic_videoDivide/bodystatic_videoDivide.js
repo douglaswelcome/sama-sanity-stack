@@ -16,7 +16,7 @@ const bodystatic_videoDivide = (props) => {
                     autoPlay="autoplay" 
                     loop="loop" 
                     playsInline="playsinline" 
-                    muted="true" 
+                    muted={true}
                 >
                     <source
                         src={videoPath.asset.url}

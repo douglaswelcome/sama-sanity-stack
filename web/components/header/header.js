@@ -44,15 +44,7 @@ class Header extends Component {
     return (
       <header className={`${styles.outer} ${showNav ? styles._active: ''}`}>
         <nav className={`umoja-l-grid--12 ${styles.wrapper}`}>
-          <Link
-            href={{
-              pathname: '/',
-              query: {
-                slug: '/'
-              }
-            }}
-            as='/'
-          >
+          <Link href="/">
             <a className={styles.logo}>
               <SVG src={logo.asset.url} />
             </a>
@@ -72,7 +64,6 @@ class Header extends Component {
                 <li className={styles.navItem} key={item._key}>
                   {item._type == 'navDropdownMenu' ?
                       <NavDropDown {...item} />
-
                       :
                       <NavLink {...item} />
                   }

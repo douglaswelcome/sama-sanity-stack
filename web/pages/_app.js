@@ -6,7 +6,6 @@ import '../styles/main.scss'
 const siteConfigQuery = `*[_id == "global-config"]{
   title,
   logo {asset->},
-  frontpage ->,
   mainNav-> {
   	items[]{
       ...,
@@ -38,14 +37,9 @@ class App extends BaseApp {
 
   static async getInitialProps ({Component, ctx}) {
     let pageProps = {}
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
-    }
     
     return client.fetch(siteConfigQuery).then(config => {
-      if (!config) {
-        return {pageProps}
-      }
+
       if (config && pageProps) {
         pageProps.config = config
       }
@@ -56,7 +50,9 @@ class App extends BaseApp {
 
   render () {
     const {Component, pageProps} = this.props
-    return <Component {...pageProps} />
+    return (
+      <Component {...pageProps}  />
+    )
   }
 }
 

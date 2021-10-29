@@ -2,7 +2,7 @@ import S from '@sanity/desk-tool/structure-builder'
 import { MdDashboard, MdSettings } from "react-icons/md"
 
 const hiddenDocTypes = listItem =>
-  !['page', 'navigation', 'siteConfig'].includes(listItem.getId())
+  !['page', 'navigation', 'siteConfig', 'reusable_module'].includes(listItem.getId())
 
 export default () =>
   S.list()
@@ -22,6 +22,11 @@ export default () =>
         .icon(MdDashboard)
         .schemaType('page')
         .child(S.documentTypeList('page').title('Pages')),
+      S.listItem()
+        .title('Reusable Content Modules')
+        .schemaType('reusable_module')
+        .child(S.documentTypeList('reusable_module').title('Reusable Content Modules')),
+      ...S.documentTypeListItems().filter(hiddenDocTypes),
       S.listItem()
         .title('Navigation')
         .schemaType('navigation')

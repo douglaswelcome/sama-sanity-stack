@@ -5,13 +5,13 @@ import Button from '../../components/button/button'
 import styles from './hero-splittxtimg.module.scss'
 
 const hero_splittxtimg = (props) => {
-    const {page_title, heading, image, tagline, cta} = props;
+    const {preheadline, heading, image, tagline, cta} = props;
 
     return (
         <div className="hero-splittxtimg umoja-l-grid--12 umoja-l-grid-align--center">
             <div className={styles.copy}>
-                {page_title &&
-                    <p className={styles.pageTitle}></p>
+                {preheadline &&
+                    <h3 className={styles.preheadline}>{preheadline}</h3>
                 }
                 <h1>{heading}</h1>
                 {tagline &&
@@ -29,7 +29,7 @@ const hero_splittxtimg = (props) => {
 }
 
 hero_splittxtimg.propTypes = {
-    page_title: PropTypes.bool,
+    preheadline: PropTypes.string,
     heading: PropTypes.string,
     image: PropTypes.object,
     tagline: PropTypes.string,

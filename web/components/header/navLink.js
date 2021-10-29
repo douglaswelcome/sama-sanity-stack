@@ -15,12 +15,8 @@ const NavLink = (props) => {
         const className = active ? `${styles.navLink} ${styles.navLink__active}` : `${styles.navLink}`;
 
         return (
-            <Link
-                href={{
-                    pathname: '/page',
-                    query: {slug: slug}
-                }}
-                as={`/${slug}`}
+            <Link 
+                href={`/${slug}`}
             >
                 <a className={className}>{title}</a>
             </Link>

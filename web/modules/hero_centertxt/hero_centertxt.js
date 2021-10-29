@@ -8,7 +8,7 @@ const hero_centertxt= (props) => {
 
     return (
         <div className="hero-centertxt umoja-l-grid--12">
-            <div class={styles.body}>
+            <div className={styles.body}>
                     <h1>{heading}</h1>
                     {tagline &&
                         <h5>{tagline}</h5>
