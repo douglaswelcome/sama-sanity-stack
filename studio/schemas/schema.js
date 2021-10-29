@@ -34,7 +34,7 @@ import bodystatic_panelQuote from './modules/bodystatic_panelQuote'
 import bodystatic_splitTxtBtn from './modules/bodystatic_splitTxtBtn'
 import bodymove_featureWindow from './modules/bodymove_featureWindow'
 import bodymove_stickySideScroll from './modules/bodymove_stickySideScroll'
-import bodystatic_videoDivide from './modules/bodystatic_videoDivide'
+import bodystatic_vidCenter from './modules/bodystatic_vidCenter'
 import bodystatic_display from './modules/bodystatic_display'
 import bodystatic_cardImg from './modules/bodystatic_cardImg'
 import bodystatic_splitTxtImg from './modules/bodystatic_splitTxtImg'
@@ -45,6 +45,7 @@ import reusable_module_module from './modules/reusable_modules_module'
 import bodystatic_iconList from './modules/bodystatic_iconList'
 import bodystatic_centerPanel from './modules/bodystatic_centerPanel'
 import bodystatic_headSubCta from './modules/bodystatic_headSubCta'
+import bodystatic_headline from './modules/bodystatic_headline'
 
 export default createSchema({
   name: 'default',
@@ -82,7 +83,7 @@ export default createSchema({
     bodystatic_panelFeature,
     bodystatic_panelQuote,
     bodystatic_splitTxtBtn,
-    bodystatic_videoDivide,
+    bodystatic_vidCenter,
     bodystatic_cardImg,
     bodystatic_display,
     bodystatic_splitTxtImg,
@@ -92,6 +93,7 @@ export default createSchema({
     reusable_module_module,
     bodystatic_iconList,
     bodystatic_centerPanel,
-    bodystatic_headSubCta
+    bodystatic_headSubCta,
+    bodystatic_headline
   ]),
 })

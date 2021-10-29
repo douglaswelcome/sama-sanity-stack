@@ -10,7 +10,7 @@ export {default as bodystatic_richTxt} from './bodystatic_richTxt/bodystatic_ric
 export {default as hero_splittxtimg} from './hero_splittxtimg/hero_splittxtimg'
 export {default as hero_centertxt} from './hero_centertxt/hero_centertxt'
 export {default as bodymove_stickySideScroll} from './bodymove_stickySideScroll/bodymove_stickySideScroll'
-export {default as bodystatic_videoDivide} from './bodystatic_videoDivide/bodystatic_videoDivide'
+export {default as bodystatic_vidCenter} from './bodystatic_vidCenter/bodystatic_vidCenter'
 export {default as bodystatic_cardImg} from './bodystatic_cardImg/bodystatic_cardImg'
 export {default as bodystatic_display} from './bodystatic_display/bodystatic_display'
 export {default as bodystatic_splitTxtImg} from './bodystatic_splitTxtImg/bodystatic_splitTxtImg'
