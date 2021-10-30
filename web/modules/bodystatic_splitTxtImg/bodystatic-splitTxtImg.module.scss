@@ -1,10 +1,11 @@
 @import '../../styles/base/grid';
 @import '../../styles/base/variables';
+@import '../../styles/base/elements';
 
 .copy{
     display: grid;
     grid-auto-flow: row;
-    row-gap: 1.5rem;
+    row-gap: $space-sm;
     grid-row: 1;
     p{
         font-size: 1.25rem;
@@ -29,6 +30,7 @@
 .image{
     grid-row: 1;
     position: relative;
+    @extend %container-lg;
 
     @include breakpoint(w-sm) {
         grid-row: 2;

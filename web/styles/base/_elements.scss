@@ -1,14 +1,14 @@
-.container-lg {
+.container-lg, %container-lg {
     border-radius:$lg-round-corner;
     overflow:hidden;
 }
 
-.container-med {
+.container-med, %container-med {
     border-radius:$med-round-corner;
     overflow:hidden;
 }
 
-.container-sm{
+.container-sm, %container-sm {
     border-radius:$sm-round-corner;
     overflow:hidden;
 }

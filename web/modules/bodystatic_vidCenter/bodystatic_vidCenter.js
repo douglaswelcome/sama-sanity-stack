@@ -9,7 +9,7 @@ const bodystatic_vidCenter = (props) => {
     const videoPath = getFile(video, client.config());
 
     return (
-        <div className="bodystatic-vidCenter umoja-l-grid--12">
+        <div className="bodystatic-vidCenter container-lg umoja-l-grid--12">
             <div className={styles.videoWrapper}>
                 <video 
                     className={styles.video} 
@@ -24,8 +24,7 @@ const bodystatic_vidCenter = (props) => {
                     />
                 </video>
             </div>
-            <div className={styles.bg1}></div>
-            <div className={styles.bg2}></div>
+
         </div>
     )
 }

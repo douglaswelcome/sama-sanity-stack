@@ -2,15 +2,16 @@
 
 .icon{
     grid-column: span 3;
+    display:grid;
+    grid-auto-flow: row;
+    row-gap:$space-tiny;
     
     h5{
         font-weight: 700;
-        margin-bottom: $space-sm;
     }
 }
 
 .iconWrap{
-    margin-bottom: $space-sm;
 }
 
 ._center{
