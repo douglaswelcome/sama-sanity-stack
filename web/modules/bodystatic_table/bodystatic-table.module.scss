@@ -1,0 +1,88 @@
+@import '../../styles/base/variables';
+@import '../../styles/base/grid';
+
+.table{
+    width: $xlg-page-width;
+    display: grid;
+    grid-template-columns: auto minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
+    align-self: center;
+    border-radius: $roundcorner;
+    padding: 0 3rem;
+    background-color: $color-charcoal-3;
+    thead,tbody{
+        display: contents;
+    }
+    tr{
+        display: contents;
+        &:last-of-type{
+            td{
+                border-bottom: none;
+            }
+        }
+    }
+    th,
+    td{
+        border-bottom: 4px solid $color-charcoal-4;
+        padding: 2rem;
+    }
+    th,
+    th h4,
+    th p{
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    th strong{
+        display: block;
+    }
+    td{
+        h5{
+            font-weight: 700;
+            text-transform: uppercase;
+            border-left: solid 6px $color-charcoal-5;
+            padding: 0.5rem 0 0.5rem 1rem;
+        }
+        &:first-of-type{
+            display: flex;
+            align-items: center;
+        }
+        &:first-of-type{
+            padding-left: 0;
+        }
+        &:last-of-type{
+            padding-right: 0;
+        }
+
+        .btn--secondary{
+            .btn__text{
+                font-weight: 700;
+            }
+            &:hover{
+                background-color: $color-charcoal-3;
+            }
+        }
+    }
+    @include breakpoint(w-sm) {
+        display: none;
+    }
+}
+
+.row_cell_list {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
+    &_content{
+        grid-column: 2 / span 1;
+       
+    }
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+    @include breakpoint(w-sm){
+        grid-template-columns: 1fr;
+    }
+    &__large{
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+}

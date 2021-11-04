@@ -9,6 +9,11 @@ export default {
     },
     fields: [
         {
+          type: 'string',
+          name: 'section_title',
+          title: 'Section Title'
+        },
+        {
             type: "string",
             name: 'background_color',
             title: "Section Background Color",
@@ -32,11 +37,13 @@ export default {
     ],
     preview: {
         select: {
-          title: 'modules.modules.0._type'
+          title: 'section_title',
+          backupTitle: 'modules.modules.0._type'
         },
-        prepare ({title}) {
+        prepare ({title, backupTitle}) {
+          const sectionTitle = title ? title : backupTitle;
           return {
-            title: title,
+            title: sectionTitle,
             media: GrObjectGroup
           }
         }

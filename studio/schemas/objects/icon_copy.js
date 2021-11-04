@@ -27,6 +27,15 @@ export default {
                   }
                 }
             ],
+        },
+        {
+          type: 'button',
+          name: 'cta',
+          title: 'CTA',
+          options: {
+            collapsible: true,
+            collapsed: true
+          },
         }
     ]
 }

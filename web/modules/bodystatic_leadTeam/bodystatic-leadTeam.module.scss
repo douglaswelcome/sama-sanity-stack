@@ -1,0 +1,32 @@
+.row {
+    grid-column: 3 / span 8;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-row-start: 2;
+    &__top{
+        grid-row: 1;
+    }
+}
+
+.avatar{
+    display: grid;
+    width: 250px;
+    padding-bottom: 3rem;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    h4, h5{
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+.imageWrap{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: linear-gradient(180deg,#fff 0%,#d9dfe2 100%);
+    position: relative;
+    overflow: hidden;
+}
