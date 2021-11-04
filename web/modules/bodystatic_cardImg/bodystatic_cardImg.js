@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Image from '../../components/image'
+import Button from '../../components/button/button'
 import styles from './bodystatic-cardImg.module.scss'
 
 const bodystatic_cardImg = (props) => {
@@ -22,6 +23,9 @@ const bodystatic_cardImg = (props) => {
                         }
                         <h5>{card.title}</h5>
                         <p>{card.body}</p>
+                        {card.cta &&
+                            <Button {...card.cta} />
+                        }
                     </div>
                 )
             })}
@@ -37,7 +41,8 @@ bodystatic_cardImg.propTypes = {
             body: PropTypes.string,
             icon: PropTypes.shape({
                 asset: PropTypes.shape({url: PropTypes.string})
-            })
+            }),
+            cta: PropTypes.object
         })
     }))
 }

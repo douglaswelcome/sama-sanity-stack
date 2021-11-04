@@ -18,4 +18,4 @@ bodystatic_display.propTypes = {
     text: PropTypes.string
 }
   
-  export default bodystatic_display
+export default bodystatic_display

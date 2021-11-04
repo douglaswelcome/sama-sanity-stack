@@ -17,7 +17,7 @@ const hero_splittxtimg = (props) => {
                 {tagline &&
                     <h5>{tagline}</h5>
                 }
-                {cta &&
+                {cta.title &&
                     <Button {...cta} />
                 }
             </div>

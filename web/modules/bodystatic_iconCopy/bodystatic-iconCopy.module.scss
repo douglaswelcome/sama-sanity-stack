@@ -2,10 +2,12 @@
 
 .icon{
     grid-column: span 3;
-    
     h5{
         font-weight: 700;
         margin-bottom: $space-sm;
+    }
+    a{
+        margin-top: $space-sm;
     }
 }
 
@@ -28,8 +30,7 @@
     }
     .iconWrap{
         width: 60%;
-        height: auto;
-        max-height: 90px;
+        height: 90px;
         margin: 0 auto;
         position: relative;
     }
