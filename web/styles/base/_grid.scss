@@ -63,7 +63,7 @@ $med-page-width: 800px;
   @include breakpoint(w-sm) {
     margin-left: 1rem;
     margin-right: 1rem;
-    width: auto;
+    width: 100%;
     max-width: 40rem;
   }
 }

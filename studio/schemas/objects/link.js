@@ -21,5 +21,10 @@ export default {
             scheme: ['https', 'http', 'mailto', 'tel'],
           }),
       },
+      {
+        name: 'file',
+        title: 'File',
+        type: 'file'
+      }
     ]
 };

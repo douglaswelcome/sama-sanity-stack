@@ -13,9 +13,9 @@ export default {
             title: 'Heading'
         },
         {
-            name: 'tagline',
-            type: 'string',
-            title: 'Tagline'
+          title: 'Tagline',
+          name: 'richText',
+          type: 'richText_field'
         },
         {
             name: 'cta',

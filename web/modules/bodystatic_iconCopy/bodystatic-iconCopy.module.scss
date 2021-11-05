@@ -9,6 +9,9 @@
     h5{
         font-weight: 700;
     }
+    a{
+        margin-top: $space-sm;
+    }
 }
 
 .iconWrap{
@@ -29,8 +32,7 @@
     }
     .iconWrap{
         width: 60%;
-        height: auto;
-        max-height: 90px;
+        height: 90px;
         margin: 0 auto;
         position: relative;
     }

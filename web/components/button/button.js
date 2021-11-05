@@ -1,52 +1,28 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import client from '../../client'
-import Link from 'next/link'
+import Link from '../link'
 import styles from './button.module.scss'
 
 const Button = (props) => {
     const {title, type, size, link} = props;
-    const [buttonLink, setButtonLink] = useState(link);
-
-    useEffect(() => {
-        if(link && link.internalLink){
-            client.fetch(`*[_type == "page" && _id == "${link.internalLink._ref}"][0]`)
-            .then(page => {
-                setButtonLink(page.slug.current);
-            })
-        }
-    });
 
     const wrapperClass = `${styles.wrapper} ${type ? styles[`_${type}`] : ''} ${size ? styles[`_${size}`] : ''}`;
     const buttonInner =  <button className={styles.btn}>
                             <h3 className={styles.text}>{title}</h3>
                         </button>
 
-    if(buttonLink){
+    if(link){
         return (
-            <>
-                {link.externalUrl ?
-                    <a 
-                        href={buttonLink}
-                        className={wrapperClass}
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        {buttonInner}
-                    </a>
-                    :
-                    <Link href={`/${buttonLink}`}>
-                        <a className={wrapperClass}>
-                            {buttonInner}
-                        </a>
-                    </Link>
-                }
-            </>
+            <Link className={wrapperClass} link={link}>
+                {buttonInner}
+            </Link>
         )
     }else{
-        <div className={wrapperClass}>
-            {buttonInner}
-        </div>
+        return (
+            <div className={wrapperClass}>
+                {buttonInner}
+            </div>
+        )
     }
 }
 

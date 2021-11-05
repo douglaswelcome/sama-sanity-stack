@@ -13,6 +13,13 @@
     h5{
         font-weight: 700;
     }
+    a{
+        margin-top: $space-sm;
+    }
+}
+
+.body{
+    grid-column: unset;
 }
 
 ._four{

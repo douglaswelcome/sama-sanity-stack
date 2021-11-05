@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Button from '../../components/button/button'
 import Image from '../../components/image'
 import styles from './bodystatic-iconCopy.module.scss'
 
@@ -22,7 +23,7 @@ const bodystatic_iconCopy = (props) => {
                     {icon.icon && 
                     <div className={styles.iconWrap}>
                         {responsive ?
-                                <Image layout="fill" src={icon.icon} />
+                                <Image layout="fill" objectFit="contain" src={icon.icon} />
                             :
                                 <Image layout="fixed" src={icon.icon} height={48} width={48} />
                         }

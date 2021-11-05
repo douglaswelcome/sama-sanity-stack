@@ -1,18 +1,5 @@
 const homeID = `*[_id == "global-config"][0].frontpage->_id`;
-const moduleFields = `
-...,
-"align": richText.align,
-"richText": 
-    richText.richText[]{
-        ...,
-        markDefs[]{
-            ...,
-            internalLink->{
-                slug
-            }
-        }
-    }
-`
+
 const pageFields = `
 title,
 "slug": slug.current,
@@ -22,11 +9,11 @@ title,
     "modules": modules.modules[]{
         _type == "reusable_modules_module" => module_ref->.module{
             "ref_modules": modules[]{
-                ${moduleFields}
+                ...
             }
         },
         _type != "reusable_modules_module" => {
-            ${moduleFields}
+            ...
         }
     }
 }

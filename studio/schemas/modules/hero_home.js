@@ -35,10 +35,7 @@ export default {
             isHighlighted: true
           }
         }
-      ],
-      options: {
-        hotspot: true
-      }
+      ]
     },
   ],
   preview: {

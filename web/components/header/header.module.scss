@@ -209,6 +209,12 @@
   }
 }
 
+@include breakpoint (w-med){
+  .cta{
+    display: none;
+  }
+}
+
 @include breakpoint (w-sm){
   .wrapper{
     width: 100%;

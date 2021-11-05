@@ -25,7 +25,16 @@ export default {
         {
             name: 'cta',
             type: 'button',
-            title: 'CTA'
+            title: 'CTA 1'
+        },
+        {
+          name: 'cta2',
+          type: 'button',
+          title: 'CTA 2',
+          options: {
+            collapsible: true,
+            collapsed: true
+          },
         },
         {
             name: 'image',
@@ -40,10 +49,7 @@ export default {
                     isHighlighted: true
                 }
                 }
-            ],
-            options: {
-                hotspot: true
-            }
+            ]
         },
         ],
         preview: {

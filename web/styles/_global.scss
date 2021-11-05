@@ -216,3 +216,43 @@ blockquote {
     font-size: m#{i}n(m#{a}x(var(--minFontSize), var(--scaler)), var(--maxFontSize));
   }
 }
+
+.divider-line {
+  display: inline-block;
+  width: 0.125rem;
+  position: relative;
+  background-color: $color-sunshine;
+
+  &--horizontal {
+      height: 0.125rem;
+      width: 6rem;
+      margin-bottom: 1.5rem;
+      margin-top: 1.25rem;
+  }
+
+  &--vertical{
+      display: inline-flex;
+  }
+
+  &--right-align {
+      margin-left:auto;
+  }
+
+  &--negative {
+    background-color: $color-sunshine;
+  }
+
+  &--no-shadow {
+    &::before{
+      display: none;
+    }
+  }
+
+  &--charcoal {
+    background-color: $color-charcoal-4;
+  }
+} 
+
+.mapboxgl-ctrl-logo{
+  display: none !important;
+}

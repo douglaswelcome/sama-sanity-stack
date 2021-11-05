@@ -9,9 +9,9 @@ export default {
             title: 'Title'
         },
         {
-            type: 'text',
+            type: 'richText_field_simple',
             name: 'body',
-            title: 'Body Copy'
+            title: 'Body Copy',
         },
         {
             type: 'image',

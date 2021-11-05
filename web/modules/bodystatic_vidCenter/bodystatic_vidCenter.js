@@ -1,3 +1,4 @@
+bodystatic_vidCenter.propTypes = {
 import React from 'react'
 import PropTypes from 'prop-types'
 import {getFile} from '@sanity/asset-utils'

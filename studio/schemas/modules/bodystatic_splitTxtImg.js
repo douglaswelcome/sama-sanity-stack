@@ -1,7 +1,7 @@
 export default {
     type: 'object',
     name: 'bodystatic_splitTxtImg',
-    title: 'Split Text and Image',
+    title: 'Split Text & Media',
     options: {
       collapsible: true,
       collapsed: false
@@ -28,24 +28,25 @@ export default {
             }
         },
         {
-            title: 'Image Column',
-            name: 'img_column',
+            title: 'Media Column',
+            name: 'media',
             options: {
-              collapsible: true,
-              collapsed: false
+                collapsible: true,
+                collapsed: false,
+                columns: 2
             }
         }
     ],
     fields:[
         {
             name: "img_position",
-            title: "Image Left or Right Column?",
+            title: "Media Left or Right Column?",
             type: 'string',
             fieldset: 'layout_options',
             options: {
                 list: [
-                    { title: 'Image Right Column (Default)', value: 'right'},
-                    { title: 'Image Left Column', value: 'left' }
+                    { title: 'Media Right Column (Default)', value: 'right'},
+                    { title: 'Media Left Column', value: 'left' }
                 ],
             },
         },
@@ -81,11 +82,11 @@ export default {
         {
             name: 'subheading',
             type: 'string',
-            title: 'Subheading',
+            title: 'Preheading',
             fieldset: 'txt_column'
         },
         {
-            type: 'text',
+            type: 'richText_field',
             name: 'body',
             title: 'Body Copy',
             fieldset: 'txt_column'
@@ -100,7 +101,7 @@ export default {
             type: 'image',
             name: 'image',
             title: 'Image',
-            fieldset: 'img_column',
+            fieldset: 'media',
             fields: [
                 {
                   name: 'alt',
@@ -111,7 +112,13 @@ export default {
                   }
                 }
             ],
-        }
+        },
+        {
+            type: "video",
+            name: "video",
+            title: "Video",
+            fieldset: 'media'
+        },
     ],
     preview: {
         select: {

@@ -1,4 +1,5 @@
 @import '../../styles/base/grid';
+@import '../../styles/base/variables';
 
 .icon{
     grid-column: span 3;
@@ -11,10 +12,25 @@
         font-weight: 700;
         margin-bottom: $space-sm;
     }
+
+    @include breakpoint(w-sm){
+        grid-column: span 12;
+        margin-bottom: $space-sm;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
 }
 
 ._three{
     .icon{
         grid-column: span 2;
+        @include breakpoint(w-sm){
+            grid-column: span 12;
+            margin-bottom: $space-sm;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
     }
 }

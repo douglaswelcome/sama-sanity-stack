@@ -30,8 +30,13 @@ var client_default = /*#__PURE__*/__webpack_require__.n(client);
 var queries = __webpack_require__(4645);
 // EXTERNAL MODULE: ./components/Layout.js + 5 modules
 var Layout = __webpack_require__(5964);
+<<<<<<< HEAD
 // EXTERNAL MODULE: ./components/RenderSection.js + 26 modules
 var RenderSection = __webpack_require__(4033);
+=======
+// EXTERNAL MODULE: ./components/RenderSection.js + 42 modules
+var RenderSection = __webpack_require__(7586);
+>>>>>>> develop
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(5282);
 ;// CONCATENATED MODULE: ./pages/[slug].js
@@ -135,6 +140,27 @@ module.exports = require("@sanity/block-content-to-react");
 /***/ ((module) => {
 
 module.exports = require("@sanity/client");
+
+/***/ }),
+
+/***/ 3062:
+/***/ ((module) => {
+
+module.exports = require("@u-wave/react-vimeo");
+
+/***/ }),
+
+/***/ 9525:
+/***/ ((module) => {
+
+module.exports = require("@u-wave/react-youtube");
+
+/***/ }),
+
+/***/ 4885:
+/***/ ((module) => {
+
+module.exports = require("get-youtube-id");
 
 /***/ }),
 
@@ -278,6 +304,13 @@ module.exports = require("react-inlinesvg");
 
 /***/ }),
 
+/***/ 5508:
+/***/ ((module) => {
+
+module.exports = require("react-map-gl");
+
+/***/ }),
+
 /***/ 5282:
 /***/ ((module) => {
 
@@ -292,7 +325,11 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+<<<<<<< HEAD
 var __webpack_exports__ = __webpack_require__.X(0, [61,82], () => (__webpack_exec__(8414)));
+=======
+var __webpack_exports__ = __webpack_require__.X(0, [61,8], () => (__webpack_exec__(8414)));
+>>>>>>> develop
 module.exports = __webpack_exports__;
 
 })();

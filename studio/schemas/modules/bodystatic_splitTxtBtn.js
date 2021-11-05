@@ -1,7 +1,7 @@
 export default {
     type: 'object',
     name: 'bodystatic_splitTxtBtn',
-    title: 'Split Text and Buttons',
+    title: 'Split Text & Buttons',
     options: {
       collapsible: true,
       collapsed: false
