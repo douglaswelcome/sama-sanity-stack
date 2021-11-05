@@ -8,14 +8,12 @@ export default {
       collapsible: true,
       collapsed: false
     },
-    initialValue: {
-        align: 'left'
-    },
     fields:[
         {
             type: 'string',
             name: 'align',
             title: 'Text Alignment',
+            initialValue: 'left',
             options: {
                 list: [
                   { title: 'Left', value: 'left' },

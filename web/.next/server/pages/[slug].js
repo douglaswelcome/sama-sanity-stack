@@ -30,8 +30,8 @@ var client_default = /*#__PURE__*/__webpack_require__.n(client);
 var queries = __webpack_require__(4645);
 // EXTERNAL MODULE: ./components/Layout.js + 5 modules
 var Layout = __webpack_require__(5964);
-// EXTERNAL MODULE: ./components/RenderSection.js + 41 modules
-var RenderSection = __webpack_require__(7607);
+// EXTERNAL MODULE: ./components/RenderSection.js + 42 modules
+var RenderSection = __webpack_require__(7586);
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(5282);
 ;// CONCATENATED MODULE: ./pages/[slug].js
@@ -320,7 +320,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [61,35], () => (__webpack_exec__(8414)));
+var __webpack_exports__ = __webpack_require__.X(0, [61,8], () => (__webpack_exec__(8414)));
 module.exports = __webpack_exports__;
 
 })();

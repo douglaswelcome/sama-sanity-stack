@@ -31,9 +31,6 @@ const bodystatic_iconCopy = (props) => {
                     }
                     <h5>{icon.title}</h5>
                     <p>{icon.body}</p>
-                    {icon.cta &&
-                        <Button {...icon.cta} />
-                    }
                 </div>
                 )
             })}
@@ -50,8 +47,7 @@ bodystatic_iconCopy.propTypes = {
             body: PropTypes.string,
             icon: PropTypes.shape({
                 asset: PropTypes.shape({url: PropTypes.string})
-            }),
-            cta: PropTypes.object
+            })
         })
     }))
 }

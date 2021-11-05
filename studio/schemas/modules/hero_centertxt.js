@@ -15,7 +15,7 @@ export default {
         {
           title: 'Tagline',
           name: 'richText',
-          type: 'richText_field_simple'
+          type: 'richText_field'
         },
         {
             name: 'cta',
