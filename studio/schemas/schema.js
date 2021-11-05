@@ -46,9 +46,7 @@ import reusable_module_module from './modules/reusable_modules_module'
 import bodystatic_iconList from './modules/bodystatic_iconList'
 import bodystatic_centerPanel from './modules/bodystatic_centerPanel'
 import bodystatic_headSubCta from './modules/bodystatic_headSubCta'
-<<<<<<< HEAD
 import bodystatic_headline from './modules/bodystatic_headline'
-=======
 import bodystatic_galleryGrid from './modules/bodystatic_galleryGrid'
 import grid_image from './objects/grid_image'
 import embed from './objects/embed'
@@ -73,7 +71,7 @@ import bodymove_panel from './modules/bodymove_panel'
 import bodystatic_punchyTxt from './modules/bodystatic_punchyTxt'
 import bodymove_map from './modules/bodymove_map'
 import bodymove_sfMap from './modules/bodymove_sfMap'
->>>>>>> develop
+
 
 export default createSchema({
   name: 'default',
@@ -133,9 +131,7 @@ export default createSchema({
     bodystatic_iconList,
     bodystatic_centerPanel,
     bodystatic_headSubCta,
-<<<<<<< HEAD
-    bodystatic_headline
-=======
+    bodystatic_headline,
     bodystatic_galleryGrid,
     bodystatic_flowCompare,
     bodymove_splitTxtImg_slide,
@@ -150,6 +146,5 @@ export default createSchema({
     bodystatic_punchyTxt,
     bodymove_map,
     bodymove_sfMap
->>>>>>> develop
   ]),
 })
