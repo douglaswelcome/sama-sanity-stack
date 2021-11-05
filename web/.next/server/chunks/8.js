@@ -801,10 +801,8 @@ const hero_home = props => {
     }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
       className: (hero_home_module_default()).copy,
       children: [/*#__PURE__*/jsx_runtime_.jsx("h1", {
-        className: "display-small",
+        className: `${(hero_home_module_default()).headline} display-small `,
         children: heading
-      }), /*#__PURE__*/jsx_runtime_.jsx("div", {
-        className: "divider-line divider-line--horizontal divider-line--negative"
       }), /*#__PURE__*/jsx_runtime_.jsx("h2", {
         className: (hero_home_module_default()).subheadline,
         children: tagline
@@ -1155,7 +1153,7 @@ const bodystatic_panelFeature = props => {
     awards
   } = props;
   return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-    className: `bodystatic-panelFeature ${image_position ? (bodystatic_panelFeature_module_default())._flipImage : ''} umoja-l-grid--12 umoja-u-bg--charcoal3`,
+    className: `bodystatic-panelFeature ${image_position ? (bodystatic_panelFeature_module_default())._flipImage : ''} umoja-l-grid--12 umoja-u-bg--charcoal3 container-lg`,
     children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
       className: (bodystatic_panelFeature_module_default()).imgWrap,
       children: /*#__PURE__*/jsx_runtime_.jsx(components_image, {
@@ -1688,11 +1686,10 @@ const bodymove_stickySideScroll = props => {
 };
 
 /* harmony default export */ const bodymove_stickySideScroll_bodymove_stickySideScroll = (bodymove_stickySideScroll);
-// EXTERNAL MODULE: ./modules/bodystatic_vidCenter/bodystatic-videoDivide.module.scss
-var bodystatic_videoDivide_module = __webpack_require__(7821);
-var bodystatic_videoDivide_module_default = /*#__PURE__*/__webpack_require__.n(bodystatic_videoDivide_module);
+// EXTERNAL MODULE: ./modules/bodystatic_vidCenter/bodystatic-vidCenter.module.scss
+var bodystatic_vidCenter_module = __webpack_require__(932);
+var bodystatic_vidCenter_module_default = /*#__PURE__*/__webpack_require__.n(bodystatic_vidCenter_module);
 ;// CONCATENATED MODULE: ./modules/bodystatic_vidCenter/bodystatic_vidCenter.js
-
 
 
 
@@ -1704,12 +1701,12 @@ const bodystatic_vidCenter = props => {
     video
   } = props;
   const videoPath = (0,asset_utils_.getFile)(video, client_default().config());
-  return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-    className: "bodystatic-videoDivide umoja-l-grid--12",
-    children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
-      className: (bodystatic_videoDivide_module_default()).videoWrapper,
+  return /*#__PURE__*/jsx_runtime_.jsx("div", {
+    className: "bodystatic-vidCenter container-lg umoja-l-grid--12",
+    children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+      className: (bodystatic_vidCenter_module_default()).videoWrapper,
       children: /*#__PURE__*/jsx_runtime_.jsx("video", {
-        className: (bodystatic_videoDivide_module_default()).video,
+        className: (bodystatic_vidCenter_module_default()).video,
         autoPlay: "autoplay",
         loop: "loop",
         playsInline: "playsinline",
@@ -1719,11 +1716,7 @@ const bodystatic_vidCenter = props => {
           type: `video/${videoPath.asset.extension}`
         })
       })
-    }), /*#__PURE__*/jsx_runtime_.jsx("div", {
-      className: (bodystatic_videoDivide_module_default()).bg1
-    }), /*#__PURE__*/jsx_runtime_.jsx("div", {
-      className: (bodystatic_videoDivide_module_default()).bg2
-    })]
+    })
   });
 };
 
@@ -3966,6 +3959,9 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodymove-featureWindow_umoja-l-grid-gap--row-3__15KJO",
 	"umoja-l-grid-align--center": "bodymove-featureWindow_umoja-l-grid-align--center__3RpS2",
 	"umoja-l-grid-align--base": "bodymove-featureWindow_umoja-l-grid-align--base__13C-Y",
+	"container-lg": "bodymove-featureWindow_container-lg__u-ofo",
+	"container-med": "bodymove-featureWindow_container-med__RjI1d",
+	"container-sm": "bodymove-featureWindow_container-sm__3L-Hy",
 	"wrapper": "bodymove-featureWindow_wrapper__2aGnW",
 	"sidebar": "bodymove-featureWindow_sidebar__2U_km",
 	"selector": "bodymove-featureWindow_selector__3XJ3b",
@@ -4360,9 +4356,9 @@ module.exports = {
 	"umoja-l-grid-align--center": "bodystatic-iconCopy_umoja-l-grid-align--center__2kHqh",
 	"umoja-l-grid-align--base": "bodystatic-iconCopy_umoja-l-grid-align--base__D0hzM",
 	"icon": "bodystatic-iconCopy_icon__1AzsU",
-	"iconWrap": "bodystatic-iconCopy_iconWrap__2lArm",
 	"_center": "bodystatic-iconCopy__center__ZUlkU",
 	"_responsive": "bodystatic-iconCopy__responsive__DqA13",
+	"iconWrap": "bodystatic-iconCopy_iconWrap__2lArm",
 	"_three": "bodystatic-iconCopy__three__x46IE"
 };
 
@@ -4611,10 +4607,13 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodystatic-splitTxtImg_umoja-l-grid-gap--row-3__Mb58H",
 	"umoja-l-grid-align--center": "bodystatic-splitTxtImg_umoja-l-grid-align--center__4t6No",
 	"umoja-l-grid-align--base": "bodystatic-splitTxtImg_umoja-l-grid-align--base__1T3yW",
+	"container-lg": "bodystatic-splitTxtImg_container-lg__1t2KJ",
+	"image": "bodystatic-splitTxtImg_image__10Maa",
+	"container-med": "bodystatic-splitTxtImg_container-med__X9DCL",
+	"container-sm": "bodystatic-splitTxtImg_container-sm__RZ3G0",
 	"copy": "bodystatic-splitTxtImg_copy__2mTza",
 	"subheading": "bodystatic-splitTxtImg_subheading__2LASO",
 	"body": "bodystatic-splitTxtImg_body__2xaPa",
-	"image": "bodystatic-splitTxtImg_image__10Maa",
 	"_left": "bodystatic-splitTxtImg__left__uZGrN",
 	"_right": "bodystatic-splitTxtImg__right__2aVan",
 	"_frame": "bodystatic-splitTxtImg__frame__3AIqT",
@@ -4765,27 +4764,28 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7821:
+/***/ 932:
 /***/ ((module) => {
 
 // Exports
 module.exports = {
-	"umoja-u-pad-1": "bodystatic-videoDivide_umoja-u-pad-1__1T-ev",
-	"umoja-u-pad-t--0": "bodystatic-videoDivide_umoja-u-pad-t--0__qeR_b",
-	"umoja-u-pad-b--0": "bodystatic-videoDivide_umoja-u-pad-b--0__2kfHx",
-	"umoja-l-grid--12": "bodystatic-videoDivide_umoja-l-grid--12__n652o",
-	"umoja-l-grid--6": "bodystatic-videoDivide_umoja-l-grid--6__2y6Yw",
-	"umoja-l-page-width": "bodystatic-videoDivide_umoja-l-page-width__2Cc94",
-	"umoja-l-grid-section": "bodystatic-videoDivide_umoja-l-grid-section__1SnO4",
-	"umoja-l-grid-gap--row-1": "bodystatic-videoDivide_umoja-l-grid-gap--row-1__sNXqE",
-	"umoja-l-grid-gap--row-2": "bodystatic-videoDivide_umoja-l-grid-gap--row-2__2aKqs",
-	"umoja-l-grid-gap--row-3": "bodystatic-videoDivide_umoja-l-grid-gap--row-3__IqLmy",
-	"umoja-l-grid-align--center": "bodystatic-videoDivide_umoja-l-grid-align--center__2F9h7",
-	"umoja-l-grid-align--base": "bodystatic-videoDivide_umoja-l-grid-align--base__1U9F1",
-	"videoWrapper": "bodystatic-videoDivide_videoWrapper__Sl-VL",
-	"video": "bodystatic-videoDivide_video__vbt2F",
-	"bg1": "bodystatic-videoDivide_bg1__2eeMS",
-	"bg2": "bodystatic-videoDivide_bg2__1I71v"
+	"umoja-u-pad-1": "bodystatic-vidCenter_umoja-u-pad-1__2fORc",
+	"umoja-u-pad-t--0": "bodystatic-vidCenter_umoja-u-pad-t--0__n-0HV",
+	"umoja-u-pad-b--0": "bodystatic-vidCenter_umoja-u-pad-b--0__2qql4",
+	"umoja-l-grid--12": "bodystatic-vidCenter_umoja-l-grid--12__3w1xn",
+	"umoja-l-grid--6": "bodystatic-vidCenter_umoja-l-grid--6__18aP4",
+	"umoja-l-page-width": "bodystatic-vidCenter_umoja-l-page-width__2kQwc",
+	"umoja-l-grid-section": "bodystatic-vidCenter_umoja-l-grid-section__QfVkz",
+	"umoja-l-grid-gap--row-1": "bodystatic-vidCenter_umoja-l-grid-gap--row-1__1er4L",
+	"umoja-l-grid-gap--row-2": "bodystatic-vidCenter_umoja-l-grid-gap--row-2__1kg0w",
+	"umoja-l-grid-gap--row-3": "bodystatic-vidCenter_umoja-l-grid-gap--row-3__1FnG_",
+	"umoja-l-grid-align--center": "bodystatic-vidCenter_umoja-l-grid-align--center__3gSB-",
+	"umoja-l-grid-align--base": "bodystatic-vidCenter_umoja-l-grid-align--base__35FYC",
+	"container-lg": "bodystatic-vidCenter_container-lg__1IA6b",
+	"videoWrapper": "bodystatic-vidCenter_videoWrapper__3AzT4",
+	"container-med": "bodystatic-vidCenter_container-med__2T-UY",
+	"container-sm": "bodystatic-vidCenter_container-sm__2DAUr",
+	"video": "bodystatic-vidCenter_video__24ohu"
 };
 
 
@@ -4834,6 +4834,7 @@ module.exports = {
 	"umoja-l-grid-align--base": "hero-home_umoja-l-grid-align--base__no42m",
 	"dots": "hero-home_dots__3dHTM",
 	"copy": "hero-home_copy__QxXB-",
+	"headline": "hero-home_headline__2r4c0",
 	"subheadline": "hero-home_subheadline__2p0ls",
 	"img": "hero-home_img__25RvM",
 	"imgWrapper": "hero-home_imgWrapper__tSUfI"

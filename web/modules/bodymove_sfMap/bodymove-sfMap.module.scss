@@ -4,7 +4,8 @@
 .panel{
     background-color: $color-charcoal-3;
     color: $color-white;
-    border-radius: $roundcorner;
+    border-radius: $lg-round-corner
+;
     overflow: hidden;
     @include breakpoint(w-sm){
         border-radius: 0;

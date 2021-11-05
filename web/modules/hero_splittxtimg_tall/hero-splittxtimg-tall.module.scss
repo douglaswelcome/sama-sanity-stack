@@ -62,7 +62,8 @@
     margin: 0 0 2rem 2rem;
     position: relative;
     img{
-        border-radius: $roundcorner;
+        border-radius: $lg-round-corner
+;
         position: relative;
     }
 }
@@ -72,7 +73,8 @@
     height: calc(100% - 2rem);
     background: linear-gradient($color-charcoal-1, $color-charcoal-1) padding-box,linear-gradient(270deg, #FF9432 0%, #FFFA0C 100%) border-box;
     border: 6px solid transparent;
-    border-radius: $roundcorner;
+    border-radius: $lg-round-corner
+;
     position: absolute;
     left: 0;
     bottom: 0;

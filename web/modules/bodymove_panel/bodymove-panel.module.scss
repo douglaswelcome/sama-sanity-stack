@@ -2,7 +2,8 @@
 @import '../../styles/base/grid';
 
 .panels{
-    border-radius: $roundcorner;
+    border-radius: $lg-round-corner
+;
     background-color: $color-charcoal-2;
     position: relative;
 
@@ -120,7 +121,8 @@
 
     @include breakpoint(w-sm){
         height: 400px;
-        border-radius: $roundcorner;
+        border-radius: $lg-round-corner
+;
         opacity: 1;
     }
 }

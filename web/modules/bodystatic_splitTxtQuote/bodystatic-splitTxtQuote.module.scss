@@ -82,8 +82,10 @@
 }
 
 .imageWrap{
-    border-top-left-radius: $roundcorner;
-    border-top-right-radius: $roundcorner;
+    border-top-left-radius: $lg-round-corner
+;
+    border-top-right-radius: $lg-round-corner
+;
     background: linear-gradient(180deg, $color-charcoal-5 0.01%, $color-charcoal-5 100%);
     position: relative;
     overflow: hidden;
