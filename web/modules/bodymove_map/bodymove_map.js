@@ -5,7 +5,7 @@ import styles from './bodymove-map.module.scss'
 
 const bodymove_map = (props) => {
     const {title} = props;
-    const [viewport, setViewport] = useState({});
+    const [viewport, setViewport] = useState(null);
     var data = [
         {
             coordinates: {
@@ -90,16 +90,18 @@ const bodymove_map = (props) => {
         }
     ]
     useEffect(() => {
-        const homeZoom = (window.innerWidth <= 816 ? 0 : 1.4);
-        const lat = (window.innerWidth <=816 ? 27.193714 : 45.50884);
-        const long = (window.innerWidth <= 816 ? -41.758265 : -73.58781);
-        setViewport({
-            width: '100%',
-            height: 600,
-            latitude: lat,
-            longitude: long,
-            zoom: homeZoom
-        });
+        if(viewport == null){
+            const homeZoom = (window.innerWidth <= 816 ? 0 : 1.4);
+            const lat = (window.innerWidth <=816 ? 27.193714 : 45.50884);
+            const long = (window.innerWidth <= 816 ? -41.758265 : -73.58781);
+            setViewport({
+                width: '100%',
+                height: 600,
+                latitude: lat,
+                longitude: long,
+                zoom: homeZoom
+            });
+        }
     })
 
 

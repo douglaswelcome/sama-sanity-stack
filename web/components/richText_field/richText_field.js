@@ -6,7 +6,7 @@ import client from '../../client'
 import styles from './richText.module.scss'
 
 const richText = (props) => {
-    const {align, richText, className} = props;
+    const {richText, align, className} = props;
     const {projectId, dataset} = client.config();
     const innerClass = className ? `${className} ${styles.inner}` : styles.inner;
 
@@ -14,8 +14,7 @@ const richText = (props) => {
         marks: {
           button_link: ({mark, children}) => {
             const {style} = mark;
-            const href = mark.internalLink ? mark.internalLink.slug.current : mark.externalUrl;
-
+            const href = mark.internalLink ? mark.internalLink : mark.externalUrl;
             if(style){
                 return <Button link={mark} type={style} title={children[0]} />
             }else{
@@ -24,7 +23,7 @@ const richText = (props) => {
                     linkProps.target = "_blank";
                     linkProps.rel="noopener";
                 }
-                return <a {...linkProps} href={href}>{children}</a>
+                return <a {...linkProps}>{children}</a>
             }
           }
         }
@@ -45,7 +44,7 @@ const richText = (props) => {
 richText.propTypes = {
     className: PropTypes.string,
     align: PropTypes.string,
-    richText: PropTypes.arrayOf(PropTypes.object)
+    richText: PropTypes.array.isRequired,
 }
 
 export default richText;

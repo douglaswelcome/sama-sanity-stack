@@ -17,6 +17,10 @@
     }
 }
 
+.body{
+    grid-column: unset;
+}
+
 ._four{
     grid-column: span 3;
     @include breakpoint(w-med){

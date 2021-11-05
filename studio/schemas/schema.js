@@ -41,6 +41,7 @@ import bodystatic_splitTxtImg from './modules/bodystatic_splitTxtImg'
 import bodystatic_tabs from './modules/bodystatic_tabs'
 import tab from './objects/tab'
 import richTxt_field from './objects/richTxt_field'
+import richText_field_simple from './objects/richTxt_field_simple'
 import reusable_module_module from './modules/reusable_modules_module'
 import bodystatic_iconList from './modules/bodystatic_iconList'
 import bodystatic_centerPanel from './modules/bodystatic_centerPanel'
@@ -68,7 +69,7 @@ import bodystatic_splitTxtQuote from './modules/bodystatic_splitTxtQuote'
 import bodymove_panel from './modules/bodymove_panel'
 import bodystatic_punchyTxt from './modules/bodystatic_punchyTxt'
 import bodymove_map from './modules/bodymove_map'
-import richTxt_field_simple from './objects/richTxt_field_simple'
+import bodymove_sfMap from './modules/bodymove_sfMap'
 
 export default createSchema({
   name: 'default',
@@ -95,6 +96,7 @@ export default createSchema({
     link,
     tab,
     richTxt_field,
+    richText_field_simple,
     sticky_sideItem,
     grid_image,
     embed,
@@ -104,7 +106,6 @@ export default createSchema({
     table_row,
     table_rowCell,
     avatar,
-    richTxt_field_simple,
     hero_splittxtimg,
     hero_splittxtimg_tall,
     hero_centertxt,
@@ -140,6 +141,7 @@ export default createSchema({
     bodystatic_splitTxtQuote,
     bodymove_panel,
     bodystatic_punchyTxt,
-    bodymove_map
+    bodymove_map,
+    bodymove_sfMap
   ]),
 })

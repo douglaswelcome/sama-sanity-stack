@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/9wcoQ-5dcG731wzaS-hmN/_buildManifest.js",
-    "static/9wcoQ-5dcG731wzaS-hmN/_ssgManifest.js"
+    "static/VgIT36ekca_3PrI-y5JEy/_buildManifest.js",
+    "static/VgIT36ekca_3PrI-y5JEy/_ssgManifest.js"
   ],
   "pages": {
     "/": [
@@ -15,10 +15,11 @@
       "static/chunks/main-8d15616dad332ac01c02.js",
       "static/chunks/2c796e83-e4945b7c93eab0ead28c.js",
       "static/chunks/ea88be26-ce84a7cc58b6c1ef0481.js",
-      "static/chunks/562-98ff7f436ee334f2b6ed.js",
-      "static/css/aee30a678ddb08720dd1.css",
-      "static/chunks/158-44d7c97c0abe7feae0dc.js",
-      "static/chunks/pages/index-200c211dbf30a6620529.js"
+      "static/css/1394f52100cf252c5941.css",
+      "static/chunks/645-7df21e4c1bbe950c212b.js",
+      "static/css/eb155b30d7a05e7b253b.css",
+      "static/chunks/837-a3ebfd59b2244d464e20.js",
+      "static/chunks/pages/index-5d8dbcb47fe4b712287f.js"
     ],
     "/[slug]": [
       "static/chunks/webpack-af28476a2e7790fd48db.js",
@@ -26,16 +27,17 @@
       "static/chunks/main-8d15616dad332ac01c02.js",
       "static/chunks/2c796e83-e4945b7c93eab0ead28c.js",
       "static/chunks/ea88be26-ce84a7cc58b6c1ef0481.js",
-      "static/chunks/562-98ff7f436ee334f2b6ed.js",
-      "static/css/aee30a678ddb08720dd1.css",
-      "static/chunks/158-44d7c97c0abe7feae0dc.js",
-      "static/chunks/pages/[slug]-aae81cc064dd451425bb.js"
+      "static/css/1394f52100cf252c5941.css",
+      "static/chunks/645-7df21e4c1bbe950c212b.js",
+      "static/css/eb155b30d7a05e7b253b.css",
+      "static/chunks/837-a3ebfd59b2244d464e20.js",
+      "static/chunks/pages/[slug]-22ddf32a957be1ead238.js"
     ],
     "/_app": [
       "static/chunks/webpack-af28476a2e7790fd48db.js",
       "static/chunks/framework-2191d16384373197bc0a.js",
       "static/chunks/main-8d15616dad332ac01c02.js",
-      "static/css/414926e30377a81e1e0d.css",
+      "static/css/3fb59fe3b8f17dc56fee.css",
       "static/chunks/pages/_app-43f2affa9297cba552ea.js"
     ],
     "/_error": [

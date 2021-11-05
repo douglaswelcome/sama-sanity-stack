@@ -32,3 +32,4 @@ export {default as bodystatic_splitTxtQuote} from './bodystatic_splitTxtQuote/bo
 export {default as bodymove_panel} from './bodymove_panel/bodymove_panel'
 export {default as bodystatic_punchyTxt} from './bodystatic_punchyTxt/bodystatic_punchyTxt'
 export {default as bodymove_map} from './bodymove_map/bodymove_map'
+export {default as bodymove_sfMap} from './bodymove_sfMap/bodymove_sfMap'

@@ -16,6 +16,9 @@ const Link = (props) => {
                 setUrl(page.slug.current);
             })
         }
+        if(link && link.externalUrl){
+            setUrl(link.externalUrl);
+        }
         if(link && link.file){
             const filePath = getFile(link.file, client.config());
             setUrl(filePath.asset.url);

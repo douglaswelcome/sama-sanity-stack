@@ -22,7 +22,7 @@ export default {
               decorators: [],
               annotations: [
                 {
-                  name: 'link',
+                  name: 'button_link',
                   type: 'object',
                   title: 'Link',
                   blockEditor: {
@@ -46,6 +46,18 @@ export default {
                           allowRelative: true,
                           scheme: ['https', 'http', 'mailto', 'tel'],
                         }),
+                    },
+                    {
+                      name: "style",
+                      type: "string",
+                      title: 'Optional Link Style',
+                      options: {
+                        list: [
+                            { title: 'Button Primary', value: ''},
+                            { title: 'Button Secondary', value: 'secondary' },
+                            { title: 'Arrow CTA', value: 'arrow'}
+                        ],
+                      },
                     }
                   ]
                 }
