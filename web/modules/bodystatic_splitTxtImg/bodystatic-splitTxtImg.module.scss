@@ -1,10 +1,11 @@
 @import '../../styles/base/grid';
 @import '../../styles/base/variables';
+@import '../../styles/base/elements';
 
 .copy{
     display: grid;
     grid-auto-flow: row;
-    row-gap: 1.5rem;
+    row-gap: $space-sm;
     grid-row: 1;
     p{
         font-size: 1.25rem;
@@ -33,6 +34,7 @@
 .image{
     grid-row: 1;
     position: relative;
+    @extend %container-lg;
 
     @include breakpoint(w-sm) {
         grid-row: 2;
@@ -74,7 +76,7 @@
     }
 
     img {
-        border-radius: $roundcorner;
+        border-radius: $lg-round-corner;
     }
 
     &:before {
@@ -83,7 +85,7 @@
         height: calc(100% - 2rem);
         background: linear-gradient($color-charcoal-1, $color-charcoal-1) padding-box, linear-gradient(89.94deg, $gradient-sunshine) border-box;
         border: 6px solid transparent;
-        border-radius: $roundcorner;
+        border-radius: $lg-round-corner;
         position: absolute;
         bottom: 0;
         right: 0;

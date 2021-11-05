@@ -1,12 +1,13 @@
 @import '../../styles/base/variables';
 @import '../../styles/base/grid';
+@import '../../styles/base/elements';
 
 .wrapper{
     grid-column: 1 /span 12;
     display: grid;
     grid-template-columns: 1fr 6rem 2fr;
     padding: 3rem;
-    border-radius: $roundcorner;
+    border-radius: $lg-round-corner;
     color: $color-charcoal-1;
     background-color: $color-white;
 }

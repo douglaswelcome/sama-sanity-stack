@@ -133,18 +133,14 @@ $med-page-width: 800px;
   padding-top: $space-lg;
   padding-bottom: $space-lg;
   position: relative;
+  row-gap:$space-md;
 
-  &:first-of-type{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
+  // &:first-of-type{
+  //   padding-top: 3rem;
+  //   padding-bottom: 3rem;
+  // }
 
-  > *{
-    margin-bottom: $space-md;
-    &:last-of-type{
-      margin-bottom: 0;
-    }
-  }
+  
 
   @include breakpoint(w-sm) {
     padding-top: 3rem;

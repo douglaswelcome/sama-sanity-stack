@@ -1,7 +1,7 @@
 export default {
     type: 'object',
     name: 'bodystatic_vidCenter',
-    title: 'Video Content Divider',
+    title: 'Video Center',
     options: {
       collapsible: true,
       collapsed: false
@@ -19,7 +19,7 @@ export default {
     preview: {
         prepare () {
           return {
-            title: "Video Divider"
+            title: "Video Center"
           }
         }
     }

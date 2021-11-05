@@ -8,7 +8,7 @@ const bodystatic_panelFeature = (props) => {
     const {image_position, image, headline, body_text, button, awards} = props;
 
     return (
-        <div className={`bodystatic-panelFeature ${image_position ? styles._flipImage : '' } umoja-l-grid--12 umoja-u-bg--charcoal3`}>
+        <div className={`bodystatic-panelFeature ${image_position ? styles._flipImage : '' } umoja-l-grid--12 umoja-u-bg--charcoal3 container-lg`}>
             <div className={styles.imgWrap}>
                 <Image src={image} layout="fill" />
             </div>

@@ -9,14 +9,15 @@
 .wrapper{
     grid-column: span 12;
     height: 600px;
-    border-radius: $roundcorner;
+    border-radius: $lg-round-corner;
+    ;
     background-color: $color-charcoal-2;
     position: relative;
 }
 
 .map{
     height: 100%;
-    border-radius: $roundcorner;
+    border-radius: $lg-round-corner;    ;
     overflow: hidden;
     position: absolute; 
     top: 0;

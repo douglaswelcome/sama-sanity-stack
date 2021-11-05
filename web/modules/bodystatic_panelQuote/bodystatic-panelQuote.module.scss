@@ -19,7 +19,7 @@
     height: 100%;
     background: linear-gradient($color-charcoal-1,$color-charcoal-1) padding-box,linear-gradient(89.94deg, $gradient-green-yellow) border-box;
     border: 6px solid transparent;
-    border-radius: $roundcorner;
+    border-radius: $lg-round-corner;
     position: absolute;
     bottom: -2rem;
     z-index: -1;

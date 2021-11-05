@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {getFile} from '@sanity/asset-utils'
 import client from '../../client'
-import styles from './bodystatic-videoDivide.module.scss'
+import styles from './bodystatic-vidCenter.module.scss'
 
 const bodystatic_vidCenter = (props) => {
     const {video} = props;
     const videoPath = getFile(video, client.config());
 
     return (
-        <div className="bodystatic-videoDivide umoja-l-grid--12">
+        <div className="bodystatic-vidCenter container-lg umoja-l-grid--12">
             <div className={styles.videoWrapper}>
                 <video 
                     className={styles.video} 
@@ -24,8 +24,7 @@ const bodystatic_vidCenter = (props) => {
                     />
                 </video>
             </div>
-            <div className={styles.bg1}></div>
-            <div className={styles.bg2}></div>
+
         </div>
     )
 }

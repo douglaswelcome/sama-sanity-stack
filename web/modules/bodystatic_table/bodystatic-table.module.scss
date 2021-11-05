@@ -6,7 +6,8 @@
     display: grid;
     grid-template-columns: auto minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
     align-self: center;
-    border-radius: $roundcorner;
+    border-radius: $lg-round-corner
+;
     padding: 0 3rem;
     background-color: $color-charcoal-3;
     thead,tbody{

@@ -25,7 +25,8 @@
             content: "";
             width: 0;
             height: 4px;
-            border-radius: $roundcorner;
+            border-radius: $lg-round-corner
+;
             position: absolute;
             left: 0;
             bottom: 0;
@@ -174,7 +175,8 @@
 }
 
 .list{
-    border-radius: $roundcorner;
+    border-radius: $lg-round-corner
+;
     padding: 3rem 2rem;
     background-color: $color-charcoal-3;
     position: relative;
