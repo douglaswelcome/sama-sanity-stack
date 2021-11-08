@@ -24,12 +24,14 @@ export async function getStaticProps() {
     const sections = home?.sections;
     sections.map(section =>{
       let {modules} = section;
-      modules.map((module, i) =>{
-        if(module.ref_modules){
-          let refs = module.ref_modules;
-          modules.splice(i, 1 , ...refs);
-        }
-      });
+      if(modules){
+        modules.map((module, i) =>{
+          if(module.ref_modules){
+            let refs = module.ref_modules;
+            modules.splice(i, 1 , ...refs);
+          }
+        });
+      }
     })
     
     return {
