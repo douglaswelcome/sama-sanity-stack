@@ -8,6 +8,8 @@
         text-align: center;
     }
 
+ 
+
     @include breakpoint (w-sm) {
         grid-column: 1 /span 6;
     }
@@ -18,6 +20,8 @@
     height: 20rem;
     margin-bottom: $space-sm;
     position: relative;
+    border-radius:$med-round-corner;
+  
 }
 
 .item__link{
@@ -47,6 +51,7 @@
             transition-property: transform;
             transition-duration: 0.2s;
             transition-timing-function: ease;
+            border-radius:$med-round-corner;
         }
     }
     &:hover{

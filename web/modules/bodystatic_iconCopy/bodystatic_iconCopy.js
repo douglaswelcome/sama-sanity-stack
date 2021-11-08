@@ -29,8 +29,8 @@ const bodystatic_iconCopy = (props) => {
                         }
                     </div>
                     }
-                    <h5>{icon.title}</h5>
-                    <p>{icon.body}</p>
+                    <h4>{icon.title}</h4>
+                    {/* <p>{icon.body}</p> */}
                 </div>
                 )
             })}
@@ -44,7 +44,7 @@ bodystatic_iconCopy.propTypes = {
     icons: PropTypes.arrayOf(PropTypes.shape({
         icon: PropTypes.shape({
             title: PropTypes.string,
-            body: PropTypes.string,
+            // body: PropTypes.array,
             icon: PropTypes.shape({
                 asset: PropTypes.shape({url: PropTypes.string})
             })

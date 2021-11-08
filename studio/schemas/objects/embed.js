@@ -13,7 +13,7 @@ export default {
             title: 'Type',
             options: {
                 list: [
-                    { title: 'Viemo', value: 'vimeo'},
+                    { title: 'Vimeo', value: 'vimeo'},
                     { title: 'Youtube', value: 'youtube' }
                 ],
             },
