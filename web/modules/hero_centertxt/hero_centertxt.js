@@ -11,11 +11,12 @@ const hero_centertxt= (props) => {
         <div className="hero-centertxt umoja-l-grid--12">
             <div className={styles.body}>
                     <h1>{heading}</h1>
-                    {tagline.richText ?
-                        <RichText className={styles.tagline} richText={tagline.richText} align={tagline.align} />
+                    {tagline &&
+                        tagline.richText ?
+                            <RichText className={styles.tagline} richText={tagline.richText} align={tagline.align} />
                         :
-                        <h5>{tagline}</h5>
-                    }
+                            <h5>{tagline}</h5>
+                    } 
                 {cta.title &&
                     <Button {...cta} />
                 }

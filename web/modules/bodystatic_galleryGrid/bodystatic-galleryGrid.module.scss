@@ -55,3 +55,21 @@
         }
     }
 }
+
+._four{
+    .item{
+        grid-column: span 3;
+
+        @include breakpoint (w-sm) {
+            grid-column: 1 /span 6;
+        }
+    }
+    .imgWrap{
+       width: 20rem;
+       margin: 0 auto $space-sm auto;
+       
+       @include breakpoint (w-sm) {
+        width: 100%;
+        }
+    }
+}

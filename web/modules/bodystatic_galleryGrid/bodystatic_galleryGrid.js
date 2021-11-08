@@ -6,9 +6,11 @@ import styles from './bodystatic-galleryGrid.module.scss'
 
 const bodystatic_galleryGrid = (props) => {
     const {gridItems} = props;
+    let className = `bodystatic-galleryGrid umoja-l-grid--6 umoja-l-grid-gap--row-2 ${gridItems.length == 4 ? styles._four : ''}`;
+
 
     return (
-        <div className="bodystatic-galleryGrid umoja-l-grid--6 umoja-l-grid-gap--row-2">
+        <div className={className}>
             {gridItems.map((item) => {
                 if(item.link){
                     return ( 
