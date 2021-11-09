@@ -1,10 +1,16 @@
-import moment from 'moment'
 import PropTypes from 'prop-types'
 import styles from './event.module.scss'
 
 const Event = (props) => {
     const {datetime, time_zone, type, location, name, lightMode} = props;
-    const date = moment(datetime).format('MMMM DD, YYYY @ h:mm A');
+    let date = new Date(datetime);
+    date = date.toLocaleString('en-US', {
+        day: 'numeric',
+        year: 'numeric',
+        month: 'long',
+        hour: 'numeric',
+        minute: 'numeric',
+    });
     let catClass = 'category__sunshine';
     switch (type){
         case 'Conference':

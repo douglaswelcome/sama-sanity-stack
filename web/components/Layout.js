@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import dynamic from "next/dynamic";
 import Head from 'next/head'
-import Header from './header/header'
-import Footer from './footer/footer'
+const Header = dynamic(() => import('./header/header'))
+const Footer = dynamic(() => import('./footer/footer'))
 
 function Layout (props) {
   const {config, children} = props

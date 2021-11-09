@@ -4,7 +4,7 @@ exports.id = 695;
 exports.ids = [695];
 exports.modules = {
 
-/***/ 4029:
+/***/ 3513:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -24,18 +24,14 @@ var client = __webpack_require__(267);
 var client_default = /*#__PURE__*/__webpack_require__.n(client);
 // EXTERNAL MODULE: ./libs/queries.js
 var queries = __webpack_require__(4645);
-// EXTERNAL MODULE: ./components/Layout.js + 5 modules
-var Layout = __webpack_require__(5964);
-;// CONCATENATED MODULE: external "moment"
-const external_moment_namespaceObject = require("moment");
-var external_moment_default = /*#__PURE__*/__webpack_require__.n(external_moment_namespaceObject);
+// EXTERNAL MODULE: ./node_modules/next/dynamic.js
+var dynamic = __webpack_require__(5152);
 // EXTERNAL MODULE: ./components/event/event.module.scss
 var event_module = __webpack_require__(8719);
 var event_module_default = /*#__PURE__*/__webpack_require__.n(event_module);
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(5282);
 ;// CONCATENATED MODULE: ./components/event/event.js
-
 
 
 
@@ -49,7 +45,14 @@ const Event = props => {
     name,
     lightMode
   } = props;
-  const date = external_moment_default()(datetime).format('MMMM DD, YYYY @ h:mm A');
+  let date = new Date(datetime);
+  date = date.toLocaleString('en-US', {
+    day: 'numeric',
+    year: 'numeric',
+    month: 'long',
+    hour: 'numeric',
+    minute: 'numeric'
+  });
   let catClass = 'category__sunshine';
 
   switch (type) {
@@ -82,8 +85,8 @@ const Event = props => {
 };
 
 /* harmony default export */ const event_event = (Event);
-// EXTERNAL MODULE: ./modules/index.js + 41 modules
-var modules = __webpack_require__(7857);
+// EXTERNAL MODULE: ./modules/hero_centertxt/hero_centertxt.js
+var hero_centertxt = __webpack_require__(6760);
 // EXTERNAL MODULE: ./pages/events.module.scss
 var events_module = __webpack_require__(1672);
 var events_module_default = /*#__PURE__*/__webpack_require__.n(events_module);
@@ -98,6 +101,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+const Layout = (0,dynamic.default)(() => __webpack_require__.e(/* import() */ 941).then(__webpack_require__.bind(__webpack_require__, 4941)), {
+  loadableGenerated: {
+    webpack: () => [/*require.resolve*/(4941)],
+    modules: ["events.js -> " + '../components/Layout']
+  }
+});
 
 
 
@@ -133,11 +142,11 @@ const Events = props => {
     setActiveTab(active);
   };
 
-  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(Layout/* default */.Z, {
+  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(Layout, {
     config: config,
     children: [/*#__PURE__*/jsx_runtime_.jsx("section", {
       className: "umoja-l-grid-section",
-      children: /*#__PURE__*/jsx_runtime_.jsx(modules.hero_centertxt, {
+      children: /*#__PURE__*/jsx_runtime_.jsx(hero_centertxt/* default */.Z, {
         heading: "Events",
         tagline: "Sama sponsored events, conferences, and webinars."
       })
@@ -298,46 +307,6 @@ module.exports = require("@sanity/client");
 
 /***/ }),
 
-/***/ 3062:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("@u-wave/react-vimeo");
-
-/***/ }),
-
-/***/ 9525:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("@u-wave/react-youtube");
-
-/***/ }),
-
-/***/ 4885:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("get-youtube-id");
-
-/***/ }),
-
-/***/ 5768:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("lottie-web");
-
-/***/ }),
-
-/***/ 1095:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next-sanity-image");
-
-/***/ }),
-
 /***/ 9325:
 /***/ ((module) => {
 
@@ -346,27 +315,19 @@ module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
 
-/***/ 822:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/server/image-config.js");
-
-/***/ }),
-
-/***/ 6695:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/head.js");
-
-/***/ }),
-
 /***/ 5378:
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
+
+/***/ }),
+
+/***/ 2307:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/loadable.js");
 
 /***/ }),
 
@@ -434,14 +395,6 @@ module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 /***/ }),
 
-/***/ 556:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/to-base-64.js");
-
-/***/ }),
-
 /***/ 7620:
 /***/ ((module) => {
 
@@ -482,14 +435,6 @@ module.exports = require("react-inlinesvg");
 
 /***/ }),
 
-/***/ 5508:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("react-map-gl");
-
-/***/ }),
-
 /***/ 5282:
 /***/ ((module) => {
 
@@ -505,7 +450,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [61,281], () => (__webpack_exec__(4029)));
+var __webpack_exports__ = __webpack_require__.X(0, [664,152,202,760,930], () => (__webpack_exec__(3513)));
 module.exports = __webpack_exports__;
 
 })();

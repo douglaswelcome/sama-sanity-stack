@@ -28,10 +28,8 @@ var client = __webpack_require__(267);
 var client_default = /*#__PURE__*/__webpack_require__.n(client);
 // EXTERNAL MODULE: ./libs/queries.js
 var queries = __webpack_require__(4645);
-// EXTERNAL MODULE: ./components/Layout.js + 5 modules
-var Layout = __webpack_require__(5964);
-// EXTERNAL MODULE: ./components/RenderSection.js
-var RenderSection = __webpack_require__(6446);
+// EXTERNAL MODULE: ./node_modules/next/dynamic.js
+var dynamic = __webpack_require__(5152);
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(5282);
 ;// CONCATENATED MODULE: ./pages/[slug].js
@@ -41,7 +39,18 @@ var jsx_runtime_ = __webpack_require__(5282);
 
 
 
-
+const Layout = (0,dynamic.default)(() => __webpack_require__.e(/* import() */ 941).then(__webpack_require__.bind(__webpack_require__, 4941)), {
+  loadableGenerated: {
+    webpack: () => [/*require.resolve*/(4941)],
+    modules: ["[slug].js -> " + '../components/Layout']
+  }
+});
+const RenderSection = (0,dynamic.default)(() => Promise.all(/* import() */[__webpack_require__.e(664), __webpack_require__.e(675), __webpack_require__.e(202), __webpack_require__.e(760), __webpack_require__.e(342)]).then(__webpack_require__.bind(__webpack_require__, 3342)), {
+  loadableGenerated: {
+    webpack: () => [/*require.resolve*/(3342)],
+    modules: ["[slug].js -> " + '../components/RenderSection']
+  }
+});
 
 const Page = ({
   data = {},
@@ -59,10 +68,10 @@ const Page = ({
     });
   }
 
-  return /*#__PURE__*/jsx_runtime_.jsx(Layout/* default */.Z, {
+  return /*#__PURE__*/jsx_runtime_.jsx(Layout, {
     config: config,
     children: sections && sections.map(section => {
-      return /*#__PURE__*/jsx_runtime_.jsx(RenderSection/* default */.Z, {
+      return /*#__PURE__*/jsx_runtime_.jsx(RenderSection, {
         modules: section.modules,
         background_color: section.background_color
       }, section._key);
@@ -201,6 +210,13 @@ module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 
 /***/ }),
 
+/***/ 2307:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/loadable.js");
+
+/***/ }),
+
 /***/ 7162:
 /***/ ((module) => {
 
@@ -320,7 +336,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [61,281,446], () => (__webpack_exec__(8414)));
+var __webpack_exports__ = __webpack_require__.X(0, [152,930], () => (__webpack_exec__(8414)));
 module.exports = __webpack_exports__;
 
 })();

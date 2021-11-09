@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import client from '../client'
 import { eventsUpcomingQuery, eventsPastQuery, eventsFeaturedQuery } from '../libs/queries'
-import Layout from '../components/Layout'
+import dynamic from "next/dynamic";
+const Layout = dynamic(() => import('../components/Layout'))
 import Event from '../components/event/event'
-import {hero_centertxt as HeroCenterTxt} from '../modules'
+import {default as HeroCenterTxt} from '../modules/hero_centertxt/hero_centertxt'
 import styles from './events.module.scss'
 
 const Events = (props) => {
