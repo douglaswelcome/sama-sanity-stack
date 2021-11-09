@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * ATTENTION: An "eval-source-map" devtool has been used.
  * This devtool is neither made for production nor for readable output files.
@@ -1121,10 +1122,135 @@ eval("module.exports = __webpack_require__(/*! ./dist/client/link */ \"./node_mo
 /***/ ((module) => {
 
 "use strict";
+=======
+"use strict";
+(() => {
+var exports = {};
+exports.id = 219;
+exports.ids = [219];
+exports.modules = {
+
+/***/ 8414:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ _slug_),
+  "getStaticPaths": () => (/* binding */ getStaticPaths),
+  "getStaticProps": () => (/* binding */ getStaticProps)
+});
+
+// EXTERNAL MODULE: external "next/router"
+var router_ = __webpack_require__(6731);
+;// CONCATENATED MODULE: external "next/error"
+const error_namespaceObject = require("next/error");
+var error_default = /*#__PURE__*/__webpack_require__.n(error_namespaceObject);
+// EXTERNAL MODULE: ./client.js
+var client = __webpack_require__(267);
+var client_default = /*#__PURE__*/__webpack_require__.n(client);
+// EXTERNAL MODULE: ./libs/queries.js
+var queries = __webpack_require__(4645);
+// EXTERNAL MODULE: ./components/Layout.js + 5 modules
+var Layout = __webpack_require__(5964);
+// EXTERNAL MODULE: ./components/RenderSection.js + 42 modules
+var RenderSection = __webpack_require__(7586);
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(5282);
+;// CONCATENATED MODULE: ./pages/[slug].js
+
+
+
+
+
+
+
+
+const Page = ({
+  data = {},
+  config
+}) => {
+  var _data$page, _data$page2;
+
+  const router = (0,router_.useRouter)();
+  const slug = data === null || data === void 0 ? void 0 : (_data$page = data.page) === null || _data$page === void 0 ? void 0 : _data$page.slug;
+  const sections = data === null || data === void 0 ? void 0 : (_data$page2 = data.page) === null || _data$page2 === void 0 ? void 0 : _data$page2.sections;
+
+  if (!router.isFallback && !slug) {
+    return /*#__PURE__*/jsx_runtime_.jsx((error_default()), {
+      statusCode: 404
+    });
+  }
+
+  return /*#__PURE__*/jsx_runtime_.jsx(Layout/* default */.Z, {
+    config: config,
+    children: sections && sections.map(section => {
+      return /*#__PURE__*/jsx_runtime_.jsx(RenderSection/* default */.Z, {
+        modules: section.modules,
+        background_color: section.background_color
+      }, section._key);
+    })
+  });
+};
+
+async function getStaticProps({
+  params
+}) {
+  const {
+    page
+  } = await client_default().fetch(queries/* pageQuery */.JR, {
+    slug: params.slug
+  });
+  const sections = page === null || page === void 0 ? void 0 : page.sections;
+
+  if (sections) {
+    sections.map(section => {
+      let {
+        modules
+      } = section;
+      modules.map((module, i) => {
+        if (module.ref_modules) {
+          let refs = module.ref_modules;
+          modules.splice(i, 1, ...refs);
+        }
+      });
+    });
+  }
+
+  return {
+    props: {
+      data: {
+        page
+      }
+    }
+  };
+}
+async function getStaticPaths() {
+  const paths = await client_default().fetch(queries/* pageSlugsQuery */.A3);
+  return {
+    paths: paths.map(slug => ({
+      params: {
+        slug
+      }
+    })),
+    fallback: true
+  };
+}
+/* harmony default export */ const _slug_ = (Page);
+
+/***/ }),
+
+/***/ 9484:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("@sanity/asset-utils");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "@sanity/block-content-to-react":
 /*!*************************************************!*\
   !*** external "@sanity/block-content-to-react" ***!
@@ -1132,10 +1258,16 @@ module.exports = require("@sanity/asset-utils");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 2904:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("@sanity/block-content-to-react");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "@sanity/client":
 /*!*********************************!*\
   !*** external "@sanity/client" ***!
@@ -1143,10 +1275,16 @@ module.exports = require("@sanity/block-content-to-react");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 8809:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("@sanity/client");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "@u-wave/react-vimeo":
 /*!**************************************!*\
   !*** external "@u-wave/react-vimeo" ***!
@@ -1154,10 +1292,16 @@ module.exports = require("@sanity/client");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 3062:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("@u-wave/react-vimeo");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "@u-wave/react-youtube":
 /*!****************************************!*\
   !*** external "@u-wave/react-youtube" ***!
@@ -1165,10 +1309,16 @@ module.exports = require("@u-wave/react-vimeo");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 9525:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("@u-wave/react-youtube");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "get-youtube-id":
 /*!*********************************!*\
   !*** external "get-youtube-id" ***!
@@ -1176,10 +1326,16 @@ module.exports = require("@u-wave/react-youtube");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 4885:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("get-youtube-id");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "lottie-web":
 /*!*****************************!*\
   !*** external "lottie-web" ***!
@@ -1187,10 +1343,16 @@ module.exports = require("get-youtube-id");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 5768:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("lottie-web");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "next-sanity-image":
 /*!************************************!*\
   !*** external "next-sanity-image" ***!
@@ -1198,10 +1360,16 @@ module.exports = require("lottie-web");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 1095:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next-sanity-image");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../../../server/denormalize-page-path":
 /*!************************************************************!*\
   !*** external "next/dist/server/denormalize-page-path.js" ***!
@@ -1209,10 +1377,16 @@ module.exports = require("next-sanity-image");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 9325:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../server/image-config":
 /*!***************************************************!*\
   !*** external "next/dist/server/image-config.js" ***!
@@ -1220,10 +1394,16 @@ module.exports = require("next/dist/server/denormalize-page-path.js");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 822:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/dist/server/image-config.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../shared/lib/head":
 /*!***********************************************!*\
   !*** external "next/dist/shared/lib/head.js" ***!
@@ -1231,10 +1411,16 @@ module.exports = require("next/dist/server/image-config.js");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 6695:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/dist/shared/lib/head.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../i18n/normalize-locale-path":
 /*!*********************************************************************!*\
   !*** external "next/dist/shared/lib/i18n/normalize-locale-path.js" ***!
@@ -1242,10 +1428,16 @@ module.exports = require("next/dist/shared/lib/head.js");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 5378:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../mitt":
 /*!***********************************************!*\
   !*** external "next/dist/shared/lib/mitt.js" ***!
@@ -1253,10 +1445,16 @@ module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 7162:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/dist/shared/lib/mitt.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../shared/lib/router-context":
 /*!*********************************************************!*\
   !*** external "next/dist/shared/lib/router-context.js" ***!
@@ -1264,10 +1462,16 @@ module.exports = require("next/dist/shared/lib/mitt.js");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 8773:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/dist/shared/lib/router-context.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../shared/lib/router/utils/get-asset-path-from-route":
 /*!*********************************************************************************!*\
   !*** external "next/dist/shared/lib/router/utils/get-asset-path-from-route.js" ***!
@@ -1275,10 +1479,16 @@ module.exports = require("next/dist/shared/lib/router-context.js");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 2248:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./utils/is-dynamic":
 /*!******************************************************************!*\
   !*** external "next/dist/shared/lib/router/utils/is-dynamic.js" ***!
@@ -1286,10 +1496,16 @@ module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 9372:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./utils/parse-relative-url":
 /*!**************************************************************************!*\
   !*** external "next/dist/shared/lib/router/utils/parse-relative-url.js" ***!
@@ -1297,10 +1513,16 @@ module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 665:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./utils/querystring":
 /*!*******************************************************************!*\
   !*** external "next/dist/shared/lib/router/utils/querystring.js" ***!
@@ -1308,10 +1530,16 @@ module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.j
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 2747:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./utils/route-matcher":
 /*!*********************************************************************!*\
   !*** external "next/dist/shared/lib/router/utils/route-matcher.js" ***!
@@ -1319,10 +1547,16 @@ module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 333:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./utils/route-regex":
 /*!*******************************************************************!*\
   !*** external "next/dist/shared/lib/router/utils/route-regex.js" ***!
@@ -1330,10 +1564,16 @@ module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 3456:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../shared/lib/to-base-64":
 /*!*****************************************************!*\
   !*** external "next/dist/shared/lib/to-base-64.js" ***!
@@ -1341,10 +1581,16 @@ module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 556:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/dist/shared/lib/to-base-64.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../shared/lib/utils":
 /*!************************************************!*\
   !*** external "next/dist/shared/lib/utils.js" ***!
@@ -1352,10 +1598,16 @@ module.exports = require("next/dist/shared/lib/to-base-64.js");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 7620:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "next/error":
 /*!*****************************!*\
   !*** external "next/error" ***!
@@ -1374,10 +1626,16 @@ module.exports = require("next/error");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 701:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/head");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "next/router":
 /*!******************************!*\
   !*** external "next/router" ***!
@@ -1385,10 +1643,16 @@ module.exports = require("next/head");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 6731:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("next/router");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "prop-types":
 /*!*****************************!*\
   !*** external "prop-types" ***!
@@ -1407,10 +1671,16 @@ module.exports = require("prop-types");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 9297:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("react");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "react-inlinesvg":
 /*!**********************************!*\
   !*** external "react-inlinesvg" ***!
@@ -1418,10 +1688,16 @@ module.exports = require("react");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 7051:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("react-inlinesvg");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "react-is":
 /*!***************************!*\
   !*** external "react-is" ***!
@@ -1440,10 +1716,16 @@ module.exports = require("react-is");
 /***/ ((module) => {
 
 "use strict";
+=======
+/***/ 5508:
+/***/ ((module) => {
+
+>>>>>>> develop
 module.exports = require("react-map-gl");
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "react/jsx-dev-runtime":
 /*!****************************************!*\
   !*** external "react/jsx-dev-runtime" ***!
@@ -1462,6 +1744,12 @@ module.exports = require("react/jsx-dev-runtime");
 /***/ (() => {
 
 /* (ignored) */
+=======
+/***/ 5282:
+/***/ ((module) => {
+
+module.exports = require("react/jsx-runtime");
+>>>>>>> develop
 
 /***/ })
 
@@ -1472,7 +1760,11 @@ module.exports = require("react/jsx-dev-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+<<<<<<< HEAD
 var __webpack_exports__ = (__webpack_exec__("./pages/[slug].js"));
+=======
+var __webpack_exports__ = __webpack_require__.X(0, [61,8], () => (__webpack_exec__(8414)));
+>>>>>>> develop
 module.exports = __webpack_exports__;
 
 })();

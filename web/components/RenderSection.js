@@ -19,13 +19,15 @@ function RenderSection (props) {
 
   return (
     <section className={className}>
-      {modules.map(module => {
-        const SectionComponent = resolveModule(module)
-        if (!SectionComponent) {
-          return <div key={module._key}>Missing section {module._type}</div>
-        }
-        return <SectionComponent {...module} key={module._key} />
-      })}
+      {modules &&
+        modules.map(module => {
+          const SectionComponent = resolveModule(module)
+          if (!SectionComponent) {
+            return <div key={module._key}>Missing section {module._type}</div>
+          }
+          return <SectionComponent {...module} key={module._key} />
+        })
+      }
     </section>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Button from '../../components/button/button'
+import RichText from '../../components/richText_field/richText_field'
 import Image from '../../components/image'
 import styles from './bodystatic-iconCopy.module.scss'
 
@@ -29,8 +29,13 @@ const bodystatic_iconCopy = (props) => {
                         }
                     </div>
                     }
-                    <h4>{icon.title}</h4>
-                    {/* <p>{icon.body}</p> */}
+                    <h5>{icon.title}</h5>
+                    {icon.body &&
+                        icon.body.richText ?
+                            <RichText className={styles.body} richText={icon.body.richText} />
+                        :   
+                        <p>{icon.body}</p>
+                    }
                 </div>
                 )
             })}
@@ -44,7 +49,13 @@ bodystatic_iconCopy.propTypes = {
     icons: PropTypes.arrayOf(PropTypes.shape({
         icon: PropTypes.shape({
             title: PropTypes.string,
-            // body: PropTypes.array,
+            body: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.shape({
+                    align: PropTypes.string,
+                    richText: PropTypes.array
+                })
+            ]), 
             icon: PropTypes.shape({
                 asset: PropTypes.shape({url: PropTypes.string})
             })
