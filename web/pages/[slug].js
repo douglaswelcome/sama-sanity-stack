@@ -2,8 +2,9 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import client from '../client'
 import { pageQuery, pageSlugsQuery } from '../libs/queries'
-import Layout from '../components/Layout'
-import RenderSection from '../components/RenderSection'
+import dynamic from "next/dynamic";
+const Layout = dynamic(() => import('../components/Layout'))
+const RenderSection = dynamic(() => import('../components/RenderSection'))
 
 const Page = ({ data = {}, config }) => {
   const router = useRouter();

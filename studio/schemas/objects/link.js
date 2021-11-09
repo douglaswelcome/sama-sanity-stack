@@ -4,11 +4,17 @@ export default {
     title: 'Link',
     fields: [
       {
-        title: 'Internal Link',
+        title: 'Internal Page',
         name: 'internalLink',
         description: 'Select pages for navigation',
         type: 'reference',
         to: [{ type: 'page' }], 
+      },
+      {
+        title: 'Internal Page Custom URL',
+        description:"Use for internal pages not created in Sanity (e.g. dynamically created page templates)",
+        type: 'string',
+        name: 'internalLink_custom'
       },
       {
         name: 'externalUrl',

@@ -1,8 +1,8 @@
 "use strict";
 (() => {
 var exports = {};
-exports.id = 405;
-exports.ids = [405];
+exports.id = 5405;
+exports.ids = [5405];
 exports.modules = {
 
 /***/ 6124:
@@ -16,8 +16,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(267);
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_client__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _libs_queries__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4645);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5964);
-/* harmony import */ var _components_RenderSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7586);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4941);
+/* harmony import */ var _components_RenderSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6446);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5282);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
 
@@ -34,10 +34,10 @@ const Index = props => {
   const {
     sections
   } = page;
-  return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__/* .default */ .Z, {
+  return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__.default, {
     config: config,
     children: sections && sections.map(section => {
-      return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_components_RenderSection__WEBPACK_IMPORTED_MODULE_3__/* .default */ .Z, {
+      return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(_components_RenderSection__WEBPACK_IMPORTED_MODULE_3__.default, {
         modules: section.modules,
         background_color: section.background_color
       }, section._key);
@@ -153,6 +153,13 @@ module.exports = require("next/dist/shared/lib/head.js");
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
+
+/***/ }),
+
+/***/ 2307:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/loadable.js");
 
 /***/ }),
 
@@ -275,7 +282,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [61,8], () => (__webpack_exec__(6124)));
+var __webpack_exports__ = __webpack_require__.X(0, [5152,8930,6446,4941], () => (__webpack_exec__(6124)));
 module.exports = __webpack_exports__;
 
 })();
