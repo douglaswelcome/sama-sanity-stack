@@ -9,6 +9,7 @@ import page from './documents/page'
 import navigation from './documents/navigation'
 import siteConfig from './documents/siteConfig'
 import reusable_module from './documents/reusableModule'
+import event from './documents/event'
 
 //Object types
 import button from './objects/button'
@@ -84,6 +85,7 @@ export default createSchema({
     navigation,
     siteConfig,
     reusable_module,
+    event,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     page_sections,

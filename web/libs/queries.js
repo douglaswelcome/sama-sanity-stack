@@ -33,3 +33,13 @@ export const pageQuery = `{
 export const pageSlugsQuery = `
 *[_type == "page" && defined(slug.current)][].slug.current
 `
+
+export const eventsPastQuery = `
+*[_type == "event" && datetime < now()]| order(datetime desc)
+`
+export const eventsUpcomingQuery = `
+*[_type == "event" && datetime > now()]| order(datetime asc)
+`
+export const eventsFeaturedQuery = `
+*[_type == "event" && datetime > now() && featured == true][0..2]| order(datetime asc)
+`

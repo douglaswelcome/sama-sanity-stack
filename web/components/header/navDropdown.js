@@ -22,10 +22,18 @@ const NavDropDown = (props) => {
                     if(groupedItem.url.internalLink){
                         subItems.push(groupedItem.url.internalLink.slug.current)
                     }
+                    if(groupedItem.url.internalLink_custom){
+                        const internalLinkCustom = item.url.internalLink_custom.charAt(0) == '/' ? item.url.internalLink_custom.substring(1) : item.url.internalLink_custom;
+                        subItems.push(internalLinkCustom)
+                    }
                 })
             }else{
                 if(item.url.internalLink){
                     subItems.push(item.url.internalLink.slug.current)
+                }
+                if(item.url.internalLink_custom){
+                    const internalLinkCustom = item.url.internalLink_custom.charAt(0) == '/' ? item.url.internalLink_custom.substring(1) : item.url.internalLink_custom;
+                    subItems.push(internalLinkCustom)
                 }
             }
             return subItems;
