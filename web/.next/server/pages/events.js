@@ -1,7 +1,7 @@
 (() => {
 var exports = {};
-exports.id = 695;
-exports.ids = [695];
+exports.id = 7695;
+exports.ids = [7695];
 exports.modules = {
 
 /***/ 3513:
@@ -101,7 +101,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const Layout = (0,dynamic.default)(() => __webpack_require__.e(/* import() */ 941).then(__webpack_require__.bind(__webpack_require__, 4941)), {
+const Layout = (0,dynamic.default)(() => __webpack_require__.e(/* import() */ 4941).then(__webpack_require__.bind(__webpack_require__, 4941)), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(4941)],
     modules: ["events.js -> " + '../components/Layout']
@@ -146,7 +146,7 @@ const Events = props => {
     config: config,
     children: [/*#__PURE__*/jsx_runtime_.jsx("section", {
       className: "umoja-l-grid-section",
-      children: /*#__PURE__*/jsx_runtime_.jsx(hero_centertxt/* default */.Z, {
+      children: /*#__PURE__*/jsx_runtime_.jsx(hero_centertxt.default, {
         heading: "Events",
         tagline: "Sama sponsored events, conferences, and webinars."
       })
@@ -450,7 +450,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [664,152,202,760,930], () => (__webpack_exec__(3513)));
+var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5152,3653,4151,4687,8930,6760], () => (__webpack_exec__(3513)));
 module.exports = __webpack_exports__;
 
 })();

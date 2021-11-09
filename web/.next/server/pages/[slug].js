@@ -1,8 +1,8 @@
 "use strict";
 (() => {
 var exports = {};
-exports.id = 219;
-exports.ids = [219];
+exports.id = 6219;
+exports.ids = [6219];
 exports.modules = {
 
 /***/ 8414:
@@ -39,15 +39,15 @@ var jsx_runtime_ = __webpack_require__(5282);
 
 
 
-const Layout = (0,dynamic.default)(() => __webpack_require__.e(/* import() */ 941).then(__webpack_require__.bind(__webpack_require__, 4941)), {
+const Layout = (0,dynamic.default)(() => __webpack_require__.e(/* import() */ 4941).then(__webpack_require__.bind(__webpack_require__, 4941)), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(4941)],
     modules: ["[slug].js -> " + '../components/Layout']
   }
 });
-const RenderSection = (0,dynamic.default)(() => Promise.all(/* import() */[__webpack_require__.e(664), __webpack_require__.e(675), __webpack_require__.e(202), __webpack_require__.e(760), __webpack_require__.e(342)]).then(__webpack_require__.bind(__webpack_require__, 3342)), {
+const RenderSection = (0,dynamic.default)(() => __webpack_require__.e(/* import() */ 6446).then(__webpack_require__.bind(__webpack_require__, 6446)), {
   loadableGenerated: {
-    webpack: () => [/*require.resolve*/(3342)],
+    webpack: () => [/*require.resolve*/(6446)],
     modules: ["[slug].js -> " + '../components/RenderSection']
   }
 });
@@ -336,7 +336,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [152,930], () => (__webpack_exec__(8414)));
+var __webpack_exports__ = __webpack_require__.X(0, [5152,8930], () => (__webpack_exec__(8414)));
 module.exports = __webpack_exports__;
 
 })();

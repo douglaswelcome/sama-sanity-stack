@@ -2,44 +2,37 @@
   "../components/Layout.js -> ./footer/footer": {
     "id": 3551,
     "files": [
-      "static/chunks/934.afe8bf76efa5283e8335.js",
+      "static/chunks/commons-e7ca7af47bfafa7ea6fc.js",
+      "static/chunks/4934.37651fffe4e244d39030.js",
       "static/css/c1e5e6175a957e60f91c.css",
-      "static/chunks/551.465c29fe8e59ca162581.js"
+      "static/chunks/3551.40b6951cd865dc432c75.js"
     ]
   },
   "../components/Layout.js -> ./header/header": {
     "id": 425,
     "files": [
-      "static/chunks/234-827c6b8fdc570672f510.js",
-      "static/chunks/934.afe8bf76efa5283e8335.js",
+      "static/chunks/commons-e7ca7af47bfafa7ea6fc.js",
+      "static/chunks/4934.37651fffe4e244d39030.js",
       "static/css/3a3b64fc07d947264cdc.css",
-      "static/chunks/425.907dd63dea81deee2b1e.js"
+      "static/chunks/1952.a6f428f75bc1489266dd.js"
     ]
   },
   "[slug].js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/941.de4ff8c1013753834706.js"
+      "static/chunks/4941.396c0967ba3841708a1e.js"
     ]
   },
   "[slug].js -> ../components/RenderSection": {
-    "id": 3342,
+    "id": 6446,
     "files": [
-      "static/chunks/framework-c93ed74a065331c4bd75.js",
-      "static/chunks/2c796e83-e4945b7c93eab0ead28c.js",
-      "static/chunks/ea88be26-ce84a7cc58b6c1ef0481.js",
-      "static/chunks/234-827c6b8fdc570672f510.js",
-      "static/chunks/863-44b7f1603bc5c610fe1f.js",
-      "static/css/1394f52100cf252c5941.css",
-      "static/chunks/718-33099f0998f91e2e4e37.js",
-      "static/css/6c8f2f5a77009869fe2f.css",
-      "static/chunks/342-d1ead33c418229d31090.js"
+      "static/chunks/6446.f25ea8e144338d419628.js"
     ]
   },
   "events.js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/941.de4ff8c1013753834706.js"
+      "static/chunks/4941.396c0967ba3841708a1e.js"
     ]
   }
 }
