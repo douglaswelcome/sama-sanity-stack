@@ -8,9 +8,10 @@ const NavLink = (props) => {
     const {url, title} = props;
     const { asPath } = useRouter();
     const currentSlug = asPath.charAt(0) == '/' ? asPath.substring(1) : asPath;
-    
-    if(url.internalLink){
-        const slug = url.internalLink.slug.current;
+
+    if(url.internalLink || url.internalLink_custom){
+        let slug = (url.internalLink ? url.internalLink.slug.current : url.internalLink_custom);
+        slug = slug.charAt(0) == '/' ? slug.substring(1) : slug;
         const active = currentSlug === slug ? true : false;
         const className = active ? `${styles.navLink} ${styles.navLink__active}` : `${styles.navLink}`;
 

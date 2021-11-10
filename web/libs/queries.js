@@ -1,4 +1,13 @@
 const homeID = `*[_id == "global-config"][0].frontpage->_id`;
+const eventFields = `
+    featured,
+    datetime,
+    time_zone,
+    name,
+    type,
+    url,
+    location
+`
 
 const pageFields = `
 title,
@@ -32,4 +41,20 @@ export const pageQuery = `{
 
 export const pageSlugsQuery = `
 *[_type == "page" && defined(slug.current)][].slug.current
+`
+
+export const eventsPastQuery = `
+*[_type == "event" && datetime < now()]| order(datetime desc){
+    ${eventFields}
+}
+`
+export const eventsUpcomingQuery = `
+*[_type == "event" && datetime > now()]| order(datetime asc){
+    ${eventFields}
+}
+`
+export const eventsFeaturedQuery = `
+*[_type == "event" && datetime > now() && featured == true][0..2]| order(datetime asc){
+    ${eventFields}
+}
 `

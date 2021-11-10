@@ -9,8 +9,13 @@
  */
 (() => {
 var exports = {};
+<<<<<<< HEAD
 exports.id = "pages/_error";
 exports.ids = ["pages/_error"];
+=======
+exports.id = 4820;
+exports.ids = [4820];
+>>>>>>> develop
 exports.modules = {
 
 /***/ "./node_modules/next/dist/pages/_error.js":

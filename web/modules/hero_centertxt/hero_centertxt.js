@@ -17,7 +17,7 @@ const hero_centertxt= (props) => {
                         :
                             <h5>{tagline}</h5>
                     } 
-                {cta.title &&
+                {cta && cta.title && 
                     <Button {...cta} />
                 }
             </div>

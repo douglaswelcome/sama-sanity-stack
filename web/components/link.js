@@ -23,12 +23,15 @@ const Link = (props) => {
             const filePath = getFile(link.file, client.config());
             setUrl(filePath.asset.url);
         }
+        if(link && link.internalLink_custom){
+            setUrl(link.internalLink_custom)
+        }
     });
 
     if(linkUrl){
         return (
             <>
-            {link.internalLink ?
+            {(link.internalLink || link.internalLink_custom) ?
                 <NextLink href={`/${linkUrl}`}>
                     <a className={className}>
                         {children}

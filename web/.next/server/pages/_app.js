@@ -8,8 +8,13 @@
  */
 (() => {
 var exports = {};
+<<<<<<< HEAD
 exports.id = "pages/_app";
 exports.ids = ["pages/_app"];
+=======
+exports.id = 2888;
+exports.ids = [2888];
+>>>>>>> develop
 exports.modules = {
 
 /***/ "./node_modules/next/app.js":
@@ -115,7 +120,11 @@ module.exports = require("react/jsx-dev-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+<<<<<<< HEAD
 var __webpack_exports__ = (__webpack_exec__("./pages/_app.js"));
+=======
+var __webpack_exports__ = __webpack_require__.X(0, [7544], () => (__webpack_exec__(7672)));
+>>>>>>> develop
 module.exports = __webpack_exports__;
 
 })();

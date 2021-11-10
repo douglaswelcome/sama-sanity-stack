@@ -1,17 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import * as SectionModules from '../modules'
-
-function resolveModule (module) {
-  const moduleName = module._type;
-  const section = SectionModules[moduleName];
-
-  if (section) {
-    return section
-  }
-
-  return null
-}
+import dynamic from "next/dynamic";
 
 function RenderSection (props) {
   let {modules, background_color} = props;
@@ -21,7 +10,8 @@ function RenderSection (props) {
     <section className={className}>
       {modules &&
         modules.map(module => {
-          const SectionComponent = resolveModule(module)
+          const SectionComponent  = dynamic(() => import(`../modules/${module._type}/${module._type}.js`))
+
           if (!SectionComponent) {
             return <div key={module._key}>Missing section {module._type}</div>
           }

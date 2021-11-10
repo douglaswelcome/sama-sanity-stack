@@ -1,0 +1,44 @@
+@import '../styles/base/variables';
+@import '../styles/base/grid';
+@import '../modules/bodystatic_tabs/bodystatic-tabs.module.scss';
+
+.featured{
+    grid-gap: 2rem;
+    h2{
+        grid-column: span 12;
+        margin-bottom: $space-md;
+    }
+}
+
+.nav_item{
+    color: $color-charcoal-5;
+    &:hover{
+        color: $color-charcoal-3;
+    }
+    &.active{
+        color: $color-charcoal-1;
+    }
+}
+
+.tabWrapper{
+    grid-column: span 12;
+}
+
+.tab {
+    display: none;
+    opacity: 1;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-area: 1/1;
+    grid-gap: 2rem;
+    text-align: left;
+    h4{
+        display: block;
+    }
+    &.active{
+        display: grid;
+    }
+    @include breakpoint (w-sm){
+        display: grid;
+        grid-area: unset;
+    }
+}
