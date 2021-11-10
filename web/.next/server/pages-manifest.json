@@ -1,14 +1,7 @@
 {
-  "/[slug]": "pages/[slug].js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-<<<<<<< HEAD
   "/_error": "pages/_error.js",
-  "/[slug]": "pages/[slug].js",
-  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
-=======
   "/": "pages/index.js",
-  "/post/[slug]": "pages/post/[slug].js",
-  "/_error": "pages/_error.js"
->>>>>>> develop
+  "/[slug]": "pages/[slug].js"
 }
