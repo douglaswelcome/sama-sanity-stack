@@ -1,17 +1,20 @@
 @import '../../styles/base/grid';
 @import '../../styles/base/variables';
+@import '../../styles/base/spacing';
+@import '../../styles/base/colors';
 
 .inner{
-    grid-column: 1 / span 12;
-    border-radius: $lg-round-corner;
-    padding: $space-md;
-    background-color: $color-sunshine;
-    h1{
-        font-size: 3.75rem;
-        text-align: right;
-        color: #000;
+    grid-column: 1 / span 9;
+    display:grid;
+    row-gap:$space-sm;
+    @include breakpoint (w-med) {
+        grid-column: 1 / 12;
     }
-    @include breakpoint(w-sm) {
-        padding: $space-sm;
+
+    .__preheadline{
+        text-transform:uppercase;
+        color:$color-sunshine;
+
     }
+
 }

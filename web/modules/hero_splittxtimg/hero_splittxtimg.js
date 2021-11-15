@@ -17,9 +17,10 @@ const hero_splittxtimg = (props) => {
                 {tagline &&
                     <h5>{tagline}</h5>
                 }
-                {cta.title &&
+                {cta.link &&
                     <Button {...cta} />
                 }
+                
             </div>
             <div className={styles.imgWrapper}>
                 <Image src={image} layout="responsive" sizes="(max-width: 500px) 100vh, 500px" />

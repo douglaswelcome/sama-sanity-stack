@@ -33,10 +33,10 @@ export default {
             title: 'Subheadline'
         },
         {
-            type: 'button',
-            name: 'button',
-            title: 'CTA'
-        }
+          type: 'button',
+          name: 'cta',
+          title: 'CTA'
+      },
     ],
     preview: {
         select: {
