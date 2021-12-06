@@ -4,37 +4,7 @@ exports.id = 9195;
 exports.ids = [9195];
 exports.modules = {
 
-/***/ 7570:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-const slugify = str => {
-  str = str.replace(/^\s+|\s+$/g, ''); // trim
-
-  str = str.toLowerCase(); // remove accents, swap ñ for n, etc
-
-  const from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
-  const to = "aaaaeeeeiiiioooouuuunc------";
-
-  for (var i = 0, l = from.length; i < l; i++) {
-    str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
-  }
-
-  str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
-  .replace(/\s+/g, '-') // collapse whitespace and replace by -
-  .replace(/-+/g, '-'); // collapse dashes
-
-  return str;
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slugify);
-
-/***/ }),
-
-/***/ 5573:
+/***/ 9148:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -145,89 +115,8 @@ const BlogHeroHome = props => {
 };
 
 /* harmony default export */ const blog_heroHome = (BlogHeroHome);
-// EXTERNAL MODULE: ./components/blog/blog_postCard/blog-post.module.scss
-var blog_post_module = __webpack_require__(8288);
-var blog_post_module_default = /*#__PURE__*/__webpack_require__.n(blog_post_module);
-;// CONCATENATED MODULE: ./components/blog/blog_postCard/blog_postCard.js
-
-
-
-
-
-
-
-const BlogPost = props => {
-  const {
-    _createdAt,
-    slug,
-    author,
-    featured_image,
-    tags,
-    title,
-    estimatedReadingTime,
-    hideAuthor,
-    hideTag
-  } = props;
-  const tag = tags[0].label;
-  const slugURL = slug ? slug.current : '';
-  let authorSlug = {};
-  let tagSlug = {};
-  let postSlug = {
-    internalLink_custom: `/blog${slugURL.charAt(0) == '/' ? slugURL : `/${slugURL}`}`
-  };
-
-  if (!hideAuthor) {
-    authorSlug = {
-      internalLink_custom: `/blog/author/${author.slug ? author.slug.current : ''}`
-    };
-  }
-
-  if (!hideTag) {
-    tagSlug = {
-      internalLink_custom: `/blog/tag/${(0,slugify/* default */.Z)(tag)}`
-    };
-  }
-
-  let date = new Date(_createdAt);
-  date = date.toLocaleString('en-US', {
-    day: 'numeric',
-    year: 'numeric',
-    month: 'long'
-  });
-  return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-    className: (blog_post_module_default()).postCard,
-    children: [/*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
-      link: postSlug,
-      className: (blog_post_module_default()).postCard_image,
-      children: /*#__PURE__*/jsx_runtime_.jsx(components_image/* default */.Z, {
-        layout: "fill",
-        objectFit: "cover",
-        src: featured_image
-      })
-    }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-      className: (blog_post_module_default()).postCard_data,
-      children: [!hideTag && /*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
-        className: (blog_post_module_default()).postCard_tag,
-        link: tagSlug,
-        children: tag
-      }), /*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
-        link: postSlug,
-        children: /*#__PURE__*/jsx_runtime_.jsx("h3", {
-          children: title
-        })
-      }), !hideAuthor && /*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
-        link: authorSlug,
-        className: (blog_post_module_default()).postCard_author,
-        children: author.name
-      }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("p", {
-        className: `${(blog_post_module_default()).postCard_date} ${hideAuthor ? (blog_post_module_default()).postCard_date__noAuthor : ''}`,
-        children: [date, estimatedReadingTime ? ` | ${estimatedReadingTime} Min Read` : '']
-      })]
-    })]
-  });
-};
-
-/* harmony default export */ const blog_postCard = (BlogPost);
+// EXTERNAL MODULE: ./components/blog/blog_postCard/blog_postCard.js
+var blog_postCard = __webpack_require__(1325);
 ;// CONCATENATED MODULE: ./pages/blog.js
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
@@ -265,7 +154,7 @@ const Blog = props => {
       children: /*#__PURE__*/jsx_runtime_.jsx("div", {
         className: "umoja-l-grid--12 umoja-l-grid-gap--row-1",
         children: firstPosts.map((post, i) => {
-          return /*#__PURE__*/(0,external_react_.createElement)(blog_postCard, _objectSpread(_objectSpread({}, post), {}, {
+          return /*#__PURE__*/(0,external_react_.createElement)(blog_postCard/* default */.Z, _objectSpread(_objectSpread({}, post), {}, {
             key: i
           }));
         })
@@ -308,35 +197,6 @@ module.exports = {
 	"tag": "blog-heroHome_tag__1aSq3",
 	"excerpt": "blog-heroHome_excerpt__ts8bV",
 	"author": "blog-heroHome_author__3Cy_h"
-};
-
-
-/***/ }),
-
-/***/ 8288:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"umoja-u-pad-1": "blog-post_umoja-u-pad-1__ZAvSG",
-	"umoja-u-pad-t--0": "blog-post_umoja-u-pad-t--0__1dSml",
-	"umoja-u-pad-b--0": "blog-post_umoja-u-pad-b--0__2vsew",
-	"umoja-l-grid--12": "blog-post_umoja-l-grid--12__3v0BK",
-	"umoja-l-grid--6": "blog-post_umoja-l-grid--6__2dBVG",
-	"umoja-l-page-width": "blog-post_umoja-l-page-width__28dnW",
-	"umoja-l-grid-section": "blog-post_umoja-l-grid-section__2q_BC",
-	"umoja-l-grid-gap--row-1": "blog-post_umoja-l-grid-gap--row-1__3p43T",
-	"umoja-l-grid-gap--row-2": "blog-post_umoja-l-grid-gap--row-2__b05iT",
-	"umoja-l-grid-gap--row-3": "blog-post_umoja-l-grid-gap--row-3__lQ8_H",
-	"umoja-l-grid-align--center": "blog-post_umoja-l-grid-align--center__2jRjw",
-	"umoja-l-grid-align--base": "blog-post_umoja-l-grid-align--base__1l1Qp",
-	"postCard": "blog-post_postCard__i0O-O",
-	"postCard_image": "blog-post_postCard_image__3k8eA",
-	"postCard_data": "blog-post_postCard_data__2vfn3",
-	"postCard_tag": "blog-post_postCard_tag__9RTi-",
-	"postCard_author": "blog-post_postCard_author__Y7RjO",
-	"postCard_date": "blog-post_postCard_date__hrDMA",
-	"postCard_date__noAuthor": "blog-post_postCard_date__noAuthor__F9yyw"
 };
 
 
@@ -533,7 +393,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5675,5152,3653,5030,4645], () => (__webpack_exec__(5573)));
+var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5675,5152,3653,5030,4645,1768], () => (__webpack_exec__(9148)));
 module.exports = __webpack_exports__;
 
 })();
