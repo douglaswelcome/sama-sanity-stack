@@ -32,9 +32,10 @@ module.exports = client;
 /* harmony export */   "Dp": () => (/* binding */ eventsFeaturedQuery),
 /* harmony export */   "X6": () => (/* binding */ pressNewsQuery),
 /* harmony export */   "d9": () => (/* binding */ pressQuery),
-/* harmony export */   "ad": () => (/* binding */ pressFeaturedQuery)
+/* harmony export */   "ad": () => (/* binding */ pressFeaturedQuery),
+/* harmony export */   "Vs": () => (/* binding */ postsQuery)
 /* harmony export */ });
-/* unused harmony exports postsQuery, postQuery, postSlugsQuery, authorQuery, authorPostsQuery, postsByTagQuery, getAllPostSlugs, getPostsByTagSlug */
+/* unused harmony exports postQuery, postSlugsQuery, authorQuery, authorPostsQuery, postsByTagQuery, getAllPostSlugs, getPostsByTagSlug */
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(267);
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_client__WEBPACK_IMPORTED_MODULE_0__);
 

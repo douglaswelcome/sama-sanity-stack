@@ -2,6 +2,7 @@
   "/[slug]": "pages/[slug].js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
+  "/blog": "pages/blog.js",
   "/events": "pages/events.js",
   "/": "pages/index.js",
   "/post/[slug]": "pages/post/[slug].js",

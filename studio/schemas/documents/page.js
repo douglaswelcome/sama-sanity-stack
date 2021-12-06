@@ -4,7 +4,7 @@ export default {
     title: 'Pages',
     fieldsets: [
       {
-        title: 'SEO & metadata',
+        title: 'SEO & Metadata',
         name: 'metadata',
         options: {
           collapsible: true,
@@ -22,6 +22,12 @@ export default {
           Rule.required().error('We need a title before publishing'),
           Rule.max(100).warning('Shorter titles are usually better')
         ]
+      },
+      {
+        name: 'internal_title',
+        type: 'string',
+        title: 'Internal Page Title (Optional)',
+        description: 'Display a different page title in the CMS Interface'
       },
       {
         name: 'slug',
@@ -61,6 +67,13 @@ export default {
     preview: {
       select: {
         title: 'title',
+        internal_title: 'internal_title'
+      },
+      prepare ({title, internal_title}) {
+        const displayTitle = internal_title ? internal_title : title;
+        return {
+          title: displayTitle
+        }
       }
     }
   }

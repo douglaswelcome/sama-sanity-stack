@@ -1,0 +1,53 @@
+@import '../../../styles/base/grid';
+@import '../../../styles/base/variables';
+
+.left{
+    grid-column: span 7;
+    margin: 2em 0;
+    position: relative;
+    &:before{
+        content: '';
+        display: block;
+        background-color: $color-charcoal-7;
+        position: absolute;
+        top: 0.5em;
+        right: 0.5em;
+        bottom: -0.25em;
+        left: -0.5em;
+    }
+}
+.right{
+    grid-column: span 5;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    overflow-wrap: break-word;
+    h1{
+        color: $color-charcoal-2;
+    }
+}
+.tag{
+    display: inline-block;
+    padding: 0.5rem 0.5rem 0.125rem 0.5rem;
+    text-transform: uppercase;
+    background-color: $color-sunshine;
+    color: $color-charcoal-1;
+    font-size: 0.8em;
+    font-weight: 700;
+    width: fit-content;
+}
+.excerpt{
+    flex: 1;
+    padding: 1em 0;
+}
+.author{
+    margin-bottom: 0.33em;
+    margin-top: 2em;
+    font-weight: 700;
+    color: $color-charcoal-2;
+    transition: 300ms all;
+    text-decoration: underline $color-sunshine;
+    &:hover{
+        color: $color-charcoal-4;
+    }
+}
