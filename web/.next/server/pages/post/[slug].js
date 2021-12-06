@@ -10,10 +10,10 @@ exports.modules = {
 const sanityClient = __webpack_require__(8809);
 
 const client = sanityClient({
-  projectId: '76e3r62u',
+  projectId: "76e3r62u",
   // you can find this in sanity.json
-  dataset: 'production',
-  apiVersion: '2021-10-06',
+  dataset: "production",
+  apiVersion: '2021-03-25',
   useCdn: true // `false` if you want to ensure fresh data
 
 });

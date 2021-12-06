@@ -1,0 +1,40 @@
+@import '../../styles/base/grid';
+@import '../../styles/base/variables';
+
+.body{
+    width: 55em;
+    max-width: 100%;
+    padding-top: 0;
+    padding-bottom: 3rem;
+}
+
+.content{
+    grid-column: 2 / 11;
+    p{
+        line-height: 1.88;
+    }
+    a{
+        transition: 300ms all;
+        color: $color-charcoal-2;
+        font-weight: 700;
+        -webkit-text-decoration: underline $color-sunshine;
+        text-decoration: underline $color-sunshine;
+    }
+    img{
+        margin: 0 -3em;
+        min-width: calc(100% + 6em);
+        @include breakpoint (w-sm) {
+            max-width: 100%;
+            min-width: unset;
+            margin: 0 auto;
+        }
+    }
+    blockquote{
+        margin: 3rem 1.5rem;
+        padding-left: 1.5rem;
+        border-left: 0.25rem solid $color-charcoal-2;
+        position: relative;
+        font-size: 1.25rem;
+        line-height: 1.88;
+    }
+}
