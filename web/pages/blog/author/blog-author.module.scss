@@ -1,0 +1,50 @@
+@import '../../../styles/base/variables';
+@import '../../../styles/base/grid';
+
+.headshot{
+    grid-column: 2 / 5;
+    position: relative;
+    img{
+        border-radius: 50%;
+    }
+    &:before{
+        content: '';
+        background-color: $color-sunshine;
+        position: absolute;
+        top: 0.33rem;
+        right: 0.33rem;
+        bottom: -0.33em;
+        left: -0.33rem;
+        border-radius: 100%;
+    }
+    @include breakpoint(w-med) {
+        grid-column: 1 / span 6;
+    }
+    @include breakpoint(w-sm) {
+        grid-column: 1 / span 12;
+    }
+}
+
+.copy{
+    grid-column: 5 / 11;
+    padding-left: $space-sm;
+
+    @include breakpoint(w-med) {
+        grid-column: 7 / span 6;
+    }
+    @include breakpoint(w-sm) {
+        grid-column: 1 / span 12;
+    }
+}
+
+.intro{
+    border-bottom: 2px solid currentColor;
+    color: $color-charcoal-5;
+    padding-bottom: $space-sm;
+    margin-bottom: $space-sm;
+    font-size: 1.66rem;
+}
+
+.bio{
+    padding-top: $space-sm;
+}

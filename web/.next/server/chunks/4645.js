@@ -35,9 +35,11 @@ module.exports = client;
 /* harmony export */   "ad": () => (/* binding */ pressFeaturedQuery),
 /* harmony export */   "Vs": () => (/* binding */ postsQuery),
 /* harmony export */   "HF": () => (/* binding */ postQuery),
-/* harmony export */   "Pk": () => (/* binding */ postSlugsQuery)
+/* harmony export */   "Pk": () => (/* binding */ postSlugsQuery),
+/* harmony export */   "by": () => (/* binding */ authorQuery),
+/* harmony export */   "I9": () => (/* binding */ authorPostsQuery)
 /* harmony export */ });
-/* unused harmony exports authorQuery, authorPostsQuery, postsByTagQuery, getAllPostSlugs, getPostsByTagSlug */
+/* unused harmony exports postsByTagQuery, getAllPostSlugs, getPostsByTagSlug */
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(267);
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_client__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -163,9 +165,9 @@ const authorQuery = `{
         }
     }
 }`;
-const authorPostsQuery = (/* unused pure expression or super */ null && (`
+const authorPostsQuery = `
     *[_type == "author" && defined(slug.current)][].slug.current
-`));
+`;
 const postsByTagQuery = `{
     "posts": *[_type == "post" && $tag in tags[].value]{
         ${postsFields}

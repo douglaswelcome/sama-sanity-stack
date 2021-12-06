@@ -298,7 +298,7 @@ var map = {
 		1479
 	],
 	"./hero_splittxtimg_tall/hero_splittxtimg_tall.js": [
-		1325,
+		2144,
 		7426,
 		1664,
 		5675,
@@ -367,7 +367,7 @@ var map = {
 	"./hero_centertxt/hero_centertxt.js": 6760,
 	"./hero_home/hero_home.js": 6953,
 	"./hero_splittxtimg/hero_splittxtimg.js": 1479,
-	"./hero_splittxtimg_tall/hero_splittxtimg_tall.js": 1325
+	"./hero_splittxtimg_tall/hero_splittxtimg_tall.js": 2144
 };
 
 
