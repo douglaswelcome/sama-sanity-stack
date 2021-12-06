@@ -5,6 +5,7 @@
   "/blog": "pages/blog.js",
   "/blog/[slug]": "pages/blog/[slug].js",
   "/blog/author/[slug]": "pages/blog/author/[slug].js",
+  "/blog/tag/[slug]": "pages/blog/tag/[slug].js",
   "/events": "pages/events.js",
   "/": "pages/index.js",
   "/post/[slug]": "pages/post/[slug].js",

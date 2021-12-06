@@ -37,9 +37,12 @@ module.exports = client;
 /* harmony export */   "HF": () => (/* binding */ postQuery),
 /* harmony export */   "Pk": () => (/* binding */ postSlugsQuery),
 /* harmony export */   "by": () => (/* binding */ authorQuery),
-/* harmony export */   "I9": () => (/* binding */ authorPostsQuery)
+/* harmony export */   "I9": () => (/* binding */ authorPostsQuery),
+/* harmony export */   "Ki": () => (/* binding */ postsByTagQuery),
+/* harmony export */   "bz": () => (/* binding */ getAllPostSlugs),
+/* harmony export */   "x8": () => (/* binding */ getPostsByTagSlug)
 /* harmony export */ });
-/* unused harmony exports postsByTagQuery, getAllPostSlugs, getPostsByTagSlug */
+/* harmony import */ var _libs_slugify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7570);
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(267);
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_client__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -174,19 +177,19 @@ const postsByTagQuery = `{
     }
 }`;
 async function getAllPostSlugs() {
-  let data = await client.fetch(`*[_type == "post" && defined(tags)][].tags[].value`);
+  let data = await _client__WEBPACK_IMPORTED_MODULE_0___default().fetch(`*[_type == "post" && defined(tags)][].tags[].value`);
   data = [...new Set(data)];
   const paths = data.map(tag => {
-    return slugify(tag);
+    return (0,_libs_slugify__WEBPACK_IMPORTED_MODULE_1__/* .default */ .Z)(tag);
   });
   return paths;
 }
 async function getPostsByTagSlug(slug) {
-  let data = await client.fetch(`*[_type == "post" && defined(tags)][].tags[].value`);
+  let data = await _client__WEBPACK_IMPORTED_MODULE_0___default().fetch(`*[_type == "post" && defined(tags)][].tags[].value`);
   data = [...new Set(data)];
   const tags = data.map(tag => {
     let tagObj = {
-      slug: slugify(tag),
+      slug: (0,_libs_slugify__WEBPACK_IMPORTED_MODULE_1__/* .default */ .Z)(tag),
       tag: tag
     };
     return tagObj;
@@ -194,6 +197,36 @@ async function getPostsByTagSlug(slug) {
   const tag = tags.find(tag => tag.slug === slug);
   return tag;
 }
+
+/***/ }),
+
+/***/ 7570:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const slugify = str => {
+  str = str.replace(/^\s+|\s+$/g, ''); // trim
+
+  str = str.toLowerCase(); // remove accents, swap ñ for n, etc
+
+  const from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+  const to = "aaaaeeeeiiiioooouuuunc------";
+
+  for (var i = 0, l = from.length; i < l; i++) {
+    str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+  }
+
+  str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+  .replace(/\s+/g, '-') // collapse whitespace and replace by -
+  .replace(/-+/g, '-'); // collapse dashes
+
+  return str;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slugify);
 
 /***/ })
 

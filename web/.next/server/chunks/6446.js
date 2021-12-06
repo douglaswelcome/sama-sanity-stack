@@ -163,7 +163,7 @@ var map = {
 		3395
 	],
 	"./bodystatic_panelColumns/bodystatic_panelColumns.js": [
-		6242,
+		2942,
 		7426,
 		1664,
 		5675,
@@ -352,7 +352,7 @@ var map = {
 	"./bodystatic_leadTeam/bodystatic_leadTeam.js": 2467,
 	"./bodystatic_panelAvatarQuote/bodystatic_panelAvatarQuote.js": 2351,
 	"./bodystatic_panelAvatarTxt/bodystatic_panelAvatarTxt.js": 3395,
-	"./bodystatic_panelColumns/bodystatic_panelColumns.js": 6242,
+	"./bodystatic_panelColumns/bodystatic_panelColumns.js": 2942,
 	"./bodystatic_panelFeature/bodystatic_panelFeature.js": 613,
 	"./bodystatic_panelQuote/bodystatic_panelQuote.js": 4664,
 	"./bodystatic_punchyTxt/bodystatic_punchyTxt.js": 472,

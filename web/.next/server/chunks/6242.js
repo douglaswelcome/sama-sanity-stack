@@ -2,7 +2,7 @@ exports.id = 6242;
 exports.ids = [6242];
 exports.modules = {
 
-/***/ 6242:
+/***/ 2942:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
