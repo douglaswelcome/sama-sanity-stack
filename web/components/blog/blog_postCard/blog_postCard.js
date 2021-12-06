@@ -11,16 +11,16 @@ const BlogPost = (props) => {
     let authorSlug = {};
     let tagSlug = {};
     let postSlug = {
-        internalLink_custom: `/blog${slugURL.charAt(0) == '/' ? slugURL : `/${slugURL}`}`
+        internalLink_custom: `blog${slugURL.charAt(0) == '/' ? slugURL : `/${slugURL}`}`
     }
     if(!hideAuthor){
         authorSlug = {
-            internalLink_custom: `/blog/author/${author.slug ? author.slug.current : ''}`
+            internalLink_custom: `blog/author/${author.slug ? author.slug.current : ''}`
         }
     }
     if(!hideTag){
         tagSlug = {
-            internalLink_custom: `/blog/tag/${slugify(tag)}`
+            internalLink_custom: `blog/tag/${slugify(tag)}`
         }
     }
     let date = new Date(_createdAt);

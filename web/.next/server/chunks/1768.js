@@ -40,18 +40,18 @@ const BlogPost = props => {
   let authorSlug = {};
   let tagSlug = {};
   let postSlug = {
-    internalLink_custom: `/blog${slugURL.charAt(0) == '/' ? slugURL : `/${slugURL}`}`
+    internalLink_custom: `blog${slugURL.charAt(0) == '/' ? slugURL : `/${slugURL}`}`
   };
 
   if (!hideAuthor) {
     authorSlug = {
-      internalLink_custom: `/blog/author/${author.slug ? author.slug.current : ''}`
+      internalLink_custom: `blog/author/${author.slug ? author.slug.current : ''}`
     };
   }
 
   if (!hideTag) {
     tagSlug = {
-      internalLink_custom: `/blog/tag/${(0,_libs_slugify__WEBPACK_IMPORTED_MODULE_3__/* .default */ .Z)(tag)}`
+      internalLink_custom: `blog/tag/${(0,_libs_slugify__WEBPACK_IMPORTED_MODULE_3__/* .default */ .Z)(tag)}`
     };
   }
 

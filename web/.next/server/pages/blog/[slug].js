@@ -55,7 +55,7 @@ const BlogHeroPost = props => {
     estimatedReadingTime
   } = props;
   const authorSlug = {
-    internalLink_custom: `/blog/author/${author.slug.current}`
+    internalLink_custom: `blog/author/${author.slug.current}`
   };
   let date = new Date(_createdAt);
   date = date.toLocaleString('en-US', {
@@ -115,7 +115,7 @@ const BlogPostFooter = props => {
     tags
   } = props;
   const authorSlug = {
-    internalLink_custom: `/blog/author/${author.slug ? author.slug.current : ''}`
+    internalLink_custom: `blog/author/${author.slug ? author.slug.current : ''}`
   };
   return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
     children: [/*#__PURE__*/jsx_runtime_.jsx("section", {
@@ -129,7 +129,7 @@ const BlogPostFooter = props => {
             children: "Filed Under:"
           }), tags.map((tag, i) => {
             const tagSlug = {
-              internalLink_custom: `/blog/tag/${(0,slugify/* default */.Z)(tag.value)}`
+              internalLink_custom: `blog/tag/${(0,slugify/* default */.Z)(tag.value)}`
             };
             return /*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
               className: (blog_post_footer_module_default()).tag,
@@ -229,17 +229,34 @@ const Post = ({
     author,
     body
   } = post;
+  const hostname =  false ? 0 : '';
+  const shareUrl = `https://www.sama.com/${router.asPath}`;
   return /*#__PURE__*/(0,jsx_runtime_.jsxs)(Layout, {
     config: config,
     children: [/*#__PURE__*/jsx_runtime_.jsx(blog_heroPost, _objectSpread({}, post)), /*#__PURE__*/jsx_runtime_.jsx("section", {
       className: "umoja-l-grid-section umoja-u-bg--white",
-      children: /*#__PURE__*/jsx_runtime_.jsx("div", {
+      children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
         className: `umoja-l-grid--12 ${(blog_post_module_default()).body}`,
-        children: /*#__PURE__*/jsx_runtime_.jsx(richText_field/* default */.Z, {
+        children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+          className: (blog_post_module_default()).share,
+          children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+            className: (blog_post_module_default()).share_track,
+            children: [/*#__PURE__*/jsx_runtime_.jsx("a", {
+              className: `${(blog_post_module_default()).share_button} ${(blog_post_module_default()).share_button__facebook}`,
+              href: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`
+            }), /*#__PURE__*/jsx_runtime_.jsx("a", {
+              className: `${(blog_post_module_default()).share_button} ${(blog_post_module_default()).share_button__twitter}`,
+              href: `https://twitter.com/intent/tweet?text=Check%20out%20this%20great%20blog%20post%20I%20just%20read&url=${shareUrl}`
+            }), /*#__PURE__*/jsx_runtime_.jsx("a", {
+              className: `${(blog_post_module_default()).share_button} ${(blog_post_module_default()).share_button__linkedin}`,
+              href: `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${post.title}&source=https://www.sama.com/&summary=Check%20out%20this%20great%20blog%20post%20I%20just%20read`
+            })]
+          })
+        }), /*#__PURE__*/jsx_runtime_.jsx(richText_field/* default */.Z, {
           className: (blog_post_module_default()).content,
           richText: body,
           align: "left"
-        })
+        })]
       })
     }), /*#__PURE__*/jsx_runtime_.jsx(blog_postFooter, {
       tags: tags,
@@ -356,6 +373,12 @@ module.exports = {
 	"umoja-l-grid-align--center": "blog-post_umoja-l-grid-align--center__o4H8X",
 	"umoja-l-grid-align--base": "blog-post_umoja-l-grid-align--base__10sTB",
 	"body": "blog-post_body__2CyGF",
+	"share": "blog-post_share__2sAqL",
+	"share_track": "blog-post_share_track__3nibH",
+	"share_button": "blog-post_share_button__2ZGXI",
+	"share_button__facebook": "blog-post_share_button__facebook__2V_7U",
+	"share_button__twitter": "blog-post_share_button__twitter__3lhXm",
+	"share_button__linkedin": "blog-post_share_button__linkedin__34so0",
 	"content": "blog-post_content__1Q3Gg"
 };
 

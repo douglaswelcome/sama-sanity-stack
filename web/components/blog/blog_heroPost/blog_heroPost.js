@@ -6,7 +6,7 @@ import styles from './blog-hero-post.module.scss'
 const BlogHeroPost = (props) => {
     const {_createdAt, author, featured_image, title, estimatedReadingTime} = props;
     const authorSlug = {
-        internalLink_custom: `/blog/author/${author.slug.current}`
+        internalLink_custom: `blog/author/${author.slug.current}`
     }
     let date = new Date(_createdAt);
     date = date.toLocaleString('en-US', {
