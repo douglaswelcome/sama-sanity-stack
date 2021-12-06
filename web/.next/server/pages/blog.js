@@ -4,7 +4,37 @@ exports.id = 9195;
 exports.ids = [9195];
 exports.modules = {
 
-/***/ 4264:
+/***/ 7570:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const slugify = str => {
+  str = str.replace(/^\s+|\s+$/g, ''); // trim
+
+  str = str.toLowerCase(); // remove accents, swap ñ for n, etc
+
+  const from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+  const to = "aaaaeeeeiiiioooouuuunc------";
+
+  for (var i = 0, l = from.length; i < l; i++) {
+    str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+  }
+
+  str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+  .replace(/\s+/g, '-') // collapse whitespace and replace by -
+  .replace(/-+/g, '-'); // collapse dashes
+
+  return str;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slugify);
+
+/***/ }),
+
+/***/ 5573:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33,27 +63,8 @@ var components_link = __webpack_require__(1692);
 // EXTERNAL MODULE: ./components/blog/blog_heroHome/blog-heroHome.module.scss
 var blog_heroHome_module = __webpack_require__(8779);
 var blog_heroHome_module_default = /*#__PURE__*/__webpack_require__.n(blog_heroHome_module);
-;// CONCATENATED MODULE: ./libs/slugify.js
-const slugify = str => {
-  str = str.replace(/^\s+|\s+$/g, ''); // trim
-
-  str = str.toLowerCase(); // remove accents, swap ñ for n, etc
-
-  const from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
-  const to = "aaaaeeeeiiiioooouuuunc------";
-
-  for (var i = 0, l = from.length; i < l; i++) {
-    str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
-  }
-
-  str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
-  .replace(/\s+/g, '-') // collapse whitespace and replace by -
-  .replace(/-+/g, '-'); // collapse dashes
-
-  return str;
-};
-
-/* harmony default export */ const libs_slugify = (slugify);
+// EXTERNAL MODULE: ./libs/slugify.js
+var slugify = __webpack_require__(7570);
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(5282);
 ;// CONCATENATED MODULE: ./components/blog/blog_heroHome/blog_heroHome.js
@@ -84,7 +95,7 @@ const BlogHeroHome = props => {
     internalLink_custom: `/blog/author/${author.slug.current}`
   };
   const tagSlug = {
-    internalLink_custom: `/blog/tag/${libs_slugify(tag)}`
+    internalLink_custom: `/blog/tag/${(0,slugify/* default */.Z)(tag)}`
   };
   let date = new Date(_createdAt);
   date = date.toLocaleString('en-US', {
@@ -173,7 +184,7 @@ const BlogPost = props => {
 
   if (!hideTag) {
     tagSlug = {
-      internalLink_custom: `/blog/tag/${libs_slugify(tag)}`
+      internalLink_custom: `/blog/tag/${(0,slugify/* default */.Z)(tag)}`
     };
   }
 
@@ -522,7 +533,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5675,5152,3653,5030,4645], () => (__webpack_exec__(4264)));
+var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5675,5152,3653,5030,4645], () => (__webpack_exec__(5573)));
 module.exports = __webpack_exports__;
 
 })();

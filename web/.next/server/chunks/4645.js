@@ -8,10 +8,10 @@ exports.modules = {
 const sanityClient = __webpack_require__(8809);
 
 const client = sanityClient({
-  projectId: '76e3r62u',
+  projectId: "76e3r62u",
   // you can find this in sanity.json
-  dataset: 'production',
-  apiVersion: '2021-10-06',
+  dataset: "production",
+  apiVersion: '2021-03-25',
   useCdn: true // `false` if you want to ensure fresh data
 
 });
@@ -33,9 +33,11 @@ module.exports = client;
 /* harmony export */   "X6": () => (/* binding */ pressNewsQuery),
 /* harmony export */   "d9": () => (/* binding */ pressQuery),
 /* harmony export */   "ad": () => (/* binding */ pressFeaturedQuery),
-/* harmony export */   "Vs": () => (/* binding */ postsQuery)
+/* harmony export */   "Vs": () => (/* binding */ postsQuery),
+/* harmony export */   "HF": () => (/* binding */ postQuery),
+/* harmony export */   "Pk": () => (/* binding */ postSlugsQuery)
 /* harmony export */ });
-/* unused harmony exports postQuery, postSlugsQuery, authorQuery, authorPostsQuery, postsByTagQuery, getAllPostSlugs, getPostsByTagSlug */
+/* unused harmony exports authorQuery, authorPostsQuery, postsByTagQuery, getAllPostSlugs, getPostsByTagSlug */
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(267);
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_client__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -150,9 +152,9 @@ const postQuery = `{
         ${postsFields}, body
     }
 }`;
-const postSlugsQuery = (/* unused pure expression or super */ null && (`
+const postSlugsQuery = `
 *[_type == "post" && defined(slug.current)][].slug.current
-`));
+`;
 const authorQuery = `{
     "author": *[_type == "author" && slug.current == $slug][0]{
         ${authorFields},

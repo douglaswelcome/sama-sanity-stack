@@ -5,47 +5,38 @@ exports.id = 6219;
 exports.ids = [6219];
 exports.modules = {
 
-/***/ 8414:
+/***/ 1103:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ _slug_),
-  "getStaticPaths": () => (/* binding */ getStaticPaths),
-  "getStaticProps": () => (/* binding */ getStaticProps)
-});
-
-// EXTERNAL MODULE: external "next/router"
-var router_ = __webpack_require__(6731);
-;// CONCATENATED MODULE: external "next/error"
-const error_namespaceObject = require("next/error");
-var error_default = /*#__PURE__*/__webpack_require__.n(error_namespaceObject);
-// EXTERNAL MODULE: ./client.js
-var client = __webpack_require__(267);
-var client_default = /*#__PURE__*/__webpack_require__.n(client);
-// EXTERNAL MODULE: ./libs/queries.js
-var queries = __webpack_require__(4645);
-// EXTERNAL MODULE: ./node_modules/next/dynamic.js
-var dynamic = __webpack_require__(5152);
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(5282);
-;// CONCATENATED MODULE: ./pages/[slug].js
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps),
+/* harmony export */   "getStaticPaths": () => (/* binding */ getStaticPaths),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6731);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_error__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8354);
+/* harmony import */ var next_error__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_error__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(267);
+/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_client__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _libs_queries__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4645);
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5152);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(5282);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
 
 
 
-const Layout = (0,dynamic.default)(() => __webpack_require__.e(/* import() */ 4941).then(__webpack_require__.bind(__webpack_require__, 4941)), {
+const Layout = (0,next_dynamic__WEBPACK_IMPORTED_MODULE_4__.default)(() => __webpack_require__.e(/* import() */ 4941).then(__webpack_require__.bind(__webpack_require__, 4941)), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(4941)],
     modules: ["[slug].js -> " + '../components/Layout']
   }
 });
-const RenderSection = (0,dynamic.default)(() => __webpack_require__.e(/* import() */ 6446).then(__webpack_require__.bind(__webpack_require__, 6446)), {
+const RenderSection = (0,next_dynamic__WEBPACK_IMPORTED_MODULE_4__.default)(() => __webpack_require__.e(/* import() */ 6446).then(__webpack_require__.bind(__webpack_require__, 6446)), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(6446)],
     modules: ["[slug].js -> " + '../components/RenderSection']
@@ -58,20 +49,20 @@ const Page = ({
 }) => {
   var _data$page, _data$page2;
 
-  const router = (0,router_.useRouter)();
+  const router = (0,next_router__WEBPACK_IMPORTED_MODULE_0__.useRouter)();
   const slug = data === null || data === void 0 ? void 0 : (_data$page = data.page) === null || _data$page === void 0 ? void 0 : _data$page.slug;
   const sections = data === null || data === void 0 ? void 0 : (_data$page2 = data.page) === null || _data$page2 === void 0 ? void 0 : _data$page2.sections;
 
   if (!router.isFallback && !slug) {
-    return /*#__PURE__*/jsx_runtime_.jsx((error_default()), {
+    return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx((next_error__WEBPACK_IMPORTED_MODULE_1___default()), {
       statusCode: 404
     });
   }
 
-  return /*#__PURE__*/jsx_runtime_.jsx(Layout, {
+  return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(Layout, {
     config: config,
     children: sections && sections.map(section => {
-      return /*#__PURE__*/jsx_runtime_.jsx(RenderSection, {
+      return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(RenderSection, {
         modules: section.modules,
         background_color: section.background_color
       }, section._key);
@@ -84,7 +75,7 @@ async function getStaticProps({
 }) {
   const {
     page
-  } = await client_default().fetch(queries/* pageQuery */.JR, {
+  } = await _client__WEBPACK_IMPORTED_MODULE_2___default().fetch(_libs_queries__WEBPACK_IMPORTED_MODULE_3__/* .pageQuery */ .JR, {
     slug: params.slug
   });
   const sections = page === null || page === void 0 ? void 0 : page.sections;
@@ -112,7 +103,7 @@ async function getStaticProps({
   };
 }
 async function getStaticPaths() {
-  const paths = await client_default().fetch(queries/* pageSlugsQuery */.A3);
+  const paths = await _client__WEBPACK_IMPORTED_MODULE_2___default().fetch(_libs_queries__WEBPACK_IMPORTED_MODULE_3__/* .pageSlugsQuery */ .A3);
   return {
     paths: paths.map(slug => ({
       params: {
@@ -122,7 +113,7 @@ async function getStaticPaths() {
     fallback: true
   };
 }
-/* harmony default export */ const _slug_ = (Page);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Page);
 
 /***/ }),
 
@@ -287,6 +278,13 @@ module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
+/***/ 8354:
+/***/ ((module) => {
+
+module.exports = require("next/error");
+
+/***/ }),
+
 /***/ 701:
 /***/ ((module) => {
 
@@ -336,7 +334,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [5152,4645], () => (__webpack_exec__(8414)));
+var __webpack_exports__ = __webpack_require__.X(0, [5152,4645], () => (__webpack_exec__(1103)));
 module.exports = __webpack_exports__;
 
 })();
