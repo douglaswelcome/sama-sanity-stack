@@ -5,5 +5,6 @@
   "/events": "pages/events.js",
   "/": "pages/index.js",
   "/post/[slug]": "pages/post/[slug].js",
+  "/press": "pages/press.js",
   "/_error": "pages/_error.js"
 }
