@@ -7,7 +7,7 @@ import styles from './blog-post-footer.module.scss'
 const BlogPostFooter = (props) => {
     const {author, tags} = props;
     const  authorSlug = {
-        internalLink_custom: `/blog/author/${author.slug ? author.slug.current : ''}`
+        internalLink_custom: `blog/author/${author.slug ? author.slug.current : ''}`
     }
 
     return(
@@ -18,7 +18,7 @@ const BlogPostFooter = (props) => {
                     <h3 className={styles.intro}>Filed Under:</h3>
                     {tags.map((tag,i) => {
                         const tagSlug = {
-                            internalLink_custom: `/blog/tag/${slugify(tag.value)}`
+                            internalLink_custom: `blog/tag/${slugify(tag.value)}`
                         }
                         return <Link 
                                     className={styles.tag} 
