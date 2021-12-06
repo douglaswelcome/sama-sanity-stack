@@ -10,6 +10,7 @@ import navigation from './documents/navigation'
 import siteConfig from './documents/siteConfig'
 import reusable_module from './documents/reusableModule'
 import event from './documents/event'
+import press from './documents/press'
 
 //Object types
 import button from './objects/button'
@@ -72,6 +73,8 @@ import bodymove_panel from './modules/bodymove_panel'
 import bodystatic_punchyTxt from './modules/bodystatic_punchyTxt'
 import bodymove_map from './modules/bodymove_map'
 import bodymove_sfMap from './modules/bodymove_sfMap'
+import post from './documents/post'
+import author from './documents/author'
 
 
 export default createSchema({
@@ -86,6 +89,9 @@ export default createSchema({
     siteConfig,
     reusable_module,
     event,
+    press,
+    post,
+    author,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     page_sections,

@@ -29,6 +29,12 @@
       "static/chunks/6446.f25ea8e144338d419628.js"
     ]
   },
+  "blog.js -> ../components/Layout": {
+    "id": 4941,
+    "files": [
+      "static/chunks/4941.396c0967ba3841708a1e.js"
+    ]
+  },
   "events.js -> ../components/Layout": {
     "id": 4941,
     "files": [

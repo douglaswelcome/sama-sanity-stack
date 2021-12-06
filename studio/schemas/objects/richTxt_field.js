@@ -59,6 +59,12 @@ export default {
                           to: [{ type: 'page' }], 
                         },
                         {
+                          title: 'Internal Page Custom URL',
+                          description:"Use for internal pages not created in Sanity (e.g. dynamically created page templates)",
+                          type: 'string',
+                          name: 'internalLink_custom'
+                        },
+                        {
                           name: 'externalUrl',
                           title: 'External URL',
                           description:"Use fully qualified URLS for external link",
