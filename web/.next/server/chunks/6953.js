@@ -90,6 +90,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "hero-home_umoja-l-grid-gap--row-3__3n0KD",
 	"umoja-l-grid-align--center": "hero-home_umoja-l-grid-align--center__1xaO3",
 	"umoja-l-grid-align--base": "hero-home_umoja-l-grid-align--base__no42m",
+	"umoja-l-grid-span--full": "hero-home_umoja-l-grid-span--full__L_iKC",
 	"dots": "hero-home_dots__3dHTM",
 	"copy": "hero-home_copy__QxXB-",
 	"headline": "hero-home_headline__2r4c0",

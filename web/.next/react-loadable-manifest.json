@@ -2,67 +2,67 @@
   "../components/Layout.js -> ./footer/footer": {
     "id": 3551,
     "files": [
-      "static/chunks/commons-adb02c72138ca19fc830.js",
+      "static/chunks/commons-18f003546d82b711cdde.js",
       "static/chunks/4934.37651fffe4e244d39030.js",
-      "static/css/d6883990c74d8799cf0b.css",
-      "static/chunks/3551.5eefb471dad754b94e4e.js"
+      "static/css/3b03d00d40d80e105549.css",
+      "static/chunks/3551.e6d3a24e74ae2a11cefe.js"
     ]
   },
   "../components/Layout.js -> ./header/header": {
-    "id": 2819,
+    "id": 425,
     "files": [
-      "static/chunks/commons-adb02c72138ca19fc830.js",
+      "static/chunks/commons-18f003546d82b711cdde.js",
       "static/chunks/4934.37651fffe4e244d39030.js",
-      "static/css/59338f42d1d0352c41fe.css",
-      "static/chunks/1952.b444afaab69ab1c60b22.js"
+      "static/css/d8cc89507a22cd1667c4.css",
+      "static/chunks/1952.cb24443f59b3778be77b.js"
     ]
   },
   "[slug].js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.e99387eaf3bab85bcaa8.js"
+      "static/chunks/4941.396c0967ba3841708a1e.js"
     ]
   },
   "[slug].js -> ../components/RenderSection": {
     "id": 6446,
     "files": [
-      "static/chunks/6446.6015a2cf0980dc869a15.js"
+      "static/chunks/6446.0d18942df4d17e13c534.js"
     ]
   },
   "blog.js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.e99387eaf3bab85bcaa8.js"
+      "static/chunks/4941.396c0967ba3841708a1e.js"
     ]
   },
   "blog/[slug].js -> ../../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.e99387eaf3bab85bcaa8.js"
+      "static/chunks/4941.396c0967ba3841708a1e.js"
     ]
   },
   "blog/author/[slug].js -> ../../../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.e99387eaf3bab85bcaa8.js"
+      "static/chunks/4941.396c0967ba3841708a1e.js"
     ]
   },
   "blog/tag/[slug].js -> ../../../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.e99387eaf3bab85bcaa8.js"
+      "static/chunks/4941.396c0967ba3841708a1e.js"
     ]
   },
   "events.js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.e99387eaf3bab85bcaa8.js"
+      "static/chunks/4941.396c0967ba3841708a1e.js"
     ]
   },
   "press.js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.e99387eaf3bab85bcaa8.js"
+      "static/chunks/4941.396c0967ba3841708a1e.js"
     ]
   }
 }

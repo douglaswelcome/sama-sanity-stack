@@ -283,6 +283,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "footer_umoja-l-grid-gap--row-3__2oLN2",
 	"umoja-l-grid-align--center": "footer_umoja-l-grid-align--center__3elRt",
 	"umoja-l-grid-align--base": "footer_umoja-l-grid-align--base__15bJZ",
+	"umoja-l-grid-span--full": "footer_umoja-l-grid-span--full__yEtIQ",
 	"wrapper": "footer_wrapper__2VAfJ",
 	"upper": "footer_upper__2a6XG",
 	"upper_right": "footer_upper_right__cpliC",

@@ -173,4 +173,9 @@ $med-page-width: 800px;
   align-items: baseline;
 }
 
+.umoja-l-grid-span--full{
+  grid-column: 1 / -1;
+  margin-bottom: $space-sm;
+}
+
 

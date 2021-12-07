@@ -306,6 +306,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "press_umoja-l-grid-gap--row-3__QOLWq",
 	"umoja-l-grid-align--center": "press_umoja-l-grid-align--center__qll0r",
 	"umoja-l-grid-align--base": "press_umoja-l-grid-align--base__3GxPK",
+	"umoja-l-grid-span--full": "press_umoja-l-grid-span--full__w8Dc5",
 	"nav": "press_nav__QySSe",
 	"navInner": "press_navInner__Jrekx",
 	"_slideLeft": "press__slideLeft__3w0Rr",

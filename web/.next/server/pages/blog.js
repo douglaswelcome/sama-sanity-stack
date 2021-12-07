@@ -117,6 +117,8 @@ const BlogHeroHome = props => {
 /* harmony default export */ const blog_heroHome = (BlogHeroHome);
 // EXTERNAL MODULE: ./components/blog/blog_postCard/blog_postCard.js
 var blog_postCard = __webpack_require__(1325);
+// EXTERNAL MODULE: ./components/blog/blog_smallCard_row/blog_smallCard_row.js
+var blog_smallCard_row = __webpack_require__(7845);
 ;// CONCATENATED MODULE: ./pages/blog.js
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
@@ -140,9 +142,11 @@ const Layout = (0,dynamic.default)(() => __webpack_require__.e(/* import() */ 49
 
 
 
+
 const Blog = props => {
   const {
     posts,
+    featuredPosts,
     config
   } = props;
   const topPost = posts[0];
@@ -150,6 +154,22 @@ const Blog = props => {
   return /*#__PURE__*/(0,jsx_runtime_.jsxs)(Layout, {
     config: config,
     children: [/*#__PURE__*/jsx_runtime_.jsx(blog_heroHome, _objectSpread({}, topPost)), /*#__PURE__*/jsx_runtime_.jsx("section", {
+      className: "umoja-l-grid-section umoja-u-bg--charcoal1",
+      children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: "umoja-l-grid--12",
+        children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+          className: "umoja-l-grid-span--full",
+          children: [/*#__PURE__*/jsx_runtime_.jsx("h2", {
+            children: "Featured Posts"
+          }), /*#__PURE__*/jsx_runtime_.jsx("p", {
+            children: "See some of our recent posts and exciting news:"
+          })]
+        }), /*#__PURE__*/jsx_runtime_.jsx(blog_smallCard_row/* default */.Z, {
+          posts: featuredPosts,
+          hideTag: "Featured"
+        })]
+      })
+    }), /*#__PURE__*/jsx_runtime_.jsx("section", {
       className: "umoja-l-grid-section umoja-u-bg--white",
       children: /*#__PURE__*/jsx_runtime_.jsx("div", {
         className: "umoja-l-grid--12 umoja-l-grid-gap--row-1",
@@ -167,7 +187,8 @@ async function getStaticProps() {
   const posts = await client_default().fetch(queries/* postsQuery */.Vs);
   return {
     props: {
-      posts: posts
+      posts: posts.posts,
+      featuredPosts: posts.featuredPosts
     }
   };
 }
@@ -193,6 +214,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "blog-heroHome_umoja-l-grid-gap--row-3__kGVSZ",
 	"umoja-l-grid-align--center": "blog-heroHome_umoja-l-grid-align--center__31sOt",
 	"umoja-l-grid-align--base": "blog-heroHome_umoja-l-grid-align--base__B8r-h",
+	"umoja-l-grid-span--full": "blog-heroHome_umoja-l-grid-span--full__3qpgh",
 	"left": "blog-heroHome_left__3EMpN",
 	"right": "blog-heroHome_right__bxPqk",
 	"tag": "blog-heroHome_tag__1aSq3",
@@ -394,7 +416,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5675,5152,3653,5030,4645,1768], () => (__webpack_exec__(9148)));
+var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5675,5152,3653,5030,4645,1768,7845], () => (__webpack_exec__(9148)));
 module.exports = __webpack_exports__;
 
 })();

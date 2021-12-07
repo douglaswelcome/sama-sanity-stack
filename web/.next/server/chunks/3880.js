@@ -200,6 +200,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodymove-map_umoja-l-grid-gap--row-3__3cB7Q",
 	"umoja-l-grid-align--center": "bodymove-map_umoja-l-grid-align--center__29cQC",
 	"umoja-l-grid-align--base": "bodymove-map_umoja-l-grid-align--base__2GKwu",
+	"umoja-l-grid-span--full": "bodymove-map_umoja-l-grid-span--full__17rcS",
 	"title": "bodymove-map_title__1ZVGa",
 	"wrapper": "bodymove-map_wrapper__zLd9u",
 	"map": "bodymove-map_map__2zmji",

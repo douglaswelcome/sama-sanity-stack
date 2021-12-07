@@ -5,7 +5,7 @@ import { postQuery, postSlugsQuery } from '../../libs/queries'
 import dynamic from "next/dynamic";
 import BlogHeroPost from '../../components/blog/blog_heroPost/blog_heroPost';
 import BlogPostFooter from '../../components/blog/blog_postFooter/blog_postFooter';
-import RelatedPosts from '../../components/blog/relatedPosts/relatedPosts';
+import BlogSmallCardRow from '../../components/blog/blog_smallCard_row/blog_smallCard_row';
 import RichText from '../../components/richText_field/richText_field'
 const Layout = dynamic(() => import('../../components/Layout'))
 import styles from "./blog-post.module.scss"
@@ -48,7 +48,12 @@ const Post = ({ data = {}, config }) => {
         </section>
         <BlogPostFooter tags={tags} author={author} />
         {relatedPosts &&
-          <RelatedPosts posts={relatedPosts} />
+          <section className="umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white">
+            <div className="umoja-l-grid--12">
+              <h3 className={`${styles.relatedPosts}`}>Related Posts:</h3>
+              <BlogSmallCardRow posts={relatedPosts} hideTag={tags[0].value} />
+            </div>
+          </section>
         }
       </Layout>
     )

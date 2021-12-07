@@ -147,6 +147,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "blog-tag_umoja-l-grid-gap--row-3__1B_8k",
 	"umoja-l-grid-align--center": "blog-tag_umoja-l-grid-align--center__3medT",
 	"umoja-l-grid-align--base": "blog-tag_umoja-l-grid-align--base__1Zv2y",
+	"umoja-l-grid-span--full": "blog-tag_umoja-l-grid-span--full__3APna",
 	"name": "blog-tag_name__-rmiA"
 };
 

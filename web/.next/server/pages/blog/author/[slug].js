@@ -164,6 +164,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "blog-author_umoja-l-grid-gap--row-3__1JW1H",
 	"umoja-l-grid-align--center": "blog-author_umoja-l-grid-align--center__q8eaY",
 	"umoja-l-grid-align--base": "blog-author_umoja-l-grid-align--base__vG50I",
+	"umoja-l-grid-span--full": "blog-author_umoja-l-grid-span--full__1FpBb",
 	"headshot": "blog-author_headshot__14bF2",
 	"copy": "blog-author_copy__Q1Si8",
 	"intro": "blog-author_intro__3nDS5",

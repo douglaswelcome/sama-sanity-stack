@@ -123,6 +123,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodystatic-flowCompare_umoja-l-grid-gap--row-3__w3nR_",
 	"umoja-l-grid-align--center": "bodystatic-flowCompare_umoja-l-grid-align--center__2iGl4",
 	"umoja-l-grid-align--base": "bodystatic-flowCompare_umoja-l-grid-align--base__Dhy6K",
+	"umoja-l-grid-span--full": "bodystatic-flowCompare_umoja-l-grid-span--full__3RlLg",
 	"row": "bodystatic-flowCompare_row__TDArN",
 	"item": "bodystatic-flowCompare_item__aqk7_",
 	"item__right": "bodystatic-flowCompare_item__right__mOLE3",

@@ -206,6 +206,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodymove-stickySideScroll_umoja-l-grid-gap--row-3__1lYJj",
 	"umoja-l-grid-align--center": "bodymove-stickySideScroll_umoja-l-grid-align--center__p-W9m",
 	"umoja-l-grid-align--base": "bodymove-stickySideScroll_umoja-l-grid-align--base__6FZt9",
+	"umoja-l-grid-span--full": "bodymove-stickySideScroll_umoja-l-grid-span--full__NLN0l",
 	"header": "bodymove-stickySideScroll_header__6_XVC",
 	"left": "bodymove-stickySideScroll_left__3iwLt",
 	"nav": "bodymove-stickySideScroll_nav__3NWN5",

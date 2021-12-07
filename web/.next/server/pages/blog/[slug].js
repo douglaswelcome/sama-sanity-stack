@@ -4,7 +4,7 @@ exports.id = 2492;
 exports.ids = [2492];
 exports.modules = {
 
-/***/ 8398:
+/***/ 1881:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -167,72 +167,8 @@ const BlogPostFooter = props => {
 };
 
 /* harmony default export */ const blog_postFooter = (BlogPostFooter);
-// EXTERNAL MODULE: ./components/blog/relatedPosts/related-posts.module.scss
-var related_posts_module = __webpack_require__(1366);
-var related_posts_module_default = /*#__PURE__*/__webpack_require__.n(related_posts_module);
-;// CONCATENATED MODULE: ./components/blog/relatedPosts/relatedPosts.js
-
-
-
-
-
-
-
-const RelatedPosts = props => {
-  const {
-    posts
-  } = props;
-  return /*#__PURE__*/jsx_runtime_.jsx("section", {
-    className: "umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white",
-    children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-      className: "umoja-l-grid--12",
-      children: [/*#__PURE__*/jsx_runtime_.jsx("h3", {
-        className: `${(related_posts_module_default()).intro}`,
-        children: "Related Posts:"
-      }), posts.map(post => {
-        const tag = post.tags[1];
-        const slugURL = post.slug ? post.slug.current : '';
-        let postSlug = {
-          internalLink_custom: `blog${slugURL.charAt(0) == '/' ? slugURL : `/${slugURL}`}`
-        };
-        let tagSlug = {};
-
-        if (tag) {
-          tagSlug = {
-            internalLink_custom: `blog/tag/${(0,slugify/* default */.Z)(tag.value)}`
-          };
-        }
-
-        return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-          className: (related_posts_module_default()).post,
-          children: [/*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
-            link: postSlug,
-            className: (related_posts_module_default()).imgWrap,
-            children: /*#__PURE__*/jsx_runtime_.jsx(components_image/* default */.Z, {
-              src: post.featured_image,
-              layout: "fill",
-              objectFit: "cover"
-            })
-          }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-            className: (related_posts_module_default()).post_info,
-            children: [/*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
-              link: postSlug,
-              children: /*#__PURE__*/jsx_runtime_.jsx("h4", {
-                children: post.title
-              })
-            }), tag && /*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
-              className: (related_posts_module_default()).tag,
-              link: tagSlug,
-              children: tag.label
-            })]
-          })]
-        }, post._id);
-      })]
-    })
-  });
-};
-
-/* harmony default export */ const relatedPosts_relatedPosts = (RelatedPosts);
+// EXTERNAL MODULE: ./components/blog/blog_smallCard_row/blog_smallCard_row.js
+var blog_smallCard_row = __webpack_require__(7845);
 // EXTERNAL MODULE: ./components/richText_field/richText_field.js
 var richText_field = __webpack_require__(4687);
 // EXTERNAL MODULE: ./pages/blog/blog-post.module.scss
@@ -314,8 +250,18 @@ const Post = ({
     }), /*#__PURE__*/jsx_runtime_.jsx(blog_postFooter, {
       tags: tags,
       author: author
-    }), relatedPosts && /*#__PURE__*/jsx_runtime_.jsx(relatedPosts_relatedPosts, {
-      posts: relatedPosts
+    }), relatedPosts && /*#__PURE__*/jsx_runtime_.jsx("section", {
+      className: "umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white",
+      children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: "umoja-l-grid--12",
+        children: [/*#__PURE__*/jsx_runtime_.jsx("h3", {
+          className: `${(blog_post_module_default()).relatedPosts}`,
+          children: "Related Posts:"
+        }), /*#__PURE__*/jsx_runtime_.jsx(blog_smallCard_row/* default */.Z, {
+          posts: relatedPosts,
+          hideTag: tags[0].value
+        })]
+      })
     })]
   });
 };
@@ -369,6 +315,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "blog-hero-post_umoja-l-grid-gap--row-3__ksMzS",
 	"umoja-l-grid-align--center": "blog-hero-post_umoja-l-grid-align--center__3iFB5",
 	"umoja-l-grid-align--base": "blog-hero-post_umoja-l-grid-align--base__2qx4M",
+	"umoja-l-grid-span--full": "blog-hero-post_umoja-l-grid-span--full__2vQIq",
 	"wrap": "blog-hero-post_wrap__1KbfB",
 	"left": "blog-hero-post_left__2zn39",
 	"tag": "blog-hero-post_tag__3to5n",
@@ -398,6 +345,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "blog-post-footer_umoja-l-grid-gap--row-3__1Ua73",
 	"umoja-l-grid-align--center": "blog-post-footer_umoja-l-grid-align--center__1PKR0",
 	"umoja-l-grid-align--base": "blog-post-footer_umoja-l-grid-align--base__bQQBc",
+	"umoja-l-grid-span--full": "blog-post-footer_umoja-l-grid-span--full__1tHhe",
 	"intro": "blog-post-footer_intro__1dGYr",
 	"tags": "blog-post-footer_tags__yEMl0",
 	"tag": "blog-post-footer_tag__UlZZ0",
@@ -407,34 +355,6 @@ module.exports = {
 	"author_bio": "blog-post-footer_author_bio__2z8Kp",
 	"relatedPosts_header": "blog-post-footer_relatedPosts_header__1vFIN",
 	"relatedPosts_posts": "blog-post-footer_relatedPosts_posts__1UBJW"
-};
-
-
-/***/ }),
-
-/***/ 1366:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"umoja-u-pad-1": "related-posts_umoja-u-pad-1__3PI5L",
-	"umoja-u-pad-t--0": "related-posts_umoja-u-pad-t--0__duUa0",
-	"umoja-u-pad-b--0": "related-posts_umoja-u-pad-b--0__2KmgC",
-	"umoja-l-grid--12": "related-posts_umoja-l-grid--12__3_DQ2",
-	"umoja-l-grid--6": "related-posts_umoja-l-grid--6__1VcnB",
-	"umoja-l-page-width": "related-posts_umoja-l-page-width__35qJv",
-	"umoja-l-grid-section": "related-posts_umoja-l-grid-section__3gW23",
-	"umoja-l-grid-section--flat-top": "related-posts_umoja-l-grid-section--flat-top__1RbIp",
-	"umoja-l-grid-gap--row-1": "related-posts_umoja-l-grid-gap--row-1__1YdOm",
-	"umoja-l-grid-gap--row-2": "related-posts_umoja-l-grid-gap--row-2__1bfhk",
-	"umoja-l-grid-gap--row-3": "related-posts_umoja-l-grid-gap--row-3__2muso",
-	"umoja-l-grid-align--center": "related-posts_umoja-l-grid-align--center__27uju",
-	"umoja-l-grid-align--base": "related-posts_umoja-l-grid-align--base__24bLy",
-	"intro": "related-posts_intro__qY1qH",
-	"post": "related-posts_post__2BoZi",
-	"imgWrap": "related-posts_imgWrap__37N1u",
-	"post_info": "related-posts_post_info__xQ_2y",
-	"tag": "related-posts_tag__2ned8"
 };
 
 
@@ -458,6 +378,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "blog-post_umoja-l-grid-gap--row-3__3YWcx",
 	"umoja-l-grid-align--center": "blog-post_umoja-l-grid-align--center__o4H8X",
 	"umoja-l-grid-align--base": "blog-post_umoja-l-grid-align--base__10sTB",
+	"umoja-l-grid-span--full": "blog-post_umoja-l-grid-span--full__1NEcC",
 	"body": "blog-post_body__2CyGF",
 	"share": "blog-post_share__2sAqL",
 	"share_track": "blog-post_share_track__3nibH",
@@ -465,7 +386,8 @@ module.exports = {
 	"share_button__facebook": "blog-post_share_button__facebook__2V_7U",
 	"share_button__twitter": "blog-post_share_button__twitter__3lhXm",
 	"share_button__linkedin": "blog-post_share_button__linkedin__34so0",
-	"content": "blog-post_content__1Q3Gg"
+	"content": "blog-post_content__1Q3Gg",
+	"relatedPosts": "blog-post_relatedPosts__19WKQ"
 };
 
 
@@ -678,7 +600,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5675,5152,3653,5030,4151,4687,4645], () => (__webpack_exec__(8398)));
+var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5675,5152,3653,5030,4151,4687,4645,7845], () => (__webpack_exec__(1881)));
 module.exports = __webpack_exports__;
 
 })();

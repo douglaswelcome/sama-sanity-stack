@@ -70,6 +70,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodystatic-bragBar_umoja-l-grid-gap--row-3__2PLRM",
 	"umoja-l-grid-align--center": "bodystatic-bragBar_umoja-l-grid-align--center__2dEl6",
 	"umoja-l-grid-align--base": "bodystatic-bragBar_umoja-l-grid-align--base__1pgG4",
+	"umoja-l-grid-span--full": "bodystatic-bragBar_umoja-l-grid-span--full__3raKH",
 	"logoRow": "bodystatic-bragBar_logoRow__2Ied5",
 	"logos": "bodystatic-bragBar_logos__30ei1",
 	"logo": "bodystatic-bragBar_logo__MviLs",

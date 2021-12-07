@@ -110,6 +110,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "richText_umoja-l-grid-gap--row-3__1ykaM",
 	"umoja-l-grid-align--center": "richText_umoja-l-grid-align--center__2vJWR",
 	"umoja-l-grid-align--base": "richText_umoja-l-grid-align--base__3BDGB",
+	"umoja-l-grid-span--full": "richText_umoja-l-grid-span--full__Td4ZS",
 	"inner": "richText_inner__37NFR",
 	"_center": "richText__center__2gWN8",
 	"_right": "richText__right__1U7JT"

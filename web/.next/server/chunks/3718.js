@@ -174,6 +174,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodymove-sfMap_umoja-l-grid-gap--row-3__14FgD",
 	"umoja-l-grid-align--center": "bodymove-sfMap_umoja-l-grid-align--center__d1BB3",
 	"umoja-l-grid-align--base": "bodymove-sfMap_umoja-l-grid-align--base__1pK3W",
+	"umoja-l-grid-span--full": "bodymove-sfMap_umoja-l-grid-span--full__3k5-G",
 	"panel": "bodymove-sfMap_panel__3op8F",
 	"address": "bodymove-sfMap_address__1_ch7",
 	"map": "bodymove-sfMap_map__2ZK_W",

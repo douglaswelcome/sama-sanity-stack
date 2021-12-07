@@ -74,6 +74,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "button_umoja-l-grid-gap--row-3__FBbl9",
 	"umoja-l-grid-align--center": "button_umoja-l-grid-align--center__7o5b6",
 	"umoja-l-grid-align--base": "button_umoja-l-grid-align--base__dSWXb",
+	"umoja-l-grid-span--full": "button_umoja-l-grid-span--full__4v1Sd",
 	"wrapper": "button_wrapper__3lRbv",
 	"btn": "button_btn__1qxP1",
 	"text": "button_text__3_sCS",
