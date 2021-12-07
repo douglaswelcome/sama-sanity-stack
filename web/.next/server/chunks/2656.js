@@ -58,6 +58,7 @@ module.exports = {
 	"umoja-l-grid--6": "bodystatic-centerPanel_umoja-l-grid--6__rtNVq",
 	"umoja-l-page-width": "bodystatic-centerPanel_umoja-l-page-width__WNn1M",
 	"umoja-l-grid-section": "bodystatic-centerPanel_umoja-l-grid-section__GEH1J",
+	"umoja-l-grid-section--flat-top": "bodystatic-centerPanel_umoja-l-grid-section--flat-top__2sBru",
 	"umoja-l-grid-gap--row-1": "bodystatic-centerPanel_umoja-l-grid-gap--row-1__3mUkg",
 	"umoja-l-grid-gap--row-2": "bodystatic-centerPanel_umoja-l-grid-gap--row-2__3ps8Q",
 	"umoja-l-grid-gap--row-3": "bodystatic-centerPanel_umoja-l-grid-gap--row-3__10Zog",

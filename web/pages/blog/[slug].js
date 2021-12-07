@@ -5,6 +5,7 @@ import { postQuery, postSlugsQuery } from '../../libs/queries'
 import dynamic from "next/dynamic";
 import BlogHeroPost from '../../components/blog/blog_heroPost/blog_heroPost';
 import BlogPostFooter from '../../components/blog/blog_postFooter/blog_postFooter';
+import RelatedPosts from '../../components/blog/relatedPosts/relatedPosts';
 import RichText from '../../components/richText_field/richText_field'
 const Layout = dynamic(() => import('../../components/Layout'))
 import styles from "./blog-post.module.scss"
@@ -17,8 +18,7 @@ const Post = ({ data = {}, config }) => {
       return <ErrorPage statusCode={404} />
     }
 
-    const {tags, author, body} = post;
-    const hostname = typeof window !== 'undefined' && window.location.host ? window.location.host : '';
+    const {tags, author, body, relatedPosts} = post;
     const shareUrl = `https://www.sama.com/${router.asPath}`;
   
     return (
@@ -47,6 +47,9 @@ const Post = ({ data = {}, config }) => {
           </div>
         </section>
         <BlogPostFooter tags={tags} author={author} />
+        {relatedPosts &&
+          <RelatedPosts posts={relatedPosts} />
+        }
       </Layout>
     )
   }
@@ -54,7 +57,7 @@ const Post = ({ data = {}, config }) => {
 
 export async function getStaticProps({ params }) {
     const {post} = await client.fetch(postQuery, {
-      slug: params.slug,
+      slug: params.slug
     })
   
     return {

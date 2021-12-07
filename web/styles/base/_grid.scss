@@ -135,12 +135,9 @@ $med-page-width: 800px;
   position: relative;
   row-gap:$space-md;
 
-  // &:first-of-type{
-  //   padding-top: 3rem;
-  //   padding-bottom: 3rem;
-  // }
-
-  
+  &--flat-top{
+    padding-top: 0;
+  }
 
   @include breakpoint(w-sm) {
     padding-top: 3rem;

@@ -11,7 +11,6 @@ const BlogPostFooter = (props) => {
     }
 
     return(
-        <>
         <section className="umoja-l-grid-section umoja-u-bg--white">
             <div className="umoja-l-grid--12">
                 <div className={styles.tags}>
@@ -45,15 +44,6 @@ const BlogPostFooter = (props) => {
                 </div>
             </div>
         </section>
-        <section className="umoja-l-grid-section umoja-u-bg--white">
-            <div className="umoja-l-grid--12">
-                <h3 className={`${styles.intro} ${styles.relatedPosts_header}`}>Related Posts:</h3>
-                <div className={`umoja-l-grid--12 ${styles.posts}`}>
-                    
-                </div>
-            </div>
-        </section>
-        </>
     )
 }
 

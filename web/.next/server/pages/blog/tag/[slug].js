@@ -141,6 +141,7 @@ module.exports = {
 	"umoja-l-grid--6": "blog-tag_umoja-l-grid--6__1PAVa",
 	"umoja-l-page-width": "blog-tag_umoja-l-page-width__2JP0C",
 	"umoja-l-grid-section": "blog-tag_umoja-l-grid-section__3Wv_M",
+	"umoja-l-grid-section--flat-top": "blog-tag_umoja-l-grid-section--flat-top__3vMNd",
 	"umoja-l-grid-gap--row-1": "blog-tag_umoja-l-grid-gap--row-1__2asTL",
 	"umoja-l-grid-gap--row-2": "blog-tag_umoja-l-grid-gap--row-2__NiBCj",
 	"umoja-l-grid-gap--row-3": "blog-tag_umoja-l-grid-gap--row-3__1B_8k",

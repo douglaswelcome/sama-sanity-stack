@@ -110,6 +110,7 @@ module.exports = {
 	"umoja-l-grid--6": "blog-post_umoja-l-grid--6__2dBVG",
 	"umoja-l-page-width": "blog-post_umoja-l-page-width__28dnW",
 	"umoja-l-grid-section": "blog-post_umoja-l-grid-section__2q_BC",
+	"umoja-l-grid-section--flat-top": "blog-post_umoja-l-grid-section--flat-top__1yRlp",
 	"umoja-l-grid-gap--row-1": "blog-post_umoja-l-grid-gap--row-1__3p43T",
 	"umoja-l-grid-gap--row-2": "blog-post_umoja-l-grid-gap--row-2__b05iT",
 	"umoja-l-grid-gap--row-3": "blog-post_umoja-l-grid-gap--row-3__lQ8_H",

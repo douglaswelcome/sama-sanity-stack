@@ -4,7 +4,7 @@ exports.id = 2492;
 exports.ids = [2492];
 exports.modules = {
 
-/***/ 1881:
+/***/ 8398:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -108,7 +108,6 @@ var blog_post_footer_module_default = /*#__PURE__*/__webpack_require__.n(blog_po
 
 
 
-
 const BlogPostFooter = props => {
   const {
     author,
@@ -117,70 +116,123 @@ const BlogPostFooter = props => {
   const authorSlug = {
     internalLink_custom: `blog/author/${author.slug ? author.slug.current : ''}`
   };
-  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
-    children: [/*#__PURE__*/jsx_runtime_.jsx("section", {
-      className: "umoja-l-grid-section umoja-u-bg--white",
-      children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-        className: "umoja-l-grid--12",
-        children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-          className: (blog_post_footer_module_default()).tags,
-          children: [/*#__PURE__*/jsx_runtime_.jsx("h3", {
-            className: (blog_post_footer_module_default()).intro,
-            children: "Filed Under:"
-          }), tags.map((tag, i) => {
-            const tagSlug = {
-              internalLink_custom: `blog/tag/${(0,slugify/* default */.Z)(tag.value)}`
-            };
-            return /*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
-              className: (blog_post_footer_module_default()).tag,
-              link: tagSlug,
-              children: tag.label
-            }, i);
-          })]
+  return /*#__PURE__*/jsx_runtime_.jsx("section", {
+    className: "umoja-l-grid-section umoja-u-bg--white",
+    children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: "umoja-l-grid--12",
+      children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (blog_post_footer_module_default()).tags,
+        children: [/*#__PURE__*/jsx_runtime_.jsx("h3", {
+          className: (blog_post_footer_module_default()).intro,
+          children: "Filed Under:"
+        }), tags.map((tag, i) => {
+          const tagSlug = {
+            internalLink_custom: `blog/tag/${(0,slugify/* default */.Z)(tag.value)}`
+          };
+          return /*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
+            className: (blog_post_footer_module_default()).tag,
+            link: tagSlug,
+            children: tag.label
+          }, i);
+        })]
+      }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+        className: (blog_post_footer_module_default()).author,
+        children: [/*#__PURE__*/jsx_runtime_.jsx("h3", {
+          className: (blog_post_footer_module_default()).intro,
+          children: "Words by:"
         }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-          className: (blog_post_footer_module_default()).author,
-          children: [/*#__PURE__*/jsx_runtime_.jsx("h3", {
-            className: (blog_post_footer_module_default()).intro,
-            children: "Words by:"
+          className: (blog_post_footer_module_default()).author_inner,
+          children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+            className: (blog_post_footer_module_default()).author_headshot,
+            children: /*#__PURE__*/jsx_runtime_.jsx(components_image/* default */.Z, {
+              layout: "responsive",
+              objectFit: "cover",
+              src: author.avatar
+            })
           }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-            className: (blog_post_footer_module_default()).author_inner,
-            children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
-              className: (blog_post_footer_module_default()).author_headshot,
-              children: /*#__PURE__*/jsx_runtime_.jsx(components_image/* default */.Z, {
-                layout: "responsive",
-                objectFit: "cover",
-                src: author.avatar
+            className: (blog_post_footer_module_default()).author_bio,
+            children: [/*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
+              link: authorSlug,
+              children: /*#__PURE__*/jsx_runtime_.jsx("h4", {
+                children: author.name
               })
-            }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-              className: (blog_post_footer_module_default()).author_bio,
-              children: [/*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
-                link: authorSlug,
-                children: /*#__PURE__*/jsx_runtime_.jsx("h4", {
-                  children: author.name
-                })
-              }), /*#__PURE__*/jsx_runtime_.jsx("p", {
-                children: author.bio
-              })]
+            }), /*#__PURE__*/jsx_runtime_.jsx("p", {
+              children: author.bio
             })]
           })]
         })]
-      })
-    }), /*#__PURE__*/jsx_runtime_.jsx("section", {
-      className: "umoja-l-grid-section umoja-u-bg--white",
-      children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-        className: "umoja-l-grid--12",
-        children: [/*#__PURE__*/jsx_runtime_.jsx("h3", {
-          className: `${(blog_post_footer_module_default()).intro} ${(blog_post_footer_module_default()).relatedPosts_header}`,
-          children: "Related Posts:"
-        }), /*#__PURE__*/jsx_runtime_.jsx("div", {
-          className: `umoja-l-grid--12 ${(blog_post_footer_module_default()).posts}`
-        })]
-      })
-    })]
+      })]
+    })
   });
 };
 
 /* harmony default export */ const blog_postFooter = (BlogPostFooter);
+// EXTERNAL MODULE: ./components/blog/relatedPosts/related-posts.module.scss
+var related_posts_module = __webpack_require__(1366);
+var related_posts_module_default = /*#__PURE__*/__webpack_require__.n(related_posts_module);
+;// CONCATENATED MODULE: ./components/blog/relatedPosts/relatedPosts.js
+
+
+
+
+
+
+
+const RelatedPosts = props => {
+  const {
+    posts
+  } = props;
+  return /*#__PURE__*/jsx_runtime_.jsx("section", {
+    className: "umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white",
+    children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+      className: "umoja-l-grid--12",
+      children: [/*#__PURE__*/jsx_runtime_.jsx("h3", {
+        className: `${(related_posts_module_default()).intro}`,
+        children: "Related Posts:"
+      }), posts.map(post => {
+        const tag = post.tags[1];
+        const slugURL = post.slug ? post.slug.current : '';
+        let postSlug = {
+          internalLink_custom: `blog${slugURL.charAt(0) == '/' ? slugURL : `/${slugURL}`}`
+        };
+        let tagSlug = {};
+
+        if (tag) {
+          tagSlug = {
+            internalLink_custom: `blog/tag/${(0,slugify/* default */.Z)(tag.value)}`
+          };
+        }
+
+        return /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+          className: (related_posts_module_default()).post,
+          children: [/*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
+            link: postSlug,
+            className: (related_posts_module_default()).imgWrap,
+            children: /*#__PURE__*/jsx_runtime_.jsx(components_image/* default */.Z, {
+              src: post.featured_image,
+              layout: "fill",
+              objectFit: "cover"
+            })
+          }), /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+            className: (related_posts_module_default()).post_info,
+            children: [/*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
+              link: postSlug,
+              children: /*#__PURE__*/jsx_runtime_.jsx("h4", {
+                children: post.title
+              })
+            }), tag && /*#__PURE__*/jsx_runtime_.jsx(components_link/* default */.Z, {
+              className: (related_posts_module_default()).tag,
+              link: tagSlug,
+              children: tag.label
+            })]
+          })]
+        }, post._id);
+      })]
+    })
+  });
+};
+
+/* harmony default export */ const relatedPosts_relatedPosts = (RelatedPosts);
 // EXTERNAL MODULE: ./components/richText_field/richText_field.js
 var richText_field = __webpack_require__(4687);
 // EXTERNAL MODULE: ./pages/blog/blog-post.module.scss
@@ -192,6 +244,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -227,9 +280,9 @@ const Post = ({
   const {
     tags,
     author,
-    body
+    body,
+    relatedPosts
   } = post;
-  const hostname =  false ? 0 : '';
   const shareUrl = `https://www.sama.com/${router.asPath}`;
   return /*#__PURE__*/(0,jsx_runtime_.jsxs)(Layout, {
     config: config,
@@ -261,6 +314,8 @@ const Post = ({
     }), /*#__PURE__*/jsx_runtime_.jsx(blog_postFooter, {
       tags: tags,
       author: author
+    }), relatedPosts && /*#__PURE__*/jsx_runtime_.jsx(relatedPosts_relatedPosts, {
+      posts: relatedPosts
     })]
   });
 };
@@ -308,6 +363,7 @@ module.exports = {
 	"umoja-l-grid--6": "blog-hero-post_umoja-l-grid--6__2QpXG",
 	"umoja-l-page-width": "blog-hero-post_umoja-l-page-width__13TlY",
 	"umoja-l-grid-section": "blog-hero-post_umoja-l-grid-section___zt30",
+	"umoja-l-grid-section--flat-top": "blog-hero-post_umoja-l-grid-section--flat-top__3qoeF",
 	"umoja-l-grid-gap--row-1": "blog-hero-post_umoja-l-grid-gap--row-1__1u5a-",
 	"umoja-l-grid-gap--row-2": "blog-hero-post_umoja-l-grid-gap--row-2__pZEZH",
 	"umoja-l-grid-gap--row-3": "blog-hero-post_umoja-l-grid-gap--row-3__ksMzS",
@@ -336,6 +392,7 @@ module.exports = {
 	"umoja-l-grid--6": "blog-post-footer_umoja-l-grid--6__2uA5H",
 	"umoja-l-page-width": "blog-post-footer_umoja-l-page-width__1gxU0",
 	"umoja-l-grid-section": "blog-post-footer_umoja-l-grid-section__1KQ2u",
+	"umoja-l-grid-section--flat-top": "blog-post-footer_umoja-l-grid-section--flat-top__N2nQ6",
 	"umoja-l-grid-gap--row-1": "blog-post-footer_umoja-l-grid-gap--row-1__1orzu",
 	"umoja-l-grid-gap--row-2": "blog-post-footer_umoja-l-grid-gap--row-2__3kHIk",
 	"umoja-l-grid-gap--row-3": "blog-post-footer_umoja-l-grid-gap--row-3__1Ua73",
@@ -355,6 +412,34 @@ module.exports = {
 
 /***/ }),
 
+/***/ 1366:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"umoja-u-pad-1": "related-posts_umoja-u-pad-1__3PI5L",
+	"umoja-u-pad-t--0": "related-posts_umoja-u-pad-t--0__duUa0",
+	"umoja-u-pad-b--0": "related-posts_umoja-u-pad-b--0__2KmgC",
+	"umoja-l-grid--12": "related-posts_umoja-l-grid--12__3_DQ2",
+	"umoja-l-grid--6": "related-posts_umoja-l-grid--6__1VcnB",
+	"umoja-l-page-width": "related-posts_umoja-l-page-width__35qJv",
+	"umoja-l-grid-section": "related-posts_umoja-l-grid-section__3gW23",
+	"umoja-l-grid-section--flat-top": "related-posts_umoja-l-grid-section--flat-top__1RbIp",
+	"umoja-l-grid-gap--row-1": "related-posts_umoja-l-grid-gap--row-1__1YdOm",
+	"umoja-l-grid-gap--row-2": "related-posts_umoja-l-grid-gap--row-2__1bfhk",
+	"umoja-l-grid-gap--row-3": "related-posts_umoja-l-grid-gap--row-3__2muso",
+	"umoja-l-grid-align--center": "related-posts_umoja-l-grid-align--center__27uju",
+	"umoja-l-grid-align--base": "related-posts_umoja-l-grid-align--base__24bLy",
+	"intro": "related-posts_intro__qY1qH",
+	"post": "related-posts_post__2BoZi",
+	"imgWrap": "related-posts_imgWrap__37N1u",
+	"post_info": "related-posts_post_info__xQ_2y",
+	"tag": "related-posts_tag__2ned8"
+};
+
+
+/***/ }),
+
 /***/ 8059:
 /***/ ((module) => {
 
@@ -367,6 +452,7 @@ module.exports = {
 	"umoja-l-grid--6": "blog-post_umoja-l-grid--6__2wQHg",
 	"umoja-l-page-width": "blog-post_umoja-l-page-width__2U7dL",
 	"umoja-l-grid-section": "blog-post_umoja-l-grid-section__1aSd1",
+	"umoja-l-grid-section--flat-top": "blog-post_umoja-l-grid-section--flat-top__MwmPn",
 	"umoja-l-grid-gap--row-1": "blog-post_umoja-l-grid-gap--row-1__2dJU6",
 	"umoja-l-grid-gap--row-2": "blog-post_umoja-l-grid-gap--row-2__3Fva5",
 	"umoja-l-grid-gap--row-3": "blog-post_umoja-l-grid-gap--row-3__3YWcx",
@@ -592,7 +678,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5675,5152,3653,5030,4151,4687,4645], () => (__webpack_exec__(1881)));
+var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5675,5152,3653,5030,4151,4687,4645], () => (__webpack_exec__(8398)));
 module.exports = __webpack_exports__;
 
 })();

@@ -296,6 +296,7 @@ module.exports = {
 	"umoja-l-grid--6": "header_umoja-l-grid--6__2oWO5",
 	"umoja-l-page-width": "header_umoja-l-page-width__2rMVR",
 	"umoja-l-grid-section": "header_umoja-l-grid-section__2URtG",
+	"umoja-l-grid-section--flat-top": "header_umoja-l-grid-section--flat-top__1xggz",
 	"umoja-l-grid-gap--row-1": "header_umoja-l-grid-gap--row-1__15idn",
 	"umoja-l-grid-gap--row-2": "header_umoja-l-grid-gap--row-2__3syxA",
 	"umoja-l-grid-gap--row-3": "header_umoja-l-grid-gap--row-3__28-vL",

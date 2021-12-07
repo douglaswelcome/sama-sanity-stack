@@ -66,6 +66,7 @@ module.exports = {
 	"umoja-l-grid--6": "bodystatic-vidCenter_umoja-l-grid--6__18aP4",
 	"umoja-l-page-width": "bodystatic-vidCenter_umoja-l-page-width__2kQwc",
 	"umoja-l-grid-section": "bodystatic-vidCenter_umoja-l-grid-section__QfVkz",
+	"umoja-l-grid-section--flat-top": "bodystatic-vidCenter_umoja-l-grid-section--flat-top__3tiF0",
 	"umoja-l-grid-gap--row-1": "bodystatic-vidCenter_umoja-l-grid-gap--row-1__1er4L",
 	"umoja-l-grid-gap--row-2": "bodystatic-vidCenter_umoja-l-grid-gap--row-2__1kg0w",
 	"umoja-l-grid-gap--row-3": "bodystatic-vidCenter_umoja-l-grid-gap--row-3__1FnG_",
