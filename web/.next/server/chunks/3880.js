@@ -194,6 +194,7 @@ module.exports = {
 	"umoja-l-grid--6": "bodymove-map_umoja-l-grid--6__1rJPY",
 	"umoja-l-page-width": "bodymove-map_umoja-l-page-width__3hN4H",
 	"umoja-l-grid-section": "bodymove-map_umoja-l-grid-section__6BgyD",
+	"umoja-l-grid-section--flat-top": "bodymove-map_umoja-l-grid-section--flat-top__2Xero",
 	"umoja-l-grid-gap--row-1": "bodymove-map_umoja-l-grid-gap--row-1__1EuDh",
 	"umoja-l-grid-gap--row-2": "bodymove-map_umoja-l-grid-gap--row-2__bRSZo",
 	"umoja-l-grid-gap--row-3": "bodymove-map_umoja-l-grid-gap--row-3__3cB7Q",

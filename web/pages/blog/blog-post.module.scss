@@ -67,10 +67,9 @@
     }
     img{
         margin: 0 -3em;
-        min-width: calc(100% + 6em);
+        max-width: calc(100% + 6em);
         @include breakpoint (w-sm) {
             max-width: 100%;
-            min-width: unset;
             margin: 0 auto;
         }
     }

@@ -187,6 +187,7 @@ module.exports = {
 	"umoja-l-grid--6": "blog-heroHome_umoja-l-grid--6__1a74F",
 	"umoja-l-page-width": "blog-heroHome_umoja-l-page-width__1__6H",
 	"umoja-l-grid-section": "blog-heroHome_umoja-l-grid-section__1Q-Q6",
+	"umoja-l-grid-section--flat-top": "blog-heroHome_umoja-l-grid-section--flat-top__GGTuw",
 	"umoja-l-grid-gap--row-1": "blog-heroHome_umoja-l-grid-gap--row-1__1qo16",
 	"umoja-l-grid-gap--row-2": "blog-heroHome_umoja-l-grid-gap--row-2__2uHRT",
 	"umoja-l-grid-gap--row-3": "blog-heroHome_umoja-l-grid-gap--row-3__kGVSZ",

@@ -104,6 +104,7 @@ module.exports = {
 	"umoja-l-grid--6": "richText_umoja-l-grid--6__mOyRC",
 	"umoja-l-page-width": "richText_umoja-l-page-width__WBf-t",
 	"umoja-l-grid-section": "richText_umoja-l-grid-section__gTheM",
+	"umoja-l-grid-section--flat-top": "richText_umoja-l-grid-section--flat-top__2RSv9",
 	"umoja-l-grid-gap--row-1": "richText_umoja-l-grid-gap--row-1__3G9b6",
 	"umoja-l-grid-gap--row-2": "richText_umoja-l-grid-gap--row-2__7pjoo",
 	"umoja-l-grid-gap--row-3": "richText_umoja-l-grid-gap--row-3__1ykaM",

@@ -300,6 +300,7 @@ module.exports = {
 	"umoja-l-grid--6": "press_umoja-l-grid--6__3Bo_W",
 	"umoja-l-page-width": "press_umoja-l-page-width__3Nre3",
 	"umoja-l-grid-section": "press_umoja-l-grid-section__2PmpP",
+	"umoja-l-grid-section--flat-top": "press_umoja-l-grid-section--flat-top__22UKg",
 	"umoja-l-grid-gap--row-1": "press_umoja-l-grid-gap--row-1__K-v5J",
 	"umoja-l-grid-gap--row-2": "press_umoja-l-grid-gap--row-2__2uD8T",
 	"umoja-l-grid-gap--row-3": "press_umoja-l-grid-gap--row-3__QOLWq",

@@ -119,7 +119,9 @@ export const postsQuery = `
 `
 export const postQuery = `{
     "post": *[_type == "post" && slug.current == $slug][0] {
-        ${postsFields}, body
+        ${postsFields}, 
+        body,
+        "relatedPosts": *[_type=='post' && tags[0].value in tags[].value && references(^._id) != _id][0..2]| order(_createdAt desc)
     }
 }`
 

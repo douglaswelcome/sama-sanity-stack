@@ -68,6 +68,7 @@ module.exports = {
 	"umoja-l-grid--6": "button_umoja-l-grid--6__3iPRr",
 	"umoja-l-page-width": "button_umoja-l-page-width__TBzfJ",
 	"umoja-l-grid-section": "button_umoja-l-grid-section__30hdz",
+	"umoja-l-grid-section--flat-top": "button_umoja-l-grid-section--flat-top__3-E46",
 	"umoja-l-grid-gap--row-1": "button_umoja-l-grid-gap--row-1__13k4Y",
 	"umoja-l-grid-gap--row-2": "button_umoja-l-grid-gap--row-2__3mbaT",
 	"umoja-l-grid-gap--row-3": "button_umoja-l-grid-gap--row-3__FBbl9",
