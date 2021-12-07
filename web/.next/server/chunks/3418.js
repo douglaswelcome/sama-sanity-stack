@@ -405,6 +405,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodystatic-timeline_umoja-l-grid-gap--row-3__1TkV-",
 	"umoja-l-grid-align--center": "bodystatic-timeline_umoja-l-grid-align--center__2PkGH",
 	"umoja-l-grid-align--base": "bodystatic-timeline_umoja-l-grid-align--base__UO3l9",
+	"umoja-l-grid-span--full": "bodystatic-timeline_umoja-l-grid-span--full__1zKaB",
 	"wrapper": "bodystatic-timeline_wrapper__9-bBj",
 	"row": "bodystatic-timeline_row__1dGBW",
 	"center": "bodystatic-timeline_center__2yNaL",

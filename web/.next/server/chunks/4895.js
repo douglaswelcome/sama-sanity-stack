@@ -120,6 +120,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodymove-panel_umoja-l-grid-gap--row-3__2Be-g",
 	"umoja-l-grid-align--center": "bodymove-panel_umoja-l-grid-align--center__1sVv6",
 	"umoja-l-grid-align--base": "bodymove-panel_umoja-l-grid-align--base__2lUl6",
+	"umoja-l-grid-span--full": "bodymove-panel_umoja-l-grid-span--full__3G5XQ",
 	"panels": "bodymove-panel_panels__1TvDI",
 	"carouselTitle__mobile": "bodymove-panel_carouselTitle__mobile__2EZ82",
 	"panel": "bodymove-panel_panel__2Dt_i",

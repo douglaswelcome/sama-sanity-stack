@@ -81,6 +81,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodystatic-cardImg_umoja-l-grid-gap--row-3__pXDEN",
 	"umoja-l-grid-align--center": "bodystatic-cardImg_umoja-l-grid-align--center__25BFU",
 	"umoja-l-grid-align--base": "bodystatic-cardImg_umoja-l-grid-align--base__1eGNJ",
+	"umoja-l-grid-span--full": "bodystatic-cardImg_umoja-l-grid-span--full__1vV3Y",
 	"card": "bodystatic-cardImg_card__I6yK0",
 	"body": "bodystatic-cardImg_body__192kF",
 	"_four": "bodystatic-cardImg__four__15uIz"

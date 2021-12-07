@@ -92,6 +92,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodystatic-panelAvatarTxt_umoja-l-grid-gap--row-3__1OivN",
 	"umoja-l-grid-align--center": "bodystatic-panelAvatarTxt_umoja-l-grid-align--center__1HyoX",
 	"umoja-l-grid-align--base": "bodystatic-panelAvatarTxt_umoja-l-grid-align--base__2bWQE",
+	"umoja-l-grid-span--full": "bodystatic-panelAvatarTxt_umoja-l-grid-span--full__X4mFT",
 	"dotPanel": "bodystatic-panelAvatarTxt_dotPanel__116BM",
 	"bottomPanel": "bodystatic-panelAvatarTxt_bottomPanel__1uRmQ",
 	"topPanel": "bodystatic-panelAvatarTxt_topPanel__2QVGi",

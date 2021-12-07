@@ -77,6 +77,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodystatic-panelColumns_umoja-l-grid-gap--row-3__6-ttf",
 	"umoja-l-grid-align--center": "bodystatic-panelColumns_umoja-l-grid-align--center__iuig1",
 	"umoja-l-grid-align--base": "bodystatic-panelColumns_umoja-l-grid-align--base__G7PEm",
+	"umoja-l-grid-span--full": "bodystatic-panelColumns_umoja-l-grid-span--full__14awl",
 	"panel": "bodystatic-panelColumns_panel__16_vX",
 	"panel_imgWrap": "bodystatic-panelColumns_panel_imgWrap__1lzlt",
 	"panel_copy": "bodystatic-panelColumns_panel_copy__22vMr"

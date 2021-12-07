@@ -80,6 +80,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodystatic-flowRow_umoja-l-grid-gap--row-3__2HOOB",
 	"umoja-l-grid-align--center": "bodystatic-flowRow_umoja-l-grid-align--center__2vYiq",
 	"umoja-l-grid-align--base": "bodystatic-flowRow_umoja-l-grid-align--base__3hoVN",
+	"umoja-l-grid-span--full": "bodystatic-flowRow_umoja-l-grid-span--full__3-aHp",
 	"step": "bodystatic-flowRow_step__2nhT9",
 	"image": "bodystatic-flowRow_image__2YV8P",
 	"arrow": "bodystatic-flowRow_arrow__1MpII"

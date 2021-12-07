@@ -123,6 +123,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodystatic-table_umoja-l-grid-gap--row-3__HRoT8",
 	"umoja-l-grid-align--center": "bodystatic-table_umoja-l-grid-align--center__FR7lz",
 	"umoja-l-grid-align--base": "bodystatic-table_umoja-l-grid-align--base__M6UuH",
+	"umoja-l-grid-span--full": "bodystatic-table_umoja-l-grid-span--full__lxGLy",
 	"table": "bodystatic-table_table__3BT-E",
 	"btn--secondary": "bodystatic-table_btn--secondary__3pi05",
 	"btn__text": "bodystatic-table_btn__text__35iqd",

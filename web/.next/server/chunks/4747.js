@@ -139,6 +139,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodystatic-tabs_umoja-l-grid-gap--row-3__13_89",
 	"umoja-l-grid-align--center": "bodystatic-tabs_umoja-l-grid-align--center__1-RdD",
 	"umoja-l-grid-align--base": "bodystatic-tabs_umoja-l-grid-align--base__2e1Nd",
+	"umoja-l-grid-span--full": "bodystatic-tabs_umoja-l-grid-span--full__3Y9_6",
 	"nav": "bodystatic-tabs_nav__1-UBP",
 	"navInner": "bodystatic-tabs_navInner__iKy65",
 	"_slideLeft": "bodystatic-tabs__slideLeft__1Bq19",

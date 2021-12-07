@@ -198,6 +198,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodymove-featureWindow_umoja-l-grid-gap--row-3__15KJO",
 	"umoja-l-grid-align--center": "bodymove-featureWindow_umoja-l-grid-align--center__3RpS2",
 	"umoja-l-grid-align--base": "bodymove-featureWindow_umoja-l-grid-align--base__13C-Y",
+	"umoja-l-grid-span--full": "bodymove-featureWindow_umoja-l-grid-span--full__2a1MR",
 	"container-lg": "bodymove-featureWindow_container-lg__u-ofo",
 	"container-med": "bodymove-featureWindow_container-med__RjI1d",
 	"container-sm": "bodymove-featureWindow_container-sm__3L-Hy",

@@ -112,16 +112,30 @@ export const pressFeaturedQuery = `
 }
 `
 
-export const postsQuery = `
-*[_type == "post"]| order(_createdAt desc){
-    ${postsFields}
+export const postsQuery = `{
+    "posts": *[_type == "post"]| order(_createdAt desc){
+        ${postsFields},
+    },
+    "featuredPosts": *[_type=='post' && "Featured" in tags[].value][0..2]| order(_createdAt desc){
+        _id,
+        title,
+        slug,
+        tags,
+        featured_image
+    }
 }
 `
 export const postQuery = `{
     "post": *[_type == "post" && slug.current == $slug][0] {
         ${postsFields}, 
         body,
-        "relatedPosts": *[_type=='post' && tags[0].value in tags[].value && references(^._id) != _id][0..2]| order(_createdAt desc)
+        "relatedPosts": *[_type=='post' && tags[0].value in tags[].value && references(^._id) != _id][0..2]| order(_createdAt desc){
+            _id,
+            title,
+            slug,
+            tags,
+            featured_image
+        }
     }
 }`
 

@@ -81,6 +81,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodystatic-splitTxtBtn_umoja-l-grid-gap--row-3__3oMST",
 	"umoja-l-grid-align--center": "bodystatic-splitTxtBtn_umoja-l-grid-align--center__1xjkD",
 	"umoja-l-grid-align--base": "bodystatic-splitTxtBtn_umoja-l-grid-align--base__D7nx4",
+	"umoja-l-grid-span--full": "bodystatic-splitTxtBtn_umoja-l-grid-span--full__WMFRP",
 	"left": "bodystatic-splitTxtBtn_left__1GvQ7",
 	"right": "bodystatic-splitTxtBtn_right__3xe-T",
 	"buttons": "bodystatic-splitTxtBtn_buttons__2ELKN"

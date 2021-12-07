@@ -84,6 +84,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "hero-splittxtimg_umoja-l-grid-gap--row-3__2FbAA",
 	"umoja-l-grid-align--center": "hero-splittxtimg_umoja-l-grid-align--center__2H2zA",
 	"umoja-l-grid-align--base": "hero-splittxtimg_umoja-l-grid-align--base__1L8B2",
+	"umoja-l-grid-span--full": "hero-splittxtimg_umoja-l-grid-span--full__21ULu",
 	"copy": "hero-splittxtimg_copy__28fs5",
 	"preheadline": "hero-splittxtimg_preheadline__3Ikgm",
 	"imgWrapper": "hero-splittxtimg_imgWrapper__XL8hm"

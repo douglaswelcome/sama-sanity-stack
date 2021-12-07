@@ -72,6 +72,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodystatic-vidCenter_umoja-l-grid-gap--row-3__1FnG_",
 	"umoja-l-grid-align--center": "bodystatic-vidCenter_umoja-l-grid-align--center__3gSB-",
 	"umoja-l-grid-align--base": "bodystatic-vidCenter_umoja-l-grid-align--base__35FYC",
+	"umoja-l-grid-span--full": "bodystatic-vidCenter_umoja-l-grid-span--full__1Ljny",
 	"container-lg": "bodystatic-vidCenter_container-lg__1IA6b",
 	"videoWrapper": "bodystatic-vidCenter_videoWrapper__3AzT4",
 	"container-med": "bodystatic-vidCenter_container-med__2T-UY",

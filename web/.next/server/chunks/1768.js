@@ -116,6 +116,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "blog-post_umoja-l-grid-gap--row-3__lQ8_H",
 	"umoja-l-grid-align--center": "blog-post_umoja-l-grid-align--center__2jRjw",
 	"umoja-l-grid-align--base": "blog-post_umoja-l-grid-align--base__1l1Qp",
+	"umoja-l-grid-span--full": "blog-post_umoja-l-grid-span--full__38LJU",
 	"postCard": "blog-post_postCard__i0O-O",
 	"postCard_image": "blog-post_postCard_image__3k8eA",
 	"postCard_data": "blog-post_postCard_data__2vfn3",

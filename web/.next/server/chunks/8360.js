@@ -73,6 +73,7 @@ module.exports = {
 	"umoja-l-grid-gap--row-3": "bodystatic-iconList_umoja-l-grid-gap--row-3__BKrOI",
 	"umoja-l-grid-align--center": "bodystatic-iconList_umoja-l-grid-align--center__cU9_5",
 	"umoja-l-grid-align--base": "bodystatic-iconList_umoja-l-grid-align--base__34N9s",
+	"umoja-l-grid-span--full": "bodystatic-iconList_umoja-l-grid-span--full__1hU2Q",
 	"icon": "bodystatic-iconList_icon__1HhdM",
 	"_three": "bodystatic-iconList__three__o8lHH"
 };
