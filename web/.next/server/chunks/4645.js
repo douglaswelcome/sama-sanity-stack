@@ -148,15 +148,21 @@ const pressFeaturedQuery = `
 }
 `;
 const postsQuery = `{
-    "posts": *[_type == "post"]| order(_createdAt desc){
+    "topPost": *[_type == "post"]|order(_createdAt desc)[0]{
         ${postsFields},
     },
-    "featuredPosts": *[_type=='post' && "Featured" in tags[].value][0..2]| order(_createdAt desc){
+    "firstLoad": *[_type == "post"]| order(_createdAt desc)[1..12]{
+        ${postsFields},
+    },
+    "featuredPosts": *[_type=='post' && "Featured" in tags[].value]| order(_createdAt desc)[0..2]{
         _id,
         title,
         slug,
         tags,
         featured_image
+    },
+    "morePosts": *[_type == "post"]| order(_createdAt desc)[13..100]{
+        ${postsFields},
     }
 }
 `;
@@ -164,7 +170,7 @@ const postQuery = `{
     "post": *[_type == "post" && slug.current == $slug][0] {
         ${postsFields}, 
         body,
-        "relatedPosts": *[_type=='post' && tags[0].value in tags[].value && references(^._id) != _id][0..2]| order(_createdAt desc){
+        "relatedPosts": *[_type=='post' && tags[0].value in tags[].value && references(^._id) != _id]| order(_createdAt desc)[0..2]{
             _id,
             title,
             slug,
@@ -179,8 +185,11 @@ const postSlugsQuery = `
 const authorQuery = `{
     "author": *[_type == "author" && slug.current == $slug][0]{
         ${authorFields},
-        "posts": *[_type=='post' && references(^._id)]{
-            ${postsFields}
+        "firstLoad": *[_type=='post' && references(^._id)]| order(_createdAt desc)[0..11]{
+            ${postsFields},
+        },
+        "morePosts": *[_type=='post' && references(^._id)]| order(_createdAt desc)[12..100]{
+            ${postsFields},
         }
     }
 }`;
@@ -188,8 +197,11 @@ const authorPostsQuery = `
     *[_type == "author" && defined(slug.current)][].slug.current
 `;
 const postsByTagQuery = `{
-    "posts": *[_type == "post" && $tag in tags[].value]{
-        ${postsFields}
+    "firstLoad": *[_type == "post" && $tag in tags[].value]| order(_createdAt desc)[0..11]{
+        ${postsFields},
+    },
+    "morePosts": *[_type == "post" && $tag in tags[].value]| order(_createdAt desc)[12..100]{
+        ${postsFields},
     }
 }`;
 async function getAllPostSlugs() {

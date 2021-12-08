@@ -26,7 +26,8 @@ const Button = props => {
     title,
     type,
     size,
-    link
+    link,
+    onClick
   } = props;
   const wrapperClass = `${(_button_module_scss__WEBPACK_IMPORTED_MODULE_3___default().wrapper)} ${type ? (_button_module_scss__WEBPACK_IMPORTED_MODULE_3___default())[`_${type}`] : ''} ${size ? (_button_module_scss__WEBPACK_IMPORTED_MODULE_3___default())[`_${size}`] : ''}`;
 
@@ -47,6 +48,7 @@ const Button = props => {
   } else {
     return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
       className: wrapperClass,
+      onClick: onClick,
       children: buttonInner
     });
   }

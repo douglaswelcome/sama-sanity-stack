@@ -31,10 +31,10 @@ const BlogSmallCardRow = props => {
   } = props;
   return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: posts.map(post => {
-      let tag = post.tags[1];
+      let tag = post.tags[1] ? post.tags[1] : post.tags[0];
 
-      if (hideTag && tag.value == hideTag) {
-        tag = post.tags.find((o, i) => {
+      if (post.tags.length > 1 && hideTag && tag.value == hideTag) {
+        tag = post.tags.find(o => {
           if (o.value !== hideTag) {
             return o;
           }
