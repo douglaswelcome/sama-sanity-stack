@@ -45,13 +45,13 @@
 
 ._secondary {
     .btn{
-      background-color: $color-charcoal-1;
+      background-color: $color-white;
       border: 0.125rem solid;
-      border-color: $color-white;
+      border-color: $color-charcoal-1;
     }
 
     .text{
-      color: $color-white;
+      color: $color-charcoal-1;
       background-image: none;
     }
 }

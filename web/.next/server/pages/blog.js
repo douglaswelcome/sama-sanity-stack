@@ -26,6 +26,8 @@ var client_default = /*#__PURE__*/__webpack_require__.n(client);
 var queries = __webpack_require__(4645);
 // EXTERNAL MODULE: ./node_modules/next/dynamic.js
 var dynamic = __webpack_require__(5152);
+// EXTERNAL MODULE: ./components/button/button.js
+var button_button = __webpack_require__(4151);
 // EXTERNAL MODULE: ./components/image.js
 var components_image = __webpack_require__(5030);
 // EXTERNAL MODULE: ./components/link.js
@@ -143,14 +145,25 @@ const Layout = (0,dynamic.default)(() => __webpack_require__.e(/* import() */ 49
 
 
 
+
 const Blog = props => {
-  const {
-    posts,
+  let {
+    topPost,
+    firstLoad,
     featuredPosts,
+    morePosts,
     config
   } = props;
-  const topPost = posts[0];
-  const firstPosts = posts.slice(1, 13);
+  const {
+    0: posts,
+    1: setPostList
+  } = (0,external_react_.useState)(firstLoad);
+
+  const loadMorePosts = () => {
+    const newPosts = posts.concat(morePosts.splice(0, 12));
+    setPostList(newPosts);
+  };
+
   return /*#__PURE__*/(0,jsx_runtime_.jsxs)(Layout, {
     config: config,
     children: [/*#__PURE__*/jsx_runtime_.jsx(blog_heroHome, _objectSpread({}, topPost)), /*#__PURE__*/jsx_runtime_.jsx("section", {
@@ -173,11 +186,18 @@ const Blog = props => {
       className: "umoja-l-grid-section umoja-u-bg--white",
       children: /*#__PURE__*/jsx_runtime_.jsx("div", {
         className: "umoja-l-grid--12 umoja-l-grid-gap--row-1",
-        children: firstPosts.map((post, i) => {
+        children: posts.map((post, i) => {
           return /*#__PURE__*/(0,external_react_.createElement)(blog_postCard/* default */.Z, _objectSpread(_objectSpread({}, post), {}, {
             key: i
           }));
         })
+      })
+    }), /*#__PURE__*/jsx_runtime_.jsx("section", {
+      className: "umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white",
+      children: /*#__PURE__*/jsx_runtime_.jsx(button_button/* default */.Z, {
+        type: "secondary",
+        title: "Load More",
+        onClick: loadMorePosts
       })
     })]
   });
@@ -187,8 +207,10 @@ async function getStaticProps() {
   const posts = await client_default().fetch(queries/* postsQuery */.Vs);
   return {
     props: {
-      posts: posts.posts,
-      featuredPosts: posts.featuredPosts
+      topPost: posts.topPost,
+      firstLoad: posts.firstLoad,
+      featuredPosts: posts.featuredPosts,
+      morePosts: posts.morePosts
     }
   };
 }
@@ -416,7 +438,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5675,5152,3653,5030,4645,1768,7845], () => (__webpack_exec__(9148)));
+var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5675,5152,3653,5030,4151,4645,1768,7845], () => (__webpack_exec__(9148)));
 module.exports = __webpack_exports__;
 
 })();

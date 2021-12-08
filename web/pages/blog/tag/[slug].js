@@ -1,22 +1,27 @@
+import React, {useState} from 'react'
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import client from '../../../client'
 import { postsByTagQuery, getPostsByTagSlug, getAllPostSlugs } from '../../../libs/queries'
 import dynamic from "next/dynamic";
 const Layout = dynamic(() => import('../../../components/Layout'));
+import Button from '../../../components/button/button';
 import BlogPost from '../../../components/blog/blog_postCard/blog_postCard';
 import styles from './blog-tag.module.scss'
 
 const PostTag = ({ data = {}, config }) => {
     const router = useRouter();
-    const posts = data?.posts;
 
-    if (posts == undefined || !router.isFallback && !data.slug) {
+    if (data?.firstLoad == undefined || !router.isFallback && !data.slug) {
       return <ErrorPage statusCode={404} />
     }
+    const {tagName, firstLoad, morePosts} = data;
+    const [posts, setPostList] = useState(firstLoad);
 
-    const firstPosts = posts.slice(0, 12);
-    const tagName = data?.tagName;
+    const loadMorePosts = () => {
+      const newPosts = posts.concat(morePosts.splice(0, 12));
+      setPostList(newPosts)
+    } 
 
     return (
       <Layout config={config}>
@@ -29,26 +34,35 @@ const PostTag = ({ data = {}, config }) => {
         </section>
         <section className="umoja-l-grid-section umoja-u-bg--white">
           <div className="umoja-l-grid--12 umoja-l-grid-gap--row-1">
-              {firstPosts.map((post, i) => {
+              {posts.map((post, i) => {
                   return <BlogPost {...post} hideTag={true} key={i} />
               })}
           </div>
         </section>
+        {morePosts.length > 0 &&
+          <section className="umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white">
+            <Button 
+                type="secondary" 
+                title="Load More"
+                onClick={loadMorePosts}
+            />
+          </section>
+        }
       </Layout>
     )
 }
 
 export async function getStaticProps({ params }) {
     const tag = await getPostsByTagSlug(params.slug);
-
-    const {posts} = await client.fetch(postsByTagQuery, {
+    const posts = await client.fetch(postsByTagQuery, {
         tag: tag.tag,
     })
   
     return {
       props: {
         data: {
-            posts,
+            firstLoad: posts.firstLoad,
+            morePosts: posts.morePosts,
             slug: params.slug,
             tagName: tag.tag
         },

@@ -10,9 +10,9 @@ const BlogSmallCardRow = (props) => {
     return(
             <>
             {posts.map((post) => {
-                let tag = post.tags[1];
-                if(hideTag && tag.value == hideTag){
-                    tag  = post.tags.find((o, i) => {
+                let tag = post.tags[1] ? post.tags[1] : post.tags[0];
+                if(post.tags.length > 1 && hideTag && tag.value == hideTag){
+                    tag  = post.tags.find((o) => {
                         if (o.value !== hideTag) {
                             return o;
                         }
