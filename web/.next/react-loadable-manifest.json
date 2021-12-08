@@ -14,13 +14,13 @@
       "static/chunks/commons-38d39b8714d89582ab40.js",
       "static/chunks/4934.37651fffe4e244d39030.js",
       "static/css/0d4bd6b9e4f2c8d7d433.css",
-      "static/chunks/1952.cb24443f59b3778be77b.js"
+      "static/chunks/1952.c48d8556ec1dc7f6b94b.js"
     ]
   },
   "[slug].js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.396c0967ba3841708a1e.js"
+      "static/chunks/1776.8a2533c590b21f9a9b53.js"
     ]
   },
   "[slug].js -> ../components/RenderSection": {
@@ -32,37 +32,37 @@
   "blog.js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.396c0967ba3841708a1e.js"
+      "static/chunks/4941.52187702c26f025008f2.js"
     ]
   },
   "blog/[slug].js -> ../../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.396c0967ba3841708a1e.js"
+      "static/chunks/1776.8a2533c590b21f9a9b53.js"
     ]
   },
   "blog/author/[slug].js -> ../../../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.396c0967ba3841708a1e.js"
+      "static/chunks/1776.8a2533c590b21f9a9b53.js"
     ]
   },
   "blog/tag/[slug].js -> ../../../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.396c0967ba3841708a1e.js"
+      "static/chunks/1776.8a2533c590b21f9a9b53.js"
     ]
   },
   "events.js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.396c0967ba3841708a1e.js"
+      "static/chunks/4941.52187702c26f025008f2.js"
     ]
   },
   "press.js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.396c0967ba3841708a1e.js"
+      "static/chunks/4941.52187702c26f025008f2.js"
     ]
   }
 }

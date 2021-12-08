@@ -220,8 +220,11 @@ const Post = ({
     relatedPosts
   } = post;
   const shareUrl = `https://www.sama.com/${router.asPath}`;
+
+  const postConfig = _objectSpread(_objectSpread({}, config), data.post.config);
+
   return /*#__PURE__*/(0,jsx_runtime_.jsxs)(Layout, {
-    config: config,
+    config: postConfig,
     children: [/*#__PURE__*/jsx_runtime_.jsx(blog_heroPost, _objectSpread({}, post)), /*#__PURE__*/jsx_runtime_.jsx("section", {
       className: "umoja-l-grid-section umoja-u-bg--white",
       children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {

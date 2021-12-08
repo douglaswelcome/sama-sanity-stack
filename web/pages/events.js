@@ -8,9 +8,13 @@ import {default as HeroCenterTxt} from '../modules/hero_centertxt/hero_centertxt
 import styles from './events.module.scss'
 
 const Events = (props) => {
-    const {upcoming, past, featured, config} = props;
+    const {upcoming, past, featured} = props;
     const [activeTab, setActiveTab] = useState(0);
     const [tabDir, setTabDir] = useState('');
+    const config = {
+        ...props.config,
+        ...props.pageConfig
+    }
 
     const handleClick = (e) => {
         const active = parseInt(e.target.getAttribute('data-at'));
@@ -84,9 +88,12 @@ export async function getStaticProps() {
     
     return {
         props: {
-          upcoming: upcoming,
-          past: past,
-          featured: featured
+            upcoming: upcoming,
+            past: past,
+            featured: featured,
+            pageConfig:{
+                title: "Sama Events | Training Data, AI and Impact Sourcing Insights"
+            }
         },
     }
 }

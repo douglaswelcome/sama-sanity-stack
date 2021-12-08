@@ -26,6 +26,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _press_module_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_press_module_scss__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(5282);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -46,8 +52,7 @@ const Press = props => {
   let {
     featured,
     press,
-    news,
-    config
+    news
   } = props;
   const featuredMain = featured[0];
   featured = featured.slice(1);
@@ -60,6 +65,8 @@ const Press = props => {
     0: tabDir,
     1: setTabDir
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
+
+  const config = _objectSpread(_objectSpread({}, props.config), props.pageConfig);
 
   const handleClick = e => {
     const active = parseInt(e.target.getAttribute('data-at'));
@@ -280,7 +287,11 @@ async function getStaticProps() {
     props: {
       featured: featured,
       press: press,
-      news: news
+      news: news,
+      pageConfig: {
+        title: "Sama Press & Media | Training Data, AI and Impact Sourcing Insights",
+        description: "Ethical AI Has a Story to Tell. Read the Latest News About Sama."
+      }
     }
   };
 }

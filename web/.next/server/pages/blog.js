@@ -151,13 +151,14 @@ const Blog = props => {
     topPost,
     firstLoad,
     featuredPosts,
-    morePosts,
-    config
+    morePosts
   } = props;
   const {
     0: posts,
     1: setPostList
   } = (0,external_react_.useState)(firstLoad);
+
+  const config = _objectSpread(_objectSpread({}, props.config), props.pageConfig);
 
   const loadMorePosts = () => {
     const newPosts = posts.concat(morePosts.splice(0, 12));
@@ -210,7 +211,11 @@ async function getStaticProps() {
       topPost: posts.topPost,
       firstLoad: posts.firstLoad,
       featuredPosts: posts.featuredPosts,
-      morePosts: posts.morePosts
+      morePosts: posts.morePosts,
+      pageConfig: {
+        title: "Sama Blog | Training Data, AI and Impact Sourcing Insights",
+        description: "From machine learning to training data strategy, the Sama blog covers research, news and other AI trends from thought leaders across the globe."
+      }
     }
   };
 }

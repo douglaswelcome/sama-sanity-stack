@@ -118,8 +118,7 @@ const Events = props => {
   const {
     upcoming,
     past,
-    featured,
-    config
+    featured
   } = props;
   const {
     0: activeTab,
@@ -129,6 +128,8 @@ const Events = props => {
     0: tabDir,
     1: setTabDir
   } = (0,external_react_.useState)('');
+
+  const config = _objectSpread(_objectSpread({}, props.config), props.pageConfig);
 
   const handleClick = e => {
     const active = parseInt(e.target.getAttribute('data-at'));
@@ -215,7 +216,10 @@ async function getStaticProps() {
     props: {
       upcoming: upcoming,
       past: past,
-      featured: featured
+      featured: featured,
+      pageConfig: {
+        title: "Sama Events | Training Data, AI and Impact Sourcing Insights"
+      }
     }
   };
 }

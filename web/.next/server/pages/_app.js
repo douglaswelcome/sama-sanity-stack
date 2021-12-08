@@ -48,7 +48,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 const siteConfigQuery = `*[_id == "global-config"]{
-  title,
   logo {asset->},
   mainNav-> {
   	items[]{

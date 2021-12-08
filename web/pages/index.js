@@ -4,8 +4,12 @@ import Layout from '../components/Layout'
 import RenderSection from '../components/RenderSection'
 
 const Index = (props) => {
-    const {page, config} = props;
+    const {page} = props;
     const {sections} = page;
+    let config = {
+      ...props.config,
+      ...page.config
+    }
 
     return (
       <Layout config={config}>
@@ -20,7 +24,6 @@ const Index = (props) => {
 
 export async function getStaticProps() {
     const home = await client.fetch(indexQuery);
-
     const sections = home?.sections;
     sections.map(section =>{
       let {modules} = section;
@@ -36,7 +39,7 @@ export async function getStaticProps() {
     
     return {
         props: {
-          page: home,
+          page: home
         },
     }
 }

@@ -9,8 +9,12 @@ import BlogPost from '../components/blog/blog_postCard/blog_postCard';
 import BlogSmallCardRow from '../components/blog/blog_smallCard_row/blog_smallCard_row';
 
 const Blog = (props) => {
-    let {topPost, firstLoad, featuredPosts, morePosts, config} = props;
+    let {topPost, firstLoad, featuredPosts, morePosts} = props;
     const [posts, setPostList] = useState(firstLoad);
+    const config = {
+        ...props.config,
+        ...props.pageConfig
+    }
 
     const loadMorePosts = () => {
         const newPosts = posts.concat(morePosts.splice(0, 12));
@@ -55,7 +59,11 @@ export async function getStaticProps() {
             topPost: posts.topPost,
             firstLoad: posts.firstLoad,
             featuredPosts: posts.featuredPosts,
-            morePosts: posts.morePosts
+            morePosts: posts.morePosts,
+            pageConfig:{
+                title: "Sama Blog | Training Data, AI and Impact Sourcing Insights",
+                description: "From machine learning to training data strategy, the Sama blog covers research, news and other AI trends from thought leaders across the globe."
+            }
         },
     }
 }
