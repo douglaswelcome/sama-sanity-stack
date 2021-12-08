@@ -20,9 +20,13 @@ const Post = ({ data = {}, config }) => {
 
     const {tags, author, body, relatedPosts} = post;
     const shareUrl = `https://www.sama.com/${router.asPath}`;
+    const postConfig = {
+      ...config,
+      ...data.post.config
+    }
   
     return (
-      <Layout config={config}>
+      <Layout config={postConfig}>
         <BlogHeroPost {...post} />
         <section className="umoja-l-grid-section umoja-u-bg--white">
           <div className={`umoja-l-grid--12 ${styles.body}`}>

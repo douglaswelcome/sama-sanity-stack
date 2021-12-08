@@ -84,6 +84,11 @@ title,
             ...
         }
     }
+},
+"config": {
+    title,
+    description,
+    openGraphImage
 }
 `;
 const authorFields = `
@@ -103,7 +108,12 @@ ${authorFields}
 "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 ),
 featured_image, 
 tags, 
-title
+title,
+"config": {
+    "title": seo_title,
+    "description": meta_description,
+    openGraphImage
+}
 `;
 const indexQuery = `
 *[_type == "page" && _id == ${homeID}][0] {

@@ -15,8 +15,12 @@ const PostTag = ({ data = {}, config }) => {
     if (data?.firstLoad == undefined || !router.isFallback && !data.slug) {
       return <ErrorPage statusCode={404} />
     }
-    const {tagName, firstLoad, morePosts} = data;
+    const {tagName, firstLoad, morePosts, pageConfig} = data;
     const [posts, setPostList] = useState(firstLoad);
+    const tagConfig = {
+      ...config,
+      ...pageConfig
+    }
 
     const loadMorePosts = () => {
       const newPosts = posts.concat(morePosts.splice(0, 12));
@@ -24,7 +28,7 @@ const PostTag = ({ data = {}, config }) => {
     } 
 
     return (
-      <Layout config={config}>
+      <Layout config={tagConfig}>
         <section className="umoja-l-grid-section umoja-u-bg--white">
           <div className="umoja-l-grid--12">
             <div className={styles.name}>
@@ -64,7 +68,11 @@ export async function getStaticProps({ params }) {
             firstLoad: posts.firstLoad,
             morePosts: posts.morePosts,
             slug: params.slug,
-            tagName: tag.tag
+            tagName: tag.tag,
+            pageConfig:{
+              title: "Sama Blog | Training Data, AI and Impact Sourcing Insights",
+              description: "From machine learning to training data strategy, the Sama blog covers research, news and other AI trends from thought leaders across the globe."
+            }
         },
       },
     }

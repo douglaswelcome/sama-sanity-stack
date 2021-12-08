@@ -40,6 +40,11 @@ title,
             ...
         }
     }
+},
+"config": {
+    title,
+    description,
+    openGraphImage
 }
 `
 
@@ -61,7 +66,12 @@ ${authorFields}
 "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 ),
 featured_image, 
 tags, 
-title
+title,
+"config": {
+    "title": seo_title,
+    "description": meta_description,
+    openGraphImage
+}
 `
 
 export const indexQuery = `

@@ -20,6 +20,10 @@ const PostAuthor = ({ data = {}, config }) => {
 
     const {avatar, name, bio, firstLoad, morePosts} = author; 
     const [posts, setPostList] = useState(firstLoad);
+    const authorConfig = {
+      ...config,
+      ...data.pageConfig
+    }
 
     const loadMorePosts = () => {
       const newPosts = posts.concat(morePosts.splice(0, 12));
@@ -27,7 +31,7 @@ const PostAuthor = ({ data = {}, config }) => {
     } 
 
     return (
-      <Layout config={config}>
+      <Layout config={authorConfig}>
         <section className="umoja-l-grid-section umoja-u-bg--white">
           <div className="umoja-l-grid--12">
             <div className={styles.headshot}>
@@ -68,7 +72,11 @@ export async function getStaticProps({ params }) {
     return {
       props: {
         data: {
-          author
+          author,
+          pageConfig:{
+            title: "Sama Blog | Training Data, AI and Impact Sourcing Insights",
+            description: "From machine learning to training data strategy, the Sama blog covers research, news and other AI trends from thought leaders across the globe."
+          }
         },
       },
     }

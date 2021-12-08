@@ -70,12 +70,15 @@ const PostTag = ({
   const {
     tagName,
     firstLoad,
-    morePosts
+    morePosts,
+    pageConfig
   } = data;
   const {
     0: posts,
     1: setPostList
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(firstLoad);
+
+  const tagConfig = _objectSpread(_objectSpread({}, config), pageConfig);
 
   const loadMorePosts = () => {
     const newPosts = posts.concat(morePosts.splice(0, 12));
@@ -83,7 +86,7 @@ const PostTag = ({
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(Layout, {
-    config: config,
+    config: tagConfig,
     children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("section", {
       className: "umoja-l-grid-section umoja-u-bg--white",
       children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("div", {
@@ -130,7 +133,11 @@ async function getStaticProps({
         firstLoad: posts.firstLoad,
         morePosts: posts.morePosts,
         slug: params.slug,
-        tagName: tag.tag
+        tagName: tag.tag,
+        pageConfig: {
+          title: "Sama Blog | Training Data, AI and Impact Sourcing Insights",
+          description: "From machine learning to training data strategy, the Sama blog covers research, news and other AI trends from thought leaders across the globe."
+        }
       }
     }
   };

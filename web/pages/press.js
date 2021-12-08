@@ -8,13 +8,17 @@ import Image from '../components/image'
 import styles from './press.module.scss'
 
 const Press = (props) => {
-    let {featured, press, news, config} = props;
+    let {featured, press, news} = props;
     const featuredMain = featured[0];
     featured = featured.slice(1);
     const featuredMainBackground = useNextSanityImage(client, featuredMain.background);
 
     const [activeTab, setActiveTab] = useState(0);
     const [tabDir, setTabDir] = useState('');
+    const config = {
+      ...props.config,
+      ...props.pageConfig
+    }
 
     const handleClick = (e) => {
         const active = parseInt(e.target.getAttribute('data-at'));
@@ -191,7 +195,11 @@ export async function getStaticProps() {
         props: {
           featured: featured,
           press: press,
-          news: news
+          news: news,
+          pageConfig:{
+            title: "Sama Press & Media | Training Data, AI and Impact Sourcing Insights",
+            description: "Ethical AI Has a Story to Tell. Read the Latest News About Sama."
+          }
         },
     }
 }

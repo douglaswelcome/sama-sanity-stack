@@ -4,7 +4,6 @@ import client from '../client'
 import '../styles/main.scss'
 
 const siteConfigQuery = `*[_id == "global-config"]{
-  title,
   logo {asset->},
   mainNav-> {
   	items[]{
@@ -39,7 +38,7 @@ class App extends BaseApp {
     let pageProps = {}
     
     return client.fetch(siteConfigQuery).then(config => {
-
+ 
       if (config && pageProps) {
         pageProps.config = config
       }

@@ -10,12 +10,16 @@ const Page = ({ data = {}, config }) => {
   const router = useRouter();
   const slug = data?.page?.slug;
   const sections = data?.page?.sections;
-  if (!router.isFallback && !slug) {
+  if (data.page == undefined || !router.isFallback && !slug) {
     return <ErrorPage statusCode={404} />
+  }
+  const pageConfig = {
+    ...config,
+    ...data.page?.config
   }
 
   return (
-    <Layout config={config}>
+    <Layout config={pageConfig}>
       {sections &&
         sections.map((section) => {
           return <RenderSection modules={section.modules} background_color={section.background_color} key={section._key} />
