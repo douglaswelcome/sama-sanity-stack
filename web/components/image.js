@@ -9,13 +9,14 @@ const Image = (props) => {
     const imageProps = useNextSanityImage(client, src);
     const width = (!props.width && layout != 'fill') ? imageProps.width : props.width;
     const height = (!props.height && layout != 'fill') ? imageProps.height : props.height;
+    const alt = src.alt ? src.alt : "";
 
     return (
         <>
         {sizes ?
-            <NextImg {...imageProps} layout={layout} sizes={sizes} alt={src.alt} objectFit={objectFit} placeholder={placeholder} />
+            <NextImg {...imageProps} layout={layout} sizes={sizes} alt={alt} objectFit={objectFit} placeholder={placeholder} />
         :
-            <NextImg {...imageProps} layout={layout} width={width} height={height} alt={src.alt} objectFit={objectFit} placeholder={placeholder}/>
+            <NextImg {...imageProps} layout={layout} width={width} height={height} alt={alt} objectFit={objectFit} placeholder={placeholder}/>
         }
         </>
     )
