@@ -42,8 +42,8 @@ function Layout (props) {
         <meta property="twitter:title" content={title} />
         <meta name="msapplication-TileColor" content="#28282a" />
         <meta name="theme-color" content="#ffffff"/>
-        <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
-        <link rel="shortcut icon" href="/static/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <div className='container'>
         <Header title={title} navItems={mainNav} logo={logo} />

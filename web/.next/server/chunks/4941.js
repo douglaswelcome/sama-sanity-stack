@@ -113,10 +113,10 @@ function Layout(props) {
       }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("link", {
         rel: "apple-touch-icon",
         sizes: "180x180",
-        href: "/static/apple-touch-icon.png"
+        href: "/apple-touch-icon.png"
       }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("link", {
         rel: "shortcut icon",
-        href: "/static/favicon.ico"
+        href: "/favicon.ico"
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: "container",

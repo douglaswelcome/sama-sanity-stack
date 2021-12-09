@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaPaperclip } from 'react-icons/fa'
+import { FaPaperclip, FaImage } from 'react-icons/fa'
 
 export default {
     name: 'post',
@@ -54,6 +54,15 @@ export default {
             of: [
                 {
                     type: 'block',
+                    styles: [
+                        {title: 'Normal', value: 'normal'},
+                        {title: 'Title', value: 'title'},
+                        {title: 'H1', value: 'h1'},
+                        {title: 'H2', value: 'h2'},
+                        {title: 'H3', value: 'h3'},
+                        {title: 'Quote', value: 'blockquote'},
+                        {title: 'Caption', value: 'caption'}
+                    ],
                     marks: {
                         annotations: [
                             {
@@ -109,6 +118,11 @@ export default {
                             options: {
                                 isHighlighted: true
                             }
+                        },
+                        {
+                            type: 'link',
+                            name: 'link',
+                            title: 'Image Link'
                         }
                     ]
                 }
