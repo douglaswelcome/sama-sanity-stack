@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Button from '../button/button'
+import Image from '../image'
+import Link from '../link'
 import BlockContent from '@sanity/block-content-to-react'
+import { useNextSanityImage } from 'next-sanity-image';
 import client from '../../client'
 import styles from './richText.module.scss'
 
@@ -25,7 +28,29 @@ const richText = (props) => {
                 }
                 return <a {...linkProps}>{children}</a>
             }
-          }
+          },
+        },
+        types: {
+            image: (props) => {
+                const imageProps = useNextSanityImage(client, props.node);
+                const alt = props.node.alt ? props.node.alt : ""; 
+
+                if(props.node.link){
+                    return  (
+                        <Link link={props.node.link}>
+                            <img src={imageProps.src} alt={alt} />
+                        </Link>
+                    )
+                }else{
+                    return <img src={imageProps.src} alt={alt} />
+                }
+            },
+            block: (props) => {
+                if(props.node.style == 'caption'){
+                    return <p className={styles.caption}>{props.children}</p>
+                }
+                return BlockContent.defaultSerializers.types.block(props)
+            }
         }
     }
 

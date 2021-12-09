@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9394],{1298:function(i,c,e){e.r(c);e(7294);var r=e(4687),t=e(5893);c.default=function(i){var c=i.richText,e=c.richText,a=c.align;return(0,t.jsx)("div",{className:"bodystatic_richTxt umoja-l-grid--12",children:(0,t.jsx)(r.Z,{richText:e,align:a})})}}}]);
