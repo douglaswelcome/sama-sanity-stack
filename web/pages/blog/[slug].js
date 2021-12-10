@@ -28,7 +28,7 @@ const Post = ({ data = {}, config }) => {
     return (
       <Layout config={postConfig}>
         <BlogHeroPost {...post} />
-        <section className="umoja-l-grid-section umoja-u-bg--white">
+        <section className="umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white">
           <div className={`umoja-l-grid--12 ${styles.body}`}>
             <div className={styles.share}>
               <div className={styles.share_track}>

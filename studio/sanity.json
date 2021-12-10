@@ -16,7 +16,8 @@
     "sama-logo",
     "@sanity/dashboard",
     "autocomplete-tags",
-    "dashboard-widget-netlify"
+    "dashboard-widget-netlify",
+    "@sanity/code-input"
   ],
   "env": {
     "development": {

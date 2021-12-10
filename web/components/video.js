@@ -54,7 +54,7 @@ const Video = (props) => {
 
 Video.propTypes ={
     src: PropTypes.object,
-    embed: PropTypes.object,
+    video_embed: PropTypes.object,
     className: PropTypes.object,
     autoPlay: PropTypes.string,
     loop: PropTypes.string,

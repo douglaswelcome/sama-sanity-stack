@@ -12,7 +12,7 @@ export default {
             }
         },
         {
-            type: "embed",
+            type: "video_embed",
             name: "embed",
             title: "Embed"
         }

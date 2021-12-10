@@ -11,7 +11,7 @@ const BlogPostFooter = (props) => {
     }
 
     return(
-        <section className="umoja-l-grid-section umoja-u-bg--white">
+        <section className="umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white">
             <div className="umoja-l-grid--12">
                 <div className={styles.tags}>
                     <h3 className={styles.intro}>Filed Under:</h3>

@@ -1,27 +1,26 @@
+import {FaCode } from 'react-icons/fa'
+
 export default {
-    type: 'object',
-    name: 'embed',
-    title: 'Video Embed',
-    options: {
-        collapsible: true,
-        collapsed: true
-    },
+    type: "object",
+    name: "embed",
+    title: "Embed",
+    icon: FaCode,
     fields: [
-        {
-            name: "type",
-            type: "string",
-            title: 'Type',
-            options: {
-                list: [
-                    { title: 'Viemo', value: 'vimeo'},
-                    { title: 'Youtube', value: 'youtube' }
-                ],
-            },
+      {
+        name: "code",
+        type: "text",
+        description: "Paste in your embed code"
+      }
+    ],
+    preview: {
+        select: {
+          title: "code"
         },
-        {
-            name: 'url',
-            type: 'url',
-            title: 'Video URL'
+        prepare ({title}) {
+          return {
+            title: title,
+            media: FaCode
+          }
         }
-    ]
-}
+    }
+  }

@@ -52,6 +52,7 @@ import bodystatic_headline from './modules/bodystatic_headline'
 import bodystatic_galleryGrid from './modules/bodystatic_galleryGrid'
 import grid_image from './objects/grid_image'
 import embed from './objects/embed'
+import video_embed from './objects/video_embed'
 import video from './objects/video'
 import bodystatic_flowCompare from './modules/bodystatic_flowCompare'
 import bodymove_splitTxtImg_slide from './objects/bodymove_splitTxtImg_slide'
@@ -109,13 +110,14 @@ export default createSchema({
     richText_field_simple,
     sticky_sideItem,
     grid_image,
-    embed,
+    video_embed,
     video,
     bullet_icon,
     table_col,
     table_row,
     table_rowCell,
     avatar,
+    embed,
     hero_splittxtimg,
     hero_splittxtimg_tall,
     hero_centertxt,
