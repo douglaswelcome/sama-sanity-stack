@@ -22,7 +22,7 @@ const Post = ({ data = {}, config }) => {
     const shareUrl = `https://www.sama.com/${router.asPath}`;
     const postConfig = {
       ...config,
-      ...data.post.config
+      ...data.config
     }
   
     return (
@@ -72,7 +72,12 @@ export async function getStaticProps({ params }) {
     return {
       props: {
         data: {
-          post
+          post,
+          config: {
+            title: post.seo_title ? post.seo_title : post.title,
+            description: post.meta_description ? post.meta_description : "",
+            openGraphImage: post.openGraphImage ? post.openGraphImage : ""
+          }
         },
       },
     }

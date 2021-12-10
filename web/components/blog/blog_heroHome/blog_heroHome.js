@@ -9,13 +9,13 @@ const BlogHeroHome = (props) => {
     const tag = tags[0].label;
     const excerpt = (plaintextBody.length <= 200 ? plaintextBody : plaintextBody.substr(0, plaintextBody.lastIndexOf(' ', 200)));
     let postSlug = {
-        internalLink_custom: `/blog${slug.current.charAt(0) == '/' ? slug.current : `/${slug.current}`}`
+        internalLink_custom: `blog${slug.current.charAt(0) == '/' ? slug.current : `/${slug.current}`}`
     }
     const authorSlug = {
-        internalLink_custom: `/blog/author/${author.slug.current}`
+        internalLink_custom: `blog/author/${author.slug.current}`
     }
     const tagSlug = {
-        internalLink_custom: `/blog/tag/${slugify(tag)}`
+        internalLink_custom: `blog/tag/${slugify(tag)}`
     }
     let date = new Date(_createdAt);
     date = date.toLocaleString('en-US', {

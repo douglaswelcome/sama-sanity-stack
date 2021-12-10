@@ -1,0 +1,21 @@
+{
+    "name": "Sama",
+    "short_name": "Sama",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#0e0e11",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/favicon-16x16.webp",
+        "type": "image/webp",
+        "sizes": "16x16"
+      },
+      {
+        "src": "/favicon-32x32.webp",
+        "type": "image/webp",
+        "sizes": "32x32" 
+      }
+    ]
+  }

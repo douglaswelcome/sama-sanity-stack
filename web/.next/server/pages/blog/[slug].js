@@ -221,7 +221,7 @@ const Post = ({
   } = post;
   const shareUrl = `https://www.sama.com/${router.asPath}`;
 
-  const postConfig = _objectSpread(_objectSpread({}, config), data.post.config);
+  const postConfig = _objectSpread(_objectSpread({}, config), data.config);
 
   return /*#__PURE__*/(0,jsx_runtime_.jsxs)(Layout, {
     config: postConfig,
@@ -280,7 +280,12 @@ async function getStaticProps({
   return {
     props: {
       data: {
-        post
+        post,
+        config: {
+          title: post.seo_title ? post.seo_title : post.title,
+          description: post.meta_description ? post.meta_description : "",
+          openGraphImage: post.openGraphImage ? post.openGraphImage : ""
+        }
       }
     }
   };

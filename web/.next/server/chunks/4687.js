@@ -94,13 +94,17 @@ const richText = props => {
             link: props.node.link,
             children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx("img", {
               src: imageProps.src,
-              alt: alt
+              alt: alt,
+              width: imageProps.width,
+              height: imageProps.height
             })
           });
         } else {
           return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx("img", {
             src: imageProps.src,
-            alt: alt
+            alt: alt,
+            width: imageProps.width,
+            height: imageProps.height
           });
         }
       },
