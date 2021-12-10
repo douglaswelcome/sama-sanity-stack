@@ -63,6 +63,7 @@ const NavLink = props => {
     href: url.externalUrl,
     className: (header_module_default()).navLink,
     target: "_blank",
+    rel: "noopener",
     children: title
   });
 };

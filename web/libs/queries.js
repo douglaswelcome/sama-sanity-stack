@@ -67,10 +67,10 @@ ${authorFields}
 featured_image, 
 tags, 
 title,
-"config": {
-    "title": seo_title,
-    "description": meta_description,
-    openGraphImage
+seo_title,
+meta_description,
+"openGraphImage":openGraphImage.asset->{
+    url
 }
 `
 

@@ -13,7 +13,7 @@ function Layout (props) {
     return <div>Missing config</div>
   }
 
-  let {title, description, mainNav, footerNav, logo} = config;
+  let {title, description, mainNav, footerNav, logo, openGraphImage} = config;
   const domain = 'https://sama.com';
   const router = useRouter();
   const _pathSliceLength = Math.min.apply(Math, [
@@ -37,10 +37,18 @@ function Layout (props) {
         <meta property="og:description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:url" content={canonicalUrl} />
+        {openGraphImage && 
+          <meta property="og:image" content={openGraphImage.url} />
+        }
         <meta name="twitter:card" content="summary" />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:title" content={title} />
+        <meta name="twitter:domain" content="www.sama.com" />
+        {openGraphImage && 
+          <meta property="twitter:image" content={openGraphImage.url} />
+        }
         <meta name="msapplication-TileColor" content="#28282a" />
+        <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ffffff"/>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="shortcut icon" href="/favicon.ico" />

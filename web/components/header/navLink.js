@@ -29,6 +29,7 @@ const NavLink = (props) => {
             href={url.externalUrl}
             className={styles.navLink}
             target="_blank"
+            rel="noopener"
         >
             {title}
         </a>

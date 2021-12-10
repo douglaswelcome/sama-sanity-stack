@@ -34,15 +34,14 @@ const richText = (props) => {
             image: (props) => {
                 const imageProps = useNextSanityImage(client, props.node);
                 const alt = props.node.alt ? props.node.alt : ""; 
-
                 if(props.node.link){
                     return  (
                         <Link link={props.node.link}>
-                            <img src={imageProps.src} alt={alt} />
+                            <img src={imageProps.src} alt={alt} width={imageProps.width} height={imageProps.height} />
                         </Link>
                     )
                 }else{
-                    return <img src={imageProps.src} alt={alt} />
+                    return <img src={imageProps.src} alt={alt} width={imageProps.width} height={imageProps.height} />
                 }
             },
             block: (props) => {

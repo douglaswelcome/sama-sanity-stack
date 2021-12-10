@@ -2,25 +2,25 @@
   "../components/Layout.js -> ./footer/footer": {
     "id": 3551,
     "files": [
-      "static/chunks/commons-5a94db9810221d20fa9a.js",
+      "static/chunks/commons-9184af50b88be5157a55.js",
       "static/chunks/4934.37651fffe4e244d39030.js",
-      "static/css/3b03d00d40d80e105549.css",
+      "static/css/6fb72abf7150f9f8f764.css",
       "static/chunks/3551.489d89a23d509b64ee09.js"
     ]
   },
   "../components/Layout.js -> ./header/header": {
     "id": 425,
     "files": [
-      "static/chunks/commons-5a94db9810221d20fa9a.js",
+      "static/chunks/commons-9184af50b88be5157a55.js",
       "static/chunks/4934.37651fffe4e244d39030.js",
-      "static/css/9a46d033eec6e43f3361.css",
-      "static/chunks/1952.873af660fabc9256a12c.js"
+      "static/css/ba5da1bbd47cc5381e38.css",
+      "static/chunks/1952.82cfb62f4589642e5656.js"
     ]
   },
   "[slug].js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/1776.90811ba0e7bd8502bb5d.js"
+      "static/chunks/1776.a4a235ae76c170a56e16.js"
     ]
   },
   "[slug].js -> ../components/RenderSection": {
@@ -32,37 +32,37 @@
   "blog.js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.319f2b499229d20f2783.js"
+      "static/chunks/4941.4d10ac309f9597dfe337.js"
     ]
   },
   "blog/[slug].js -> ../../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/1776.90811ba0e7bd8502bb5d.js"
+      "static/chunks/1776.a4a235ae76c170a56e16.js"
     ]
   },
   "blog/author/[slug].js -> ../../../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/1776.90811ba0e7bd8502bb5d.js"
+      "static/chunks/1776.a4a235ae76c170a56e16.js"
     ]
   },
   "blog/tag/[slug].js -> ../../../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/1776.90811ba0e7bd8502bb5d.js"
+      "static/chunks/1776.a4a235ae76c170a56e16.js"
     ]
   },
   "events.js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.319f2b499229d20f2783.js"
+      "static/chunks/4941.4d10ac309f9597dfe337.js"
     ]
   },
   "press.js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.319f2b499229d20f2783.js"
+      "static/chunks/4941.4d10ac309f9597dfe337.js"
     ]
   }
 }

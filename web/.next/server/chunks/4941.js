@@ -56,7 +56,8 @@ function Layout(props) {
     description,
     mainNav,
     footerNav,
-    logo
+    logo,
+    openGraphImage
   } = config;
   const domain = 'https://sama.com';
   const router = (0,next_router__WEBPACK_IMPORTED_MODULE_2__.useRouter)();
@@ -95,6 +96,9 @@ function Layout(props) {
       }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("meta", {
         property: "og:url",
         content: canonicalUrl
+      }), openGraphImage && /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("meta", {
+        property: "og:image",
+        content: openGraphImage.url
       }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("meta", {
         name: "twitter:card",
         content: "summary"
@@ -105,8 +109,17 @@ function Layout(props) {
         property: "twitter:title",
         content: title
       }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("meta", {
+        name: "twitter:domain",
+        content: "www.sama.com"
+      }), openGraphImage && /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("meta", {
+        property: "twitter:image",
+        content: openGraphImage.url
+      }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("meta", {
         name: "msapplication-TileColor",
         content: "#28282a"
+      }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("link", {
+        rel: "manifest",
+        href: "/manifest.json"
       }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx("meta", {
         name: "theme-color",
         content: "#ffffff"
