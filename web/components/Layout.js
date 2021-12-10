@@ -14,7 +14,7 @@ function Layout (props) {
   }
 
   let {title, description, mainNav, footerNav, logo, openGraphImage} = config;
-  const domain = 'https://sama.com';
+  const domain = 'https://sama-next.netlify.app/';
   const router = useRouter();
   const _pathSliceLength = Math.min.apply(Math, [
       router.asPath.indexOf('?') > 0 ? router.asPath.indexOf('?') : router.asPath.length,

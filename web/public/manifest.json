@@ -16,6 +16,12 @@
         "src": "/favicon-32x32.webp",
         "type": "image/webp",
         "sizes": "32x32" 
+      },
+      {
+        "src": "/maskable_icon.png",
+        "sizes": "180×180",
+        "type": "image/png",
+        "purpose": "any maskable"
       }
     ]
   }

@@ -59,7 +59,7 @@ function Layout(props) {
     logo,
     openGraphImage
   } = config;
-  const domain = 'https://sama.com';
+  const domain = 'https://sama-next.netlify.app/';
   const router = (0,next_router__WEBPACK_IMPORTED_MODULE_2__.useRouter)();
 
   const _pathSliceLength = Math.min.apply(Math, [router.asPath.indexOf('?') > 0 ? router.asPath.indexOf('?') : router.asPath.length, router.asPath.indexOf('#') > 0 ? router.asPath.indexOf('#') : router.asPath.length]);
