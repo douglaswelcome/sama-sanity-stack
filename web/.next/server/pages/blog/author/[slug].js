@@ -129,7 +129,7 @@ const PostAuthor = ({
     }), morePosts.length > 0 && /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx("section", {
       className: "umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white",
       children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx(_components_button_button__WEBPACK_IMPORTED_MODULE_6__/* .default */ .Z, {
-        type: "secondary",
+        type: "light",
         title: "Load More",
         onClick: loadMorePosts
       })
