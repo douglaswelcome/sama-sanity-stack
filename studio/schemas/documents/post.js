@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaPaperclip, FaImage } from 'react-icons/fa'
+import { FaPaperclip, FaCode } from 'react-icons/fa'
 
 export default {
     name: 'post',
@@ -125,6 +125,11 @@ export default {
                             title: 'Image Link'
                         }
                     ]
+                },
+                {
+                    type: 'embed',
+                    name: 'embed',
+                    title: 'Embed'
                 }
             ]
         },

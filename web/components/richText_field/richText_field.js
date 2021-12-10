@@ -11,7 +11,7 @@ import styles from './richText.module.scss'
 const richText = (props) => {
     const {richText, align, className} = props;
     const {projectId, dataset} = client.config();
-    const innerClass = className ? `${className} ${styles.inner}` : styles.inner;
+    const innerClass = className ? `${className} ${styles.inner}` : `${style.default} ${styles.inner}`;
 
     const serializers = {
         marks: {
@@ -50,6 +50,9 @@ const richText = (props) => {
                     return <p className={styles.caption}>{props.children}</p>
                 }
                 return BlockContent.defaultSerializers.types.block(props)
+            },
+            embed: (props) => {
+                return <p className={styles.embed} dangerouslySetInnerHTML={{__html: props.node.code}}></p>
             }
         }
     }

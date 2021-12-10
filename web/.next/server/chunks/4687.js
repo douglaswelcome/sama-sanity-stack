@@ -50,7 +50,7 @@ const richText = props => {
     projectId,
     dataset
   } = _client__WEBPACK_IMPORTED_MODULE_6___default().config();
-  const innerClass = className ? `${className} ${(_richText_module_scss__WEBPACK_IMPORTED_MODULE_8___default().inner)}` : (_richText_module_scss__WEBPACK_IMPORTED_MODULE_8___default().inner);
+  const innerClass = className ? `${className} ${(_richText_module_scss__WEBPACK_IMPORTED_MODULE_8___default().inner)}` : `${style.default} ${(_richText_module_scss__WEBPACK_IMPORTED_MODULE_8___default().inner)}`;
   const serializers = {
     marks: {
       button_link: ({
@@ -113,6 +113,14 @@ const richText = props => {
         }
 
         return _sanity_block_content_to_react__WEBPACK_IMPORTED_MODULE_4___default().defaultSerializers.types.block(props);
+      },
+      embed: props => {
+        return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx("p", {
+          className: (_richText_module_scss__WEBPACK_IMPORTED_MODULE_8___default().embed),
+          dangerouslySetInnerHTML: {
+            __html: props.node.code
+          }
+        });
       }
     }
   };
@@ -150,9 +158,11 @@ module.exports = {
 	"umoja-l-grid-align--base": "richText_umoja-l-grid-align--base__3BDGB",
 	"umoja-l-grid-span--full": "richText_umoja-l-grid-span--full__Td4ZS",
 	"inner": "richText_inner__37NFR",
+	"default": "richText_default__1jUov",
 	"_center": "richText__center__2gWN8",
 	"_right": "richText__right__1U7JT",
-	"caption": "richText_caption__3y6by"
+	"caption": "richText_caption__3y6by",
+	"embed": "richText_embed__3666z"
 };
 
 

@@ -117,7 +117,7 @@ const BlogPostFooter = props => {
     internalLink_custom: `blog/author/${author.slug ? author.slug.current : ''}`
   };
   return /*#__PURE__*/jsx_runtime_.jsx("section", {
-    className: "umoja-l-grid-section umoja-u-bg--white",
+    className: "umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white",
     children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
       className: "umoja-l-grid--12",
       children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
@@ -226,7 +226,7 @@ const Post = ({
   return /*#__PURE__*/(0,jsx_runtime_.jsxs)(Layout, {
     config: postConfig,
     children: [/*#__PURE__*/jsx_runtime_.jsx(blog_heroPost, _objectSpread({}, post)), /*#__PURE__*/jsx_runtime_.jsx("section", {
-      className: "umoja-l-grid-section umoja-u-bg--white",
+      className: "umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white",
       children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
         className: `umoja-l-grid--12 ${(blog_post_module_default()).body}`,
         children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
