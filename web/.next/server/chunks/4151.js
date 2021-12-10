@@ -81,6 +81,7 @@ module.exports = {
 	"btn": "button_btn__1qxP1",
 	"text": "button_text__3_sCS",
 	"_secondary": "button__secondary__1pZ5q",
+	"_light": "button__light__3zLll",
 	"_arrow": "button__arrow__1eUJP",
 	"_small": "button__small__2kIwW"
 };

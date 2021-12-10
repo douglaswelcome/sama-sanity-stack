@@ -45,15 +45,28 @@
 
 ._secondary {
     .btn{
-      background-color: $color-white;
+      background-color: $color-charcoal-1;
       border: 0.125rem solid;
-      border-color: $color-charcoal-1;
+      border-color: $color-white;
     }
 
     .text{
-      color: $color-charcoal-1;
+      color: $color-white;
       background-image: none;
     }
+}
+
+._light {
+  .btn{
+    background-color: $color-white;
+    border: 0.125rem solid;
+    border-color: $color-charcoal-1;
+  }
+
+  .text{
+    color: $color-charcoal-1;
+    background-image: none;
+  }
 }
 
 ._arrow{

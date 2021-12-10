@@ -46,7 +46,7 @@ const PostTag = ({ data = {}, config }) => {
         {morePosts.length > 0 &&
           <section className="umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white">
             <Button 
-                type="secondary" 
+                type="light" 
                 title="Load More"
                 onClick={loadMorePosts}
             />

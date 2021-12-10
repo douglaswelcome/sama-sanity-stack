@@ -196,7 +196,7 @@ const Blog = props => {
     }), /*#__PURE__*/jsx_runtime_.jsx("section", {
       className: "umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white",
       children: /*#__PURE__*/jsx_runtime_.jsx(button_button/* default */.Z, {
-        type: "secondary",
+        type: "light",
         title: "Load More",
         onClick: loadMorePosts
       })

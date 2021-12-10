@@ -42,7 +42,7 @@ const Blog = (props) => {
              </section>
              <section className="umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white">
                 <Button 
-                    type="secondary" 
+                    type="light" 
                     title="Load More"
                     onClick={loadMorePosts}
                 />
