@@ -10,6 +10,7 @@ const NavDropDown = (props) => {
     const { asPath } = useRouter();
     const currentSlug = asPath.charAt(0) == '/' ? asPath.substring(1) : asPath;
     const [active, setActive] = useState(false);
+    console.log(active)
     const className = active ? `${styles.navItem_label} ${styles.navItem_label__active}` : `${styles.navItem_label}`;
 
 

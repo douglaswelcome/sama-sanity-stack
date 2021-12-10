@@ -11,7 +11,7 @@ import styles from './richText.module.scss'
 const richText = (props) => {
     const {richText, align, className} = props;
     const {projectId, dataset} = client.config();
-    const innerClass = className ? `${className} ${styles.inner}` : `${style.default} ${styles.inner}`;
+    const innerClass = className ? `${className} ${styles.inner}` : `${styles.default} ${styles.inner}`;
 
     const serializers = {
         marks: {

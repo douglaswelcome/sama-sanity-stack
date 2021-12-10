@@ -50,7 +50,7 @@ const richText = props => {
     projectId,
     dataset
   } = _client__WEBPACK_IMPORTED_MODULE_6___default().config();
-  const innerClass = className ? `${className} ${(_richText_module_scss__WEBPACK_IMPORTED_MODULE_8___default().inner)}` : `${style.default} ${(_richText_module_scss__WEBPACK_IMPORTED_MODULE_8___default().inner)}`;
+  const innerClass = className ? `${className} ${(_richText_module_scss__WEBPACK_IMPORTED_MODULE_8___default().inner)}` : `${(_richText_module_scss__WEBPACK_IMPORTED_MODULE_8___default().default)} ${(_richText_module_scss__WEBPACK_IMPORTED_MODULE_8___default().inner)}`;
   const serializers = {
     marks: {
       button_link: ({

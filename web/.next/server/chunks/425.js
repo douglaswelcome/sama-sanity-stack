@@ -131,6 +131,7 @@ const NavDropDown = props => {
     0: active,
     1: setActive
   } = (0,external_react_.useState)(false);
+  console.log(active);
   const className = active ? `${(header_module_default()).navItem_label} ${(header_module_default()).navItem_label__active}` : `${(header_module_default()).navItem_label}`;
   (0,external_react_.useEffect)(() => {
     const subLinks = items.map(item => {
