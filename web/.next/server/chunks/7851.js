@@ -97,10 +97,13 @@ const Footer = props => {
           className: (_footer_module_scss__WEBPACK_IMPORTED_MODULE_4___default().middle_left),
           children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(next_link__WEBPACK_IMPORTED_MODULE_2__.default, {
             href: "/",
-            children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx("a", {
-              children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx((react_inlinesvg__WEBPACK_IMPORTED_MODULE_1___default()), {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
+              children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx("span", {
+                className: "visually-hidden",
+                children: "Sama"
+              }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx((react_inlinesvg__WEBPACK_IMPORTED_MODULE_1___default()), {
                 src: logo.asset.url
-              })
+              })]
             })
           })
         }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx("div", {

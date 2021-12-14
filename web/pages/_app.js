@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import BaseApp from 'next/app'
 import client from '../client'
 import '../styles/main.scss'
@@ -32,10 +32,26 @@ const siteConfigQuery = `*[_id == "global-config"]{
   }
 }[0]`;
 
+
 class App extends BaseApp {
+  componentDidMount() {
+    if("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+       navigator.serviceWorker.register("/sw.js").then(
+          function (registration) {
+            console.log("Service Worker registration successful with scope: ", registration.scope);
+          },
+          function (err) {
+            console.log("Service Worker registration failed: ", err);
+          }
+        );
+      });
+    }
+  }
 
   static async getInitialProps ({Component, ctx}) {
     let pageProps = {}
+
     
     return client.fetch(siteConfigQuery).then(config => {
  

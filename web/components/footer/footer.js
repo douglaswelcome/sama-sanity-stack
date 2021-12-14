@@ -67,6 +67,7 @@ const Footer = (props) => {
           <div className={styles.middle_left}>
             <Link href="/">
               <a>
+                <span className="visually-hidden">Sama</span>
                 <SVG src={logo.asset.url} />
               </a>
             </Link>

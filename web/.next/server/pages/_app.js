@@ -78,6 +78,18 @@ const siteConfigQuery = `*[_id == "global-config"]{
 }[0]`;
 
 class App extends next_app__WEBPACK_IMPORTED_MODULE_1__.default {
+  componentDidMount() {
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("/sw.js").then(function (registration) {
+          console.log("Service Worker registration successful with scope: ", registration.scope);
+        }, function (err) {
+          console.log("Service Worker registration failed: ", err);
+        });
+      });
+    }
+  }
+
   static async getInitialProps({
     Component,
     ctx
