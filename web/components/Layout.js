@@ -54,9 +54,13 @@ function Layout (props) {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <div className='container'>
-        <Header title={title} navItems={mainNav} logo={logo} />
+        {mainNav && 
+          <Header title={title} navItems={mainNav} logo={logo} />
+        }
         <main className='content'>{children}</main>
-        <Footer navItems={footerNav.items} logo={logo} />
+        {footerNav &&
+          <Footer navItems={footerNav.items} logo={logo} />
+        }
       </div>
     </>
   )

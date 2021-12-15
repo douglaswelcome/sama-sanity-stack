@@ -18,8 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6731);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_error__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8354);
-/* harmony import */ var next_error__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_error__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _404__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6506);
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(267);
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_client__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _libs_queries__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4645);
@@ -60,85 +59,98 @@ const PostTag = ({
   config
 }) => {
   const router = (0,next_router__WEBPACK_IMPORTED_MODULE_1__.useRouter)();
-
-  if ((data === null || data === void 0 ? void 0 : data.firstLoad) == undefined || !router.isFallback && !data.slug) {
-    return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx((next_error__WEBPACK_IMPORTED_MODULE_2___default()), {
-      statusCode: 404
-    });
-  }
-
   const {
-    tagName,
-    firstLoad,
-    morePosts,
     pageConfig
   } = data;
-  const {
-    0: posts,
-    1: setPostList
-  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(firstLoad);
 
   const tagConfig = _objectSpread(_objectSpread({}, config), pageConfig);
 
-  const loadMorePosts = () => {
-    const newPosts = posts.concat(morePosts.splice(0, 12));
-    setPostList(newPosts);
-  };
+  if ((data === null || data === void 0 ? void 0 : data.firstLoad) == undefined || !router.isFallback && !data.slug) {
+    return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx(Layout, {
+      config: tagConfig,
+      children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx(_404__WEBPACK_IMPORTED_MODULE_2__.default, {})
+    });
+  } else {
+    const {
+      tagName,
+      firstLoad,
+      morePosts
+    } = data;
+    const {
+      0: posts,
+      1: setPostList
+    } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(firstLoad);
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(Layout, {
-    config: tagConfig,
-    children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("section", {
-      className: "umoja-l-grid-section umoja-u-bg--white",
-      children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("div", {
-        className: "umoja-l-grid--12",
+    const loadMorePosts = () => {
+      const newPosts = posts.concat(morePosts.splice(0, 12));
+      setPostList(newPosts);
+    };
+
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(Layout, {
+      config: tagConfig,
+      children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("section", {
+        className: "umoja-l-grid-section umoja-u-bg--white",
         children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("div", {
-          className: (_blog_tag_module_scss__WEBPACK_IMPORTED_MODULE_9___default().name),
-          children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("h1", {
-            children: tagName
+          className: "umoja-l-grid--12",
+          children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("div", {
+            className: (_blog_tag_module_scss__WEBPACK_IMPORTED_MODULE_9___default().name),
+            children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("h1", {
+              children: tagName
+            })
           })
         })
-      })
-    }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("section", {
-      className: "umoja-l-grid-section umoja-u-bg--white",
-      children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("div", {
-        className: "umoja-l-grid--12 umoja-l-grid-gap--row-1",
-        children: posts.map((post, i) => {
-          return /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_blog_blog_postCard_blog_postCard__WEBPACK_IMPORTED_MODULE_7__/* .default */ .Z, _objectSpread(_objectSpread({}, post), {}, {
-            hideTag: true,
-            key: i
-          }));
+      }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("section", {
+        className: "umoja-l-grid-section umoja-u-bg--white",
+        children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("div", {
+          className: "umoja-l-grid--12 umoja-l-grid-gap--row-1",
+          children: posts.map((post, i) => {
+            return /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_blog_blog_postCard_blog_postCard__WEBPACK_IMPORTED_MODULE_7__/* .default */ .Z, _objectSpread(_objectSpread({}, post), {}, {
+              hideTag: true,
+              key: i
+            }));
+          })
         })
-      })
-    }), morePosts.length > 0 && /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("section", {
-      className: "umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white",
-      children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx(_components_button_button__WEBPACK_IMPORTED_MODULE_6__/* .default */ .Z, {
-        type: "light",
-        title: "Load More",
-        onClick: loadMorePosts
-      })
-    })]
-  });
+      }), morePosts.length > 0 && /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx("section", {
+        className: "umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white",
+        children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx(_components_button_button__WEBPACK_IMPORTED_MODULE_6__/* .default */ .Z, {
+          type: "light",
+          title: "Load More",
+          onClick: loadMorePosts
+        })
+      })]
+    });
+  }
 };
 
 async function getStaticProps({
   params
 }) {
   const tag = await (0,_libs_queries__WEBPACK_IMPORTED_MODULE_4__/* .getPostsByTagSlug */ .x8)(params.slug);
-  const posts = await _client__WEBPACK_IMPORTED_MODULE_3___default().fetch(_libs_queries__WEBPACK_IMPORTED_MODULE_4__/* .postsByTagQuery */ .Ki, {
-    tag: tag.tag
-  });
+  let data = {
+    pageConfig: {
+      title: '404: Page not found'
+    }
+  };
+
+  if (tag) {
+    const posts = await _client__WEBPACK_IMPORTED_MODULE_3___default().fetch(_libs_queries__WEBPACK_IMPORTED_MODULE_4__/* .postsByTagQuery */ .Ki, {
+      tag: tag === null || tag === void 0 ? void 0 : tag.tag
+    });
+    data = {
+      firstLoad: posts.firstLoad,
+      morePosts: posts.morePosts,
+      slug: params.slug,
+      tagName: tag.tag,
+      pageConfig: {
+        title: "Sama Blog | Training Data, AI and Impact Sourcing Insights",
+        description: "From machine learning to training data strategy, the Sama blog covers research, news and other AI trends from thought leaders across the globe."
+      }
+    };
+  }
+
   return {
     props: {
-      data: {
-        firstLoad: posts.firstLoad,
-        morePosts: posts.morePosts,
-        slug: params.slug,
-        tagName: tag.tag,
-        pageConfig: {
-          title: "Sama Blog | Training Data, AI and Impact Sourcing Insights",
-          description: "From machine learning to training data strategy, the Sama blog covers research, news and other AI trends from thought leaders across the globe."
-        }
-      }
+      data
     }
   };
 }
@@ -326,14 +338,6 @@ module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
-/***/ 8354:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/error");
-
-/***/ }),
-
 /***/ 701:
 /***/ ((module) => {
 
@@ -381,7 +385,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [7426,5675,1664,5152,5030,3653,4151,4645,1768], () => (__webpack_exec__(6242)));
+var __webpack_exports__ = __webpack_require__.X(0, [7426,5675,1664,5152,5030,3653,4151,4645,6506,1768], () => (__webpack_exec__(6242)));
 module.exports = __webpack_exports__;
 
 })();
