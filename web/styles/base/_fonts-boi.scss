@@ -1,4 +1,4 @@
-$static-font-base: "https://www.sama.com/hubfs/Custom/assets/static-assets/fonts/Brown/";
+$static-font-base: "/fonts/";
 $font-brown: "Brown", Arial, sans-serif;
 
 @font-face {
@@ -34,8 +34,7 @@ $font-brown: "Brown", Arial, sans-serif;
 @font-face {
   font-family: "Brown";
   src: 
-  url("#{$static-font-base}BrownLLWeb-MediumItalic.woff2") format("woff2"),
-  url("#{$static-font-base}BrownLLWeb-MediumItalic.woff") format("woff");
+  url("#{$static-font-base}BrownLLWeb-MediumItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
