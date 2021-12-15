@@ -13,7 +13,7 @@
     "files": [
       "static/chunks/commons-9184af50b88be5157a55.js",
       "static/chunks/4934.37651fffe4e244d39030.js",
-      "static/css/ba5da1bbd47cc5381e38.css",
+      "static/css/251c68569dc0dc087385.css",
       "static/chunks/1952.b946b9426ec92537afc7.js"
     ]
   },
@@ -26,7 +26,7 @@
   "[slug].js -> ../components/RenderSection": {
     "id": 6446,
     "files": [
-      "static/chunks/6446.0d18942df4d17e13c534.js"
+      "static/chunks/6446.6015a2cf0980dc869a15.js"
     ]
   },
   "blog.js -> ../components/Layout": {
