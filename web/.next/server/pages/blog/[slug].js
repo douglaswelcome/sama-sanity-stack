@@ -20,9 +20,8 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: external "next/router"
 var router_ = __webpack_require__(6731);
-// EXTERNAL MODULE: external "next/error"
-var error_ = __webpack_require__(8354);
-var error_default = /*#__PURE__*/__webpack_require__.n(error_);
+// EXTERNAL MODULE: ./pages/404.js
+var _404 = __webpack_require__(6506);
 // EXTERNAL MODULE: ./client.js
 var client = __webpack_require__(267);
 var client_default = /*#__PURE__*/__webpack_require__.n(client);
@@ -207,66 +206,66 @@ const Post = ({
   const router = (0,router_.useRouter)();
   const post = data === null || data === void 0 ? void 0 : data.post;
 
-  if (post == undefined || !router.isFallback && !post.slug) {
-    return /*#__PURE__*/jsx_runtime_.jsx((error_default()), {
-      statusCode: 404
-    });
-  }
-
-  const {
-    tags,
-    author,
-    body,
-    relatedPosts
-  } = post;
-  const shareUrl = `https://www.sama.com/${router.asPath}`;
-
   const postConfig = _objectSpread(_objectSpread({}, config), data.config);
 
-  return /*#__PURE__*/(0,jsx_runtime_.jsxs)(Layout, {
-    config: postConfig,
-    children: [/*#__PURE__*/jsx_runtime_.jsx(blog_heroPost, _objectSpread({}, post)), /*#__PURE__*/jsx_runtime_.jsx("section", {
-      className: "umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white",
-      children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-        className: `umoja-l-grid--12 ${(blog_post_module_default()).body}`,
-        children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
-          className: (blog_post_module_default()).share,
-          children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-            className: (blog_post_module_default()).share_track,
-            children: [/*#__PURE__*/jsx_runtime_.jsx("a", {
-              className: `${(blog_post_module_default()).share_button} ${(blog_post_module_default()).share_button__facebook}`,
-              href: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`
-            }), /*#__PURE__*/jsx_runtime_.jsx("a", {
-              className: `${(blog_post_module_default()).share_button} ${(blog_post_module_default()).share_button__twitter}`,
-              href: `https://twitter.com/intent/tweet?text=Check%20out%20this%20great%20blog%20post%20I%20just%20read&url=${shareUrl}`
-            }), /*#__PURE__*/jsx_runtime_.jsx("a", {
-              className: `${(blog_post_module_default()).share_button} ${(blog_post_module_default()).share_button__linkedin}`,
-              href: `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${post.title}&source=https://www.sama.com/&summary=Check%20out%20this%20great%20blog%20post%20I%20just%20read`
-            })]
-          })
-        }), /*#__PURE__*/jsx_runtime_.jsx(richText_field/* default */.Z, {
-          className: (blog_post_module_default()).content,
-          richText: body,
-          align: "left"
-        })]
-      })
-    }), /*#__PURE__*/jsx_runtime_.jsx(blog_postFooter, {
-      tags: tags,
-      author: author
-    }), relatedPosts && /*#__PURE__*/jsx_runtime_.jsx("section", {
-      className: "umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white",
-      children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
-        className: "umoja-l-grid--12",
-        children: [/*#__PURE__*/jsx_runtime_.jsx("h3", {
-          className: `${(blog_post_module_default()).relatedPosts}`,
-          children: "Related Posts:"
-        }), /*#__PURE__*/jsx_runtime_.jsx(blog_smallCard_row/* default */.Z, {
-          posts: relatedPosts,
-          hideTag: tags[0].value
-        })]
-      })
-    })]
-  });
+  if (post == undefined || !router.isFallback && !post.slug) {
+    return /*#__PURE__*/jsx_runtime_.jsx(Layout, {
+      config: postConfig,
+      children: /*#__PURE__*/jsx_runtime_.jsx(_404.default, {})
+    });
+  } else {
+    const {
+      tags,
+      author,
+      body,
+      relatedPosts
+    } = post;
+    const shareUrl = `https://www.sama.com/${router.asPath}`;
+    return /*#__PURE__*/(0,jsx_runtime_.jsxs)(Layout, {
+      config: postConfig,
+      children: [/*#__PURE__*/jsx_runtime_.jsx(blog_heroPost, _objectSpread({}, post)), /*#__PURE__*/jsx_runtime_.jsx("section", {
+        className: "umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white",
+        children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+          className: `umoja-l-grid--12 ${(blog_post_module_default()).body}`,
+          children: [/*#__PURE__*/jsx_runtime_.jsx("div", {
+            className: (blog_post_module_default()).share,
+            children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+              className: (blog_post_module_default()).share_track,
+              children: [/*#__PURE__*/jsx_runtime_.jsx("a", {
+                className: `${(blog_post_module_default()).share_button} ${(blog_post_module_default()).share_button__facebook}`,
+                href: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`
+              }), /*#__PURE__*/jsx_runtime_.jsx("a", {
+                className: `${(blog_post_module_default()).share_button} ${(blog_post_module_default()).share_button__twitter}`,
+                href: `https://twitter.com/intent/tweet?text=Check%20out%20this%20great%20blog%20post%20I%20just%20read&url=${shareUrl}`
+              }), /*#__PURE__*/jsx_runtime_.jsx("a", {
+                className: `${(blog_post_module_default()).share_button} ${(blog_post_module_default()).share_button__linkedin}`,
+                href: `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${post.title}&source=https://www.sama.com/&summary=Check%20out%20this%20great%20blog%20post%20I%20just%20read`
+              })]
+            })
+          }), /*#__PURE__*/jsx_runtime_.jsx(richText_field/* default */.Z, {
+            className: (blog_post_module_default()).content,
+            richText: body,
+            align: "left"
+          })]
+        })
+      }), /*#__PURE__*/jsx_runtime_.jsx(blog_postFooter, {
+        tags: tags,
+        author: author
+      }), relatedPosts && /*#__PURE__*/jsx_runtime_.jsx("section", {
+        className: "umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white",
+        children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("div", {
+          className: "umoja-l-grid--12",
+          children: [/*#__PURE__*/jsx_runtime_.jsx("h3", {
+            className: `${(blog_post_module_default()).relatedPosts}`,
+            children: "Related Posts:"
+          }), /*#__PURE__*/jsx_runtime_.jsx(blog_smallCard_row/* default */.Z, {
+            posts: relatedPosts,
+            hideTag: tags[0].value
+          })]
+        })
+      })]
+    });
+  }
 };
 
 async function getStaticProps({
@@ -277,15 +276,23 @@ async function getStaticProps({
   } = await client_default().fetch(queries/* postQuery */.HF, {
     slug: params.slug
   });
+  let config = {
+    title: '404: Page not found'
+  };
+
+  if (post) {
+    config = {
+      title: post.seo_title ? post.seo_title : post.title,
+      description: post.meta_description ? post.meta_description : null,
+      openGraphImage: post.openGraphImage ? post.openGraphImage : null
+    };
+  }
+
   return {
     props: {
       data: {
         post,
-        config: {
-          title: post.seo_title ? post.seo_title : post.title,
-          description: post.meta_description ? post.meta_description : "",
-          openGraphImage: post.openGraphImage ? post.openGraphImage : ""
-        }
+        config
       }
     }
   };
@@ -553,14 +560,6 @@ module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
-/***/ 8354:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/error");
-
-/***/ }),
-
 /***/ 701:
 /***/ ((module) => {
 
@@ -608,7 +607,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [7426,5675,1664,5152,5030,3653,4151,4687,4645,7845], () => (__webpack_exec__(1881)));
+var __webpack_exports__ = __webpack_require__.X(0, [7426,5675,1664,5152,5030,3653,4151,4687,4645,6506,7845], () => (__webpack_exec__(1881)));
 module.exports = __webpack_exports__;
 
 })();

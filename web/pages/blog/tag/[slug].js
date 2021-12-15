@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
+import Page404 from '../../404'
 import client from '../../../client'
 import { postsByTagQuery, getPostsByTagSlug, getAllPostSlugs } from '../../../libs/queries'
 import dynamic from "next/dynamic";
@@ -11,69 +11,84 @@ import styles from './blog-tag.module.scss'
 
 const PostTag = ({ data = {}, config }) => {
     const router = useRouter();
-
-    if (data?.firstLoad == undefined || !router.isFallback && !data.slug) {
-      return <ErrorPage statusCode={404} />
-    }
-    const {tagName, firstLoad, morePosts, pageConfig} = data;
-    const [posts, setPostList] = useState(firstLoad);
+    const {pageConfig} = data;
     const tagConfig = {
       ...config,
       ...pageConfig
     }
 
-    const loadMorePosts = () => {
-      const newPosts = posts.concat(morePosts.splice(0, 12));
-      setPostList(newPosts)
-    } 
+    if (data?.firstLoad == undefined || !router.isFallback && !data.slug) {
+      return (
+        <Layout config={tagConfig}>
+          <Page404 />
+        </Layout>
+      )
+    }else{
+      const {tagName, firstLoad, morePosts} = data;
+      const [posts, setPostList] = useState(firstLoad);
 
-    return (
-      <Layout config={tagConfig}>
-        <section className="umoja-l-grid-section umoja-u-bg--white">
-          <div className="umoja-l-grid--12">
-            <div className={styles.name}>
-              <h1>{tagName}</h1>
+      const loadMorePosts = () => {
+        const newPosts = posts.concat(morePosts.splice(0, 12));
+        setPostList(newPosts)
+      }
+
+      return (
+        <Layout config={tagConfig}>
+          <section className="umoja-l-grid-section umoja-u-bg--white">
+            <div className="umoja-l-grid--12">
+              <div className={styles.name}>
+                <h1>{tagName}</h1>
+              </div>
             </div>
-          </div>
-        </section>
-        <section className="umoja-l-grid-section umoja-u-bg--white">
-          <div className="umoja-l-grid--12 umoja-l-grid-gap--row-1">
-              {posts.map((post, i) => {
-                  return <BlogPost {...post} hideTag={true} key={i} />
-              })}
-          </div>
-        </section>
-        {morePosts.length > 0 &&
-          <section className="umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white">
-            <Button 
-                type="light" 
-                title="Load More"
-                onClick={loadMorePosts}
-            />
           </section>
-        }
-      </Layout>
-    )
+          <section className="umoja-l-grid-section umoja-u-bg--white">
+            <div className="umoja-l-grid--12 umoja-l-grid-gap--row-1">
+                {posts.map((post, i) => {
+                    return <BlogPost {...post} hideTag={true} key={i} />
+                })}
+            </div>
+          </section>
+          {morePosts.length > 0 &&
+            <section className="umoja-l-grid-section umoja-l-grid-section--flat-top umoja-u-bg--white">
+              <Button 
+                  type="light" 
+                  title="Load More"
+                  onClick={loadMorePosts}
+              />
+            </section>
+          }
+        </Layout>
+      )
+    }
 }
 
 export async function getStaticProps({ params }) {
     const tag = await getPostsByTagSlug(params.slug);
-    const posts = await client.fetch(postsByTagQuery, {
-        tag: tag.tag,
-    })
+    let data = {
+      pageConfig:{
+        title: '404: Page not found'
+      }
+    }
+
+    if(tag){
+      const posts = await client.fetch(postsByTagQuery, {
+        tag: tag?.tag,
+      })
+      data = {
+        firstLoad: posts.firstLoad,
+        morePosts: posts.morePosts,
+        slug: params.slug,
+        tagName: tag.tag,
+        pageConfig:{
+          title: "Sama Blog | Training Data, AI and Impact Sourcing Insights",
+          description: "From machine learning to training data strategy, the Sama blog covers research, news and other AI trends from thought leaders across the globe."
+        }
+      }
+    }
   
     return {
       props: {
-        data: {
-            firstLoad: posts.firstLoad,
-            morePosts: posts.morePosts,
-            slug: params.slug,
-            tagName: tag.tag,
-            pageConfig:{
-              title: "Sama Blog | Training Data, AI and Impact Sourcing Insights",
-              description: "From machine learning to training data strategy, the Sama blog covers research, news and other AI trends from thought leaders across the globe."
-            }
-        },
+        data
       },
     }
   }

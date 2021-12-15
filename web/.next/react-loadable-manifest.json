@@ -20,7 +20,7 @@
   "[slug].js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/1776.985394b0f9b81a541326.js"
+      "static/chunks/1776.dff8842f6f7123b79c35.js"
     ]
   },
   "[slug].js -> ../components/RenderSection": {
@@ -32,37 +32,37 @@
   "blog.js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.a4ba19896bef0bb96e3a.js"
+      "static/chunks/4941.f7b4b29e03c1b6f7dee2.js"
     ]
   },
   "blog/[slug].js -> ../../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/1776.985394b0f9b81a541326.js"
+      "static/chunks/1776.dff8842f6f7123b79c35.js"
     ]
   },
   "blog/author/[slug].js -> ../../../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/1776.985394b0f9b81a541326.js"
+      "static/chunks/1776.dff8842f6f7123b79c35.js"
     ]
   },
   "blog/tag/[slug].js -> ../../../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/1776.985394b0f9b81a541326.js"
+      "static/chunks/1776.dff8842f6f7123b79c35.js"
     ]
   },
   "events.js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.a4ba19896bef0bb96e3a.js"
+      "static/chunks/4941.f7b4b29e03c1b6f7dee2.js"
     ]
   },
   "press.js -> ../components/Layout": {
     "id": 4941,
     "files": [
-      "static/chunks/4941.a4ba19896bef0bb96e3a.js"
+      "static/chunks/4941.f7b4b29e03c1b6f7dee2.js"
     ]
   }
 }

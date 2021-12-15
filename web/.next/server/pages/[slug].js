@@ -1,13 +1,13 @@
-"use strict";
 (() => {
 var exports = {};
 exports.id = 6219;
-exports.ids = [6219];
+exports.ids = [6219,2197];
 exports.modules = {
 
 /***/ 1103:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps),
@@ -16,8 +16,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6731);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_error__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8354);
-/* harmony import */ var next_error__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_error__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _404__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6506);
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(267);
 /* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_client__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _libs_queries__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4645);
@@ -59,22 +58,14 @@ const Page = ({
   const slug = data === null || data === void 0 ? void 0 : (_data$page = data.page) === null || _data$page === void 0 ? void 0 : _data$page.slug;
   const sections = data === null || data === void 0 ? void 0 : (_data$page2 = data.page) === null || _data$page2 === void 0 ? void 0 : _data$page2.sections;
 
-  if (data.page == undefined || !router.isFallback && !slug) {
-    return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx((next_error__WEBPACK_IMPORTED_MODULE_1___default()), {
-      statusCode: 404
-    });
-  }
-
   const pageConfig = _objectSpread(_objectSpread({}, config), (_data$page3 = data.page) === null || _data$page3 === void 0 ? void 0 : _data$page3.config);
 
   return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(Layout, {
     config: pageConfig,
-    children: sections && sections.map(section => {
-      return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(RenderSection, {
-        modules: section.modules,
-        background_color: section.background_color
-      }, section._key);
-    })
+    children: data.page == undefined || !router.isFallback && !slug ? /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_404__WEBPACK_IMPORTED_MODULE_1__.default, {}) : sections && sections.map(section => /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(RenderSection, {
+      modules: section.modules,
+      background_color: section.background_color
+    }, section._key))
   });
 };
 
@@ -128,6 +119,7 @@ async function getStaticPaths() {
 /***/ 9484:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("@sanity/asset-utils");
 
 /***/ }),
@@ -135,6 +127,7 @@ module.exports = require("@sanity/asset-utils");
 /***/ 2904:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("@sanity/block-content-to-react");
 
 /***/ }),
@@ -142,6 +135,7 @@ module.exports = require("@sanity/block-content-to-react");
 /***/ 8809:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("@sanity/client");
 
 /***/ }),
@@ -149,6 +143,7 @@ module.exports = require("@sanity/client");
 /***/ 3062:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("@u-wave/react-vimeo");
 
 /***/ }),
@@ -156,6 +151,7 @@ module.exports = require("@u-wave/react-vimeo");
 /***/ 9525:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("@u-wave/react-youtube");
 
 /***/ }),
@@ -163,6 +159,7 @@ module.exports = require("@u-wave/react-youtube");
 /***/ 4885:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("get-youtube-id");
 
 /***/ }),
@@ -170,6 +167,7 @@ module.exports = require("get-youtube-id");
 /***/ 5768:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("lottie-web");
 
 /***/ }),
@@ -177,6 +175,7 @@ module.exports = require("lottie-web");
 /***/ 1095:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next-sanity-image");
 
 /***/ }),
@@ -184,6 +183,7 @@ module.exports = require("next-sanity-image");
 /***/ 9325:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
@@ -191,6 +191,7 @@ module.exports = require("next/dist/server/denormalize-page-path.js");
 /***/ 822:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/server/image-config.js");
 
 /***/ }),
@@ -198,6 +199,7 @@ module.exports = require("next/dist/server/image-config.js");
 /***/ 6695:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/head.js");
 
 /***/ }),
@@ -205,6 +207,7 @@ module.exports = require("next/dist/shared/lib/head.js");
 /***/ 5378:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 
 /***/ }),
@@ -212,6 +215,7 @@ module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 /***/ 2307:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/loadable.js");
 
 /***/ }),
@@ -219,6 +223,7 @@ module.exports = require("next/dist/shared/lib/loadable.js");
 /***/ 7162:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/mitt.js");
 
 /***/ }),
@@ -226,6 +231,7 @@ module.exports = require("next/dist/shared/lib/mitt.js");
 /***/ 8773:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/router-context.js");
 
 /***/ }),
@@ -233,6 +239,7 @@ module.exports = require("next/dist/shared/lib/router-context.js");
 /***/ 2248:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
 
 /***/ }),
@@ -240,6 +247,7 @@ module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-
 /***/ 9372:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
 
 /***/ }),
@@ -247,6 +255,7 @@ module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
 /***/ 665:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
 
 /***/ }),
@@ -254,6 +263,7 @@ module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.j
 /***/ 2747:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
 
 /***/ }),
@@ -261,6 +271,7 @@ module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
 /***/ 333:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
 
 /***/ }),
@@ -268,6 +279,7 @@ module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
 /***/ 3456:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 /***/ }),
@@ -275,6 +287,7 @@ module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 /***/ 556:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/to-base-64.js");
 
 /***/ }),
@@ -282,20 +295,15 @@ module.exports = require("next/dist/shared/lib/to-base-64.js");
 /***/ 7620:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/utils.js");
-
-/***/ }),
-
-/***/ 8354:
-/***/ ((module) => {
-
-module.exports = require("next/error");
 
 /***/ }),
 
 /***/ 701:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/head");
 
 /***/ }),
@@ -303,6 +311,7 @@ module.exports = require("next/head");
 /***/ 6731:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/router");
 
 /***/ }),
@@ -310,6 +319,7 @@ module.exports = require("next/router");
 /***/ 9297:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("react");
 
 /***/ }),
@@ -317,6 +327,7 @@ module.exports = require("react");
 /***/ 7051:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("react-inlinesvg");
 
 /***/ }),
@@ -324,6 +335,7 @@ module.exports = require("react-inlinesvg");
 /***/ 5508:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("react-map-gl");
 
 /***/ }),
@@ -331,7 +343,15 @@ module.exports = require("react-map-gl");
 /***/ 5282:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ 2431:
+/***/ (() => {
+
+/* (ignored) */
 
 /***/ })
 
@@ -342,7 +362,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [5152,4645], () => (__webpack_exec__(1103)));
+var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5152,4645,6506], () => (__webpack_exec__(1103)));
 module.exports = __webpack_exports__;
 
 })();
