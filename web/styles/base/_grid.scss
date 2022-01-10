@@ -130,6 +130,7 @@ $med-page-width: 800px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: column;
   padding-top: $space-lg;
   padding-bottom: $space-lg;
   position: relative;
