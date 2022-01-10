@@ -49,12 +49,14 @@ const Image = props => {
       sizes: sizes,
       alt: alt,
       objectFit: objectFit,
+      lazyBoundary: "20px",
       placeholder: placeholder
     })) : /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(next_image__WEBPACK_IMPORTED_MODULE_2__.default, _objectSpread(_objectSpread({}, imageProps), {}, {
       layout: layout,
       width: width,
       height: height,
       alt: alt,
+      lazyBoundary: "20px",
       objectFit: objectFit,
       placeholder: placeholder
     }))

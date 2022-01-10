@@ -14,9 +14,9 @@ const Image = (props) => {
     return (
         <>
         {sizes ?
-            <NextImg {...imageProps} layout={layout} sizes={sizes} alt={alt} objectFit={objectFit} placeholder={placeholder} />
+            <NextImg {...imageProps} layout={layout} sizes={sizes} alt={alt} objectFit={objectFit} lazyBoundary="20px" placeholder={placeholder} />
         :
-            <NextImg {...imageProps} layout={layout} width={width} height={height} alt={alt} objectFit={objectFit} placeholder={placeholder}/>
+            <NextImg {...imageProps} layout={layout} width={width} height={height} alt={alt} lazyBoundary="20px" objectFit={objectFit} placeholder={placeholder}/>
         }
         </>
     )

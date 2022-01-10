@@ -2,7 +2,7 @@
   "../components/Layout.js -> ./footer/footer": {
     "id": 3551,
     "files": [
-      "static/chunks/commons-9184af50b88be5157a55.js",
+      "static/chunks/commons-29272ea044d5a317a0a9.js",
       "static/chunks/4934.37651fffe4e244d39030.js",
       "static/css/f9f8c0d06ba77c772815.css",
       "static/chunks/3551.369166f7a3aa0696cada.js"
@@ -11,7 +11,7 @@
   "../components/Layout.js -> ./header/header": {
     "id": 425,
     "files": [
-      "static/chunks/commons-9184af50b88be5157a55.js",
+      "static/chunks/commons-29272ea044d5a317a0a9.js",
       "static/chunks/4934.37651fffe4e244d39030.js",
       "static/css/5478fb8820b37cca7a22.css",
       "static/chunks/1952.b946b9426ec92537afc7.js"
