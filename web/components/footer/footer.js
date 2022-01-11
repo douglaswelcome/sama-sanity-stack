@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import SVG from 'react-inlinesvg'
 import Link from 'next/link'
 import styles from './footer.module.scss'
+import Textfield from '../textfield/textfield'
+import Form from '../form/form'
+import Button from '../button/button'
 
 const Footer = (props) => {
   const {navItems, logo} = props;
@@ -20,6 +23,14 @@ const Footer = (props) => {
           <div className={styles.upper_left}>
             <h4>Newsletter</h4>
             <p>Subscribe today and be the first to receive the latest from Sama.</p>
+            <div>
+            <Form id='myForm'>
+               <Textfield name='email' label='Email Address'> </Textfield>
+              
+              <Button title='Sign Me Up' type='submit'>Sign Me Up</Button>
+           
+            </Form>
+            </div>  
           </div>
           <div className={styles.upper_right}>
             {navItems.map((item) => {
@@ -166,7 +177,13 @@ const Footer = (props) => {
           </div>
         </div>
       </div>
+      
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6398568.js"></script>
+
     </footer>
+
+
+
   )
 }
 
@@ -183,3 +200,5 @@ Footer.propTypes = {
 }
 
 export default Footer
+
+
