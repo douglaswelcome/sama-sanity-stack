@@ -213,6 +213,7 @@ const Footer = props => {
                   } else {
                     return /*#__PURE__*/jsx_runtime_.jsx("a", {
                       href: footerItem.url.externalUrl,
+                      rel: "noopener",
                       target: "_blank",
                       className: (footer_module_default()).nav_link,
                       children: footerItem.title
@@ -229,10 +230,13 @@ const Footer = props => {
           className: (footer_module_default()).middle_left,
           children: /*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
             href: "/",
-            children: /*#__PURE__*/jsx_runtime_.jsx("a", {
-              children: /*#__PURE__*/jsx_runtime_.jsx((external_react_inlinesvg_default()), {
+            children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("a", {
+              children: [/*#__PURE__*/jsx_runtime_.jsx("span", {
+                className: "visually-hidden",
+                children: "Sama"
+              }), /*#__PURE__*/jsx_runtime_.jsx((external_react_inlinesvg_default()), {
                 src: logo.asset.url
-              })
+              })]
             })
           })
         }), /*#__PURE__*/jsx_runtime_.jsx("div", {
@@ -243,6 +247,7 @@ const Footer = props => {
               href: "https://www.facebook.com/samaartificialintelligence",
               className: (footer_module_default()).social_icon,
               target: "_blank",
+              rel: "noopener",
               children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 35.1 64.89",
@@ -264,6 +269,7 @@ const Footer = props => {
               href: "https://www.instagram.com/sama_ai_",
               className: (footer_module_default()).social_icon,
               target: "_blank",
+              rel: "noopener",
               children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 57 57",
@@ -289,6 +295,7 @@ const Footer = props => {
               href: "https://twitter.com/SamaAI",
               className: (footer_module_default()).social_icon,
               target: "_blank",
+              rel: "noopener",
               children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 62 51.19",
@@ -310,6 +317,7 @@ const Footer = props => {
               href: "https://www.linkedin.com/company/sama-ai/",
               className: (footer_module_default()).social_icon,
               target: "_blank",
+              rel: "noopener",
               children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 59.71 60.79",
@@ -338,6 +346,7 @@ const Footer = props => {
               href: "https://www.youtube.com/c/SamaAI",
               className: (footer_module_default()).social_icon,
               target: "_blank",
+              rel: "noopener",
               children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 65 44.63",
@@ -416,11 +425,13 @@ module.exports = {
 	"umoja-l-grid--6": "footer_umoja-l-grid--6__1dRcY",
 	"umoja-l-page-width": "footer_umoja-l-page-width__2CarG",
 	"umoja-l-grid-section": "footer_umoja-l-grid-section__1LTFe",
+	"umoja-l-grid-section--flat-top": "footer_umoja-l-grid-section--flat-top__Ma1Ed",
 	"umoja-l-grid-gap--row-1": "footer_umoja-l-grid-gap--row-1__36rEV",
 	"umoja-l-grid-gap--row-2": "footer_umoja-l-grid-gap--row-2__20H7c",
 	"umoja-l-grid-gap--row-3": "footer_umoja-l-grid-gap--row-3__2oLN2",
 	"umoja-l-grid-align--center": "footer_umoja-l-grid-align--center__3elRt",
 	"umoja-l-grid-align--base": "footer_umoja-l-grid-align--base__15bJZ",
+	"umoja-l-grid-span--full": "footer_umoja-l-grid-span--full__yEtIQ",
 	"wrapper": "footer_wrapper__2VAfJ",
 	"upper": "footer_upper__2a6XG",
 	"upper_right": "footer_upper_right__cpliC",
@@ -451,11 +462,13 @@ module.exports = {
 	"umoja-l-grid--6": "textfield_umoja-l-grid--6__20sGz",
 	"umoja-l-page-width": "textfield_umoja-l-page-width__1KRz1",
 	"umoja-l-grid-section": "textfield_umoja-l-grid-section__1VMHd",
+	"umoja-l-grid-section--flat-top": "textfield_umoja-l-grid-section--flat-top__3k4mk",
 	"umoja-l-grid-gap--row-1": "textfield_umoja-l-grid-gap--row-1__29g75",
 	"umoja-l-grid-gap--row-2": "textfield_umoja-l-grid-gap--row-2__Qqjoz",
 	"umoja-l-grid-gap--row-3": "textfield_umoja-l-grid-gap--row-3__1I65K",
 	"umoja-l-grid-align--center": "textfield_umoja-l-grid-align--center__tsbPt",
 	"umoja-l-grid-align--base": "textfield_umoja-l-grid-align--base__1mIiA",
+	"umoja-l-grid-span--full": "textfield_umoja-l-grid-span--full__1sL_7",
 	"wrap": "textfield_wrap__3WyMl",
 	"label": "textfield_label__18AO4",
 	"input": "textfield_input__3Wd8E",
