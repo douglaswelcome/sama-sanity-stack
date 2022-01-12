@@ -10,5 +10,6 @@
   "/events": "pages/events.js",
   "/": "pages/index.js",
   "/press": "pages/press.js",
+  "/tester": "pages/tester.js",
   "/_error": "pages/_error.js"
 }

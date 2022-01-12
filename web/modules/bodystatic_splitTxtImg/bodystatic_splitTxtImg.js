@@ -25,7 +25,7 @@ const bodystatic_splitTxtImg  = (props) => {
                         :   
                         <p>{body}</p>
                 }
-                {cta.link &&
+                {cta && cta.title &&
                     <Button {...cta} />
                 }
             </div>

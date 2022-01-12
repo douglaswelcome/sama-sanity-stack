@@ -12,10 +12,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9297);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _bodystatic_headline_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6380);
-/* harmony import */ var _bodystatic_headline_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_bodystatic_headline_module_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5282);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _bodystatic_headline_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6380);
+/* harmony import */ var _bodystatic_headline_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_bodystatic_headline_module_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_button_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4151);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5282);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
@@ -23,34 +31,25 @@ __webpack_require__.r(__webpack_exports__);
 
 const bodystatic_headline = props => {
   const {
-    text
+    preheadline,
+    headline,
+    subheadline,
+    cta
   } = props;
-  return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("div", {
+  return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
     className: "bodystatic-headline umoja-l-grid--12",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      class: (_bodystatic_headline_module_scss__WEBPACK_IMPORTED_MODULE_2___default().inner),
-      children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("h2", {
-        class: (_bodystatic_headline_module_scss__WEBPACK_IMPORTED_MODULE_2___default().__headline),
-        children: "Here's a headline"
-      }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("h5", {
-        class: (_bodystatic_headline_module_scss__WEBPACK_IMPORTED_MODULE_2___default().__subheadline),
-        children: "Here's a subheadline"
-      }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("div", {
-        class: (_bodystatic_headline_module_scss__WEBPACK_IMPORTED_MODULE_2___default().__btn),
-        children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("div", {
-          class: "btn__row",
-          children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("a", {
-            href: "{{module.url}}",
-            class: "btn__wrapper ",
-            children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("button", {
-              class: "btn",
-              children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx("h3", {
-                class: "btn__text"
-              })
-            })
-          })
-        })
-      })]
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      class: (_bodystatic_headline_module_scss__WEBPACK_IMPORTED_MODULE_3___default().inner),
+      children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h3", {
+        className: (_bodystatic_headline_module_scss__WEBPACK_IMPORTED_MODULE_3___default().__preheadline),
+        children: preheadline
+      }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h2", {
+        className: (_bodystatic_headline_module_scss__WEBPACK_IMPORTED_MODULE_3___default().__headline),
+        children: headline
+      }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("h5", {
+        className: (_bodystatic_headline_module_scss__WEBPACK_IMPORTED_MODULE_3___default().__subheadline),
+        children: subheadline
+      }), cta && cta.title && /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx(_components_button_button__WEBPACK_IMPORTED_MODULE_1__/* .default */ .Z, _objectSpread({}, cta))]
     })
   });
 };
@@ -78,7 +77,8 @@ module.exports = {
 	"umoja-l-grid-align--center": "bodystatic-headline_umoja-l-grid-align--center__1z7h3",
 	"umoja-l-grid-align--base": "bodystatic-headline_umoja-l-grid-align--base__30Rvf",
 	"umoja-l-grid-span--full": "bodystatic-headline_umoja-l-grid-span--full__2q0a-",
-	"inner": "bodystatic-headline_inner__1hA1E"
+	"inner": "bodystatic-headline_inner__1hA1E",
+	"__preheadline": "bodystatic-headline___preheadline__1GlVO"
 };
 
 

@@ -32,9 +32,9 @@ const Header = (0,next_dynamic__WEBPACK_IMPORTED_MODULE_1__.default)(() => Promi
     modules: ["../components/Layout.js -> " + './header/header']
   }
 });
-const Footer = (0,next_dynamic__WEBPACK_IMPORTED_MODULE_1__.default)(() => Promise.all(/* import() */[__webpack_require__.e(7426), __webpack_require__.e(1664), __webpack_require__.e(7851)]).then(__webpack_require__.bind(__webpack_require__, 3551)), {
+const Footer = (0,next_dynamic__WEBPACK_IMPORTED_MODULE_1__.default)(() => Promise.all(/* import() */[__webpack_require__.e(7426), __webpack_require__.e(1664), __webpack_require__.e(3653), __webpack_require__.e(4151), __webpack_require__.e(7350)]).then(__webpack_require__.bind(__webpack_require__, 7350)), {
   loadableGenerated: {
-    webpack: () => [/*require.resolve*/(3551)],
+    webpack: () => [/*require.resolve*/(7350)],
     modules: ["../components/Layout.js -> " + './footer/footer']
   }
 });

@@ -133,6 +133,10 @@ var map = {
 	],
 	"./bodystatic_headline/bodystatic_headline.js": [
 		8018,
+		7426,
+		1664,
+		3653,
+		4151,
 		8018
 	],
 	"./bodystatic_iconCopy/bodystatic_iconCopy.js": [
