@@ -2,7 +2,7 @@ exports.id = 6242;
 exports.ids = [6242];
 exports.modules = {
 
-/***/ 6242:
+/***/ 2942:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -71,11 +71,13 @@ module.exports = {
 	"umoja-l-grid--6": "bodystatic-panelColumns_umoja-l-grid--6__2RzIZ",
 	"umoja-l-page-width": "bodystatic-panelColumns_umoja-l-page-width__1-lmB",
 	"umoja-l-grid-section": "bodystatic-panelColumns_umoja-l-grid-section__seZR_",
+	"umoja-l-grid-section--flat-top": "bodystatic-panelColumns_umoja-l-grid-section--flat-top__3q8Yi",
 	"umoja-l-grid-gap--row-1": "bodystatic-panelColumns_umoja-l-grid-gap--row-1__2OCRu",
 	"umoja-l-grid-gap--row-2": "bodystatic-panelColumns_umoja-l-grid-gap--row-2__t4qiE",
 	"umoja-l-grid-gap--row-3": "bodystatic-panelColumns_umoja-l-grid-gap--row-3__6-ttf",
 	"umoja-l-grid-align--center": "bodystatic-panelColumns_umoja-l-grid-align--center__iuig1",
 	"umoja-l-grid-align--base": "bodystatic-panelColumns_umoja-l-grid-align--base__G7PEm",
+	"umoja-l-grid-span--full": "bodystatic-panelColumns_umoja-l-grid-span--full__14awl",
 	"panel": "bodystatic-panelColumns_panel__16_vX",
 	"panel_imgWrap": "bodystatic-panelColumns_panel_imgWrap__1lzlt",
 	"panel_copy": "bodystatic-panelColumns_panel_copy__22vMr"

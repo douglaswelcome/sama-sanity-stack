@@ -6,6 +6,17 @@ exports.modules = {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./bodymove_accordion/bodymove_accordion.js": [
+		7137,
+		7426,
+		5675,
+		1664,
+		5030,
+		3653,
+		4151,
+		4687,
+		7137
+	],
 	"./bodymove_featureWindow/bodymove_featureWindow.js": [
 		4031,
 		7426,
@@ -20,18 +31,20 @@ var map = {
 	"./bodymove_panel/bodymove_panel.js": [
 		4895,
 		7426,
-		1664,
 		5675,
+		1664,
+		5030,
 		3653,
 		4151,
-		5030,
 		4687,
 		4895
 	],
 	"./bodymove_sfMap/bodymove_sfMap.js": [
 		3718,
 		7426,
+		5675,
 		1664,
+		5030,
 		3653,
 		4151,
 		4687,
@@ -40,11 +53,11 @@ var map = {
 	"./bodymove_splitTxtImg/bodymove_splitTxtImg.js": [
 		5044,
 		7426,
-		1664,
 		5675,
+		1664,
+		5030,
 		3653,
 		4151,
-		5030,
 		4687,
 		32,
 		5044
@@ -63,18 +76,20 @@ var map = {
 	"./bodystatic_cardImg/bodystatic_cardImg.js": [
 		2833,
 		7426,
-		1664,
 		5675,
+		1664,
+		5030,
 		3653,
 		4151,
-		5030,
 		4687,
 		2833
 	],
 	"./bodystatic_centerPanel/bodystatic_centerPanel.js": [
 		2656,
 		7426,
+		5675,
 		1664,
+		5030,
 		3653,
 		4151,
 		4687,
@@ -87,7 +102,9 @@ var map = {
 	"./bodystatic_flowCompare/bodystatic_flowCompare.js": [
 		7319,
 		7426,
+		5675,
 		1664,
+		5030,
 		3653,
 		4151,
 		4687,
@@ -100,10 +117,10 @@ var map = {
 	"./bodystatic_galleryGrid/bodystatic_galleryGrid.js": [
 		3046,
 		7426,
-		1664,
 		5675,
-		3653,
+		1664,
 		5030,
+		3653,
 		3046
 	],
 	"./bodystatic_headSubCta/bodystatic_headSubCta.js": [
@@ -125,11 +142,11 @@ var map = {
 	"./bodystatic_iconCopy/bodystatic_iconCopy.js": [
 		9059,
 		7426,
-		1664,
 		5675,
+		1664,
+		5030,
 		3653,
 		4151,
-		5030,
 		4687,
 		9059
 	],
@@ -157,34 +174,34 @@ var map = {
 	"./bodystatic_panelAvatarTxt/bodystatic_panelAvatarTxt.js": [
 		3395,
 		7426,
-		1664,
 		5675,
+		1664,
+		5030,
 		3653,
 		4151,
-		5030,
 		4687,
 		7753,
 		3395
 	],
 	"./bodystatic_panelColumns/bodystatic_panelColumns.js": [
-		6242,
+		2942,
 		7426,
-		1664,
 		5675,
+		1664,
+		5030,
 		3653,
 		4151,
-		5030,
 		4687,
 		6242
 	],
 	"./bodystatic_panelFeature/bodystatic_panelFeature.js": [
 		613,
 		7426,
-		1664,
 		5675,
+		1664,
+		5030,
 		3653,
 		4151,
-		5030,
 		613
 	],
 	"./bodystatic_panelQuote/bodystatic_panelQuote.js": [
@@ -201,7 +218,9 @@ var map = {
 	"./bodystatic_richTxt/bodystatic_richTxt.js": [
 		4726,
 		7426,
+		5675,
 		1664,
+		5030,
 		3653,
 		4151,
 		4687,
@@ -218,11 +237,11 @@ var map = {
 	"./bodystatic_splitTxtImg/bodystatic_splitTxtImg.js": [
 		3550,
 		7426,
-		1664,
 		5675,
+		1664,
+		5030,
 		3653,
 		4151,
-		5030,
 		4687,
 		32,
 		3550
@@ -230,33 +249,33 @@ var map = {
 	"./bodystatic_splitTxtQuote/bodystatic_splitTxtQuote.js": [
 		1610,
 		7426,
-		1664,
 		5675,
+		1664,
+		5030,
 		3653,
 		4151,
-		5030,
 		4687,
 		1610
 	],
 	"./bodystatic_table/bodystatic_table.js": [
 		1326,
 		7426,
-		1664,
 		5675,
+		1664,
+		5030,
 		3653,
 		4151,
-		5030,
 		4687,
 		1326
 	],
 	"./bodystatic_tabs/bodystatic_tabs.js": [
 		4747,
 		7426,
-		1664,
 		5675,
+		1664,
+		5030,
 		3653,
 		4151,
-		5030,
 		4687,
 		4747
 	],
@@ -274,7 +293,9 @@ var map = {
 	"./hero_centertxt/hero_centertxt.js": [
 		6760,
 		7426,
+		5675,
 		1664,
+		5030,
 		3653,
 		4151,
 		4687,
@@ -283,32 +304,32 @@ var map = {
 	"./hero_home/hero_home.js": [
 		6953,
 		7426,
-		1664,
 		5675,
+		1664,
+		5030,
 		3653,
 		4151,
-		5030,
 		7753,
 		6953
 	],
 	"./hero_splittxtimg/hero_splittxtimg.js": [
 		1479,
 		7426,
-		1664,
 		5675,
+		1664,
+		5030,
 		3653,
 		4151,
-		5030,
 		1479
 	],
 	"./hero_splittxtimg_tall/hero_splittxtimg_tall.js": [
-		1325,
+		2144,
 		7426,
-		1664,
 		5675,
+		1664,
+		5030,
 		3653,
 		4151,
-		5030,
 		1325
 	]
 };
@@ -336,6 +357,7 @@ module.exports = webpackAsyncContext;
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./bodymove_accordion/bodymove_accordion.js": 7137,
 	"./bodymove_featureWindow/bodymove_featureWindow.js": 4031,
 	"./bodymove_map/bodymove_map.js": 3880,
 	"./bodymove_panel/bodymove_panel.js": 4895,
@@ -356,7 +378,7 @@ var map = {
 	"./bodystatic_leadTeam/bodystatic_leadTeam.js": 2467,
 	"./bodystatic_panelAvatarQuote/bodystatic_panelAvatarQuote.js": 2351,
 	"./bodystatic_panelAvatarTxt/bodystatic_panelAvatarTxt.js": 3395,
-	"./bodystatic_panelColumns/bodystatic_panelColumns.js": 6242,
+	"./bodystatic_panelColumns/bodystatic_panelColumns.js": 2942,
 	"./bodystatic_panelFeature/bodystatic_panelFeature.js": 613,
 	"./bodystatic_panelQuote/bodystatic_panelQuote.js": 4664,
 	"./bodystatic_punchyTxt/bodystatic_punchyTxt.js": 472,
@@ -371,7 +393,7 @@ var map = {
 	"./hero_centertxt/hero_centertxt.js": 6760,
 	"./hero_home/hero_home.js": 6953,
 	"./hero_splittxtimg/hero_splittxtimg.js": 1479,
-	"./hero_splittxtimg_tall/hero_splittxtimg_tall.js": 1325
+	"./hero_splittxtimg_tall/hero_splittxtimg_tall.js": 2144
 };
 
 

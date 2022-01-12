@@ -4,7 +4,7 @@ import Link from '../link'
 import styles from './button.module.scss'
 
 const Button = (props) => {
-    const {title, type, size, link} = props;
+    const {title, type, size, link, onClick} = props;
 
     const wrapperClass = `${styles.wrapper} ${type ? styles[`_${type}`] : ''} ${size ? styles[`_${size}`] : ''}`;
     const buttonInner =  <button className={styles.btn}>
@@ -19,7 +19,7 @@ const Button = (props) => {
         )
     }else{
         return (
-            <div className={wrapperClass}>
+            <div className={wrapperClass} onClick={onClick}>
                 {buttonInner}
             </div>
         )
@@ -33,7 +33,8 @@ Button.propTypes ={
     ]),
     title: PropTypes.string,
     type: PropTypes.string,
-    size: PropTypes.string
+    size: PropTypes.string,
+    onClick: PropTypes.func,
 }
 
 export default Button

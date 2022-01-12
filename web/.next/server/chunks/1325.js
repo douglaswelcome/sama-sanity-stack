@@ -2,7 +2,7 @@ exports.id = 1325;
 exports.ids = [1325];
 exports.modules = {
 
-/***/ 1325:
+/***/ 2144:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -91,11 +91,13 @@ module.exports = {
 	"umoja-l-grid--6": "hero-splittxtimg-tall_umoja-l-grid--6__28iSN",
 	"umoja-l-page-width": "hero-splittxtimg-tall_umoja-l-page-width__3vGZJ",
 	"umoja-l-grid-section": "hero-splittxtimg-tall_umoja-l-grid-section__1yWgu",
+	"umoja-l-grid-section--flat-top": "hero-splittxtimg-tall_umoja-l-grid-section--flat-top__7IPV7",
 	"umoja-l-grid-gap--row-1": "hero-splittxtimg-tall_umoja-l-grid-gap--row-1__1J5qD",
 	"umoja-l-grid-gap--row-2": "hero-splittxtimg-tall_umoja-l-grid-gap--row-2__18dQI",
 	"umoja-l-grid-gap--row-3": "hero-splittxtimg-tall_umoja-l-grid-gap--row-3__3iNcL",
 	"umoja-l-grid-align--center": "hero-splittxtimg-tall_umoja-l-grid-align--center__zFD2r",
 	"umoja-l-grid-align--base": "hero-splittxtimg-tall_umoja-l-grid-align--base__8h_p4",
+	"umoja-l-grid-span--full": "hero-splittxtimg-tall_umoja-l-grid-span--full__n18Xs",
 	"copy": "hero-splittxtimg-tall_copy__AobDg",
 	"copyWrapper": "hero-splittxtimg-tall_copyWrapper__2lq4W",
 	"preheadline": "hero-splittxtimg-tall_preheadline__3F8XV",

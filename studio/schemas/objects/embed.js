@@ -1,12 +1,12 @@
+import {FaCode } from 'react-icons/fa'
+
 export default {
-    type: 'object',
-    name: 'embed',
-    title: 'Video Embed',
-    options: {
-        collapsible: true,
-        collapsed: true
-    },
+    type: "object",
+    name: "embed",
+    title: "Embed",
+    icon: FaCode,
     fields: [
+<<<<<<< HEAD
         {
             name: "type",
             type: "string",
@@ -17,11 +17,23 @@ export default {
                     { title: 'Youtube', value: 'youtube' }
                 ],
             },
+=======
+      {
+        name: "code",
+        type: "text",
+        description: "Paste in your embed code"
+      }
+    ],
+    preview: {
+        select: {
+          title: "code"
+>>>>>>> develop
         },
-        {
-            name: 'url',
-            type: 'url',
-            title: 'Video URL'
+        prepare ({title}) {
+          return {
+            title: title,
+            media: FaCode
+          }
         }
-    ]
-}
+    }
+  }

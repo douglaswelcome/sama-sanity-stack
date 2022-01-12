@@ -56,6 +56,19 @@
     }
 }
 
+._light {
+  .btn{
+    background-color: $color-white;
+    border: 0.125rem solid;
+    border-color: $color-charcoal-1;
+  }
+
+  .text{
+    color: $color-charcoal-1;
+    background-image: none;
+  }
+}
+
 ._arrow{
   background-color: transparent;
   .btn{

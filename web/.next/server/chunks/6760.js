@@ -70,11 +70,13 @@ module.exports = {
 	"umoja-l-grid--6": "hero-centertxt_umoja-l-grid--6__KSGxN",
 	"umoja-l-page-width": "hero-centertxt_umoja-l-page-width__1yMe9",
 	"umoja-l-grid-section": "hero-centertxt_umoja-l-grid-section__3CP18",
+	"umoja-l-grid-section--flat-top": "hero-centertxt_umoja-l-grid-section--flat-top__35BaO",
 	"umoja-l-grid-gap--row-1": "hero-centertxt_umoja-l-grid-gap--row-1__2fC2A",
 	"umoja-l-grid-gap--row-2": "hero-centertxt_umoja-l-grid-gap--row-2__1EV_-",
 	"umoja-l-grid-gap--row-3": "hero-centertxt_umoja-l-grid-gap--row-3__3109y",
 	"umoja-l-grid-align--center": "hero-centertxt_umoja-l-grid-align--center__Q-X0b",
 	"umoja-l-grid-align--base": "hero-centertxt_umoja-l-grid-align--base__2bS7H",
+	"umoja-l-grid-span--full": "hero-centertxt_umoja-l-grid-span--full__3BKrt",
 	"body": "hero-centertxt_body__2J6HW",
 	"tagline": "hero-centertxt_tagline__2kA_Y"
 };

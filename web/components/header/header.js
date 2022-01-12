@@ -46,6 +46,7 @@ class Header extends Component {
         <nav className={`umoja-l-grid--12 ${styles.wrapper}`}>
           <Link href="/">
             <a className={styles.logo}>
+              <span className="visually-hidden">Sama</span>
               <SVG src={logo.asset.url} />
             </a>
           </Link>

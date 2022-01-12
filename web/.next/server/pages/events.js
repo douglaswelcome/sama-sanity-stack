@@ -118,8 +118,7 @@ const Events = props => {
   const {
     upcoming,
     past,
-    featured,
-    config
+    featured
   } = props;
   const {
     0: activeTab,
@@ -129,6 +128,8 @@ const Events = props => {
     0: tabDir,
     1: setTabDir
   } = (0,external_react_.useState)('');
+
+  const config = _objectSpread(_objectSpread({}, props.config), props.pageConfig);
 
   const handleClick = e => {
     const active = parseInt(e.target.getAttribute('data-at'));
@@ -215,7 +216,10 @@ async function getStaticProps() {
     props: {
       upcoming: upcoming,
       past: past,
-      featured: featured
+      featured: featured,
+      pageConfig: {
+        title: "Sama Events | Training Data, AI and Impact Sourcing Insights"
+      }
     }
   };
 }
@@ -235,11 +239,13 @@ module.exports = {
 	"umoja-l-grid--6": "event_umoja-l-grid--6__2i6fC",
 	"umoja-l-page-width": "event_umoja-l-page-width__2fJa4",
 	"umoja-l-grid-section": "event_umoja-l-grid-section__310DM",
+	"umoja-l-grid-section--flat-top": "event_umoja-l-grid-section--flat-top__16Yt2",
 	"umoja-l-grid-gap--row-1": "event_umoja-l-grid-gap--row-1__2y6j9",
 	"umoja-l-grid-gap--row-2": "event_umoja-l-grid-gap--row-2__3GGxD",
 	"umoja-l-grid-gap--row-3": "event_umoja-l-grid-gap--row-3__pKeHQ",
 	"umoja-l-grid-align--center": "event_umoja-l-grid-align--center__2vrb2",
 	"umoja-l-grid-align--base": "event_umoja-l-grid-align--base__1XnSw",
+	"umoja-l-grid-span--full": "event_umoja-l-grid-span--full__3gOT6",
 	"event": "event_event__XD-7i",
 	"event__light": "event_event__light__3ny67",
 	"category": "event_category__1hmd0",
@@ -263,11 +269,13 @@ module.exports = {
 	"umoja-l-grid--6": "events_umoja-l-grid--6__2rxpl",
 	"umoja-l-page-width": "events_umoja-l-page-width__B53bJ",
 	"umoja-l-grid-section": "events_umoja-l-grid-section__UKx__",
+	"umoja-l-grid-section--flat-top": "events_umoja-l-grid-section--flat-top__uMJ54",
 	"umoja-l-grid-gap--row-1": "events_umoja-l-grid-gap--row-1__u4Rw5",
 	"umoja-l-grid-gap--row-2": "events_umoja-l-grid-gap--row-2__2GPnk",
 	"umoja-l-grid-gap--row-3": "events_umoja-l-grid-gap--row-3__KUmWJ",
 	"umoja-l-grid-align--center": "events_umoja-l-grid-align--center__38_10",
 	"umoja-l-grid-align--base": "events_umoja-l-grid-align--base__1g68m",
+	"umoja-l-grid-span--full": "events_umoja-l-grid-span--full__30wkB",
 	"nav": "events_nav__17MTY",
 	"navInner": "events_navInner__3cJIc",
 	"_slideLeft": "events__slideLeft__3jJec",
@@ -307,11 +315,35 @@ module.exports = require("@sanity/client");
 
 /***/ }),
 
+/***/ 1095:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next-sanity-image");
+
+/***/ }),
+
 /***/ 9325:
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("next/dist/server/denormalize-page-path.js");
+
+/***/ }),
+
+/***/ 822:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/server/image-config.js");
+
+/***/ }),
+
+/***/ 6695:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/head.js");
 
 /***/ }),
 
@@ -395,6 +427,14 @@ module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 /***/ }),
 
+/***/ 556:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/to-base-64.js");
+
+/***/ }),
+
 /***/ 7620:
 /***/ ((module) => {
 
@@ -450,7 +490,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5152,3653,4151,4687,8930,6760], () => (__webpack_exec__(3513)));
+var __webpack_exports__ = __webpack_require__.X(0, [7426,5675,1664,5152,5030,3653,4151,4687,4645,6760], () => (__webpack_exec__(3513)));
 module.exports = __webpack_exports__;
 
 })();

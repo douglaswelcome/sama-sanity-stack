@@ -74,11 +74,13 @@ module.exports = {
 	"umoja-l-grid--6": "bodystatic-flowRow_umoja-l-grid--6__3yItI",
 	"umoja-l-page-width": "bodystatic-flowRow_umoja-l-page-width__2lqZV",
 	"umoja-l-grid-section": "bodystatic-flowRow_umoja-l-grid-section__2D-oN",
+	"umoja-l-grid-section--flat-top": "bodystatic-flowRow_umoja-l-grid-section--flat-top__2Hx7U",
 	"umoja-l-grid-gap--row-1": "bodystatic-flowRow_umoja-l-grid-gap--row-1__1e1u5",
 	"umoja-l-grid-gap--row-2": "bodystatic-flowRow_umoja-l-grid-gap--row-2__2lx4v",
 	"umoja-l-grid-gap--row-3": "bodystatic-flowRow_umoja-l-grid-gap--row-3__2HOOB",
 	"umoja-l-grid-align--center": "bodystatic-flowRow_umoja-l-grid-align--center__2vYiq",
 	"umoja-l-grid-align--base": "bodystatic-flowRow_umoja-l-grid-align--base__3hoVN",
+	"umoja-l-grid-span--full": "bodystatic-flowRow_umoja-l-grid-span--full__3-aHp",
 	"step": "bodystatic-flowRow_step__2nhT9",
 	"image": "bodystatic-flowRow_image__2YV8P",
 	"arrow": "bodystatic-flowRow_arrow__1MpII"

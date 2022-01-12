@@ -63,6 +63,7 @@ const NavLink = props => {
     href: url.externalUrl,
     className: (header_module_default()).navLink,
     target: "_blank",
+    rel: "noopener",
     children: title
   });
 };
@@ -126,7 +127,8 @@ const NavDropDown = props => {
   const {
     asPath
   } = (0,router_.useRouter)();
-  const currentSlug = asPath.charAt(0) == '/' ? asPath.substring(1) : asPath;
+  const isHome = asPath == '/' ? true : false;
+  const currentSlug = !isHome && asPath.charAt(0) == '/' ? asPath.substring(1) : asPath;
   const {
     0: active,
     1: setActive
@@ -244,11 +246,14 @@ class Header extends external_react_.Component {
         className: `umoja-l-grid--12 ${(header_module_default()).wrapper}`,
         children: [/*#__PURE__*/jsx_runtime_.jsx(next_link.default, {
           href: "/",
-          children: /*#__PURE__*/jsx_runtime_.jsx("a", {
+          children: /*#__PURE__*/(0,jsx_runtime_.jsxs)("a", {
             className: (header_module_default()).logo,
-            children: /*#__PURE__*/jsx_runtime_.jsx((external_react_inlinesvg_default()), {
+            children: [/*#__PURE__*/jsx_runtime_.jsx("span", {
+              className: "visually-hidden",
+              children: "Sama"
+            }), /*#__PURE__*/jsx_runtime_.jsx((external_react_inlinesvg_default()), {
               src: logo.asset.url
-            })
+            })]
           })
         }), /*#__PURE__*/jsx_runtime_.jsx("button", {
           className: (header_module_default()).hamburger,
@@ -296,11 +301,13 @@ module.exports = {
 	"umoja-l-grid--6": "header_umoja-l-grid--6__2oWO5",
 	"umoja-l-page-width": "header_umoja-l-page-width__2rMVR",
 	"umoja-l-grid-section": "header_umoja-l-grid-section__2URtG",
+	"umoja-l-grid-section--flat-top": "header_umoja-l-grid-section--flat-top__1xggz",
 	"umoja-l-grid-gap--row-1": "header_umoja-l-grid-gap--row-1__15idn",
 	"umoja-l-grid-gap--row-2": "header_umoja-l-grid-gap--row-2__3syxA",
 	"umoja-l-grid-gap--row-3": "header_umoja-l-grid-gap--row-3__28-vL",
 	"umoja-l-grid-align--center": "header_umoja-l-grid-align--center__3C5zd",
 	"umoja-l-grid-align--base": "header_umoja-l-grid-align--base__208hq",
+	"umoja-l-grid-span--full": "header_umoja-l-grid-span--full__YhfZI",
 	"outer": "header_outer__yu9q7",
 	"wrapper": "header_wrapper__3Ghzm",
 	"logo": "header_logo__eiLSq",

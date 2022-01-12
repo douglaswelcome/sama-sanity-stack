@@ -1,0 +1,55 @@
+@import '../../../styles/base/grid';
+@import '../../../styles/base/variables';
+
+.wrap{
+    grid-column: 2/ span 10;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: -1rem 1rem $color-charcoal-6;
+
+    @include breakpoint (w-med) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.left{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+    padding: 2rem;
+    color: $color-white;
+    background-color: $color-charcoal-3;
+    .tag{
+        display: inline-block;
+        padding: 0.5rem 0.5rem 0.125rem 0.5rem;
+        text-transform: uppercase;
+        background-color: $color-sunshine;
+        color: $color-charcoal-1;
+        font-size: 0.8em;
+        font-weight: 700;
+        width: fit-content;
+    }
+    h1{
+        margin-bottom: 3rem;
+        color: $color-white;
+    }
+    .author{
+        margin-bottom: 0.33em;
+        margin-top: 2em;
+        font-weight: 700;
+        color: $color-white;
+        transition: 300ms all;
+        text-decoration: underline $color-sunshine;
+        &:hover{
+            color: $color-charcoal-4;
+        }
+    }
+    .author,
+    .date{
+        text-align: right;
+    }
+}
+
+.right{
+    position: relative;
+}

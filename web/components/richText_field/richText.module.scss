@@ -2,7 +2,6 @@
 @import '../../styles/base/grid';
 
 .inner{
-    grid-column: span 8;
     text-align: left;
     > *{
         margin-bottom: $space-sm;
@@ -10,6 +9,10 @@
     :last-child{
         margin-bottom: 0;
     }
+}
+
+.default{
+    grid-column: span 8;
 }
 
 ._center{
@@ -20,6 +23,17 @@
 ._right{
     grid-column: -1;
     text-align: right;
+}
+
+.caption{
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    font-style: italic;
+}
+
+.embed{
+    position: relative;
 }
 
 @include breakpoint(w-sm){

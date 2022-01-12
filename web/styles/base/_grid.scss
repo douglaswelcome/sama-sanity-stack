@@ -130,17 +130,15 @@ $med-page-width: 800px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: column;
   padding-top: $space-lg;
   padding-bottom: $space-lg;
   position: relative;
   row-gap:$space-md;
 
-  // &:first-of-type{
-  //   padding-top: 3rem;
-  //   padding-bottom: 3rem;
-  // }
-
-  
+  &--flat-top{
+    padding-top: 0;
+  }
 
   @include breakpoint(w-sm) {
     padding-top: 3rem;
@@ -174,6 +172,11 @@ $med-page-width: 800px;
 
 .umoja-l-grid-align--base{
   align-items: baseline;
+}
+
+.umoja-l-grid-span--full{
+  grid-column: 1 / -1;
+  margin-bottom: $space-sm;
 }
 
 

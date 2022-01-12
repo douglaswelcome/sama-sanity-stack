@@ -1,0 +1,93 @@
+@import '../../styles/base/grid';
+@import '../../styles/base/variables';
+
+.body{
+    width: 55em;
+    max-width: 100%;
+    padding-top: 0;
+    padding-bottom: 3rem;
+}
+
+.share{
+    grid-column: 1;
+    position: relative;
+    left: -3rem;
+    &_track{
+        position: sticky;
+        top: 2em;
+    }
+    &_button{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        border: 2px solid;
+        border-radius: 50%;
+        border-color: currentColor;
+        transition: ease 0.5s;
+        width: 3rem;
+        height: 3rem;
+        color: $color-charcoal-5;
+        margin-bottom: 0.75rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1.5rem 1.5rem;
+        &__facebook{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 35.1 64.89'%3E%3Ctitle%3Efacebook%3C/title%3E%3Cg data-name='Layer 2'%3E%3Cg data-name='Layer 1'%3E%3Cpath fill='%23787887' d='M35.1,11.26V1.36A1.35,1.35,0,0,0,33.76,0H25.35A15.34,15.34,0,0,0,14,4.35C11.24,7.2,9.78,11.22,9.78,16v7.34H1.34A1.34,1.34,0,0,0,0,24.66V35.32a1.35,1.35,0,0,0,1.34,1.35H9.78V63.55a1.34,1.34,0,0,0,1.34,1.34h11a1.34,1.34,0,0,0,1.34-1.34V36.67h9.87a1.35,1.35,0,0,0,1.34-1.35V24.66a1.37,1.37,0,0,0-.7-1.18,1.47,1.47,0,0,0-.67-.16H23.49V17.1c0-1.72.25-2.69.84-3.37s1.88-1.13,3.77-1.13h5.66A1.34,1.34,0,0,0,35.1,11.26Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");        
+        }
+        &__twitter{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 62 51.19'%3E%3Ctitle%3Etwitter%3C/title%3E%3Cg data-name='Layer 2'%3E%3Cg data-name='Layer 1'%3E%3Cpath fill='%23787887' d='M23.59,51.19c-10.35,0-18.53-1.81-22.44-5l-.07-.06L1,46.1a3.19,3.19,0,0,1-.84-3.35l0-.1a3.24,3.24,0,0,1,3-2,26.57,26.57,0,0,0,7.06-1,13.45,13.45,0,0,1-7.07-8.16,2.92,2.92,0,0,1,1-3.38,3.06,3.06,0,0,1,.88-.45,19.52,19.52,0,0,1-4-7.18l0-.08,0-.09a3,3,0,0,1,1.4-3.23,3,3,0,0,1,1.43-.4,15.15,15.15,0,0,1-1.14-3.49A14.59,14.59,0,0,1,4.24,3.47l.38-.77a2.15,2.15,0,0,1,3.44-.56l.7.7c5.53,5.81,10.49,8.56,19.06,10.44a15.17,15.17,0,0,1,4.1-8.75A14.39,14.39,0,0,1,42.19,0h0c2.84,0,6.36,1.62,8.49,2.77,1.83-.6,4-1.53,6.32-2.51a2.88,2.88,0,0,1,3.22.57,2.85,2.85,0,0,1,.62,3.11c-.17.47-.36.92-.57,1.36a3.07,3.07,0,0,1,.84.58,3.13,3.13,0,0,1,.78,2.92l0,.1a11.92,11.92,0,0,1-4.78,6.56C56.73,35.23,41.84,51.19,23.59,51.19Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        &__linkedin{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 59.71 60.79'%3E%3Ctitle%3Elinkedin%3C/title%3E%3Cg data-name='Layer 2'%3E%3Cg data-name='Layer 1'%3E%3Cpath fill='%23787887' d='M59.65,60.79l-12.35,0,0-19.36c0-4.62-.07-10.56-6.41-10.58s-7.44,5-7.45,10.21l0,19.7-12.36,0,.09-40.95,11.87,0v6.57h.16c1.66-3.13,5.7-6.42,11.73-6.41,12.51,0,14.81,8.28,14.79,19l-.05,21.85Z'/%3E%3Cpath fill='%23787887' d='M7.17,14.35a7.18,7.18,0,1,1,7.18-7.18A7.17,7.17,0,0,1,7.17,14.35Z'/%3E%3Crect fill='%23787887' x='0.98' y='19.8' width='12.39' height='40.95'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    }
+    @include breakpoint (w-sm) {
+        grid-column: 1 / 12;
+        &_track{
+            display: flex;
+            justify-content: space-between;
+            max-width: 160px;
+            margin: 0 auto;
+            left: unset;
+        }
+    }
+}
+
+.content{
+    grid-column: 2 / 11;
+    p{
+        line-height: 1.88;
+    }
+    a{
+        transition: 300ms all;
+        color: $color-charcoal-2;
+        font-weight: 700;
+        -webkit-text-decoration: underline $color-sunshine;
+        text-decoration: underline $color-sunshine;
+    }
+    img{
+        margin: 0 -3em;
+        max-width: calc(100% + 6em);
+        @include breakpoint (w-sm) {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+    blockquote{
+        margin: 3rem 1.5rem;
+        padding-left: 1.5rem;
+        border-left: 0.25rem solid $color-charcoal-2;
+        position: relative;
+        font-size: 1.25rem;
+        line-height: 1.88;
+    }
+}
+
+.relatedPosts{
+    grid-column: span 12;
+    border-bottom: 2px solid $color-charcoal-4;
+    color: $color-charcoal-4;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}

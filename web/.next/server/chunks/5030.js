@@ -42,18 +42,21 @@ const Image = props => {
   const imageProps = (0,next_sanity_image__WEBPACK_IMPORTED_MODULE_1__.useNextSanityImage)((_client__WEBPACK_IMPORTED_MODULE_3___default()), src);
   const width = !props.width && layout != 'fill' ? imageProps.width : props.width;
   const height = !props.height && layout != 'fill' ? imageProps.height : props.height;
+  const alt = src.alt ? src.alt : "";
   return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
     children: sizes ? /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(next_image__WEBPACK_IMPORTED_MODULE_2__.default, _objectSpread(_objectSpread({}, imageProps), {}, {
       layout: layout,
       sizes: sizes,
-      alt: src.alt,
+      alt: alt,
       objectFit: objectFit,
+      lazyBoundary: "20px",
       placeholder: placeholder
     })) : /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx(next_image__WEBPACK_IMPORTED_MODULE_2__.default, _objectSpread(_objectSpread({}, imageProps), {}, {
       layout: layout,
       width: width,
       height: height,
-      alt: src.alt,
+      alt: alt,
+      lazyBoundary: "20px",
       objectFit: objectFit,
       placeholder: placeholder
     }))

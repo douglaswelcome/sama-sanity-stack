@@ -10,6 +10,7 @@ import navigation from './documents/navigation'
 import siteConfig from './documents/siteConfig'
 import reusable_module from './documents/reusableModule'
 import event from './documents/event'
+import press from './documents/press'
 
 //Object types
 import button from './objects/button'
@@ -51,6 +52,7 @@ import bodystatic_headline from './modules/bodystatic_headline'
 import bodystatic_galleryGrid from './modules/bodystatic_galleryGrid'
 import grid_image from './objects/grid_image'
 import embed from './objects/embed'
+import video_embed from './objects/video_embed'
 import video from './objects/video'
 import bodystatic_flowCompare from './modules/bodystatic_flowCompare'
 import bodymove_splitTxtImg_slide from './objects/bodymove_splitTxtImg_slide'
@@ -72,6 +74,9 @@ import bodymove_panel from './modules/bodymove_panel'
 import bodystatic_punchyTxt from './modules/bodystatic_punchyTxt'
 import bodymove_map from './modules/bodymove_map'
 import bodymove_sfMap from './modules/bodymove_sfMap'
+import post from './documents/post'
+import author from './documents/author'
+import bodymove_accordion from './modules/bodymove_accordion'
 
 
 export default createSchema({
@@ -86,6 +91,9 @@ export default createSchema({
     siteConfig,
     reusable_module,
     event,
+    press,
+    post,
+    author,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     page_sections,
@@ -103,13 +111,14 @@ export default createSchema({
     richText_field_simple,
     sticky_sideItem,
     grid_image,
-    embed,
+    video_embed,
     video,
     bullet_icon,
     table_col,
     table_row,
     table_rowCell,
     avatar,
+    embed,
     hero_splittxtimg,
     hero_splittxtimg_tall,
     hero_centertxt,
@@ -147,6 +156,7 @@ export default createSchema({
     bodymove_panel,
     bodystatic_punchyTxt,
     bodymove_map,
-    bodymove_sfMap
+    bodymove_sfMap,
+    bodymove_accordion
   ]),
 })

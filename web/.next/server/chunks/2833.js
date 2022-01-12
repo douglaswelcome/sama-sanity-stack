@@ -75,11 +75,13 @@ module.exports = {
 	"umoja-l-grid--6": "bodystatic-cardImg_umoja-l-grid--6__u0SSa",
 	"umoja-l-page-width": "bodystatic-cardImg_umoja-l-page-width__DaR83",
 	"umoja-l-grid-section": "bodystatic-cardImg_umoja-l-grid-section__2ts_S",
+	"umoja-l-grid-section--flat-top": "bodystatic-cardImg_umoja-l-grid-section--flat-top__1KQl6",
 	"umoja-l-grid-gap--row-1": "bodystatic-cardImg_umoja-l-grid-gap--row-1__3E52g",
 	"umoja-l-grid-gap--row-2": "bodystatic-cardImg_umoja-l-grid-gap--row-2__10ze5",
 	"umoja-l-grid-gap--row-3": "bodystatic-cardImg_umoja-l-grid-gap--row-3__pXDEN",
 	"umoja-l-grid-align--center": "bodystatic-cardImg_umoja-l-grid-align--center__25BFU",
 	"umoja-l-grid-align--base": "bodystatic-cardImg_umoja-l-grid-align--base__1eGNJ",
+	"umoja-l-grid-span--full": "bodystatic-cardImg_umoja-l-grid-span--full__1vV3Y",
 	"card": "bodystatic-cardImg_card__I6yK0",
 	"body": "bodystatic-cardImg_body__192kF",
 	"_four": "bodystatic-cardImg__four__15uIz"

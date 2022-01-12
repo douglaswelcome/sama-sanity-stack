@@ -1,51 +1,47 @@
-"use strict";
 (() => {
 var exports = {};
 exports.id = 6219;
-exports.ids = [6219];
+exports.ids = [6219,2197];
 exports.modules = {
 
-/***/ 8414:
+/***/ 1103:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
+"use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps),
+/* harmony export */   "getStaticPaths": () => (/* binding */ getStaticPaths),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6731);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _404__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6506);
+/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(267);
+/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_client__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _libs_queries__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4645);
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5152);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(5282);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ _slug_),
-  "getStaticPaths": () => (/* binding */ getStaticPaths),
-  "getStaticProps": () => (/* binding */ getStaticProps)
-});
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-// EXTERNAL MODULE: external "next/router"
-var router_ = __webpack_require__(6731);
-;// CONCATENATED MODULE: external "next/error"
-const error_namespaceObject = require("next/error");
-var error_default = /*#__PURE__*/__webpack_require__.n(error_namespaceObject);
-// EXTERNAL MODULE: ./client.js
-var client = __webpack_require__(267);
-var client_default = /*#__PURE__*/__webpack_require__.n(client);
-// EXTERNAL MODULE: ./libs/queries.js
-var queries = __webpack_require__(4645);
-// EXTERNAL MODULE: ./node_modules/next/dynamic.js
-var dynamic = __webpack_require__(5152);
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(5282);
-;// CONCATENATED MODULE: ./pages/[slug].js
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
 
 
-const Layout = (0,dynamic.default)(() => __webpack_require__.e(/* import() */ 4941).then(__webpack_require__.bind(__webpack_require__, 4941)), {
+
+const Layout = (0,next_dynamic__WEBPACK_IMPORTED_MODULE_4__.default)(() => __webpack_require__.e(/* import() */ 4941).then(__webpack_require__.bind(__webpack_require__, 4941)), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(4941)],
     modules: ["[slug].js -> " + '../components/Layout']
   }
 });
-const RenderSection = (0,dynamic.default)(() => __webpack_require__.e(/* import() */ 6446).then(__webpack_require__.bind(__webpack_require__, 6446)), {
+const RenderSection = (0,next_dynamic__WEBPACK_IMPORTED_MODULE_4__.default)(() => __webpack_require__.e(/* import() */ 6446).then(__webpack_require__.bind(__webpack_require__, 6446)), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(6446)],
     modules: ["[slug].js -> " + '../components/RenderSection']
@@ -56,26 +52,20 @@ const Page = ({
   data = {},
   config
 }) => {
-  var _data$page, _data$page2;
+  var _data$page, _data$page2, _data$page3;
 
-  const router = (0,router_.useRouter)();
+  const router = (0,next_router__WEBPACK_IMPORTED_MODULE_0__.useRouter)();
   const slug = data === null || data === void 0 ? void 0 : (_data$page = data.page) === null || _data$page === void 0 ? void 0 : _data$page.slug;
   const sections = data === null || data === void 0 ? void 0 : (_data$page2 = data.page) === null || _data$page2 === void 0 ? void 0 : _data$page2.sections;
 
-  if (!router.isFallback && !slug) {
-    return /*#__PURE__*/jsx_runtime_.jsx((error_default()), {
-      statusCode: 404
-    });
-  }
+  const pageConfig = _objectSpread(_objectSpread({}, config), (_data$page3 = data.page) === null || _data$page3 === void 0 ? void 0 : _data$page3.config);
 
-  return /*#__PURE__*/jsx_runtime_.jsx(Layout, {
-    config: config,
-    children: sections && sections.map(section => {
-      return /*#__PURE__*/jsx_runtime_.jsx(RenderSection, {
-        modules: section.modules,
-        background_color: section.background_color
-      }, section._key);
-    })
+  return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(Layout, {
+    config: pageConfig,
+    children: data.page == undefined || !router.isFallback && !slug ? /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(_404__WEBPACK_IMPORTED_MODULE_1__.default, {}) : sections && sections.map(section => /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(RenderSection, {
+      modules: section.modules,
+      background_color: section.background_color
+    }, section._key))
   });
 };
 
@@ -84,7 +74,7 @@ async function getStaticProps({
 }) {
   const {
     page
-  } = await client_default().fetch(queries/* pageQuery */.JR, {
+  } = await _client__WEBPACK_IMPORTED_MODULE_2___default().fetch(_libs_queries__WEBPACK_IMPORTED_MODULE_3__/* .pageQuery */ .JR, {
     slug: params.slug
   });
   const sections = page === null || page === void 0 ? void 0 : page.sections;
@@ -112,7 +102,7 @@ async function getStaticProps({
   };
 }
 async function getStaticPaths() {
-  const paths = await client_default().fetch(queries/* pageSlugsQuery */.A3);
+  const paths = await _client__WEBPACK_IMPORTED_MODULE_2___default().fetch(_libs_queries__WEBPACK_IMPORTED_MODULE_3__/* .pageSlugsQuery */ .A3);
   return {
     paths: paths.map(slug => ({
       params: {
@@ -122,13 +112,14 @@ async function getStaticPaths() {
     fallback: true
   };
 }
-/* harmony default export */ const _slug_ = (Page);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Page);
 
 /***/ }),
 
 /***/ 9484:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("@sanity/asset-utils");
 
 /***/ }),
@@ -136,6 +127,7 @@ module.exports = require("@sanity/asset-utils");
 /***/ 2904:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("@sanity/block-content-to-react");
 
 /***/ }),
@@ -143,6 +135,7 @@ module.exports = require("@sanity/block-content-to-react");
 /***/ 8809:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("@sanity/client");
 
 /***/ }),
@@ -150,6 +143,7 @@ module.exports = require("@sanity/client");
 /***/ 3062:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("@u-wave/react-vimeo");
 
 /***/ }),
@@ -157,6 +151,7 @@ module.exports = require("@u-wave/react-vimeo");
 /***/ 9525:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("@u-wave/react-youtube");
 
 /***/ }),
@@ -164,6 +159,7 @@ module.exports = require("@u-wave/react-youtube");
 /***/ 4885:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("get-youtube-id");
 
 /***/ }),
@@ -171,6 +167,7 @@ module.exports = require("get-youtube-id");
 /***/ 5768:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("lottie-web");
 
 /***/ }),
@@ -178,6 +175,7 @@ module.exports = require("lottie-web");
 /***/ 1095:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next-sanity-image");
 
 /***/ }),
@@ -185,6 +183,7 @@ module.exports = require("next-sanity-image");
 /***/ 9325:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/server/denormalize-page-path.js");
 
 /***/ }),
@@ -192,6 +191,7 @@ module.exports = require("next/dist/server/denormalize-page-path.js");
 /***/ 822:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/server/image-config.js");
 
 /***/ }),
@@ -199,6 +199,7 @@ module.exports = require("next/dist/server/image-config.js");
 /***/ 6695:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/head.js");
 
 /***/ }),
@@ -206,6 +207,7 @@ module.exports = require("next/dist/shared/lib/head.js");
 /***/ 5378:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 
 /***/ }),
@@ -213,6 +215,7 @@ module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 /***/ 2307:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/loadable.js");
 
 /***/ }),
@@ -220,6 +223,7 @@ module.exports = require("next/dist/shared/lib/loadable.js");
 /***/ 7162:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/mitt.js");
 
 /***/ }),
@@ -227,6 +231,7 @@ module.exports = require("next/dist/shared/lib/mitt.js");
 /***/ 8773:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/router-context.js");
 
 /***/ }),
@@ -234,6 +239,7 @@ module.exports = require("next/dist/shared/lib/router-context.js");
 /***/ 2248:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
 
 /***/ }),
@@ -241,6 +247,7 @@ module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-
 /***/ 9372:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
 
 /***/ }),
@@ -248,6 +255,7 @@ module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
 /***/ 665:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
 
 /***/ }),
@@ -255,6 +263,7 @@ module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.j
 /***/ 2747:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
 
 /***/ }),
@@ -262,6 +271,7 @@ module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
 /***/ 333:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
 
 /***/ }),
@@ -269,6 +279,7 @@ module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
 /***/ 3456:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 /***/ }),
@@ -276,6 +287,7 @@ module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 /***/ 556:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/to-base-64.js");
 
 /***/ }),
@@ -283,6 +295,7 @@ module.exports = require("next/dist/shared/lib/to-base-64.js");
 /***/ 7620:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
@@ -290,6 +303,7 @@ module.exports = require("next/dist/shared/lib/utils.js");
 /***/ 701:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/head");
 
 /***/ }),
@@ -297,6 +311,7 @@ module.exports = require("next/head");
 /***/ 6731:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/router");
 
 /***/ }),
@@ -304,6 +319,7 @@ module.exports = require("next/router");
 /***/ 9297:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("react");
 
 /***/ }),
@@ -311,6 +327,7 @@ module.exports = require("react");
 /***/ 7051:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("react-inlinesvg");
 
 /***/ }),
@@ -318,6 +335,7 @@ module.exports = require("react-inlinesvg");
 /***/ 5508:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("react-map-gl");
 
 /***/ }),
@@ -325,7 +343,15 @@ module.exports = require("react-map-gl");
 /***/ 5282:
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ 2431:
+/***/ (() => {
+
+/* (ignored) */
 
 /***/ })
 
@@ -336,7 +362,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [5152,8930], () => (__webpack_exec__(8414)));
+var __webpack_exports__ = __webpack_require__.X(0, [7426,1664,5152,4645,6506], () => (__webpack_exec__(1103)));
 module.exports = __webpack_exports__;
 
 })();

@@ -26,7 +26,8 @@ const Button = props => {
     title,
     type,
     size,
-    link
+    link,
+    onClick
   } = props;
   const wrapperClass = `${(_button_module_scss__WEBPACK_IMPORTED_MODULE_3___default().wrapper)} ${type ? (_button_module_scss__WEBPACK_IMPORTED_MODULE_3___default())[`_${type}`] : ''} ${size ? (_button_module_scss__WEBPACK_IMPORTED_MODULE_3___default())[`_${size}`] : ''}`;
 
@@ -47,6 +48,7 @@ const Button = props => {
   } else {
     return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx("div", {
       className: wrapperClass,
+      onClick: onClick,
       children: buttonInner
     });
   }
@@ -68,15 +70,18 @@ module.exports = {
 	"umoja-l-grid--6": "button_umoja-l-grid--6__3iPRr",
 	"umoja-l-page-width": "button_umoja-l-page-width__TBzfJ",
 	"umoja-l-grid-section": "button_umoja-l-grid-section__30hdz",
+	"umoja-l-grid-section--flat-top": "button_umoja-l-grid-section--flat-top__3-E46",
 	"umoja-l-grid-gap--row-1": "button_umoja-l-grid-gap--row-1__13k4Y",
 	"umoja-l-grid-gap--row-2": "button_umoja-l-grid-gap--row-2__3mbaT",
 	"umoja-l-grid-gap--row-3": "button_umoja-l-grid-gap--row-3__FBbl9",
 	"umoja-l-grid-align--center": "button_umoja-l-grid-align--center__7o5b6",
 	"umoja-l-grid-align--base": "button_umoja-l-grid-align--base__dSWXb",
+	"umoja-l-grid-span--full": "button_umoja-l-grid-span--full__4v1Sd",
 	"wrapper": "button_wrapper__3lRbv",
 	"btn": "button_btn__1qxP1",
 	"text": "button_text__3_sCS",
 	"_secondary": "button__secondary__1pZ5q",
+	"_light": "button__light__3zLll",
 	"_arrow": "button__arrow__1eUJP",
 	"_small": "button__small__2kIwW"
 };

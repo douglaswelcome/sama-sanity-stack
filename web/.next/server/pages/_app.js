@@ -10,10 +10,11 @@ exports.modules = {
 const sanityClient = __webpack_require__(8809);
 
 const client = sanityClient({
-  projectId: '76e3r62u',
+  projectId: "76e3r62u",
   // you can find this in sanity.json
-  dataset: 'production',
-  apiVersion: '2021-10-06',
+  dataset: "production",
+  apiVersion: '2021-03-25',
+  //token: process.env.SANITY_API_TOKEN,
   useCdn: true // `false` if you want to ensure fresh data
 
 });
@@ -48,7 +49,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 const siteConfigQuery = `*[_id == "global-config"]{
-  title,
   logo {asset->},
   mainNav-> {
   	items[]{
@@ -78,6 +78,18 @@ const siteConfigQuery = `*[_id == "global-config"]{
 }[0]`;
 
 class App extends next_app__WEBPACK_IMPORTED_MODULE_1__.default {
+  componentDidMount() {
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("/sw.js").then(function (registration) {
+          console.log("Service Worker registration successful with scope: ", registration.scope);
+        }, function (err) {
+          console.log("Service Worker registration failed: ", err);
+        });
+      });
+    }
+  }
+
   static async getInitialProps({
     Component,
     ctx

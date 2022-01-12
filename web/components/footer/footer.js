@@ -59,6 +59,7 @@ const Footer = (props) => {
                           <a 
                             key={footerItem._key}
                             href={footerItem.url.externalUrl}
+                            rel="noopener"
                             target="_blank"
                             className={styles.nav_link}
                           >
@@ -77,6 +78,7 @@ const Footer = (props) => {
           <div className={styles.middle_left}>
             <Link href="/">
               <a>
+                <span className="visually-hidden">Sama</span>
                 <SVG src={logo.asset.url} />
               </a>
             </Link>
@@ -87,6 +89,7 @@ const Footer = (props) => {
                 href="https://www.facebook.com/samaartificialintelligence" 
                 className={styles.social_icon}
                 target="_blank"
+                rel="noopener"
               >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.1 64.89">
                     <title>facebook</title>
@@ -101,6 +104,7 @@ const Footer = (props) => {
                 href="https://www.instagram.com/sama_ai_" 
                 className={styles.social_icon} 
                 target="_blank"
+                rel="noopener"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 57">
                   <title>insta</title>
@@ -116,6 +120,7 @@ const Footer = (props) => {
                 href="https://twitter.com/SamaAI" 
                 className={styles.social_icon} 
                 target="_blank"
+                rel="noopener"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 51.19">
                   <title>twitter</title>
@@ -130,6 +135,7 @@ const Footer = (props) => {
                 href="https://www.linkedin.com/company/sama-ai/" 
                 className={styles.social_icon} 
                 target="_blank"
+                rel="noopener"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.71 60.79">
                   <title>linkedin</title>
@@ -146,6 +152,7 @@ const Footer = (props) => {
                 href="https://www.youtube.com/c/SamaAI" 
                 className={styles.social_icon} 
                 target="_blank"
+                rel="noopener"
               >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 44.63">
                     <title>youtube</title>

@@ -78,11 +78,13 @@ module.exports = {
 	"umoja-l-grid--6": "hero-splittxtimg_umoja-l-grid--6__3KC2U",
 	"umoja-l-page-width": "hero-splittxtimg_umoja-l-page-width__2BmN6",
 	"umoja-l-grid-section": "hero-splittxtimg_umoja-l-grid-section__3B7--",
+	"umoja-l-grid-section--flat-top": "hero-splittxtimg_umoja-l-grid-section--flat-top__2YYss",
 	"umoja-l-grid-gap--row-1": "hero-splittxtimg_umoja-l-grid-gap--row-1__2gxrc",
 	"umoja-l-grid-gap--row-2": "hero-splittxtimg_umoja-l-grid-gap--row-2__7Mg-6",
 	"umoja-l-grid-gap--row-3": "hero-splittxtimg_umoja-l-grid-gap--row-3__2FbAA",
 	"umoja-l-grid-align--center": "hero-splittxtimg_umoja-l-grid-align--center__2H2zA",
 	"umoja-l-grid-align--base": "hero-splittxtimg_umoja-l-grid-align--base__1L8B2",
+	"umoja-l-grid-span--full": "hero-splittxtimg_umoja-l-grid-span--full__21ULu",
 	"copy": "hero-splittxtimg_copy__28fs5",
 	"preheadline": "hero-splittxtimg_preheadline__3Ikgm",
 	"imgWrapper": "hero-splittxtimg_imgWrapper__XL8hm"

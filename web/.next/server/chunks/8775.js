@@ -75,11 +75,13 @@ module.exports = {
 	"umoja-l-grid--6": "bodystatic-splitTxtBtn_umoja-l-grid--6__3BFQ-",
 	"umoja-l-page-width": "bodystatic-splitTxtBtn_umoja-l-page-width__2HglD",
 	"umoja-l-grid-section": "bodystatic-splitTxtBtn_umoja-l-grid-section__3KoFB",
+	"umoja-l-grid-section--flat-top": "bodystatic-splitTxtBtn_umoja-l-grid-section--flat-top__1zf3e",
 	"umoja-l-grid-gap--row-1": "bodystatic-splitTxtBtn_umoja-l-grid-gap--row-1__1W6-d",
 	"umoja-l-grid-gap--row-2": "bodystatic-splitTxtBtn_umoja-l-grid-gap--row-2__zf62-",
 	"umoja-l-grid-gap--row-3": "bodystatic-splitTxtBtn_umoja-l-grid-gap--row-3__3oMST",
 	"umoja-l-grid-align--center": "bodystatic-splitTxtBtn_umoja-l-grid-align--center__1xjkD",
 	"umoja-l-grid-align--base": "bodystatic-splitTxtBtn_umoja-l-grid-align--base__D7nx4",
+	"umoja-l-grid-span--full": "bodystatic-splitTxtBtn_umoja-l-grid-span--full__WMFRP",
 	"left": "bodystatic-splitTxtBtn_left__1GvQ7",
 	"right": "bodystatic-splitTxtBtn_right__3xe-T",
 	"buttons": "bodystatic-splitTxtBtn_buttons__2ELKN"

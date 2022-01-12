@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
+import Page404 from './404';
 import client from '../client'
 import { pageQuery, pageSlugsQuery } from '../libs/queries'
 import dynamic from "next/dynamic";
@@ -9,17 +9,21 @@ const RenderSection = dynamic(() => import('../components/RenderSection'))
 const Page = ({ data = {}, config }) => {
   const router = useRouter();
   const slug = data?.page?.slug;
-  const sections = data?.page?.sections;
-  if (!router.isFallback && !slug) {
-    return <ErrorPage statusCode={404} />
+  const sections = data?.page?.sections; 
+  const pageConfig = {
+    ...config,
+    ...data.page?.config
   }
 
   return (
-    <Layout config={config}>
-      {sections &&
-        sections.map((section) => {
-          return <RenderSection modules={section.modules} background_color={section.background_color} key={section._key} />
-        })
+    <Layout config={pageConfig}>
+      {data.page == undefined || !router.isFallback && !slug ?
+        <Page404 />
+      :
+        sections &&
+          sections.map((section) => 
+            <RenderSection modules={section.modules} background_color={section.background_color} key={section._key} />
+          )
       }
     </Layout>
   )

@@ -8,7 +8,8 @@ import styles from './header.module.scss'
 const NavDropDown = (props) => {
     const {items, title} = props;
     const { asPath } = useRouter();
-    const currentSlug = asPath.charAt(0) == '/' ? asPath.substring(1) : asPath;
+    const isHome = asPath == '/' ? true : false;
+    const currentSlug = !isHome && asPath.charAt(0) == '/' ? asPath.substring(1) : asPath;
     const [active, setActive] = useState(false);
     const className = active ? `${styles.navItem_label} ${styles.navItem_label__active}` : `${styles.navItem_label}`;
 
@@ -42,7 +43,6 @@ const NavDropDown = (props) => {
         const isActive = subLinks.some(item => {
             return item == currentSlug
         });
-
         setActive(isActive)
     });
 
