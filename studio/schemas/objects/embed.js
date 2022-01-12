@@ -6,18 +6,6 @@ export default {
     title: "Embed",
     icon: FaCode,
     fields: [
-<<<<<<< HEAD
-        {
-            name: "type",
-            type: "string",
-            title: 'Type',
-            options: {
-                list: [
-                    { title: 'Vimeo', value: 'vimeo'},
-                    { title: 'Youtube', value: 'youtube' }
-                ],
-            },
-=======
       {
         name: "code",
         type: "text",
@@ -27,7 +15,6 @@ export default {
     preview: {
         select: {
           title: "code"
->>>>>>> develop
         },
         prepare ({title}) {
           return {
