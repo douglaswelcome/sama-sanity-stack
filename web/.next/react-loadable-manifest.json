@@ -1,0 +1,38 @@
+{
+  "../components/Layout.js -> ./footer/footer": {
+    "id": 7350,
+    "files": [
+      "static/chunks/commons-4c1befa5aca12010d6e7.js",
+      "static/chunks/4934.37651fffe4e244d39030.js",
+      "static/css/acaf13eb6b89fb83ce84.css",
+      "static/chunks/9837.d7d5322aaf8459b5e568.js"
+    ]
+  },
+  "../components/Layout.js -> ./header/header": {
+    "id": 425,
+    "files": [
+      "static/chunks/commons-4c1befa5aca12010d6e7.js",
+      "static/chunks/4934.37651fffe4e244d39030.js",
+      "static/css/3a3b64fc07d947264cdc.css",
+      "static/chunks/1952.a6f428f75bc1489266dd.js"
+    ]
+  },
+  "[slug].js -> ../components/Layout": {
+    "id": 4941,
+    "files": [
+      "static/chunks/4941.46a56e83ade540ac8e49.js"
+    ]
+  },
+  "[slug].js -> ../components/RenderSection": {
+    "id": 6446,
+    "files": [
+      "static/chunks/6446.895bc6cb5978c82de507.js"
+    ]
+  },
+  "events.js -> ../components/Layout": {
+    "id": 4941,
+    "files": [
+      "static/chunks/4941.46a56e83ade540ac8e49.js"
+    ]
+  }
+}

@@ -14,12 +14,9 @@ export default class Textfield extends React.Component {
     }
     
     handleBlur() {
-<<<<<<< Updated upstream
         const currentState = this.state.active;
         this.setState({ active: !currentState });
-=======
 
->>>>>>> Stashed changes
         this.setState(prevState => ({
           filled: !prevState.filled
         }));
