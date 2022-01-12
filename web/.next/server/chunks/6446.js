@@ -6,6 +6,17 @@ exports.modules = {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./bodymove_accordion/bodymove_accordion.js": [
+		7137,
+		7426,
+		5675,
+		1664,
+		5030,
+		3653,
+		4151,
+		4687,
+		7137
+	],
 	"./bodymove_featureWindow/bodymove_featureWindow.js": [
 		4031,
 		7426,
@@ -342,6 +353,7 @@ module.exports = webpackAsyncContext;
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./bodymove_accordion/bodymove_accordion.js": 7137,
 	"./bodymove_featureWindow/bodymove_featureWindow.js": 4031,
 	"./bodymove_map/bodymove_map.js": 3880,
 	"./bodymove_panel/bodymove_panel.js": 4895,

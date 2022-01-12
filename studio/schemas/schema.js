@@ -76,6 +76,7 @@ import bodymove_map from './modules/bodymove_map'
 import bodymove_sfMap from './modules/bodymove_sfMap'
 import post from './documents/post'
 import author from './documents/author'
+import bodymove_accordion from './modules/bodymove_accordion'
 
 
 export default createSchema({
@@ -155,6 +156,7 @@ export default createSchema({
     bodymove_panel,
     bodystatic_punchyTxt,
     bodymove_map,
-    bodymove_sfMap
+    bodymove_sfMap,
+    bodymove_accordion
   ]),
 })
