@@ -34,7 +34,7 @@ Button.propTypes ={
     title: PropTypes.string,
     type: PropTypes.string,
     size: PropTypes.string,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
 }
 
 export default Button
